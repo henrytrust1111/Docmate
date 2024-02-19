@@ -91,8 +91,8 @@
     border-radius: 50%;
     background-color: #D31010;
     position: absolute;
-    top: 0px;
-    right: 5px;
+    top: 4px;
+    right: 7px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -135,7 +135,7 @@
 }
 
 /*Tablet view*/
-@media screen and (width <=  768px) {
+@media screen and (width <=  768px){
     .search-box{
         display: none;
     }

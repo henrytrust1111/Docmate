@@ -8,7 +8,7 @@ import { Provider } from 'react-redux'
 import { PersistGate } from 'redux-persist/integration/react'
 
 const myPersistor = persistStore(thisIsOurStore);
-const root = ReactDOM.createRoot(document.querySelector('.Henry'))
+const root = ReactDOM.createRoot(document.querySelector('#root'))
 root.render(
   <React.StrictMode>
    <Provider store={thisIsOurStore}>

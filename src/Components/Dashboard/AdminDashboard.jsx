@@ -1,9 +1,12 @@
 import React from 'react'
 import "./AdminDashboard.css"
+import AdminHeader from './AdminHeader'
 
 const AdminDashboard = () => {
   return (
-    <div>AdminDashboard</div>
+    <div className="dashboard">
+        <AdminHeader />
+    </div>
   )
 }
 

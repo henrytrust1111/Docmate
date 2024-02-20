@@ -4,7 +4,7 @@ import AdminHeader from './AdminHeader'
 
 const AdminDashboard = () => {
   return (
-    <div className="dashboard">
+    <div className="admin-dashboard-container">
         <AdminHeader />
     </div>
   )

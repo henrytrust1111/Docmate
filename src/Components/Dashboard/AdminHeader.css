@@ -1,11 +1,12 @@
 .dashboard-header {
   height: 65px;
-  width: 100%;
+  max-width: 100%;
   background: #2c7da0;
   display: flex;
   justify-content: center;
   font-family: Rubik;
   position: sticky;
+  overflow: hidden;
 }
 
 .dashboard-header-wrapper {
@@ -168,7 +169,8 @@
 /* Mobile view iphone-5 */
 @media screen and (width <= 320px) {
   .mobile-search-bar {
-    max-width: 110px;
+    max-width: 100px;
+    margin-left: 10px;
   }
 }
 

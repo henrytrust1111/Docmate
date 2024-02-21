@@ -134,7 +134,7 @@
 }
 
 /*Mobile view iPhone-13pro*/
-@media screen and (width <= 428px) {
+@media screen and (width <= 480px) {
   .dashboard-right .search-icon {
     display: block;
   }

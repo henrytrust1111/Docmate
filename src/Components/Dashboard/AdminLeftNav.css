@@ -71,7 +71,7 @@
 }
 
 /* Mobile view iphone-13 */
-@media screen and (width <= 428px) {
+@media screen and (width <= 480px) {
     .admin-left-nav{
         display: none;
         max-width: 10px;

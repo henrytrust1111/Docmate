@@ -83,7 +83,7 @@
 }
 
 /* Mobile view iphone-13 */
-@media screen and (width <= 428px) {
+@media screen and (width <= 480px) {
     .admin-burger-menu{
         display: flex;
     }

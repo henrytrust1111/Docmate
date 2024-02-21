@@ -43,7 +43,10 @@ const AdminRightNav = () => {
               </div>
             </div>
           </div>
-          <div className="selected-view-container"></div>
+          <div className="selected-view-container">
+            <div className="dashboard-attribute-container"></div>
+            <div className="dashboard-list-of-items-container"></div>
+          </div>
         </div>
       </div>
     </div>

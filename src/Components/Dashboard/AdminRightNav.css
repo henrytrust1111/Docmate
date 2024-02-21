@@ -72,8 +72,12 @@
     background-color: blueviolet;
 }
 
+.dashboard-attribute-container{
+
+}
+
 /* Mobile view iphone-13 */
-@media screen and (width <= 428px) {
+@media screen and (width <= 480px) {
     .admin-dashboard-right{
         min-width: 100%;
     }

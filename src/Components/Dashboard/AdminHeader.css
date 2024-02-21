@@ -144,10 +144,6 @@
   .dashboard-profile {
     justify-content: end;
   }
-  #dashboard-right {
-    min-width: max-content;
-    gap: 0px;
-  }
   .dashboard-logo {
     display: none;
   }
@@ -157,10 +153,6 @@
   .mobile-search-bar {
     display: block;
   }
-  .mobile-search-bar::placeholder{
-    color: #fff;
-  }
-
 }
 
 /* Mobile view iphone-5 */
@@ -186,5 +178,15 @@
   }
   .admin-dashboard-logo img {
     object-fit: contain;
+  }
+  .mobile-search-bar {
+    display: block;
+  }
+  #dashboard-right {
+    min-width: max-content;
+    gap: 0px;
+  }
+  .mobile-search-bar::placeholder{
+    color: #fff;
   }
 }

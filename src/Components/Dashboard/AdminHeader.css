@@ -1,15 +1,14 @@
 .dashboard-header {
   height: 67px;
-  /* height: 10vh; */
   width: 100%;
   background: #2c7da0;
   display: flex;
   justify-content: center;
   font-family: Rubik;
-  position: sticky;
+  position: fixed;
   top: 0px;
   overflow: hidden;
-  position: relative;
+  z-index: 4;
 }
 
 .dashboard-header-wrapper {
@@ -17,6 +16,7 @@
   height: 100%;
   display: flex;
   align-items: center;
+  /* position: relative; */
 }
 
 .admin-dashboard-logo {

@@ -1,0 +1,84 @@
+.admin-dashboard-right{
+    height: calc(100% - 67px);
+    width: calc(100% - 200px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: blue; */
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    z-index: 2;
+    font-family: Rubik;
+}
+
+.admin-dashboard-right-wrapper{
+    width: 95%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard-overview{
+    height: 10%;
+    width: 100%;
+}
+
+.dashboard-main-content-container{
+    height: 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.select-dashboard-view-container{
+    width: 100%;
+    height: 72px;
+    display: flex;
+    gap: 20px;
+}
+.select-dashboard-view-wrapper{
+    min-width: 170px;
+    min-height: 100%;
+    background-color: #0000003b;
+    border-radius: 30px 30px 0px 0px;
+    padding: 20px;
+}
+
+.selected-view-container{
+    width: 100%;
+    height: 100%;
+    background-color: blueviolet;
+}
+
+/* Mobile view iphone-13 */
+@media screen and (width <= 428px) {
+    .admin-dashboard-right{
+        min-width: 100%;
+    }
+    .select-dashboard-view-container{
+        overflow-x: scroll;
+    }
+    .select-dashboard-view-wrapper{
+        min-width: 150px;
+        font-size: 14px;
+    }
+}
+
+/* Mobile view iphone-5 */
+@media screen and (width <= 320px) {
+    .select-dashboard-view-wrapper{
+        min-width: 120px;
+        font-size: 11px;
+        padding: 15px;
+        padding-block-start: 20px;
+        border-radius: 15px 15px 0px 0px;
+    }
+}
+
+/*Tablet view*/
+@media screen and (width <= 768px) {
+    .admin-dashboard-right{
+        width: calc(100% - 50px);
+    }
+}

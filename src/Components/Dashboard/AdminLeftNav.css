@@ -1,12 +1,15 @@
 .admin-left-nav{
-    height: 100%;
+    height: calc(100% - 67px);
     background-color: #fff;
-    /* width: 15%; */
-    width: 200px;
+    min-width: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-right: 1px solid #dedede;
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    margin-top: 67px;
 }
 
 .admin-left-nav-wrapper{
@@ -71,6 +74,7 @@
 @media screen and (width <= 428px) {
     .admin-left-nav{
         display: none;
+        max-width: 10px;
     }
 }
 
@@ -83,6 +87,7 @@
         display: none;
     }
     .admin-left-nav{
-        width: 50px;
+        min-width: 50px;
+        background-color: red;
     }
 }

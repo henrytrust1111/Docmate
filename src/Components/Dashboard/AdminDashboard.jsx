@@ -3,7 +3,6 @@ import "./AdminDashboard.css";
 import AdminHeader from "./AdminHeader";
 import AdminLeftNav from "./AdminLeftNav";
 import AdminRightNav from "./AdminRightNav";
-import AdminBurgerMenu from "./AdminBurgerMenu";
 
 const AdminDashboard = () => {
   return (

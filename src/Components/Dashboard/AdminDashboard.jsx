@@ -1,13 +1,20 @@
-import React from 'react'
-import "./AdminDashboard.css"
-import AdminHeader from './AdminHeader'
+import React from "react";
+import "./AdminDashboard.css";
+import AdminHeader from "./AdminHeader";
+import AdminLeftNav from "./AdminLeftNav";
+import AdminRightNav from "./AdminRightNav";
+import AdminBurgerMenu from "./AdminBurgerMenu";
 
 const AdminDashboard = () => {
   return (
     <div className="admin-dashboard-container">
-        <AdminHeader />
+      <AdminHeader />
+      <div className="admin-dashboard-holder">
+        <AdminLeftNav />
+        <AdminRightNav />
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default AdminDashboard
+export default AdminDashboard;

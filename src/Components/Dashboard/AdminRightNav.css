@@ -58,7 +58,19 @@
     }
     .select-dashboard-view-container{
         overflow-x: scroll;
+        scrollbar-width: thin; /* Firefox */
+        scrollbar-color: transparent transparent; /* Firefox */
+        -ms-overflow-style: none; /* Internet Explorer and Edge */
     }
+    .select-dashboard-view-container::-webkit-scrollbar {
+        width: 6px;
+      }
+      .select-dashboard-view-container::-webkit-scrollbar-thumb {
+        background-color: transparent;
+      }
+      .select-dashboard-view-container::-webkit-scrollbar-track {
+        background-color: transparent;
+      }
     .select-dashboard-view-wrapper{
         min-width: 150px;
         font-size: 14px;

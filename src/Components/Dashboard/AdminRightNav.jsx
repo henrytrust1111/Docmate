@@ -46,6 +46,7 @@ const AdminRightNav = () => {
           <div className="selected-view-container">
             <div className="dashboard-attribute-container">
               <div className="dashboard-attribute-wrapper">
+                <div className="dashboard-attribute-holder">
                 <div className="s-n">S/N</div>
                 <div className="attribute-fixed-width patient-attribute">
                   PATIENT
@@ -56,7 +57,11 @@ const AdminRightNav = () => {
                 <div className="attribute-fixed-width request-attribute">
                   REQUEST
                 </div>
+                <div className="attribute-fixed-width request-attribute">
+                  REQUEST
+                </div>
                 <div className="attribute-fixed-width date-attribute">DATE</div>
+                </div>
               </div>
               <div className="dashboard-list-wrapper">
                 <div className="list-container">

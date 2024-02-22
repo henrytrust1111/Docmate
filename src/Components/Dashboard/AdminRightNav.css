@@ -115,11 +115,15 @@
   width: 95%;
   min-height: 30px;
   display: flex;
-  background-color: #fff;
-  z-index: 5;
+  z-index: 10;
   position: sticky;
   top: 0px;
   right: 0px;
+}
+.dashboard-attribute-holder{
+  width: max-content;
+  background-color: #fff;
+  display: flex;
 }
 
 .s-n {
@@ -174,7 +178,7 @@
 }
 
 .list-container {
-  width: 100%;
+  width: max-content;
   min-height: 50px;
   display: flex;
   background-color: #fff;
@@ -224,20 +228,13 @@
   justify-content: center;
 }
 .delete-view-btn {
-  width: 100%;
+  width: 180px;
   height: 100%;
   display: flex;
   gap: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.view-and-delete-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
 }
 
 .view-button {

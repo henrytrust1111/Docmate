@@ -1,0 +1,250 @@
+.AdminBookingReview-page {
+  height: calc(100% - 67px);
+  width: calc(100% - 200px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  z-index: 2;
+  font-family: Rubik;
+  color: #373737;
+  /* background-color: purple; */
+}
+
+.AdminBookingReview-page-container {
+  width: 90%;
+  height: 90%;
+  /* background-color: rgb(255, 17, 0); */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.AdminBookingReview-page-header {
+  width: 100%;
+  height: 10%;
+  /* background-color: blue; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.AdminBookingReview-page-header-container {
+  height: 90%;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  font-size: 30px;
+  font-weight: 600;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.AdminBookingReview-page-main {
+  width: 100%;
+  height: 80%;
+  /* background-color: yellow; */
+  display: flex;
+}
+
+.patient-review-check-container {
+  width: 50%;
+  height: 100%;
+  border-right: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.doctor-review-check-container {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.patient-review-check {
+  width: 300px;
+  height: 90%;
+  background-color: #e0e7f3;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.doctor-review-check {
+  width: 300px;
+  height: 90%;
+  background-color: #e0e7f3;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.patient-review-check-top {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.patient-review-check-top p {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.patient-review-check-down {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.patient-review-check-down-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.AdminBookingReview-page-buttom {
+  width: 100%;
+  height: 10%;
+  /* background-color: bisque; */
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.book-appointment-btn {
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  background-color: #2c7da0;
+  color: #fff;
+  cursor: pointer;
+}
+.book-appointment-btn:hover{
+  border: 2px solid;
+  background-color: #fff;
+  color: #2c7da0;
+}
+
+/* Mobile view iphone-13 */
+@media screen and (width <= 480px) {
+  .AdminBookingReview-page {
+    min-width: 100%;
+  }
+  .AdminBookingReview-page-main {
+    position: sticky;
+    top: 0px;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: yellow; */
+    gap: 10px;
+    overflow-y: scroll;
+  }
+  .patient-review-check-top p {
+    font-size: 30px;
+    text-decoration: underline;
+    font-weight: 500;
+  }
+
+  .patient-review-check-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .doctor-review-check-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .doctor-review-check {
+    width: 100%;
+    gap: 10px;
+    padding-block: 10px;
+    height: max-content;
+    border-radius: 15px;
+    background-color: #fff;
+    color: #373737;
+    border: 1px solid #8e8e8e;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+      rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  }
+  .book-appointment-btn {
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-size: 19px;
+  }
+  .patient-review-check {
+    width: 100%;
+    gap: 10px;
+    height: max-content;
+    padding-block: 10px;
+    border-radius: 15px;
+    background-color: #fff;
+    color: #373737;
+    border: 1px solid #8e8e8e;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+      rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  }
+  .patient-review-check-down {
+    gap: 10px;
+  }
+}
+
+/* Mobile view iphone-5 */
+@media screen and (width <= 320px) {
+}
+
+/*Tablet view*/
+@media screen and (width <= 768px) {
+  .AdminBookingReview-page {
+    width: calc(100% - 50px);
+  }
+}
+
+/* big-tablet */
+@media screen and (width <= 834px) {
+  .AdminBookingReview-page-container {
+    width: 95%;
+  }
+  .patient-review-check-container {
+    border-right: none;
+  }
+  /* .AdminBookingReview-page-buttom {
+    background-color: bisque;
+  } */
+  .book-appointment-btn {
+    padding: 22px;
+    font-size: 19px;
+  }
+  .doctor-review-check {
+    width: 100%;
+    background-color: #eaeaea;
+  }
+  .patient-review-check {
+    width: 100%;
+  }
+}

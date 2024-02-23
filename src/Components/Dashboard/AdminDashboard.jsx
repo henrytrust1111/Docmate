@@ -4,6 +4,8 @@ import AdminHeader from "./AdminHeader";
 import AdminLeftNav from "./AdminLeftNav";
 import AdminRightNav from "./AdminRightNav";
 import AdminAppointmentReview from "./AdminAppointmentReview";
+import AdminAssignDoctor from "./AdminAssignDoctor";
+import AdminBookingReview from "./AdminBookingReview";
 
 const AdminDashboard = () => {
   return (
@@ -12,7 +14,9 @@ const AdminDashboard = () => {
       <div className="admin-dashboard-holder">
         <AdminLeftNav />
         {/* <AdminRightNav /> */}
-        <AdminAppointmentReview />
+        {/* <AdminAppointmentReview /> */}
+        {/* <AdminAssignDoctor /> */}
+        <AdminBookingReview />
       </div>
     </div>
   );

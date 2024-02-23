@@ -1,0 +1,160 @@
+.AdminAppointmentReview-page {
+  height: calc(100% - 67px);
+  width: calc(100% - 200px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  z-index: 2;
+  font-family: Rubik;
+  color: #373737;
+}
+
+.admin-appointment-review-holder {
+  width: 40%;
+  height: 90%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-appointment-review-content-holder {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+}
+.admin-appointment-review-header {
+  height: 20%;
+  /* background-color: aqua; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.admin-appointment-review-header-content{
+    padding: 20px;
+    font-size: 22px ;
+    font-weight: 600;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    background-color: #fff;
+    border-radius: 3px;
+    text-align: center;
+    color: #373737;
+}
+
+.admin-appointment-review-content {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.admin-appointment-review-main-content{
+    color: #373737; 
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.admin-appointment-review-patient-name-header{
+    font-size: 20px;
+    font-weight: 500;
+}
+.admin-appointment-review-patient-name{
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.admin-appointment-review-button-holder{
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.assign-a-doctor-btn{
+    width: 150px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-color: #2C7DA0;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+/* Mobile view iphone-13 */
+@media screen and (width <= 480px) {
+  .AdminAppointmentReview-page {
+    min-width: 100%;
+  }
+  .assign-a-doctor-btn{
+    width: 100%;
+    height: 40px;
+}
+.admin-appointment-review-header-content{
+    padding: 0px;
+    font-size: 27px;
+    text-decoration: underline;
+    box-shadow: none;
+    background-color: #fff;
+    border-radius: 0px;
+    color: #373737;
+}
+}
+
+/* Mobile view iphone-5 */
+@media screen and (width <= 320px) {
+    .admin-appointment-review-header-content{
+        padding: 0px;
+        font-size: 22px;
+        box-shadow: none;
+        background-color: #fff;
+        border-radius: 0px;
+        color: #373737;
+    }
+      .admin-appointment-review-content {
+        gap: 0px
+      }
+    #admin-appointment-review-patient-name-header{
+        font-size: 15px;
+        font-weight: 500;
+    }
+    .admin-appointment-review-patient-name{
+        font-size: 12px;
+        font-weight: 400;
+    }
+     
+}
+
+/*Tablet view*/
+@media screen and (width <= 768px) {
+  .AdminAppointmentReview-page {
+    width: calc(100% - 50px);
+  }
+}
+
+/* big-tablet */
+@media screen and (width <= 834px) {
+    .admin-appointment-review-content {
+      justify-content: space-evenly;
+    }
+    .admin-appointment-review-patient-name-header{
+        font-size: 24px;
+        font-weight: 500;
+    }
+    .admin-appointment-review-patient-name{
+        font-size: 19px;
+        font-weight: 400;
+    }
+    .admin-appointment-review-holder {
+        width: 60%;
+      }
+  }

@@ -1,0 +1,146 @@
+.PatientHospitalPage-container {
+  height: calc(100% - 67px);
+  width: calc(100% - 200px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  z-index: 2;
+  font-family: Rubik;
+  color: #373737;
+  background-color: #e0e7f3;
+}
+
+.PatientHospitalPage-wrapper {
+  width: 95%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.request-view-container {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  /* background-color: green; */
+  justify-content: space-around;
+}
+
+.patient-request-view-box {
+  height: 300px;
+  width: 40%;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.patient-request-view-box:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.request-appointment-icon {
+  width: 100px;
+  height: 100px;
+}
+
+.patient-request-view-box p {
+  font-size: 25px;
+  text-align: center;
+}
+
+.PatientHospitalPage-container-footer{
+  display: flex;
+  justify-content: center;
+}
+
+.PatientHospitalPage-container-footer p{
+  text-align: center;
+}
+
+/* Mobile view iphone-13 */
+@media screen and (width <= 480px) {
+  .PatientHospitalPage-container {
+    min-width: 100%;
+  }
+  .PatientHospitalPage-wrapper {
+    gap: 0px;
+  }
+  
+  #request-view-container {
+    height: 70%;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .patient-request-view-box {
+    height: 50% ;
+    width: 85%;
+    /* background-color: green; */
+    gap: 10px;
+  }
+
+  .request-appointment-icon {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .patient-request-view-box p {
+    font-size: 22px;
+    text-align: center;
+  }
+}
+
+/* Mobile view iphone-5 */
+@media screen and (width <= 320px) {
+  #request-view-container {
+    height: 80%;
+    gap: 10px;
+  }
+  .patient-request-view-box {
+    gap: 20px;
+  }
+  .request-appointment-icon {
+    width: 40px;
+    height: 40px;
+  }
+  .patient-request-view-box p {
+    font-size: 17px;
+  }
+  .PatientHospitalPage-container-footer p{
+    font-size: 12px;
+  }
+}
+
+/*Tablet view*/
+@media screen and (width <= 768px) {
+  .PatientHospitalPage-container {
+    width: calc(100% - 50px);
+  }
+}
+
+/* big-tablet */
+@media screen and (width <= 834px) {
+  .request-view-container {
+    height: max-content;
+    align-items: center;
+    flex-direction: column;
+    /* background-color: green; */
+    gap: 30px;
+  }
+  .patient-request-view-box {
+    height: 300px;
+    width: 75%;
+  }
+}

@@ -20,7 +20,7 @@ const AdminDashboard = () => {
         {/* <AdminAssignDoctor /> */}
         {/* <AdminBookingReview /> */}
         {/* <AdminRescheduleReview /> */}
-        <AdminPayment />
+        {/* <AdminPayment /> */}
       </div>
     </div>
   );

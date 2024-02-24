@@ -3,6 +3,7 @@ import './App.css'
 import PaymentMethod from './Components/BankTransfer/PaymentMethod'
 import Test from './Components/Test'
 import AdminDashboard from './Components/Dashboard/AdminDashboard'
+import PatientDashboard from './Components/PatientDashboard/PatientDashboard'
 
 
 const route=createBrowserRouter([
@@ -11,10 +12,15 @@ const route=createBrowserRouter([
     element:<AdminDashboard />
   },
   {
-    path:"/Payment",
+    path:"/patientDashboard",
+    element:<PatientDashboard/>
+  },
+  {
+    path:"/payment",
     element:<PaymentMethod/>
   }
 ])
+
 function App() {
   return (
     <RouterProvider  router={route}/>

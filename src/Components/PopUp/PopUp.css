@@ -1,0 +1,36 @@
+.popUp-screen {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: poppins;
+  background-color: #ffffff97;
+  z-index: 4;
+  backdrop-filter: blur(3px);
+}
+
+.popUp-message-container {
+  width: 50%;
+  height: 50%;
+  background-color: #ffff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:40px;
+  flex-direction: column;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px,
+    rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+}
+
+.sucess-icon-holder{
+    width: 100px;
+    height: 100px;
+}
+
+.popUp-message-container p{
+    font-size: 24px;
+    font-weight: 550;
+}

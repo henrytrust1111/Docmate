@@ -1,8 +1,11 @@
 import React from "react";
 import "./AdminBookingReview.css";
+import PopUp from "../PopUp/PopUp";
 
 const AdminBookingReview = () => {
   return (
+    <>
+     {/* <PopUp /> */}
     <div className="AdminBookingReview-page">
       <div className="AdminBookingReview-page-container">
         <div className="AdminBookingReview-page-header">
@@ -63,6 +66,7 @@ const AdminBookingReview = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

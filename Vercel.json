@@ -1,8 +1,17 @@
 {
     "routes":[
         {
+            "src":"/",
+            "dest": "/"
+          },      
+        {
             "src":"/payment",
             "dest": "/"
-          }      
+          },
+        {
+            "src":"/admin",
+            "dest": "/"
+          }
+
     ]
 }

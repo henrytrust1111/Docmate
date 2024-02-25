@@ -1,0 +1,186 @@
+.patientAppointmentForm-container {
+  height: calc(100% - 67px);
+  width: calc(100% - 200px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  z-index: 2;
+  font-family: Rubik;
+  color: #373737;
+  background-color: #F5F5F5;
+}
+
+.patientAppointmentForm-wrapper {
+  width: 65%;
+  height: 90%;
+  /* background-color: goldenrod; */
+  /* background-color: #e0e7f3; */
+  /* overflow-y: scroll; */
+}
+
+.patientAppointmentForm-holder {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.patientAppointmentForm-holder {
+  overflow-y: scroll;
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: transparent transparent; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer and Edge */
+}
+.patientAppointmentForm-holder::-webkit-scrollbar {
+  width: 6px;
+}
+.patientAppointmentForm-holder::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+.patientAppointmentForm-holder::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.patientAppointmentForm-header {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.patientAppointmentForm-header p {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.patientAppointmentForm-form-container {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-around; */
+  gap: 20px;
+  /* background-color: green; */
+ 
+}
+
+.patientAppointmentForm-intro{
+  text-decoration: underline;
+}
+.patientAppointmentForm-input-container {
+  width: 100%;
+  display: flex;
+  /* background-color: green; */
+  gap: 15px;
+  align-items: center;
+}
+
+.patientAppointmentForm-label {
+  width: max-content;
+  font-size: 17px;
+  color: #373737;
+}
+
+.patientAppointmentForm-input-input {
+  width: 50%;
+  height: 30px;
+  outline: none;
+  border: none;
+  border: 1px solid #c1c1c1;
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
+    rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+}
+
+.patientAppointmentForm-diagnosis-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.patientAppointmentForm-diagnosis-label {
+  font-size: 17px;
+  color: #373737;
+}
+
+textarea {
+  border-radius: 10px;
+  height: 100px;
+  width: 70%;
+  padding: 10px;
+  outline: none;
+  border: none;
+  border: 1px solid #c1c1c1;
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
+    rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+}
+
+.patientAppointmentForm-btn-container{
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+}
+
+.patientAppointmentForm-btn{
+  width: 120px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background-color: #2c7da0;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.patientAppointmentForm-btn:hover{
+  border: 2px solid;
+  background-color: #fff;
+  color: #2c7da0;
+}
+
+/* Mobile view iphone-13 */
+@media screen and (width <= 480px) {
+  .patientAppointmentForm-container {
+    min-width: 100%;
+  }
+  .patientAppointmentForm-wrapper {
+    width: 91%;
+    /* overflow-y: scroll; */
+    /* background-color: goldenrod; */
+  }
+  textarea {
+    width: 90%;
+  }
+  .patientAppointmentForm-header {
+    height: 70px;
+    background-color: #F5F5F5;
+    position: sticky;
+    top: 0px;
+
+  }
+  
+}
+
+/* Mobile view iphone-5 */
+@media screen and (width <= 320px) {
+}
+
+/*Tablet view*/
+@media screen and (width <= 768px) {
+  .patientAppointmentForm-container {
+    width: calc(100% - 50px);
+  }
+}
+
+/* big-tablet */
+@media screen and (width <= 834px) {
+}

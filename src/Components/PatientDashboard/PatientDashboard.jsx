@@ -2,6 +2,7 @@ import React from 'react'
 import PatientHeader from './PatientHeader'
 import PatientHospitalPage from './PatientHospitalPage'
 import PatientLeftNav from './PatientLeftNav'
+import PatientAppointmentForm from './PatientAppointmentForm'
 
 const PatientDashboard = () => {
   return (
@@ -9,7 +10,8 @@ const PatientDashboard = () => {
     <PatientHeader />
     <div className="admin-dashboard-holder">
       <PatientLeftNav />
-      <PatientHospitalPage/>
+      {/* <PatientHospitalPage/> */}
+      <PatientAppointmentForm />
     </div>
   </div>
   )

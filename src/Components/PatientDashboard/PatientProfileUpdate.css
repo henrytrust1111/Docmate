@@ -1,0 +1,205 @@
+.PatientProfileUpdate-container {
+  height: calc(100% - 67px);
+  width: calc(100% - 200px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  z-index: 2;
+  font-family: Rubik;
+  color: #373737;
+  background-color: #f5f5f5;
+}
+
+.PatientProfileUpdate-holder{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.PatientProfileUpdate-wrapper {
+  width: 70%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.PatientProfileUpdate-container1 {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  justify-content: flex-end;
+  /* align-items: end; */
+  /* background-color: gray; */
+}
+
+.upload-your-file{
+  text-align: center;
+  cursor: pointer;
+}
+
+.Patient-imageUpload-container {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #bebebe;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.PatientProfileUpdate-container2 {
+  width: 60%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  /* background-color: blue; */
+}
+
+.PatientProfileUpdate-input-container {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  /* background-color: yellow; */
+}
+
+.PatientProfileUpdate-label {
+  font-size: 18px;
+}
+
+.PatientProfileUpdate-input-input {
+  width: 100%;
+  height: 30px;
+  outline: none;
+  padding-left: 5px;
+  border: 1px solid #ababab;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+    rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+
+.gender-update-container {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  /* background-color: pink; */
+}
+
+.updateSelect {
+  height: 30px;
+  outline: none;
+}
+
+.PatientProfileUpdate-container3 {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  /* background-color: green; */
+}
+
+.PatientProfileUpdate-btn {
+  width: 120px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background-color: #2c7da0;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.PatientProfileUpdate-btn:hover {
+  border: 2px solid;
+  background-color: #fff;
+  color: #2c7da0;
+}
+
+/* Mobile view iphone-13 */
+@media screen and (width <= 480px) {
+  .PatientProfileUpdate-container {
+    min-width: 100%;
+  }
+  .PatientProfileUpdate-wrapper {
+    width: 90%;
+  }
+
+  #PatientProfileUpdate-container2 {
+    width: 100%;
+    justify-content: center;
+    gap: 15px;
+  }
+
+}
+
+/* Mobile view iphone-5 */
+@media screen and (width <= 320px) {
+  .PatientProfileUpdate-holder{
+    /* height: 90%; */
+    min-height: max-content;
+    overflow-y: scroll;
+  }
+.PatientProfileUpdate-wrapper{
+  height: 95%;
+  gap: 30px;
+  overflow-y: scroll;
+}
+.PatientProfileUpdate-container1{
+  width: 100%;
+  height: max-content;
+  /* background-color: green; */
+}
+#upload-image-container1{
+  width: 50%;
+  height: 150px;
+} 
+#updateFor-gender-age{
+  width: 100%;
+  align-items: start;
+  flex-direction: column;
+  gap: 10px;
+}
+.PatientProfileUpdate-container2 {
+  height: max-content;
+}
+
+}
+/* Mobile view iphone-XR */
+@media screen and (width <= 375px) {
+  #updateFor-gender-age{
+    gap: 30px;
+  }
+}
+
+/*Tablet view*/
+@media screen and (width <= 768px) {
+  .PatientProfileUpdate-container {
+    width: calc(100% - 50px);
+  }
+}
+
+/* big-tablet */
+@media screen and (width <= 834px) {
+  .PatientProfileUpdate-wrapper {
+    width: 90%;
+  }
+
+  .PatientProfileUpdate-container2 {
+    width: 85%;
+    justify-content: center;
+    gap: 25px;
+  }
+
+  .Patient-imageUpload-container {
+    width: 40%;
+  }
+}

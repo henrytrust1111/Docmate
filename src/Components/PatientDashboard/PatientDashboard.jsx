@@ -3,6 +3,7 @@ import PatientHeader from './PatientHeader'
 import PatientHospitalPage from './PatientHospitalPage'
 import PatientLeftNav from './PatientLeftNav'
 import PatientAppointmentForm from './PatientAppointmentForm'
+import PatientProfileUpdate from './PatientProfileUpdate'
 
 const PatientDashboard = () => {
   return (
@@ -11,7 +12,8 @@ const PatientDashboard = () => {
     <div className="admin-dashboard-holder">
       <PatientLeftNav />
       {/* <PatientHospitalPage/> */}
-      <PatientAppointmentForm />
+      {/* <PatientAppointmentForm /> */}
+      <PatientProfileUpdate />
     </div>
   </div>
   )

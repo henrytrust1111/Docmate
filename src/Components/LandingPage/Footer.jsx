@@ -1,6 +1,6 @@
 import React from 'react'
 import './Footer.css'
-import footerlogo from '/DocMate1232.png'
+import footerlogo from '/docmate1232.png'
 import locationimg from '/Vector.png'
 import callimg from '/call.png'
 import emailimg from '/emailicon.png'

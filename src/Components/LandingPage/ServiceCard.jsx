@@ -1,7 +1,7 @@
 import React from 'react'
 import './ServiceCard.css'
-import image from '../../../public/image.png'
-import image2 from '../../../public/upload-icon.png'
+import image from '/image.png'
+import image2 from '/upload-icon.png'
 // import image3 from '../../../public/email.png'
 // import image4 from '../../../public/upload.png'
 

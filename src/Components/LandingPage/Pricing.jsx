@@ -1,6 +1,6 @@
 import React from 'react'
 import './Pricing.css'
-import image from '../../../public/check.png'
+import image from '/check.png'
 
 const Pricing = () => {
   return (

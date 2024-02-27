@@ -1,7 +1,7 @@
 import React from "react";
 import "./PatientRegister.css";
-import image from "../../../public/Docmate.png";
-import image2 from "../../../public/signup.png";
+import image from "/Docmate.png";
+import image2 from "/signup.png";
 import { useNavigate } from "react-router-dom";
 
 const PatientRegister = () => {

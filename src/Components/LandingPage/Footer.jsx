@@ -1,12 +1,12 @@
 import React from 'react'
 import './Footer.css'
-import footerlogo from '../../../public/DocMate1232.png'
-import locationimg from '../../../public/Vector.png'
-import callimg from '../../../public/call.png'
-import emailimg from '../../../public/emailicon.png'
-import facebookimg1 from '../../../public/facebook.png'
-import twitterimg from '../../../public/twitter.png'
-import inimg from '../../../public/in.png'
+import footerlogo from '/DocMate1232.png'
+import locationimg from '/Vector.png'
+import callimg from '/call.png'
+import emailimg from '/emailicon.png'
+import facebookimg1 from '/facebook.png'
+import twitterimg from '/twitter.png'
+import inimg from '/in.png'
 
 const Footer = () => {
   return (

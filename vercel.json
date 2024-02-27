@@ -1,0 +1,17 @@
+{
+    "routes":[
+        {
+            "src":"/",
+            "dest": "/"
+          },
+          {
+            "src":"/patientRegister",
+            "dest": "/"
+          },
+          {
+            "src":"/dashboard",
+            "dest": "/dashboard"
+          }
+          
+    ]
+}

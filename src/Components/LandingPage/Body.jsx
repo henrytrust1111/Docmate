@@ -1,5 +1,4 @@
 import React from 'react'
-import Header from './header'
 import Hero from './Hero'
 import Services from './Services'
 import ServiceCard from './ServiceCard'
@@ -8,12 +7,13 @@ import Testimonial from './Testimonial'
 import Pricing from './Pricing'
 import Health from './Health'
 import Footer from './Footer'
+import HomePageHeader from './HomePageHeader'
 
 
 const Body = () => {
   return (
     <div>
-         <Header/>
+      <HomePageHeader />
       <Hero/>
       <Services/>
       <ServiceCard/>

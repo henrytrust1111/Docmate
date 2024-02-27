@@ -1,9 +1,9 @@
 import React from 'react'
-import './header.css'
+import './HomePageHeader.css'
 import DocMate from "../../../public/docmate1232.png"
 import { useNavigate } from 'react-router-dom'
 
-const Header = () => {
+const HomePageHeader = () => {
     const nav = useNavigate()
     const handleSignUp = ()=>{
       nav('/patientRegister')
@@ -33,4 +33,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default HomePageHeader

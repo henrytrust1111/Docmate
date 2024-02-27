@@ -7,7 +7,6 @@ import {
 } from "react-router-dom";
 import "./App.css";
 import PaymentMethod from "./Components/BankTransfer/PaymentMethod";
-import Test from "./Components/Test";
 import AdminDashboard from "./Components/Dashboard/AdminDashboard";
 import PatientDashboard from "./Components/PatientDashboard/PatientDashboard";
 import Body from "./Components/LandingPage/Body";

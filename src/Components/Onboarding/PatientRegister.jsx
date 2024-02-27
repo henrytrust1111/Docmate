@@ -1,6 +1,6 @@
 import React from "react";
 import "./PatientRegister.css";
-import image from "/Docmate.png";
+import image from "/DocMate.png";
 import image2 from "/signup.png";
 import { useNavigate } from "react-router-dom";
 

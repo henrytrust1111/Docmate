@@ -5,6 +5,7 @@ import PatientLeftNav from './PatientLeftNav'
 import PatientAppointmentForm from './PatientAppointmentForm'
 import PatientProfileUpdate from './PatientProfileUpdate'
 import PatientAppointmentReview from './PatientAppointmentReview'
+import PatientRescheduleForm from '../PopUp/PatientRescheduleForm'
 
 const PatientDashboard = () => {
   return (
@@ -15,7 +16,8 @@ const PatientDashboard = () => {
       {/* <PatientHospitalPage/> */}
       {/* <PatientAppointmentForm /> */}
       {/* <PatientProfileUpdate /> */}
-      <PatientAppointmentReview />
+      {/* <PatientAppointmentReview /> */}
+      <PatientRescheduleForm />
     </div>
   </div>
   )

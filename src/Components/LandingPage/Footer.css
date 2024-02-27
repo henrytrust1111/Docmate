@@ -1,0 +1,202 @@
+.footerbody{
+    width: 100vw;
+    height: 80vh;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footerhold{
+    width: 90%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.firstfooterdiv{
+    width:30%;
+    height: 100%;
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footerlogo{
+    width: 100%;
+    height: 20%;
+    /* background-color: blanchedalmond; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+.footerlogo >img{
+    width: 20%;
+    height: 80%;
+object-fit: contain;
+}
+
+.footertext{
+    width: 100%;
+    height: 70%;
+    /* background-color: violet; */
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 70px;
+}
+
+
+
+.footercontact{
+    width: 100%;
+    height: 20%;
+    /* background-color: tomato; */
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+.footertextimg{
+    width: 5%;
+    height: 100%;
+    /* background: #dd1717; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.footertextimg > img{
+    width: 80%;
+    height: 80%;
+  object-fit: contain;
+}
+
+.footerimagetext{
+    width: 85%;
+    height: 100%;
+    /* background-color: brown; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.footerimagetext >h1{
+font-size: 15px;
+font-weight: 500;
+font-family: Poppins;
+}
+
+
+
+
+.secondfooterdiv{
+    width:18%;
+    height: 100%;
+    /* background-color: yellow; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.quicklink{
+    width: 100%;
+    height: 18%;
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.quicklink >h1{
+    font-size: 25px;
+    font-weight: 500;
+    font-family: Poppins;
+}
+
+.quicklinktext{
+    width: 100%;
+    height: 35%;
+    /* background-color: thistle; */
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+    flex-direction: column;
+
+}
+
+.quicklinktext > h2{
+    font-size: 15px;
+    font-weight: 500;
+    font-family: Poppins;
+}
+
+.thirdfooterdiv{
+    width:18%;
+    height: 100%;
+    /* background-color: green; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.fourthfooterdiv{
+    width:23%;
+    height: 100%;
+    /* background-color: purple; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.socials{
+    width: 100%;
+    height: 20%;
+    /* background-color: #dd1717; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.socialimg{
+    width: 10%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.socialtxt{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.socialtxt >h1{
+    font-size: 15px;
+    font-weight: 500;
+    font-family: Poppins;
+}
+
+.soso{
+    gap: 10px;
+}
+
+.copyright > h1{
+    font-size: 15px;
+    font-weight: 500;
+    font-family: Poppins;
+}

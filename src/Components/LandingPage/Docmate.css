@@ -1,0 +1,330 @@
+.docmatebody{
+    width: 100%;
+    height: 120vh;
+    background-color: white;
+    display: flex;
+}
+
+.docmatebodyleft{
+    width: 55%;
+    height: 100%;
+    /* background-color: yellow; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.upperdocdiv{
+width: 75%;
+height: 23%;
+/* background-color: red; */
+margin-left: 40px;
+}
+
+.upperdocdiv >p{
+font-size: 20px;
+font-family: Poppins;
+font-weight: 400;
+color: #2C7DA0;
+}
+
+.upperdocdiv >h1{
+font-size: 30px;
+font-family: Poppins;
+font-weight: 700;
+}
+
+.lowerdocdiv{
+  width: 100%;
+  height:75% ;
+  /* background-color: orange; */
+  display: flex;
+   margin-left: 40px;
+  align-items: center;
+  justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.conbodydiv{
+    width: 80%;
+    height: 35%;
+    /* background-color: gray; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    ;
+
+}
+
+.leftcondiv{
+    width: 15%;
+    height: 100%;
+    /* background-color: rgb(158, 158, 5); */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.borderdiv{
+    width: 57%;
+    height: 25%;
+    background-color: gray;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: white;
+    font-family: Poppins;
+    font-weight: 400;
+}
+
+.strokediv{
+    width: 4%;
+    height: 70%;
+    background-color: #2C7DA0;
+}
+
+.rightcondiv{
+    width: 85%;
+    height: 100%;
+    /* background-color: aqua; */
+    gap: 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction:column ;
+}
+.rightcondiv >h1{
+   font-size: 25px;
+   font-family: Poppins;
+   font-weight: 700;
+}
+.rightcondiv >p{
+   font-size: 18px;
+   font-family: Poppins;
+   font-weight: 400;
+}
+
+.docmatebodyright{
+width: 55%;
+height: 100%;
+/* background-color: pink; */
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-direction: column;
+}
+
+.upperimage{
+    width: 100%;
+    height: 55%;
+    /* background-color: green; */
+    display: flex;
+    align-items:flex-end;
+    justify-content: flex-start;
+    gap: 15px;
+    
+}
+
+.upperleftimage{
+    width: 35%;
+    height: 55%;
+    /* background-color: blue; */
+
+}
+
+.upperleftimage >img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.upperrightimage{
+    width: 42%;
+    height:85%;
+    /* background-color: #000; */
+}
+.upperrightimage >img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.belowimage{
+    width: 75%;
+    height: 43%;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+    gap: 15px;
+  margin-right: 60px;
+}
+
+.belowleftimage{
+    width: 38%;
+    height: 55%;
+    /* background-color: blanchedalmond; */
+}
+.belowleftimage >img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.belowrightimage{
+    width: 45%;
+    height:70%;
+    /* background-color: blueviolet; */
+}
+.belowrightimage >img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media screen and (width:450px) {
+    .docmatebody{
+        width: 100%;
+        height: 120vh;
+        background-color: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      margin-top: 40px;
+    }
+
+    .docmatebodyleft{
+        width: 85%;
+        height: 100%;
+        background-color: none; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .upperdocdiv{
+        width: 75%;
+        height: 30%;
+        background-color: none;
+        margin-left: 40px;
+        }
+        
+        .upperdocdiv >p{
+        font-size: 15px;
+        font-family: Poppins;
+        font-weight: 300;
+        color: #2C7DA0;
+        }
+        
+        .upperdocdiv >h1{
+        font-size: 20px;
+        font-family: Poppins;
+        font-weight: 500;
+        }
+
+        .lowerdocdiv{
+            width: 100%;
+            height:80% ;
+            background-color: none;
+            display: flex;
+             margin-left: 0px;
+            align-items: center;
+            justify-content: center;
+              flex-direction: column;
+              gap: 5px;
+          }
+          
+          .conbodydiv{
+              width: 100%;
+              height: 35%;
+              background-color: none;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              
+          
+          }
+          
+          .leftcondiv{
+              width: 35%;
+              height: 90%;
+              background-color: none;
+              display: flex;
+              align-items: center;
+              justify-content: space-around;
+              flex-direction: column;
+          }
+
+          .borderdiv{
+            width: 30%;
+            height: 30%;
+            background-color: grey;
+            border-radius: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: white;
+            font-family: Poppins;
+            font-weight: 400;
+        }
+        
+        .strokediv{
+            width: 3%;
+            height: 70%;
+            background-color: #2C7DA0(81, 0, 255);
+        }
+        
+        .rightcondiv{
+            width: 75%;
+            height: 91%;
+            background-color: none;
+            gap: 0px;
+            display: flex;
+            align-items: none;
+            justify-content: flex-start;
+            flex-direction:column ;
+        }
+
+        .rightcondiv >h1{
+           font-size: 18px;
+           font-family: Poppins;
+           font-weight: 600;
+        }
+
+        .rightcondiv >p{
+           font-size: 13px;
+           font-family: Poppins;
+           font-weight: 400;
+           color: rgb(85, 83, 83);
+           
+        }
+        
+        .docmatebodyright{
+        width: 55%;
+        height: 100%;
+        background-color: none;
+        display: none;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        }
+        
+        .upperimage{
+            width: 100%;
+            height: 55%;
+            background-color: none;
+            display: none;
+            align-items:flex-end;
+            justify-content: flex-start;
+            gap: 15px;
+            
+        }
+   
+}

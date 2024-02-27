@@ -1,0 +1,70 @@
+.serivicediv{
+    width: 100vw;
+    height: 50vh;
+    background-color: #ECEAF7;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.textholder{
+    width: 57%;
+    height: 60%;
+    /* background-color: green; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.textholder > h1{
+    font-size: 52px;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #2c7da0;
+}
+
+.textholder > p{
+    font-size: 20px;
+    font-weight: 350;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    
+}
+
+@media screen and (width:450px) {
+    .serivicediv{
+        width: 100vw;
+        height: 50vh;
+        background-color: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .textholder{
+        width: 57%;
+        height: 90%;
+        background-color: none;
+        display: flex;
+        align-items: center;
+        flex-direction: none;
+        justify-content: center;
+    }
+
+    .textholder > h1{
+        font-size: 25px;
+        font-weight: 500;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #2c7da0;
+        text-align: center;
+    }
+
+    .textholder > p{
+        font-size: 15px;
+        font-weight: 400;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+        
+    }
+}

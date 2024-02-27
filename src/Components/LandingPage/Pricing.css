@@ -1,0 +1,379 @@
+.pricingdiv{
+    width: 100vw;
+    height: 120vh;
+    background-color: #ECEAF7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+  
+}
+
+.upperpricingdiv{
+    width: 100%;
+    height:90%;
+    background-color:#D2E1F2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+
+}
+.nextupperpricingdiv{
+    width: 100%;
+    height: 30%;
+    /* background-color: coral; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.pricingtextdiv{
+    width: 30%;
+    height: 20%;
+    /* background-color: red; */
+    text-align: center;
+    
+
+}
+
+.nextupperpricingdiv >h2{
+    font-size: 18px;
+    font-family: Poppins;
+    font-weight: 500;
+
+}
+
+   .pricingtextdiv >h2{
+    font-size: 30px;
+    font-family: Poppins;
+    font-weight: 500;
+      
+  
+  }
+
+.pricingtextdiv >h1{
+    font-size: 30px;
+    font-family: Poppins;
+    font-weight: 500;
+    color: #2c7da0 ;
+}
+
+.pricingtextdiv >p{
+    font-size: 12px;
+    font-family: Poppins;
+    font-weight: 400;
+   
+}
+
+.allcardsdiv{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    /* background-color: red; */
+}
+
+.pricingcarddiv{
+ width: 25%;
+ height: 98%;
+ background-color: white;
+ box-shadow: 0px 0px 20px 1px lightgrey;
+ display: flex;
+ align-items: center;
+ border-radius: 5px;
+ flex-direction: column;
+ 
+}
+
+.moneydiv{
+    width: 35%;
+    height:30%;
+    /* background-color: chartreuse; */
+    display: flex;
+    align-items: center;
+    justify-content:flex-end;
+    flex-direction: column;
+ 
+  
+
+}
+.moneydiv >h1{
+ font-size: 39Px;
+ font-weight: 700;
+ font-family: Poppins;
+}
+.moneydiv >p{
+ font-size: 15Px;
+ font-weight: 500;
+ font-family: Poppins;
+ color: orangered;
+}
+
+.linedivv{
+    width: 50%;
+    height: 8%;
+    border-bottom: 1px solid rgb(220, 218, 218);
+   
+}
+
+.richdiv{
+    width: 70%;
+    height: 60%;
+    /* background-color: red; */
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.imagetext{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+
+}
+.imagetext >p{
+ font-size: 16px;
+ font-family: Poppins;
+ font-weight: 400;
+ color: grey;
+
+}
+
+.imagetextimg{
+    width: 10%;
+    height: 50%;
+    /* background-color: cadetblue; */
+}
+
+.imagetextimg >img{
+    width: 100%;
+    height: 100%;
+object-fit: contain;
+}
+.imagetextimg >p{
+    width: 100%;
+    height: 100%;
+object-fit: contain;
+}
+
+.purchasediv{
+    width:100% ;
+    height: 30%;
+    /* background-color: pink; */
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    /* background-color: red; */
+}
+
+.purchasebtn{
+    width: 60%;
+    height: 45%;
+    border-radius: 5px;
+    border:1.5px solid  #2c7da0;
+    box-shadow: 2px 2px 4px #bcbaba;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: Poppins;
+    background-color: white;
+}
+
+@media screen and (width:450px) {
+    .pricingdiv{
+        width: 100vw;
+        height: 120vh;
+        background-color: #ECEAF7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+      
+    }
+    
+    .upperpricingdiv{
+        width: 100%;
+        height:90%;
+        background-color:#D2E1F2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    
+    
+    }
+    .nextupperpricingdiv{
+        width: 100%;
+        height: 30%;
+        background-color: coral;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    
+    
+    .pricingtextdiv{
+        width: 45%;
+        height: 50%;
+        background-color: red;
+        text-align: center;
+        
+    
+    }
+    .pricingtextdiv >h2{
+      font-size: 20px;
+      font-family: Poppins;
+      font-weight: 400;
+        
+    
+    }
+    
+    .nextupperpricingdiv >h2{
+        font-size: 15px;
+        font-family: Poppins;
+        font-weight: 400;
+        
+    }
+    
+    .pricingtextdiv >h1{
+        font-size: 15px;
+        font-family: Poppins;
+        font-weight: 400;
+        color: #2c7da0 ;
+    }
+    
+    .pricingtextdiv >p{
+        font-size: 12px;
+        font-family: Poppins;
+        font-weight: 400;
+       
+    }
+    
+    .allcardsdiv{
+        width: 100%;
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+        /* background-color: red; */
+    }
+    
+    .pricingcarddiv{
+     width: 45%;
+     height: 100%;
+     background-color: white;
+     box-shadow: 0px 0px 20px 1px lightgrey;
+     display: flex;
+     align-items: center;
+     border-radius: 5px;
+     flex-direction: column;
+     
+    }
+    
+    .moneydiv{
+        width: 60%;
+        height:25%;
+        background-color: chartreuse;
+        display: flex;
+        align-items: center;
+        justify-content:flex-end;
+        flex-direction: column;
+     
+      
+    
+    }
+    .moneydiv >h1{
+     font-size: 20Px;
+     font-weight: 700;
+     font-family: Poppins;
+    }
+
+    .moneydiv >p{
+     font-size: 12Px;
+     font-weight: 400;
+     font-family: Poppins;
+     color: orangered;
+    }
+    
+    .linedivv{
+        width: 50%;
+        height: 8%;
+        border-bottom: 1px solid rgb(220, 218, 218);
+       
+    }
+    
+    .richdiv{
+        width: 80%;
+        height: 65%;
+        background-color: purple;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .imagetext{
+        width: 100%;
+        height: 15%;
+        display: flex;
+        align-items: center;
+    
+    }
+    .imagetext >p{
+     font-size: 10px;
+     font-family: Poppins;
+     font-weight: 400;
+     color: grey;
+    
+    }
+    
+    .imagetextimg{
+        width: 10%;
+        height: 98%;
+        background-color: cadetblue;
+    }
+    
+    .imagetextimg >img{
+        width: 80%;
+        height: 80%;
+    object-fit: contain;
+    }
+    .imagetextimg >p{
+        width: 100%;
+        height: 100%;
+    object-fit: contain;
+    }
+    
+    .purchasediv{
+        width:100% ;
+        height: 20%;
+        /* background-color: pink; */
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        /* background-color: red; */
+    }
+    
+    .purchasebtn{
+        width: 60%;
+        height: 80%;
+        border-radius: 5px;
+        border:1.5px solid  #2c7da0;
+        box-shadow: 2px 2px 4px #bcbaba;
+        font-size: 10px;
+        font-weight: 400;
+        font-family: Poppins;
+        background-color: white;
+    }
+}

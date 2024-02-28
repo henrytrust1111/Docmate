@@ -2,8 +2,8 @@ import React from 'react'
 import './ServiceCard.css'
 import image from '/image.png'
 import image2 from '/upload-icon.png'
-// import image3 from '../../../public/email.png'
-// import image4 from '../../../public/upload.png'
+ import image3 from '/email.png'
+ import image4 from '/upload.png'
 
 const ServiceCard = () => {
   return (
@@ -23,13 +23,13 @@ const ServiceCard = () => {
         </div>
        
          <section className="carddiv3">
-           <img src={image2}alt="" />
+           <img src={image3}alt="" />
           <h1>Notification</h1>
           <p>Get notified and keep track of your <br /> appointments</p> 
         </section> 
 
          <article className="carddiv4">
-           <img src={image2}alt="" />
+           <img src={image4}alt="" />
           <h1>Secure</h1>
           <p>All personal health information <br /> undergoes encryption and is Secure
 </p> 

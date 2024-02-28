@@ -11,7 +11,7 @@ const Docmate = () => {
     <div className="docmatebodyleft">
    <div className="upperdocdiv">
     <p>Why Choose Docmate?</p>
-    <h1>DocMate is dedicated to revolutionizing the way you manage your healthcare needs</h1>
+    <h1>DocMate is dedicated o revolutionizing the way you manage your healthcare needs</h1>
    </div>
 
     <div className="lowerdocdiv">

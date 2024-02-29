@@ -1,6 +1,6 @@
 import React from 'react'
 import './Pricing.css'
-import image from '/check.png'
+import image from '../../asset/icons/check.png'
 
 const Pricing = () => {
   return (

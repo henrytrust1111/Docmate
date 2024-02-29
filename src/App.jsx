@@ -20,6 +20,7 @@ import Aboutus from "./Components/AboutUspage/Aboutus";
 import Faqpage from "./Components/Faqpage/Faqpage";
 import Setnewpassword from "./Components/Setnewpassword/Setnewpassword";
 
+
 function App() {
   return (
     <BrowserRouter>
@@ -34,7 +35,9 @@ function App() {
         <Route path="/patientLogin" element={<PatientLogin />} />
         <Route path="/hospitalLogin" element={<HospitalLogin />} />
         <Route path="/hospitalRegister" element={<HospitalRegister />} />
+        <Route path="/dashboard" element={<PatientDashboard />} />
         <Route path="/patient" element={<PatientDashboard />} />
+
         <Route path="/admin" element={<AdminDashboard />} />
         <Route path="/payment" element={<PaymentMethod />} />
       </Routes>

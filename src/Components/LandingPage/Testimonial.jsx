@@ -1,7 +1,7 @@
 import React from 'react'
 import './Testimonia.css'
-import image from '/lady.png'
-import image11 from '/star.png'
+import image from '../../asset/icons/lady.png'
+import image11 from '../../asset/icons/star.png'
 
 const Testimonial = () => {
   return (

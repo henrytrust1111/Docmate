@@ -1,6 +1,6 @@
 import React from 'react'
 import './HomePageHeader.css'
-import DocMate from "/docmate1232.png"
+import DocMate from "../../asset/icons/docmate1232.png"
 import { useNavigate } from 'react-router-dom'
 
 const HomePageHeader = () => {

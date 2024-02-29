@@ -1,9 +1,9 @@
 import React from 'react'
 import './ServiceCard.css'
-import image from '/image.png'
-import image2 from '/upload-icon.png'
- import image3 from '/email.png'
- import image4 from '/upload.png'
+import image from '../../asset/icons/image.png'
+import image2 from '../../asset/icons/upload-icon.png'
+ import image3 from '../../asset/icons/email.png'
+ import image4 from '../../asset/icons/upload.png'
 
 const ServiceCard = () => {
   return (

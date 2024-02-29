@@ -30,12 +30,12 @@ const HospitalRegister = () => {
     setHospitalAddress(newHospitalAddress)
   }
 
-  const handleimage =(e) =>{
-    const newimage = e.target.files[0]
-    const url=URL.createObjectURL(newimage)
-    setProfilePicture(url)
-console.log(profilePicture);
-  }
+//   const handleimage =(e) =>{
+//     const newimage = e.target.files[0]
+//     const url=URL.createObjectURL(newimage)
+//     setProfilePicture(url)
+// console.log(profilePicture);
+//   }
 
 
   const  handlephoneNumber= (e) => {
@@ -60,7 +60,7 @@ console.log(profilePicture);
     setConfirmpassword(newconfirmpassword)
   }
 
-  const data = { hospitalName, hospitalAddress,phoneNumber, email, password, confirmPassword,profilePicture }
+  const data = { hospitalName, hospitalAddress,phoneNumber, email, password, confirmPassword, }
   const Url = 'https://doc-mate.onrender.com/signup'
 
   const HandleSubmit = async (e) => {
@@ -112,11 +112,11 @@ console.log(profilePicture);
               onChange={handleHospitalAddress}
             />
           </div>
-          <div className="theformholder" id="theFormholderInputContainer">
+          {/* <div className="theformholder" id="theFormholderInputContainer">
             <input type="file" name=" HospitalAddress" placeholder="HospitalAddress" id="theFormholderInput"
                onChange={handleimage}
             />
-          </div>
+          </div> */}
 
           <div className="theformholder">
             <input type="text" name=" Phonenumber" placeholder="Phonenumber"

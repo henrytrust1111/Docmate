@@ -1,60 +1,176 @@
 import React, { useState } from "react";
 import "./AdminLeftNav.css";
 
-const AdminLeftNav = () => {
+const AdminLeftNav = ({
+  setAdminPatientView,
+  setAdminProfile,
+  setAdminRightNav,
+  setAdminPayment,
+  setAdminAppointmentReview,
+  setAdminAssignDoctor,
+}) => {
+  const [dashboard,setDashboard] = useState(true)
+  const [patient,setPatient] = useState(false)
+  const [patientMouseOut,setPatientMouseOut] = useState(false)
+  const handleDashboardMouseOver = ()=>{
+    setDashboard(true)
+  }
+  const handleDashboardMouseOut = ()=>{
+    // setDashboard(false)
+  }
+  const handlePatientMouseOver = ()=>{
+    setPatient(true)
+    setPatientMouseOut(true)
+  }
+  const handlePatientMouseOut = ()=>{
+    setPatientMouseOut(false)
+  }
+  const handleRightDiv = () => {
+    setAdminRightNav(true);
+    setAdminPatientView(false);
+    setAdminProfile(false);
+    setAdminPayment(false);
+    setAdminAppointmentReview(false);
+    setAdminAssignDoctor(false);
+    setDashboard(true)
+    setPatient(false)
+  };
+  const handlePatientView = () => {
+    setAdminRightNav(false);
+    setAdminPatientView(true);
+    setAdminProfile(false);
+    setAdminPayment(false);
+    setAdminAppointmentReview(false);
+    setAdminAssignDoctor(false);
+    setDashboard(false)
+    setPatient(true)
+  };
+  const handleProfile = () => {
+    setAdminRightNav(false);
+    setAdminPatientView(false);
+    setAdminProfile(true);
+    setAdminPayment(false);
+    setAdminAppointmentReview(false);
+    setAdminAssignDoctor(false);
+  };
+  const handlePayment = () => {
+    setAdminRightNav(false);
+    setAdminPatientView(false);
+    setAdminProfile(false);
+    setAdminPayment(true);
+    setAdminAppointmentReview(false);
+    setAdminAssignDoctor(false);
+  };
   return (
     <>
-        <div className="admin-left-nav">
-      <div className="admin-left-nav-wrapper">
-        <div className="dashboard-content-holder">
-          <div className="dashboard-content colored-icon">
-            <div className="dashboard-icon-container">
-              <img src="/icons/colored-dashboard.svg" alt="dashboard" className="colored-payment" />
-              <img src="/icons/dashboard.svg" alt="dashboard" className="black-payment" />
+      <div className="admin-left-nav">
+        <div className="admin-left-nav-wrapper">
+          <div className="dashboard-content-holder">
+            <div
+              className="dashboard-content colored-icon"
+              onClick={handleRightDiv}
+              onMouseOver={handleDashboardMouseOver}
+              onMouseOut={handleDashboardMouseOut}
+            >
+              <div className="dashboard-icon-container">
+                {dashboard?  <img
+                  src="/icons/colored-dashboard.svg"
+                  alt="dashboard"
+                  // className="colored-payment"
+                />:
+                <img
+                  src="/icons/dashboard.svg"
+                  alt="dashboard"
+                  className="black-payment"
+                />}
+              </div>
+              <div className="dashboard-text-container">
+                <p >Dashboard</p>
+              </div>
             </div>
-            <div className="dashboard-text-container">
-              <p>Dashboard</p>
+            <div
+              className="dashboard-content colored-icon"
+              onClick={handlePatientView}
+              onMouseOver={handlePatientMouseOver}   
+              onMouseOut={handlePatientMouseOut}
+            >
+              <div className="dashboard-icon-container">
+                {patient?  <img
+                  src="/icons/colored-patient.svg"
+                  alt="dashboard"
+                  // className="colored-payment"
+                />:
+                <img
+                  src="/icons/patient.svg"
+                  alt="dashboard"
+                  className="black-payment"
+                />}
+              </div>
+              <div className="dashboard-text-container">
+              <p >Patient</p>
+              </div>
+            </div>
+            <div
+              className="dashboard-content colored-icon"
+              onClick={handleProfile}
+            >
+              <div className="dashboard-icon-container">
+                {/* {viewProfile? } */}
+                <img
+                  src="/icons/colored-profile.svg"
+                  alt="dashboard"
+                  className="colored-payment"
+                />
+                <img
+                  src="/icons/profile.svg"
+                  alt="dashboard"
+                  className="black-payment"
+                />
+              </div>
+              <div className="dashboard-text-container">
+                <p>View Profile</p>
+              </div>
+            </div>
+            <div
+              className="dashboard-content colored-icon"
+              onClick={handlePayment}
+            >
+              <div className="dashboard-icon-container">
+                <img
+                  src="/icons/payment.svg"
+                  alt="dashboard"
+                  className="black-payment"
+                />
+                <img
+                  src="/icons/colored-payment.svg"
+                  alt="dashboard"
+                  className="colored-payment"
+                />
+              </div>
+              <div className="dashboard-text-container">
+                <p>Payment</p>
+              </div>
             </div>
           </div>
-          <div className="dashboard-content colored-icon">
+          <div className="dashboard-content colored-icon" id="logout">
             <div className="dashboard-icon-container">
-             <img src="/icons/colored-patient.svg" alt="dashboard" className="colored-payment" />
-              <img src="/icons/patient.svg" alt="dashboard" className="black-payment" />
-            </div>
-            <div className="dashboard-text-container">
-              <p>Patient</p>
-            </div>
-          </div>
-          <div className="dashboard-content colored-icon">
-            <div className="dashboard-icon-container">
-             <img src="/icons/colored-profile.svg" alt="dashboard" className="colored-payment" />
-              <img src="/icons/profile.svg" alt="dashboard" className="black-payment"/>
-            </div>
-            <div className="dashboard-text-container">
-              <p>View Profile</p>
-            </div>
-          </div>
-          <div className="dashboard-content colored-icon">
-            <div className="dashboard-icon-container">
-              <img src="/icons/payment.svg" alt="dashboard" className="black-payment"/>
-              <img src="/icons/colored-payment.svg" alt="dashboard" className="colored-payment"/>
-            </div>
-            <div className="dashboard-text-container">
-              <p>Payment</p>
-            </div>
-          </div>
-        </div>
-        <div className="dashboard-content colored-icon" id="logout">
-            <div className="dashboard-icon-container">
-              <img src="/icons/logout.svg" alt="dashboard" className="black-payment" />
-              <img src="/icons/colored-logout.svg" alt="dashboard" className="colored-payment" />
+              <img
+                src="/icons/logout.svg"
+                alt="dashboard"
+                className="black-payment"
+              />
+              <img
+                src="/icons/colored-logout.svg"
+                alt="dashboard"
+                className="colored-payment"
+              />
             </div>
             <div className="dashboard-text-container">
               <p>Logout</p>
             </div>
           </div>
+        </div>
       </div>
-    </div>
     </>
   );
 };

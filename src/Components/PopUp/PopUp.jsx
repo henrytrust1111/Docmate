@@ -1,14 +1,14 @@
 import React from 'react'
 import "./PopUp.css"
 
-const PopUp = () => {
+const PopUp = ({image,text}) => {
   return (
     <div className="popUp-screen">
         <div className="popUp-message-container">
             <div className="sucess-icon-holder">
-            <img src="./icons/success.svg" alt="success icon"/>
+            <img src={image} alt="success icon"/>
             </div>
-            <p>Appointment booked successfully</p>
+            <p>{text}</p>
         </div>
     </div>
   )

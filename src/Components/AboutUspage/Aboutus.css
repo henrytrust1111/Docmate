@@ -1,0 +1,1157 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.AboutusMain{
+    width: 100%;
+    height: 100vh;
+    /* background-color: red; */
+}
+
+.AboutusmainBody{
+    width: 100%;
+    height: 100%;
+    /* background-color: gray; */
+}
+
+.Aboutusheropage{
+    width: 100%;
+    height: 70%;
+    /* background-color: blue; */
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    background-image: url(public/Rectangle.png);
+    /* background-position: center; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: fill;
+}
+
+.Aboutusherotext{
+    width: 100%;
+    height: 30%;
+    /* background-color: green; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Aboutusherotextbox{
+    width: 80%;
+    height: 100%;
+    /* background-color: red; */
+}
+
+.Aboutusherotext1{
+    width: 100%;
+    height: 50%;
+    color: white;
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+    font-family:  sans-serif;
+    font-size: 40px;
+    font-weight: 900;
+    /* font-style: normal; */
+}
+
+.Aboutusherotext2{
+    width: 50%;
+    height: 50%;
+    font-family: sans-serif;
+    /* background-color: burlywood; */
+    color: white;
+}
+
+.Aboutusherotext2 p{
+    font-family: sans-serif;
+    font-size: 12px;
+}
+
+
+.Empowerimprovehealth{
+    width: 100%;
+    height: 350px;
+    /* background-color: blue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Empowerimprovehealthbox{
+    width: 80%;
+    height: 95%;
+    background-color: white;
+    display: flex;
+    box-shadow: 0px 10px 5px 0px rgba(223,226,235,0.75);
+
+}
+
+.Empowerimprovehealthbox1{
+    width: 50%;
+    height: 100%;
+    /* background-color: blue; */
+}
+
+.Empowerimprovehealthtext{
+    width: 100%;
+    height: 30%;
+    /* background-color: brown; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Empowerimprovehealthtext1{
+    width: 95%;
+    height: 100%;
+    /* background-color: green; */
+    display: flex;
+    align-items: center;
+}
+
+.Empowerimprovehealthtext1 h2{
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+
+}
+
+.Empowerimprovehealthtextbox2{
+    width: 100%;
+    height: 60%;
+    /* background-color: yellow; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Empowerimprovehealthtext2{
+    width: 95%;
+    height: 100%;
+    /* background-color: aqua; */
+}
+
+.Empowerimprovehealthtext2 p{
+    font-family: sans-serif;
+    font-size: 17px;
+    
+}
+    
+
+.Empowerimprovehealthbox2{
+    width: 50%;
+    height: 100%;
+    /* background-color: red; */
+    background-image: url(public/Empower2.webp);
+}
+
+.spaceKeyfeaturesmain{
+    width: 100%;
+    height: 8%;
+}
+
+.Keyfeaturesmain{
+    width: 100%;
+    height: 450px;
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Keyfeaturesmainbody{
+    width: 80%;
+    height: 100%;
+    background-color: #2C7DA0;
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+.Keyfeaturesthemain{
+    width: 100%;
+    height: 10%;
+    /* background-color: blue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Keyfeaturesthemtext{
+    width: 30%;
+    height: 100%;
+    /* background-color: brown; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.Keyfeaturesthemtext h2{
+    font-family: sans-serif;
+    font-size: 30px;
+}
+
+.Keyfeaturesthembox{
+    width: 100%;
+    height: 85%;
+    /* background-color: darkolivegreen; */
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+}
+
+.Keyfeaturesthemboxs{
+    width: 33%;
+    height: 98%;
+    background-color: white;
+    font-family: sans-serif;
+    border: hwb(hue white black);
+}
+
+.Keyfeaturesthemboxtext{
+    width: 100%;
+    height: 20%;
+    /* background-color: blueviolet; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Keyfeaturesthemboxtext1{
+    width: 80%;
+    height: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.Keyfeaturesthemboxtext1 h3{
+    font-family: sans-serif;
+    
+}
+
+.Keyfeaturesthemboxtext1icon{
+    width: 100%;
+    height: 20%;
+    /* background-color: darkorange; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Keyfeaturesthemboxtext1iconboc{
+    width: 80%;
+    height: 100%;
+    /* background-color: darkgrey; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Keyfeaturesthemboxtext1iconboc1{
+    width: 50%;
+    height: 50%;
+}
+
+.Keyfeaturesthemboxtextcon2{
+    width: 100%;
+    height: 60%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Keyfeaturesthemboxtextcontext2{
+    width: 60%;
+    height: 80%;
+    /* background-color: burlywood; */
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+.Keyfeaturesthemboxtextcontext2 p{
+    font-size: 13px;
+    text-align: center;
+}
+
+
+.Keyfeaturesthemboxs2{
+    width: 33%;
+    height: 98%;
+    background-color: white;
+    font-family: sans-serif;
+    border: hwb(hue white black);
+}
+
+.Keyfeaturesthemboxstext2{
+    width: 100%;
+    height: 20%;
+    /* background-color: blueviolet; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Keyfeaturesthemboxsmaintext2{
+    width: 80%;
+    height: 100%;
+    /* background-color: darkgrey; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Keyfeaturesthemboxseconbox2{
+    width: 100%;
+    height: 20%;
+    /* background-color: blue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.Keyfeaturesthemboxseconbox2icon{
+    width: 80%;
+    height: 100%;
+    /* background-color: brown; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Keyboxseconbox2icon{
+    width: 50%;
+    height: 50%;
+}
+
+.Keyfeaturesthemboxsecontext2{
+    width: 100%;
+    height: 60%;
+    /* background-color: blueviolet; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Keyfeaturesthemboxsecontext2 p{
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 13px;
+}
+
+.featuresthemboxtext2{
+    width: 70%;
+    height: 80%;
+    /* background-color: darkkhaki; */
+}
+
+.Keyfeaturesthemboxs3{
+    width: 33%;
+    height: 98%;
+    background-color: white;
+    font-family: sans-serif;
+    border: hwb(hue white black);
+}
+
+.Keyfeaturesthemboxscon3{
+    width: 100%;
+    height: 20%;
+    /* background-color: burlywood; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Keyfeaturesthemboxscontext3{
+    width: 80%;
+    height: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Keyfeaturesthemboxscondtext3{
+    width: 100%;
+    height: 20%;
+    /* background-color: darkorange; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Keyfeaturesthemboxscondtext3icon{
+    width: 50%;
+    height: 50%;
+
+}
+
+
+.Keyfeaturesthemboxscontextbox3{
+    width: 100%;
+    height: 60%;
+    /* background-color: darkgray; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Keyfeaturesthemboxsmaintextbox3{
+    width: 80%;
+    height: 80%;
+    /* background-color: bisque; */
+}
+
+.spaceOurmissionandvisionpage{
+    width: 100%;
+    height: 8%;
+}
+
+.Ourmissionandvisionpage{
+    width: 100%;
+    height: 550px;
+    /* background-color: blue;   */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.Ourmissionandvisionmainpage{
+    width: 80%;
+    height: 100%;
+    background-color: white;
+    box-shadow: 0px 10px 5px 0px rgba(223,226,235,0.75);
+}
+
+.Ourmissionandvisionmainpageup{
+    width: 100%;
+    height: 50%;
+    /* background-color: blueviolet; */
+    display: flex;
+
+}
+
+.Ourmissionandpageupleft{
+    width: 50%;
+    height: 100%;
+    /* background-color: burlywood; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Ourmissionandpageupleftcirlce{
+    width: 95%;
+    height: 95%;
+    border-radius: 100%;
+    /* background-color: blueviolet; */
+    background-image: url(public/istockphoto-1201611973-612x612.jpg);
+    background-position: center;
+    object-fit: cover;
+}
+
+
+.Ourmissionandpageupright{
+    width: 50%;
+    height: 100%;
+    /* background-color: red; */
+}
+
+
+.Ourmissionandpageuprighttext{
+    width: 100%;
+    height: 20%;
+    /* background-color: bisque; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.Ourmissiontext{
+    width: 80%;
+    height: 100%;
+    /* background-color: green; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.Ourmissiontext h2{
+    font-family: sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.Ourmissiontext2{
+    width: 100%;
+    height: 80%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Ourmissionmaintext2{
+    width: 95%;
+    height: 90%;
+    /* background-color: green; */
+    font-family: sans-serif;
+}
+
+.Ourmissionmaintext2 p{
+    font-size: 17px;
+    text-align: center;
+}
+
+.Ourmissionandvisionmainpagedown{
+    width: 100%;
+    height: 50%;
+    /* background-color: brown; */
+    display: flex;
+}
+
+.Ourvisionmainpagedownleft{
+    width: 50%;
+    height: 100%;
+    /* background-color: blue; */
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+.Ourvisionmainpagedownleft1{
+    width: 100%;
+    height: 20%;
+    /* background-color: darkgray; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Ourvisiondownlefttext1{
+    width: 80%;
+    height: 100%;
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+
+}
+
+.Ourvisiondownlefttext1 h2{
+    font-family: sans-serif;
+    font-size: 30px;
+}
+
+.Ourvisionmainpagetextleft2{
+    width: 100%;
+    height: 80%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Ourvisionmainpagetextdownleft2{
+    width: 80%;
+    height: 95%;
+    /* background-color: green; */
+    font-family: sans-serif;
+}
+
+.Ourvisionmainpagetextdownleft2 p{
+    font-size: 17px;
+}
+
+.Ourvisionmainpagedownright{
+    width: 50%;
+    height: 100%;
+    /* background-color: green; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Ourvisionmainpagedownrightcircle{
+    width: 95%;
+    height: 95%;
+    /* background-color: red; */
+}
+
+.Ourvisionmainpagemainightcircle{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background-color: darkgray;
+    background-image: url(public/istockphoto-1174269523-612x612.jpg);
+    background-position: center;
+    object-fit: cover;
+}
+.spaceOurvisionmainpage{
+    width: 100%;
+    height: 8%;
+}
+
+.Ourteammainpage{
+    width: 100%;
+    height: 500px;
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Ourteammainpageup{
+    width: 80%;
+    height: 100%;
+    /* background-color: red; */
+}
+
+.Ourteammainpageinnerup{
+    width: 100%;
+    height: 40%;
+    /* background-color: blueviolet; */
+}
+
+.Ourteammainpageinnerfirstup{
+    width: 100%;
+    height: 20%;
+    /* background-color: burlywood; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Ourteammainpageinnertext{
+    width: 30%;
+    height: 100%;
+    /* background-color: green; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Ourteammainpageinnertext h2{
+    font-family: sans-serif;
+    font-size: 30px;
+
+}
+
+.Ourteammainpageinnertext2{
+    width: 100%;
+    height: 80%;
+    /* background-color: greenyellow; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.Ourteammaininnertext2{
+    width: 50%;
+    height: 100%;
+    /* background-color: blue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Ourteammaininnertext2 p{
+    font-size: 17px;
+    text-align: center;
+}
+
+.Ourteammainpageouterdown{
+    width: 100%;
+    height: 60%;
+    /* background-color: gray; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Ourteammainpageouterdownbox{
+    width: 100%;
+    height: 95%;
+    background-color: white;
+    box-shadow: 0px 10px 5px 0px rgba(223,226,235,0.75);
+}
+
+.Ourteammainpageouterdownboxup{
+    width: 100%;
+    height: 5%;
+    background-color: #2C7DA0;
+    border-radius: 5px;
+}
+
+.Ourteamprofiletercirclbox{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    /* background-color: darkgray; */
+}
+
+.Ourterfirstcirclbox{
+    width: 20%;
+    height: 100%;
+    /* background-color: blue; */
+    display:flex ;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.Ourterfirstcirclbox1{
+    width: 50%;
+    height: 45%;
+    background-color: lightslategray;
+    border-radius: 100%;
+}
+
+.Ourterfirstcircname1{
+    width: 100%;
+    height: 40%;
+    /* background-color: blueviolet; */
+}
+
+.Ourterfirstcname1{
+    width: 100%;
+    height: 30%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+}
+
+.Ourterfirstcname1 h3{
+    font-family: sans-serif;
+    font-weight: 800;
+}
+
+.Ourterfirstcname2{
+    width: 100%;
+    height: 20%;
+    /* background-color: darkkhaki; */
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+}
+
+.Ourterfirstcname2 p{
+    font-family: sans-serif;
+    font-size: 12px;
+}
+
+.Ourtersecondcirclbox1{
+    width: 20%;
+    height: 100%;
+    /* background-color: green; */
+    display:flex ;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.Ourtersecondcirclbox2{
+    width: 50%;
+    height: 45%;
+    background-color: darkgray;
+    border-radius: 100%;
+}
+
+.OurtersecondcircBox2{
+    width: 100%;
+    height: 40%;
+    /* background-color: burlywood; */
+}
+
+.OurtersecondcircnameBox2{
+    width: 100%;
+    height: 30%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.OurtersecondcircnameBox2 h3{
+    font-family: sans-serif;
+    font-weight: 800;
+}
+
+.OurterseccircnameBox2{
+    width: 100%;
+    height: 20%;
+    /* background-color: blueviolet; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.OurterseccircnameBox2 p{
+    font-family: sans-serif;
+    font-size: 12px;
+}
+
+.Ourterthirdcirclbox1{
+    width: 20%;
+    height: 100%;
+    /* background-color: aqua; */
+    display:flex ;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.Ourterthirdmaincirclbox1{
+    width: 50%;
+    height: 45%;
+    background-color: darkgray;
+    border-radius: 100%;
+}
+
+.Ourterthirdmainircltextbox1{
+    width: 100%;
+    height: 40%;
+    /* background-color: blue; */
+}
+
+.OurterthirdMainircltextbox{
+    width: 100%;
+    height: 30%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.OurterthirdMainircltextbox h3{
+    font-family: sans-serif;
+    font-weight: 800;
+}
+
+.OurterthirdMainircltext2{
+    width: 100%;
+    height: 20%;
+    /* background-color: aquamarine; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.OurterthirdMainircltext2 p{
+    font-family: sans-serif;
+    font-size: 12px;
+}
+
+.OurterFourthcirclbox1{
+    width: 20%;
+    height: 100%;
+    /* background-color: green; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.OurterFourthcirclbox{
+    width: 50%;
+    height: 45%;
+    background-color: darkgray;
+    border-radius: 100%;
+}
+
+.OurterFourthcirclinebox{
+    width: 100%;
+    height: 40%;
+    /* background-color: red; */
+}
+
+.OurterFourthcirclinebox1{
+    width: 100%;
+    height: 30%;
+    /* background-color: burlywood; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.OurterFourthcirclinebox1 h3{
+    font-family: sans-serif;
+    font-weight: 800;
+}
+
+.OurterFourthcirclinebox2{
+    width: 100%;
+    height: 20%;
+    /* background-color: green; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.OurterFourthcirclinebox2 p{
+    font-family: sans-serif;
+    font-size: 12px;
+}
+
+.OurterFourfifthclbox{
+    width: 20%;
+    height: 100%;
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.OurterFourfifthclbox1{
+    width: 50%;
+    height: 45%;
+    background-color: darkgrey;
+    border-radius: 100%;
+}
+
+.OurterFourfiflineclbox{
+    width: 100%;
+    height: 40%;
+    /* background-color: blueviolet; */
+}
+
+.OurterFourfiflineclbox1{
+    width: 100%;
+    height: 30%;
+    /* background-color: blue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.OurterFourfiflineclbox1 h3{
+    font-family: sans-serif;
+    font-weight: 800;
+}
+
+.OurterFourfiflineclbox2{
+    width: 100%;
+    height: 20%;
+    /* background-color: bisque; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.OurterFourfiflineclbox2 p{
+    font-family: sans-serif;
+    font-size: 12px;
+}
+
+
+
+
+.spaceOurterfirstcname2{
+    width: 100%;
+    height: 8%;
+}
+
+
+@media  only screen and (max-width:765px)  {
+
+  .AboutusMain{
+    width: 100%;
+    height: 100vh;
+
+  }
+
+  .AboutusmainBody{
+    width: 100%;
+    height: 100%;
+  }
+
+  .Empowerimprovehealthbox{
+    width: 80%;
+  }
+
+  .Empowerimprovehealthbox1{
+    width: 50%;
+}
+.Empowerimprovehealthbox2{
+    width: 50%;
+    background-position: center;
+    /* background-size: contain; */
+}
+
+.Empowerimprovehealthtext1 h2{
+    font-size: 19px;
+}
+
+  .Empowerimprovehealthtext2 p{
+    font-size: 13px;
+  }
+  
+  .Keyfeaturesthemtext h2{
+    font-size: 19px;
+  }
+
+  .Keyfeaturesmainbody{
+    width: 80%;
+    height: 80%;
+  }
+
+  .Keyfeaturesthemboxtext1 h3{
+    font-size: 14px;
+  }
+
+  .Keyfeaturesthemboxtextcontext2 p{
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .Keyfeaturesthemboxsmaintext2 h3{
+    font-size: 14px;
+    text-align: center;
+  }
+  
+
+ .Ourmissiontext h2{
+    font-size: 19px;
+ } 
+
+ .Ourmissionmaintext2 p{
+    font-size: 13px;
+    text-align: center;
+ }
+
+.Ourmissionandpageupleftcirlce{
+    width: 99%;
+    height: 80%;
+    /* object-fit: cover; */
+    background-position: center;
+    background-size: cover;
+}
+
+.Ourvisiondownlefttext1 h2{
+    font-size: 19px;
+
+}
+
+.Ourvisionmainpagetextdownleft2 p{
+    font-size:13px ;
+    text-align: center;
+}
+    
+.Ourvisionmainpagemainightcircle{
+    width: 99%;
+    height: 80%;
+    background-position: center;
+    background-size: cover;
+}
+
+.Ourteammainpageinnertext h2{
+    font-size: 19px;
+}
+
+.Ourteammaininnertext2 p{
+    font-size: 13px;
+    text-align: center;
+}
+
+.Ourterfirstcname1 h3{
+    font-size: 10px;
+}
+
+.Ourterfirstcname2 p{
+    font-size: 8px;
+}
+
+.Ourteammainpageouterdownbox{
+    width: 100%;
+    height: 60%;
+    /* background-color: red; */
+}
+
+.Ourterfirstcirclbox{
+    width: 20%;
+    height: 100%;
+}
+
+
+.Ourterfirstcirclbox1{
+    width: 55%;
+    height: 45%;
+}
+
+
+}
+
+@media only screen and (max-width:428px) {
+    /* .AboutusMain{
+        width: 100%;
+        height: 100vh;
+    
+      } */
+    
+      .AboutusmainBody{
+        width: 100%;
+        height: 100%;
+      }
+
+      .Aboutusherotext1 h2{
+        font-size: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+      }
+
+      .Aboutusheropage{
+        width: 100%;
+        background-position: center;
+        /* background-size: cover; */
+        
+
+      }
+
+      .Aboutusherotext2 p{
+        font-size: 10px;
+      }
+
+      .Empowerimprovehealthbox{
+        width: 90%;
+        height: 70%;
+      }
+
+      .Empowerimprovehealthbox1{
+        width: 50%;
+        height: 80%;
+      }
+
+
+      .Empowerimprovehealthtext1 h2{
+        font-size: 13px;
+      }
+
+      .Empowerimprovehealthtext2 p{
+        font-size: 12px;
+      }
+
+
+
+
+
+
+    
+}

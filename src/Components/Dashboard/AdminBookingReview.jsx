@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import "./AdminBookingReview.css";
 import PopUp from "../PopUp/PopUp";
 
-const AdminBookingReview = () => {
+const AdminBookingReview = ({setBookingReview,setAdminRightNav}) => {
+  const [popUp,setPopUp] = useState(false)
+  const handleBookAppointment = ()=>{
+    setPopUp(true)
+    setTimeout(() => {
+      setPopUp(false)
+      setAdminRightNav(true)
+      setBookingReview(false)
+    }, 2000);
+
+    // setTimeout(false)
+  }
   return (
     <>
-     {/* <PopUp /> */}
+     {popUp? <PopUp text="Appointment booked successfully" image="./icons/success.svg" />:null}
     <div className="AdminBookingReview-page">
       <div className="AdminBookingReview-page-container">
         <div className="AdminBookingReview-page-header">
@@ -62,7 +73,7 @@ const AdminBookingReview = () => {
           </div>
         </div>
         <div className="AdminBookingReview-page-buttom">
-          <div className="book-appointment-btn">Book Appointment</div>
+          <div className="book-appointment-btn" onClick={handleBookAppointment}>Book Appointment</div>
         </div>
       </div>
     </div>

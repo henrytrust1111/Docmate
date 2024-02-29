@@ -1,0 +1,99 @@
+.patientProfileCardComponent {
+  width: 250px;
+  height: 100%;
+  border-radius: 5px;
+  /* background-color: aqua; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.patientProfileCardComponentImageHolder {
+  width: 100px;
+  height: 100px;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.patientProfileCardComponentContentHolder{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.patientProfileCardComponentDetailHolder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.patientProfileCardComponentUpdateBtn {
+  height: 30px;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  border-radius: 7px;
+  color: #fff;
+  background-color: #2bb673;
+}
+
+/* Mobile view iphone-13 */
+@media only screen and (max-width:480px) {
+  .patientProfileCardComponent {
+    width: 200px;
+    gap: 10px !important;
+    /* background-color: red; */
+  }
+  .patientProfileCardComponentImageHolder {
+    width: 120px !important;
+    height: 120px !important;
+  }
+  .patientProfileCardComponentContentHolder{
+    gap: 10px !important;
+  }
+}
+
+/* Mobile view iphone-5 */
+@media screen and (width <= 320px) {
+  .patientProfileCardComponent {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px !important;
+  }
+  .patientProfileCardComponentContentHolder{
+    gap: 19px;
+  }
+  .patientProfileCardComponentImageHolder {
+    width: 100px !important;
+    height: 100px !important;
+  }
+}
+
+/*Tablet view*/
+@media screen and (width <= 768px) {
+  .patientProfileCardComponent {
+    gap: 30px;
+  }
+}
+
+/* big-tablet */
+@media screen and (width <= 834px) {
+  .patientProfileCardComponent {
+    gap: 40px;
+  }
+  .patientProfileCardComponentContentHolder{
+    gap: 30px;
+  }
+  .patientProfileCardComponentImageHolder{
+    width: 150px;
+    height: 150px;
+  }
+}

@@ -1,0 +1,67 @@
+.PatientInformationBoxContainer1 {
+  width: 20%;
+  height: 100%;
+  border-radius: 7px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.PatientInformationBoxContentHolder1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    gap: 15px;
+    text-align: center;
+    /* background-color: green; */
+
+}
+
+.PatientInformationBoxContentHolder1 h4{
+    color: #2C7DA0;
+    text-align: center;
+   
+
+}
+.PatientInformationBoxContentHolder1 p{
+    color: #2C7DA0;
+    text-align: center;
+}
+
+/* Mobile view iphone-13 */
+@media screen and (width <= 428px) {
+    .PatientInformationBoxContainer1 {
+        width: 33%;
+      }
+    .PatientInformationBoxContentHolder1 h4{
+        font-size: 12px;    
+    }
+    .PatientInformationBoxContentHolder1 p{
+        color: #2C7DA0;
+        font-size: 12px; 
+    }
+}
+
+/* Mobile view iphone-5 */
+@media screen and (width <= 320px) {
+    .PatientInformationBoxContentHolder1 h4{
+        font-size: 9px;    
+    }
+    .PatientInformationBoxContentHolder1 p{
+        color: #2C7DA0;
+        font-size: 9px; 
+    }
+}
+
+/*Tablet view*/
+@media screen and (width <= 768px) {
+}
+
+/* big-tablet */
+@media screen and (width <= 834px) {
+  .PatientInformationBoxContainer1 {
+    width: 30%;
+  }
+}

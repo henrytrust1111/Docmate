@@ -1,49 +1,7 @@
 import React, { useState } from "react";
-import "./AdminRightNav.css";
+import "./AdminPatientView.css"
 
-const AdminRightNav = ({setAdminPatientView,setAdminProfile,setAdminRightNav,setAdminPayment,setAdminAppointmentReview,setAdminAssignDoctor}) => {
-  const [allAppointment,setAllAppointment] = useState(true)
-  const [reschedules,setReschedules] = useState(false)
-  const [attended,setAttented] = useState(false)
-  const [unattended,setUnattended] = useState(false)
-
-  const handleAllAppointment = ()=>{
-    setReschedules(false)
-    setAllAppointment(true)
-    setAttented(false)
-    setUnattended(false)
-  }
-
-  const handleReschedules = ()=>{
-    setReschedules(true)
-    setAllAppointment(false)
-    setAttented(false)
-    setUnattended(false)
-  }
-  
-  const handleAttended = ()=>{
-    setReschedules(false)
-    setAllAppointment(false)
-    setAttented(true)
-    setUnattended(false)
-  }
-
-  const handleUnattended = ()=>{
-    setReschedules(false)
-    setAllAppointment(false)
-    setAttented(false)
-    setUnattended(true)
-  }
-
-  const handleViewAppointment= ()=>{
-    setAdminRightNav(false)
-    setAdminPatientView(false)
-    setAdminProfile(false)
-    setAdminPayment(false)
-    setAdminAppointmentReview(true)
-    setAdminAssignDoctor(false)
-  }
-  console.log(setAdminRightNav)
+const AdminPatientView = () => {
   return (
     <div className="admin-dashboard-right">
       <div className="admin-dashboard-right-wrapper">
@@ -51,40 +9,6 @@ const AdminRightNav = ({setAdminPatientView,setAdminProfile,setAdminRightNav,set
           <h2>Dashboard Overview</h2>
         </div>
         <div className="dashboard-main-content-container">
-          <div className="select-dashboard-view-container">
-            <div className="select-dashboard-view-wrapper" id={allAppointment? "active-state":null} onClick={handleAllAppointment}>
-              <div className={allAppointment? "select-dashboard-view-holder active-state-container":"select-dashboard-view-holder"}>
-                <div>
-                  <p>11</p>
-                  <p>All Appointment</p>
-                </div>
-              </div>
-            </div>
-            <div className="select-dashboard-view-wrapper" id={reschedules? "active-state":null} onClick={handleReschedules}>
-              <div className={reschedules? "select-dashboard-view-holder active-state-container":"select-dashboard-view-holder"}>
-                <div>
-                  <p>11</p>
-                  <p>Reschedules</p>
-                </div>
-              </div>
-            </div>
-            <div className="select-dashboard-view-wrapper" id={attended? "active-state":null} onClick={handleAttended}>
-              <div className={attended? "select-dashboard-view-holder active-state-container":"select-dashboard-view-holder"}>
-                <div>
-                  <p>11</p>
-                  <p>Attended</p>
-                </div>
-              </div>
-            </div>
-            <div className="select-dashboard-view-wrapper" id={unattended? "active-state":null} onClick={handleUnattended}>
-              <div className={unattended? "select-dashboard-view-holder active-state-container":"select-dashboard-view-holder"}>
-                <div>
-                  <p>11</p>
-                  <p>Unattended</p>
-                </div>
-              </div>
-            </div>
-          </div>
           <div className="selected-view-container">
             <div className="dashboard-attribute-container">
               <div className="dashboard-attribute-wrapper">
@@ -97,7 +21,7 @@ const AdminRightNav = ({setAdminPatientView,setAdminProfile,setAdminRightNav,set
                     EMAIL
                   </div>
                   <div className="attribute-fixed-width request-attribute">
-                    REQUEST
+                    PHONE NUMBER
                   </div>
                   <div className="attribute-fixed-width date-attribute">
                     DATE
@@ -125,7 +49,7 @@ const AdminRightNav = ({setAdminPatientView,setAdminProfile,setAdminRightNav,set
                     Today, 10 May 2023
                   </div>
                   <div className="delete-view-btn">
-                    <div className="view-button" onClick={handleViewAppointment}>View</div>
+                    <div className="view-button">View</div>
                     <div className="delete-button">Delete</div>
                   </div>
                 </div>
@@ -483,4 +407,4 @@ const AdminRightNav = ({setAdminPatientView,setAdminProfile,setAdminRightNav,set
   );
 };
 
-export default AdminRightNav;
+export default AdminPatientView;

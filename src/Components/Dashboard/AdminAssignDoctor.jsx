@@ -1,7 +1,16 @@
 import React from "react";
 import "./AdminAssignDoctor.css";
 
-const AdminAssignDoctor = () => {
+const AdminAssignDoctor = ({setAdminPatientView,setAdminProfile,setAdminRightNav,setAdminPayment,setAdminAppointmentReview,setAdminAssignDoctor,setBookingReview}) => {
+  const handleAssignDoc = ()=>{
+    setAdminRightNav(false)
+    setAdminPatientView(false)
+    setAdminProfile(false)
+    setAdminPayment(false)
+    setAdminAppointmentReview(false)
+    setAdminAssignDoctor(false)
+    setBookingReview(true)
+  }
   return (
     <div className="AdminAssignDoctor-page">
       <div className="AdminAssignDoctor-wrapper">
@@ -58,7 +67,7 @@ const AdminAssignDoctor = () => {
                 className="AdminAssignDoctor-content-label"
                 id="AdminAssignDoctor-content-label"
               >
-                Day of appointment:
+                Time of appointment:
               </label>
               <input
                 type="text"
@@ -83,7 +92,7 @@ const AdminAssignDoctor = () => {
           </div>
         </div>
         <div className="AdminAssignDoctor-proceed-btn-container">
-          <div className="proceed-btn">Proceed</div>
+          <div className="proceed-btn" onClick={handleAssignDoc} >Proceed</div>
         </div>
       </div>
     </div>

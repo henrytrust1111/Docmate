@@ -1,50 +1,258 @@
-.PatientRescheduleForm-container{
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.PatientRescheduleForm-container {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: poppins;
+  background-color: #ffffff97;
+  z-index: 4;
+  backdrop-filter: blur(3px);
+}
+
+.PatientRescheduleForm-wrapper {
+  width: 50%;
+  height: 70%;
+  /* background-color: red; */
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.PatientRescheduleForm-container1 {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: end;
+  padding: 10px;
+  /* background-color: green; */
+}
+
+.PatientRescheduleForm-cancelBtn {
+  width: 30px;
+  height: 30px;
+}
+
+.PatientRescheduleForm-container2 {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: yellow; */
+}
+
+.PatientRescheduleForm-contentHolder {
+  width: 80%;
+  height: 90%;
+  /* background-color: green; */
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.PatientRescheduleForm-title {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.PatientRescheduleForm-title h2 {
+  color: #2c7da0;
+}
+
+.PatientRescheduleForm-subTitle {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.PatientRescheduleForm-subTitle p {
+  font-size: 12px;
+}
+
+.PatientRescheduleForm-tableContainer {
+  height: 70%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  /* background-color: aqua; */
+}
+
+.PatientRescheduleForm-tableTitle {
+  height: 10%;
+  width: 100%;
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+}
+
+.PatientRescheduleForm-tableTitle-container {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  gap: 10px;
+  /* background-color: lime; */
+}
+
+.PatientRescheduleForm-tableContent-container {
+  height: 85%;
+  width: 100%;
+  /* background-color: purple; */
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px,
+    rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.PatientRescheduleForm-tableContent {
+  width: 90%;
+  height: 25%;
+  border-radius: 5px;
+  gap: 10px;
+  display: flex;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px,
+    rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+  /* background-color: lime; */
+}
+
+.PatientRescheduleForm-tableBox1 {
+  height: 100%;
+  width: 10%;
+  /* background-color: rebeccapurple; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.PatientRescheduleForm-tableBox1 > p {
+  font-size: 12px;
+}
+
+.PatientRescheduleForm-tableBox2 {
+  height: 100%;
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: green; */
+}
+
+.PatientRescheduleForm-tableBox2 p {
+  font-size: 12px;
+  text-align: center;
+}
+
+.tableBox1 p {
+  font-size: 13px;
+}
+
+.PatientRescheduleForm-tableBox3 {
+  height: 100%;
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: red; */
+}
+.PatientRescheduleForm-tableBox3 p {
+  font-size: 13px;
+}
+
+.PatientRescheduleForm-btnContainer {
+  height: 15%;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  /* background-color: orangered; */
+}
+
+.PatientRescheduleForm-btn{
+  width: 140px;
+  height: 40px;
+  display: flex;
+  font-size: 14px;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background-color: #2c7da0;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.PatientRescheduleForm-btn:hover {
+  border: 2px solid;
+  background-color: #fff;
+  color: #2c7da0;
+}
+
+/* Mobile view iphone-13 */
+@media only screen and (max-width: 428px) {
+  .PatientRescheduleForm-wrapper {
+    width: 95% !important;
+    height: 70% !important;
+  }
+
+  .PatientRescheduleForm-contentHolder {
+    width: 95%;
+    height: 90%;
+  }
+
+  .PatientRescheduleForm-tableBox3 p {
+    font-size: 11px;
+  }
+  .PatientRescheduleForm-tableBox2 p {
+    font-size: 11px;
+  }
+  .PatientRescheduleForm-tableContent {
+    width: 90%;
+    height: 25%;
+  }
+}
+
+/* Mobile view iphone-5 */
+@media screen and (max-width: 320px) {
+  .PatientRescheduleForm-tableContent {
+    width: 90%;
+    height: 30%;
+  }
+  .PatientRescheduleForm-tableBox3 p {
+    font-size: 11px;
+  }
+  .PatientRescheduleForm-wrapper {
+    height: 95% !important;
+  }
+}
+/* Mobile view iphone-XR */
+@media screen and (max-width: 375px) {
+  .PatientRescheduleForm-container {
     font-family: poppins;
     background-color: #ffffff97;
-    z-index: 4;
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(7px);
   }
-
-  .PatientRescheduleForm-wrapper{
-    width: 50%;
-    height: 70%;
-    background-color: #ffff;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  .PatientRescheduleForm-wrapper {
+    height: 80% !important;
   }
-
-  .PatientRescheduleForm-container1{
-    width: 100%;
-    height: 10%;
-    display: flex;
+  .PatientRescheduleForm-h5{
+    font-size: 11px;
   }
+}
 
-  .PatientRescheduleForm-container2{
-    width: 100%;
-    height: 90%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: yellow;
-  }
+/*Tablet view*/
+@media screen and (max-width: 768px) {
+}
 
-  .PatientRescheduleForm-contentHolder{
+/* big-tablet */
+@media screen and (max-width: 834px) {
+  .PatientRescheduleForm-wrapper {
     width: 80%;
-    height: 80%;
-    background-color: green;
+    height: 50%;
   }
-
-  .PatientRescheduleForm-header{
-    height: 10%;
-    width: 100%;
-  }
+}

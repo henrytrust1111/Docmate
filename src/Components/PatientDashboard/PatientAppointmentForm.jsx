@@ -1,9 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./PatientAppointmentForm.css"
+import PopUp from '../PopUp/PopUp'
 
-const PatientAppointmentForm = () => {
+const PatientAppointmentForm = ({setPatientAppointmentForm,setPatientHospitalSelection}) => {
+  const [popUp, setPopUp] = useState(false)
+  const handleSendDetails = ()=>{
+    setPopUp(true)
+    setTimeout(() => {
+      setPopUp(false)
+      setPatientAppointmentForm(false)
+      setPatientHospitalSelection(true)
+    }, 2000);
+  }
   return (
-    <div className="patientAppointmentForm-container">
+    <>
+       <div className="patientAppointmentForm-container">
       <div className="patientAppointmentForm-wrapper">
         <div className="patientAppointmentForm-holder">
           <div className="patientAppointmentForm-header">
@@ -29,11 +40,13 @@ const PatientAppointmentForm = () => {
             </div>
           </div>
           <div className="patientAppointmentForm-btn-container">
-            <div className="patientAppointmentForm-btn">Send Details</div>
+            <div className="patientAppointmentForm-btn" onClick={handleSendDetails}>Send Details</div>
           </div>
         </div>
       </div>
     </div>
+    {popUp? <PopUp text="Appointment details has been sent, you would get a mail for your new a appointment" image="./icons/emailIcon.svg" />:null}
+    </>
   )
 }
 

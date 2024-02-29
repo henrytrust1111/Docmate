@@ -6,6 +6,8 @@ import {
   createBrowserRouter,
 } from "react-router-dom";
 import "./App.css";
+import Passwordresetsuc from "./Components/Passwordresestsuccesspage/Passwordresetsuc";
+import Contactus from "./Components/Contactuspage/Contactus";
 import PaymentMethod from "./Components/BankTransfer/PaymentMethod";
 import AdminDashboard from "./Components/Dashboard/AdminDashboard";
 import PatientDashboard from "./Components/PatientDashboard/PatientDashboard";
@@ -14,31 +16,28 @@ import PatientRegister from "./Components/Onboarding/PatientRegister";
 import PatientLogin from "./Components/Onboarding/PatientLogin";
 import HospitalLogin from "./Components/Onboarding/HospitalLogin";
 import HospitalRegister from "./Components/Onboarding/HospitalRegister";
-// import ForgotPassword from "./Components/Onboarding/ForgotPassword";
-// import SetNewPassword from "./Components/Onboarding/SetNewPassword";
-// import Emailverification from "./Components/Onboarding/Emailverification";
-// import EmailSuccess from "./Components/Onboarding/EmailSuccess";
-// import PasswordResetSuccess from "./Components/Onboarding/PasswordResetSuccess";
-// import PatientSignup from "./Components/Onboarding/PatientSignup";
-// import Qpopup from "./Components/Onboarding/Qpopup";
+import Aboutus from "./Components/AboutUspage/Aboutus";
+import Faqpage from "./Components/Faqpage/Faqpage";
+import Setnewpassword from "./Components/Setnewpassword/Setnewpassword";
+
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Body />} />
+        <Route path="/contactUs" element={<Contactus />} />
+        <Route path="/aboutUs" element={<Aboutus />} />
+        <Route path="/faq" element={<Faqpage />} />
+        <Route path="/setPassword" element={<Setnewpassword />} />
+        <Route path="/passwordReset" element={<Passwordresetsuc />} />
         <Route path="/patientRegister" element={<PatientRegister />} />
         <Route path="/patientLogin" element={<PatientLogin />} />
         <Route path="/hospitalLogin" element={<HospitalLogin />} />
         <Route path="/hospitalRegister" element={<HospitalRegister />} />
-        {/* <Route path="/forgotpassword" element={<ForgotPassword/>} /> */}
-        {/* <Route path="/setnewpassword" element={<SetNewPassword/>} /> */}
-        {/* <Route path="/emailverification" element={<Emailverification/>} /> */}
-        {/* <Route path="/patientsignup" element={<PatientSignup/>} /> */}
-        {/* <Route path="/qpopup" element={<Qpopup/>} /> */}
-        {/* <Route path="/passwordresetsuccess" element={<PasswordResetSuccess/>} /> */}
-        {/* <Route path="/successmsg" element={<SuccessMsg/>} /> */}
         <Route path="/dashboard" element={<PatientDashboard />} />
+        <Route path="/patient" element={<PatientDashboard />} />
+
         <Route path="/admin" element={<AdminDashboard />} />
         <Route path="/payment" element={<PaymentMethod />} />
       </Routes>

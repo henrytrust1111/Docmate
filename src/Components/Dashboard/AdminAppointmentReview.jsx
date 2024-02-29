@@ -1,7 +1,17 @@
 import React from "react";
 import "./AdminAppointmentReview.css";
 
-const AdminAppointmentReview = () => {
+const AdminAppointmentReview = ({setAdminPatientView,setAdminProfile,setAdminRightNav,setAdminPayment,setAdminAppointmentReview,setAdminAssignDoctor,setBookingReview}) => {
+  const handleAdminAppointmentReview = ()=>{
+    setAdminRightNav(false)
+    setAdminPatientView(false)
+    setAdminProfile(false)
+    setAdminPayment(false)
+    setAdminAppointmentReview(false)
+    setAdminAssignDoctor(true)
+    setBookingReview(false)
+  }
+
   return (
     <div className="AdminAppointmentReview-page">
       <div className="admin-appointment-review-holder">
@@ -31,7 +41,7 @@ const AdminAppointmentReview = () => {
           </div>
         </div>
         <div className="admin-appointment-review-button-holder">
-            <div className="assign-a-doctor-btn">
+            <div className="assign-a-doctor-btn" onClick={handleAdminAppointmentReview}>
                 Assign a doctor
             </div>
         </div>

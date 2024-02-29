@@ -1,6 +1,10 @@
 import React from "react";
 import "./PatientHospitalPage.css";
-const PatientHospitalPage = () => {
+const PatientHospitalPage = ({setPatientHospitalPage,setPatientAppointmentForm}) => {
+  const handleRequestAppointment= ()=>{
+    setPatientHospitalPage(false)
+    setPatientAppointmentForm(true)
+  }
   return (
     <div className="PatientHospitalPage-container">
       <div className="PatientHospitalPage-wrapper">
@@ -9,6 +13,7 @@ const PatientHospitalPage = () => {
           <div
             className="patient-request-view-box"
             id="patient-request-view-box"
+            onClick={handleRequestAppointment}
           >
             <div className="request-appointment-icon">
               <img src="./icons/requestAppointment.svg" alt="" />

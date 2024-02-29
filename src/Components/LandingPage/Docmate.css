@@ -8,7 +8,6 @@
 .docmatebodyleft{
     width: 55%;
     height: 100%;
-    /* background-color: yellow; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -18,7 +17,6 @@
 .upperdocdiv{
 width: 75%;
 height: 23%;
-/* background-color: red; */
 margin-left: 40px;
 }
 
@@ -203,7 +201,7 @@ flex-direction: column;
     
         }
         .upperdocdiv >p{
-            font-size: 15px;
+            font-size: 10px;
             font-weight: 300;
             }
             

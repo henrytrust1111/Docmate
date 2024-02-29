@@ -1,0 +1,31 @@
+
+.approvesuccessbody{
+    width: 100vw;
+    height: 100vh;
+    background: hsla(0, 0%, 0%, 0.361);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.approvedsuccess{
+    width: 35%;
+    height: 50%;
+    background-color: rgb(228, 219, 219);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+
+    }
+
+.approvesuccess{
+    width: 40%;
+    height: 40%;
+    object-fit: contain;
+}
+
+
+
+

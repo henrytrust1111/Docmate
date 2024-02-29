@@ -1,9 +1,9 @@
 import React from 'react'
 import './Docmate.css'
-import image44 from '/Image4.png'
-import image11 from '/Image1.png'
-import image22 from '/Image2.png'
-import image33 from '/Image3.png'
+import image44 from '../../asset/icons/Image4.png'
+import image11 from '../../asset/icons/Image1.png'
+import image22 from '../../asset/icons/Image2.png'
+import image33 from '../../asset/icons/Image3.png'
 
 const Docmate = () => {
   return (

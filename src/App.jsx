@@ -6,6 +6,7 @@ import {
   createBrowserRouter,
 } from "react-router-dom";
 import "./App.css";
+import Passwordresetsuc from "./Components/Passwordresestsuccesspage/Passwordresetsuc";
 import Contactus from "./Components/Contactuspage/Contactus";
 import PaymentMethod from "./Components/BankTransfer/PaymentMethod";
 import AdminDashboard from "./Components/Dashboard/AdminDashboard";
@@ -17,6 +18,7 @@ import HospitalLogin from "./Components/Onboarding/HospitalLogin";
 import HospitalRegister from "./Components/Onboarding/HospitalRegister";
 import Aboutus from "./Components/AboutUspage/Aboutus";
 import Faqpage from "./Components/Faqpage/Faqpage";
+import Setnewpassword from "./Components/Setnewpassword/Setnewpassword";
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
         <Route path="/contactUs" element={<Contactus />} />
         <Route path="/aboutUs" element={<Aboutus />} />
         <Route path="/faq" element={<Faqpage />} />
+        <Route path="/setPassword" element={<Setnewpassword />} />
+        <Route path="/passwordReset" element={<Passwordresetsuc />} />
         <Route path="/patientRegister" element={<PatientRegister />} />
         <Route path="/patientLogin" element={<PatientLogin />} />
         <Route path="/hospitalLogin" element={<HospitalLogin />} />

@@ -21,7 +21,7 @@ const PatientDashboard = () => {
       <PatientHeader />
       <div className="admin-dashboard-holder">
         <PatientLeftNav />
-        {/* {patientHospitalSelection ? (
+        {patientHospitalSelection ? (
           <PatientHospitalSelection
             setPatientHospitalSelection={setPatientHospitalSelection}
             setPatientHospitalPage={setPatientHospitalPage}
@@ -36,8 +36,8 @@ const PatientDashboard = () => {
           setPatientHospitalSelection={setPatientHospitalSelection}
           setPatientAppointmentForm={setPatientAppointmentForm}
           />
-        ) : null} */}
-        <PatientPayment />
+        ) : null}
+        {/* <PatientPayment /> */}
         {/* <PatientProfilePage /> */}
         {/* <PatientProfileUpdate /> */}
         {/* <PatientAppointmentReview /> */}

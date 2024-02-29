@@ -1,10 +1,26 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 const PatientHospitalSelection = ({setPatientHospitalSelection,setPatientHospitalPage}) => {
     const handleHospitalSelection = ()=>{
         setPatientHospitalSelection(false)
         setPatientHospitalPage(true)
     }
+    const url= "https://doc-mate.onrender.com/all-hospitals";
+
+    useEffect(() => {
+      axios
+        .get(url)
+        .then((response) => {
+          console.log(response);
+        })
+        .catch((error) => {
+          console.log(error);
+          console.log("Error Response:", error.response);
+        });
+    }, [])
+    
+    
   return (
     <div className="admin-dashboard-right">
       <div className="admin-dashboard-right-wrapper">

@@ -3,7 +3,7 @@ import './Services.css'
 
 const Services = () => {
   return (
-    <div className='serivicediv'>
+    <div className='serivicediv' id='serivicediv'>
     <div className="textholder">
         <h1>Our Medical Services</h1>
         <p>At DocMate, we're committed to providing comprehensive healthcare solutions tailored to 

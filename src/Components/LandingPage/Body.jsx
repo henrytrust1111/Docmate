@@ -12,14 +12,14 @@ import HomePageHeader from './HomePageHeader'
 
 const Body = () => {
   return (
-    <div>
-      <HomePageHeader />
+    <div style={{width:"100vw", height:"max-content"}}>
+       <HomePageHeader />
       <Hero/>
       <Services/>
-      <ServiceCard/>
-       <Docmate/>
-     <Testimonial/> 
-    <Pricing/> 
+       <ServiceCard/>
+        <Docmate/>
+      <Testimonial/> 
+     <Pricing/>  
      <Health/>  
     <Footer/>  
     </div>

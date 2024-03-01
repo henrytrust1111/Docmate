@@ -1,10 +1,37 @@
 import React from "react";
+import { useEffect } from "react";
 import "./PatientHospitalPage.css";
+import axios from "axios";
 const PatientHospitalPage = ({setPatientHospitalPage,setPatientAppointmentForm}) => {
   const handleRequestAppointment= ()=>{
     setPatientHospitalPage(false)
     setPatientAppointmentForm(true)
   }
+
+  const id = localStorage.getItem("hospitalID")
+  const url = `https://doc-mate.onrender.com/oneappointment/${id}`;
+  const userInfo = JSON.parse(localStorage.getItem("loggedInUser"));
+  const userToken = userInfo.token;
+  const headers = {
+    Authorization: `Bearer ${userToken}`,
+  };
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(url, { headers });
+        console.log(response.data.data); // Assuming you want to log the response data
+        console.log(response.data); // Assuming you want to log the response data
+        // setHospital(response.data.data);
+      } catch (error) {
+        console.error("Error:", error);
+        // console.error("Error Response:", error.response);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <div className="PatientHospitalPage-container">
       <div className="PatientHospitalPage-wrapper">

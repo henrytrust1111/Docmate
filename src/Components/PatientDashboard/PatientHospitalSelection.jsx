@@ -1,26 +1,58 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const PatientHospitalSelection = ({setPatientHospitalSelection,setPatientHospitalPage}) => {
-    const handleHospitalSelection = ()=>{
-        setPatientHospitalSelection(false)
-        setPatientHospitalPage(true)
-    }
-    const url= "https://doc-mate.onrender.com/all-hospitals";
+const PatientHospitalSelection = ({
+  setPatientHospitalSelection,
+  setPatientHospitalPage,
+}) => {
+  const [hospitals, setHospital] = useState([]);
 
-    useEffect(() => {
-      axios
-        .get(url)
-        .then((response) => {
-          console.log(response);
-        })
-        .catch((error) => {
-          console.log(error);
-          console.log("Error Response:", error.response);
-        });
-    }, [])
-    
-    
+  console.log(hospitals);
+
+
+  const url = "https://doc-mate.onrender.com/all-hospitals";
+  const userInfo = JSON.parse(localStorage.getItem("loggedInUser"));
+  const userToken = userInfo.token;
+  const headers = {
+    Authorization: `Bearer ${userToken}`,
+  };
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(url, { headers });
+        console.log(response.data.data); // Assuming you want to log the response data
+        setHospital(response.data.data);
+      } catch (error) {
+        console.error("Error:", error);
+        // console.error("Error Response:", error.response);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+
+
+  const handleHospitalSelection = (id) => {
+    // const selectedHospital = hospitals.find((hospital) => hospital.id === id);
+    // console.log(selectedHospital);
+    // console.log(id);
+    localStorage.setItem("hospitalID",id)
+    // const fetchData = async () => {
+    //   try {
+    //     const response = await axios.get(url, { headers });
+    //     console.log(response.data.data); // Assuming you want to log the response data
+    //     setHospital(response.data.data);
+    //   } catch (error) {
+    //     console.error("Error:", error);
+    //     // console.error("Error Response:", error.response);
+    //   }
+    // };
+    setPatientHospitalSelection(false);
+    setPatientHospitalPage(true);
+  };
+
   return (
     <div className="admin-dashboard-right">
       <div className="admin-dashboard-right-wrapper">
@@ -34,389 +66,50 @@ const PatientHospitalSelection = ({setPatientHospitalSelection,setPatientHospita
                 <div className="dashboard-attribute-holder">
                   <div className="s-n">S/N</div>
                   <div className="attribute-fixed-width patient-attribute">
-                    HOSPITALS
+                    NAME OF HOSPITAL
                   </div>
                   <div className="attribute-fixed-width email-attribute">
                     ADDRESS
                   </div>
                   <div className="attribute-fixed-width request-attribute">
-                    SPECIALITY
+                    EMAIL
                   </div>
                   <div className="attribute-fixed-width date-attribute">
-                    RANKING
+                    PHONENUMBER
                   </div>
                   <div className="attribute-fixed-width date-attribute"></div>
                 </div>
               </div>
               <div className="dashboard-list-wrapper">
-                <div className="list-container">
-                  <div className="s-n">1</div>
-                  <div className="attribute-fixed-width patient-profile-record">
-                    <div className="profile-img-view"></div>
-                    <div className="name-view-profile-container">
-                      <p>Micheal Adekunle</p>
-                      <p className="colored-view-profile">View profile</p>
+                {hospitals.map((e, i) => (
+                  <div className="list-container" key={i}>
+                    <div className="s-n">{i + 1}</div>
+                    <div className="attribute-fixed-width patient-profile-record">
+                      {/* <div className="profile-img-view"></div> */}
+                      <div className="name-view-profile-container">
+                        <p>{e.hospitalName}</p>
+                        {/* <p className="colored-view-profile">View profile</p> */}
+                      </div>
+                    </div>
+                    <div className="attribute-fixed-width email-record">
+                      {e.hospitalAddress}
+                    </div>
+                    <div className="attribute-fixed-width request-record">
+                      {e.email}
+                    </div>
+                    <div className="attribute-fixed-width date-record">
+                      {e.phoneNumber}
+                    </div>
+                    <div className="delete-view-btn">
+                      <div
+                        className="delete-button"
+                        onClick={()=>handleHospitalSelection(e._id)}
+                      >
+                        View
+                      </div>
                     </div>
                   </div>
-                  <div className="attribute-fixed-width email-record">
-                    Vivian@gmail.com
-                  </div>
-                  <div className="attribute-fixed-width request-record">
-                    Appointment
-                  </div>
-                  <div className="attribute-fixed-width date-record">
-                    Today, 10 May 2023
-                  </div>
-                  <div className="delete-view-btn">
-                    
-                    <div className="delete-button" onClick={handleHospitalSelection}>View</div>
-                  </div>
-                </div>
-                <div className="list-container">
-                  <div className="s-n">2</div>
-                  <div className="attribute-fixed-width patient-profile-record">
-                    <div className="profile-img-view"></div>
-                    <div className="name-view-profile-container">
-                      <p>Micheal Adekunle</p>
-                      <p className="colored-view-profile">View profile</p>
-                    </div>
-                  </div>
-                  <div className="attribute-fixed-width email-record">
-                    Vivian@gmail.com
-                  </div>
-                  <div className="attribute-fixed-width request-record reschedules">
-                    Reschedules
-                  </div>
-                  <div className="attribute-fixed-width date-record">
-                    Today, 10 May 2023
-                  </div>
-                  <div className="delete-view-btn">
-                    
-                    <div className="delete-button">View</div>
-                  </div>
-                </div>
-                <div className="list-container">
-                  <div className="s-n">3</div>
-                  <div className="attribute-fixed-width patient-profile-record">
-                    <div className="profile-img-view"></div>
-                    <div className="name-view-profile-container">
-                      <p>Micheal Adekunle</p>
-                      <p className="colored-view-profile">View profile</p>
-                    </div>
-                  </div>
-                  <div className="attribute-fixed-width email-record">
-                    Vivian@gmail.com
-                  </div>
-                  <div className="attribute-fixed-width request-record">
-                    Appointment
-                  </div>
-                  <div className="attribute-fixed-width date-record">
-                    Today, 10 May 2023
-                  </div>
-                  <div className="delete-view-btn">
-                    
-                    <div className="delete-button">View</div>
-                  </div>
-                </div>
-                <div className="list-container">
-                  <div className="s-n">4</div>
-                  <div className="attribute-fixed-width patient-profile-record">
-                    <div className="profile-img-view"></div>
-                    <div className="name-view-profile-container">
-                      <p>Micheal Adekunle</p>
-                      <p className="colored-view-profile">View profile</p>
-                    </div>
-                  </div>
-                  <div className="attribute-fixed-width email-record">
-                    Vivian@gmail.com
-                  </div>
-                  <div className="attribute-fixed-width request-record reschedules">
-                    Reschedules
-                  </div>
-                  <div className="attribute-fixed-width date-record">
-                    Today, 10 May 2023
-                  </div>
-                  <div className="delete-view-btn">
-                    
-                    <div className="delete-button">View</div>
-                  </div>
-                </div>
-                <div className="list-container">
-                  <div className="s-n">5</div>
-                  <div className="attribute-fixed-width patient-profile-record">
-                    <div className="profile-img-view"></div>
-                    <div className="name-view-profile-container">
-                      <p>Micheal Adekunle</p>
-                      <p className="colored-view-profile">View profile</p>
-                    </div>
-                  </div>
-                  <div className="attribute-fixed-width email-record">
-                    Vivian@gmail.com
-                  </div>
-                  <div className="attribute-fixed-width request-record">
-                    Appointment
-                  </div>
-                  <div className="attribute-fixed-width date-record">
-                    Today, 10 May 2023
-                  </div>
-                  <div className="delete-view-btn">
-                    
-                    <div className="delete-button">View</div>
-                  </div>
-                </div>
-                <div className="list-container">
-                  <div className="s-n">6</div>
-                  <div className="attribute-fixed-width patient-profile-record">
-                    <div className="profile-img-view"></div>
-                    <div className="name-view-profile-container">
-                      <p>Micheal Adekunle</p>
-                      <p className="colored-view-profile">View profile</p>
-                    </div>
-                  </div>
-                  <div className="attribute-fixed-width email-record">
-                    Vivian@gmail.com
-                  </div>
-                  <div className="attribute-fixed-width request-record reschedules">
-                    Reschedules
-                  </div>
-                  <div className="attribute-fixed-width date-record">
-                    Today, 10 May 2023
-                  </div>
-                  <div className="delete-view-btn">
-                    
-                    <div className="delete-button">View</div>
-                  </div>
-                </div>
-                <div className="list-container">
-                  <div className="s-n">7</div>
-                  <div className="attribute-fixed-width patient-profile-record">
-                    <div className="profile-img-view"></div>
-                    <div className="name-view-profile-container">
-                      <p>Micheal Adekunle</p>
-                      <p className="colored-view-profile">View profile</p>
-                    </div>
-                  </div>
-                  <div className="attribute-fixed-width email-record">
-                    Vivian@gmail.com
-                  </div>
-                  <div className="attribute-fixed-width request-record">
-                    Appointment
-                  </div>
-                  <div className="attribute-fixed-width date-record">
-                    Today, 10 May 2023
-                  </div>
-                  <div className="delete-view-btn">
-                    
-                    <div className="delete-button">View</div>
-                  </div>
-                </div>
-                <div className="list-container">
-                  <div className="s-n">8</div>
-                  <div className="attribute-fixed-width patient-profile-record">
-                    <div className="profile-img-view"></div>
-                    <div className="name-view-profile-container">
-                      <p>Micheal Adekunle</p>
-                      <p className="colored-view-profile">View profile</p>
-                    </div>
-                  </div>
-                  <div className="attribute-fixed-width email-record">
-                    Vivian@gmail.com
-                  </div>
-                  <div className="attribute-fixed-width request-record reschedules">
-                    Reschedules
-                  </div>
-                  <div className="attribute-fixed-width date-record">
-                    Today, 10 May 2023
-                  </div>
-                  <div className="delete-view-btn">
-                    
-                    <div className="delete-button">View</div>
-                  </div>
-                </div>
-                <div className="list-container">
-                  <div className="s-n">8</div>
-                  <div className="attribute-fixed-width patient-profile-record">
-                    <div className="profile-img-view"></div>
-                    <div className="name-view-profile-container">
-                      <p>Micheal Adekunle</p>
-                      <p className="colored-view-profile">View profile</p>
-                    </div>
-                  </div>
-                  <div className="attribute-fixed-width email-record">
-                    Vivian@gmail.com
-                  </div>
-                  <div className="attribute-fixed-width request-record reschedules">
-                    Reschedules
-                  </div>
-                  <div className="attribute-fixed-width date-record">
-                    Today, 10 May 2023
-                  </div>
-                  <div className="delete-view-btn">
-                    
-                    <div className="delete-button">View</div>
-                  </div>
-                </div>
-                <div className="list-container">
-                  <div className="s-n">8</div>
-                  <div className="attribute-fixed-width patient-profile-record">
-                    <div className="profile-img-view"></div>
-                    <div className="name-view-profile-container">
-                      <p>Micheal Adekunle</p>
-                      <p className="colored-view-profile">View profile</p>
-                    </div>
-                  </div>
-                  <div className="attribute-fixed-width email-record">
-                    Vivian@gmail.com
-                  </div>
-                  <div className="attribute-fixed-width request-record reschedules">
-                    Reschedules
-                  </div>
-                  <div className="attribute-fixed-width date-record">
-                    Today, 10 May 2023
-                  </div>
-                  <div className="delete-view-btn">
-                    
-                    <div className="delete-button">View</div>
-                  </div>
-                </div>
-                <div className="list-container">
-                  <div className="s-n">8</div>
-                  <div className="attribute-fixed-width patient-profile-record">
-                    <div className="profile-img-view"></div>
-                    <div className="name-view-profile-container">
-                      <p>Micheal Adekunle</p>
-                      <p className="colored-view-profile">View profile</p>
-                    </div>
-                  </div>
-                  <div className="attribute-fixed-width email-record">
-                    Vivian@gmail.com
-                  </div>
-                  <div className="attribute-fixed-width request-record reschedules">
-                    Reschedules
-                  </div>
-                  <div className="attribute-fixed-width date-record">
-                    Today, 10 May 2023
-                  </div>
-                  <div className="delete-view-btn">
-                    
-                    <div className="delete-button">View</div>
-                  </div>
-                </div>
-                <div className="list-container">
-                  <div className="s-n">8</div>
-                  <div className="attribute-fixed-width patient-profile-record">
-                    <div className="profile-img-view"></div>
-                    <div className="name-view-profile-container">
-                      <p>Micheal Adekunle</p>
-                      <p className="colored-view-profile">View profile</p>
-                    </div>
-                  </div>
-                  <div className="attribute-fixed-width email-record">
-                    Vivian@gmail.com
-                  </div>
-                  <div className="attribute-fixed-width request-record reschedules">
-                    Reschedules
-                  </div>
-                  <div className="attribute-fixed-width date-record">
-                    Today, 10 May 2023
-                  </div>
-                  <div className="delete-view-btn">
-                    
-                    <div className="delete-button">View</div>
-                  </div>
-                </div>
-                <div className="list-container">
-                  <div className="s-n">8</div>
-                  <div className="attribute-fixed-width patient-profile-record">
-                    <div className="profile-img-view"></div>
-                    <div className="name-view-profile-container">
-                      <p>Micheal Adekunle</p>
-                      <p className="colored-view-profile">View profile</p>
-                    </div>
-                  </div>
-                  <div className="attribute-fixed-width email-record">
-                    Vivian@gmail.com
-                  </div>
-                  <div className="attribute-fixed-width request-record reschedules">
-                    Reschedules
-                  </div>
-                  <div className="attribute-fixed-width date-record">
-                    Today, 10 May 2023
-                  </div>
-                  <div className="delete-view-btn">
-                    
-                    <div className="delete-button">View</div>
-                  </div>
-                </div>
-                <div className="list-container">
-                  <div className="s-n">8</div>
-                  <div className="attribute-fixed-width patient-profile-record">
-                    <div className="profile-img-view"></div>
-                    <div className="name-view-profile-container">
-                      <p>Micheal Adekunle</p>
-                      <p className="colored-view-profile">View profile</p>
-                    </div>
-                  </div>
-                  <div className="attribute-fixed-width email-record">
-                    Vivian@gmail.com
-                  </div>
-                  <div className="attribute-fixed-width request-record reschedules">
-                    Reschedules
-                  </div>
-                  <div className="attribute-fixed-width date-record">
-                    Today, 10 May 2023
-                  </div>
-                  <div className="delete-view-btn">
-                    
-                    <div className="delete-button">View</div>
-                  </div>
-                </div>
-                <div className="list-container">
-                  <div className="s-n">8</div>
-                  <div className="attribute-fixed-width patient-profile-record">
-                    <div className="profile-img-view"></div>
-                    <div className="name-view-profile-container">
-                      <p>Micheal Adekunle</p>
-                      <p className="colored-view-profile">View profile</p>
-                    </div>
-                  </div>
-                  <div className="attribute-fixed-width email-record">
-                    Vivian@gmail.com
-                  </div>
-                  <div className="attribute-fixed-width request-record reschedules">
-                    Reschedules
-                  </div>
-                  <div className="attribute-fixed-width date-record">
-                    Today, 10 May 2023
-                  </div>
-                  <div className="delete-view-btn">
-                    
-                    <div className="delete-button">View</div>
-                  </div>
-                </div>
-                <div className="list-container">
-                  <div className="s-n">8</div>
-                  <div className="attribute-fixed-width patient-profile-record">
-                    <div className="profile-img-view"></div>
-                    <div className="name-view-profile-container">
-                      <p>Micheal Adekunle</p>
-                      <p className="colored-view-profile">View profile</p>
-                    </div>
-                  </div>
-                  <div className="attribute-fixed-width email-record">
-                    Vivian@gmail.com
-                  </div>
-                  <div className="attribute-fixed-width request-record reschedules">
-                    Reschedules
-                  </div>
-                  <div className="attribute-fixed-width date-record">
-                    Today, 10 May 2023
-                  </div>
-                  <div className="delete-view-btn">
-                    
-                    <div className="delete-button">View</div>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
           </div>

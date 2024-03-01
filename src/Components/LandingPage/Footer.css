@@ -171,12 +171,22 @@ font-family: Poppins;
 }
 
 .socialimg{
-    width: 10%;
-    height: 100%;
+    /* width: 10%; */
+    width: 30px;
+    /* height: 100%; */
+    height: 30px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    /* background-color: blue; */
+    padding: 7px;
 }
+.socialimg img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
 .socialtxt{
     width: 80%;
     height: 100%;

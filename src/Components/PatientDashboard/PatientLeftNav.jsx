@@ -1,6 +1,11 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const PatientLeftNav = () => {
+  const nav = useNavigate()
+  const handleLogout = ()=>{
+    nav("/patientLogin")
+  }
   return (
     <>
         <div className="admin-left-nav">
@@ -30,7 +35,7 @@ const PatientLeftNav = () => {
               <img src="/icons/logout.svg" alt="dashboard" className="black-payment" />
               <img src="/icons/colored-logout.svg" alt="dashboard" className="colored-payment" />
             </div>
-            <div className="dashboard-text-container">
+            <div className="dashboard-text-container" onClick={handleLogout}>
               <p>Logout</p>
             </div>
           </div>

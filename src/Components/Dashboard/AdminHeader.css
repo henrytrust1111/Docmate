@@ -122,6 +122,10 @@
   background-color: #373737;
 }
 
+.profile-image-holder p{
+  font-size: 12px;
+}
+
 .mobile-search-bar {
   display: none;
   max-width: 200px;

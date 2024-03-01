@@ -161,7 +161,7 @@ const Faqpage = () => {
           </div>
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

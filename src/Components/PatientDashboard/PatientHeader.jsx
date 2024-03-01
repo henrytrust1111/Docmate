@@ -11,6 +11,9 @@ const PatientHeader = () => {
     setSearchValue("");
     setSearch(false);
   };
+  const userInfo = JSON.parse(localStorage.getItem("loggedInUser"));
+  const welcomeMessage = userInfo.message
+  console.log(welcomeMessage);
   return (
     <>
       <header className="dashboard-header">
@@ -81,7 +84,7 @@ const PatientHeader = () => {
             </div>
             <div className="dashboard-profile">
               <div className="profile-image-holder"></div>
-              <p>Hi, Adekunle</p>
+              <p style={{fontSize:"10px"}}>{welcomeMessage}</p>
             </div>
           </div>
         </div>

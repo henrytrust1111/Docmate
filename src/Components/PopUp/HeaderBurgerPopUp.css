@@ -1,0 +1,8 @@
+.HeaderBurgerPopUpPage{
+    width: 50%;
+    height: 100vh;
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    color: blue;
+}

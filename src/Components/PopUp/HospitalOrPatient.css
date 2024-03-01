@@ -1,0 +1,17 @@
+.HospitalOrPatientPage{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: aliceblue;
+    color: #2c7da0;
+    border-radius: 10px;
+    padding: 10px;
+    position: absolute;
+    bottom: -82px;
+    right: 30px;
+}
+
+.HospitalOrPatientPage p:hover{
+    color: #88d4f5;
+    cursor: pointer;
+}

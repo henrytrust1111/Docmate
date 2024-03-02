@@ -8,11 +8,12 @@ import Pricing from './Pricing'
 import Health from './Health'
 import Footer from './Footer'
 import HomePageHeader from './HomePageHeader'
+import "./Body.css"
 
 
 const Body = () => {
   return (
-    <div style={{width:"100vw", height:"max-content"}}>
+    <div className='bodyHolder'>
        <HomePageHeader />
       <Hero/>
       <Services/>

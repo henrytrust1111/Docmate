@@ -14,7 +14,7 @@ const Pricing = () => {
       </section>
       </div>
       <section className='allcardsdiv'>
-      <div className="pricingcarddiv">
+      <div className="pricingcarddiv pricingcarddivFirst">
         <article className='moneydiv'>
           <h1>#1,000</h1>
           <p>Basic plan</p>
@@ -49,7 +49,7 @@ const Pricing = () => {
           <button className='purchasebtn'>Purchase Your Plan</button>
         </section>
       </div>
-      <div className="pricingcarddiv">
+      <div className="pricingcarddiv pricingcarddivFirst2">
         <article className='moneydiv'>
           <h1>#3,000</h1>
           <p>Standard plan</p>

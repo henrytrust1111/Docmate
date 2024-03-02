@@ -1,10 +1,14 @@
 .mainHeader {
   width: 100vw;
-  height: 10vh;
+  height: 68px;
   background-color: white;
-  margin-bottom: 10px;
+  color: #000;
+  margin-bottom: 0px;
   display: flex;
   position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
   z-index: 4;
   font-family: poppins;
 }
@@ -113,7 +117,9 @@ nav:hover {
     display: flex;
     width: 40px;
     height: 50%;
-    cursor: pointer;  
+    cursor: pointer; 
+    margin-right: 20px;
+    /* background-color: green;  */
   }
 
   .Mainheaderlogo {

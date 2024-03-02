@@ -1,5 +1,5 @@
 .testimonalbody{
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background-color: #ECEAF7;
     display: flex;
@@ -7,7 +7,6 @@
     gap: 20px;
     justify-content: center;
     flex-direction: column;
-
 }
 
 .testimonaupperdiv{
@@ -42,7 +41,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 20px;
     
 }
 
@@ -53,6 +52,7 @@
     box-shadow: 0px 0px 20px 1px lightgrey;
     display: flex;
     border-radius: 10px;
+    gap: 15px;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -65,6 +65,7 @@
     /* background-color: yellow; */
     display: flex;
     align-items: center;
+    gap: 15px;
     /* justify-content: center; */
 
 
@@ -86,13 +87,10 @@
     width:100%;
     height: 100%;
     object-fit: cover;
-    
-
 }
 
 .midcarrddiv{
     width: 80%;
-    height: 20%;
     /* background-color: red; */
     display: flex;
     align-items: center;
@@ -100,9 +98,6 @@
     font-size: 15px;
     font-family: Poppins;
     font-weight: 700;
-    
-}
-.midcarrddiv >{
     
 }
 
@@ -113,54 +108,87 @@
 }
 
 .docmatetextdiv{
-    width: 75%;
-    height: 45%;
+    width: 80%;
     /* background-color: aqua; */
     display: flex;
-    gap: 10px;
+    /* gap: 10px; */
     align-items: center;
     justify-content: center;
     font-size: 15px;
-    font-weight: 200;
-    font-family: Rubik;
-    text-align: center;
+    font-weight: 400;
+    line-height: 1.5;
+    /* margin-top: 10px; */
+    /* text-align: center; */
 }
 
-@media screen and(width:450px) {
+@media screen and (max-width:820px) {
     .testimonalbody{
-        width: 100vw;
-        height: 100vh;
-        background-color: #382d77;
-        display: flex;
-        align-items: center;
-        gap: 70px;
-        justify-content: center;
-        flex-direction: column;
-    
+        width: 100%;
+        height: max-content;
+        padding-block: 20px;
     }
 
-    .testimonaupperdiv{
-        width: 80%;
-        height: 30%;
-        background-color: red;
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-        flex-direction: column;
-        gap: 8px;
+    .testimonalcarddiv{
+        width: 100%;
+        height: max-content;
+        flex-direction: column;   
+    }
+
+    .carrddiv{
+        width: 50%;
+        height: 370px;
+    }
+
+    .testimonialsP{
+        line-height: 1.5;
+        color: #000;
+        /* margin-top: 10px; */
+        /* text-align: center; */
+    }
+
+}
+@media screen and (max-width:780px) {
+    .testimonalbody{
+        width: 100%;
+        height: max-content;
+        padding-block: 40px;
+    }
+
+    .carrddiv{
+        width: 70%;
+        height: 350px;
+    }
+
+    .docmatetextdiv{
+        color: #303030;
+    }
+
+
+    .leftborderdiv{
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        /* background-color: green; */
     
     }
-    .testimonaupperdiv > p{
-       font-size: 20px;
-       font-weight: 400;
-       font-family: Poppins;
-       color:#2c7da0 ;
+    .leftborderdiv >img{
+        width:100%;
+        height: 100%;
+        object-fit: cover;
     }
-    
-    .testimonaupperdiv > h1{
-       font-size: 30px;
-       font-weight: 500;
-       font-family: Poppins;
-     
+
+}
+@media screen and (max-width:500px) {
+    .carrddiv{
+        width: 90%;
+        height: 350px;
     }
+
+    .testimonaupperdiv h1{
+        font-size: 26px;
+    }
+
+}
+@media screen and(max-width:820px) {
+
 }

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./HomePageHeader.css";
+import { Link } from "react-scroll";
 // import DocMate from "icons/docmate1232.png";
 import { useNavigate } from "react-router-dom";
 import HospitalOrPatient from "../PopUp/HospitalOrPatient";
@@ -82,7 +83,7 @@ const HomePageHeader = () => {
           </div>
         </div>
       </div>
-      {menuPop ? <HeaderBurgerPopUp /> : null}
+      {menuPop ? <HeaderBurgerPopUp  setMenuPop={setMenuPop}/> : null}
     </>
   );
 };

@@ -8,27 +8,32 @@ const HeaderBurgerPopUp = ({setMenuPop}) => {
   const [popUp1, setPopUp1] = useState(false);
   console.log(setMenuPop);
   const nav = useNavigate();
-  const handleSignUp = () => {
-    // nav("/patientRegister");
-    setPopUp1(false);
-    setPopUp(!popUp);
+  const handleHospitalRegister = () => {
+    nav("/hospitalRegister");
+    setMenuPop(false)
+    // setPopUp1(false);
+    // setPopUp(!popUp);
   };
-  const handleSignIn = () => {
-    // nav("/patientRegister");
-    setPopUp(false);
-    setPopUp1(!popUp1);
+  const handlePatientRegister = () => {
+    nav("/patientRegister");
+    setMenuPop(false)
+    // setPopUp(false);
+    // setPopUp1(!popUp1);
   };
   const handleAboutUs = () => {
     nav("/aboutUs");
+    setMenuPop(false)
   };
   const handleFaq = () => {
     nav("/faq");
   };
   const handleContactUs = () => {
     nav("/contactUs");
+    setMenuPop(false)
   };
   const handleHome = () => {
     nav("/");
+    setMenuPop(false)
   };
   const handleClose = ()=>{
     setMenuPop(false)
@@ -40,12 +45,12 @@ const HeaderBurgerPopUp = ({setMenuPop}) => {
           <ImCancelCircle onClick={handleClose}/>
         </div>
         <div className="HeaderBurgerPopUpPageContent">
-          <div>Home</div>
-          <div>About Us</div>
-          <div>Pricing</div>
-          <div>Faq</div>
-          <div>Patient Register</div>
-          <div>Hospital Register</div>
+          <div onClick={handleHome}>Home</div>
+          <div onClick={handleAboutUs}>About Us</div>
+          <div >Pricing</div>
+          <div onClick={handleFaq}>FAQ</div>
+          <div onClick={handlePatientRegister}>Patient Register</div>
+          <div onClick={handleHospitalRegister}>Hospital Register</div>
         </div>
       </div>
     </div>

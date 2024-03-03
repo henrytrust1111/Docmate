@@ -20,7 +20,7 @@ const Testimonial = () => {
             <div className="leftborderdiv">
               <img src={image} alt="" />{" "}
             </div>
-            <h1>Kayla Schofield</h1>
+            <h1>Adekunle Micheal</h1>
           </div>
           <div className="midcarrddiv">
             <p>Overall rating</p>
@@ -41,7 +41,7 @@ const Testimonial = () => {
             <div className="leftborderdiv">
               <img src={image} alt="" />{" "}
             </div>
-            <h1>Kayla Schofield</h1>
+            <h1>Godwin </h1>
           </div>
 
           <div className="midcarrddiv">
@@ -64,7 +64,7 @@ const Testimonial = () => {
             <div className="leftborderdiv">
               <img src={image} alt="" />{" "}
             </div>
-            <h1>Kayla Schofield</h1>
+            <h1>Rose Adoyi</h1>
           </div>
 
           <div className="midcarrddiv">

@@ -1,15 +1,25 @@
 .mainHeader {
-  width: 100vw;
+  width: 100%;
   height: 68px;
-  background-color: white;
+  background-color: #fff;
   color: #000;
-  margin-bottom: 0px;
+  display: flex;
+  justify-content: center;
   display: flex;
   position: fixed;
   top: 0px;
   left: 0px;
   right: 0px;
   z-index: 4;
+}
+
+.mainHeaderWrapper{
+  height: 100%;
+  width: 90%;
+  color: #272727;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
   font-family: poppins;
 }
 
@@ -18,7 +28,7 @@
 }
 
 .Mainheaderlogo {
-  width: 15%;
+  width: 10%;
   height: 100%;
   /* background-color: aquamarine;  */
   display: flex;
@@ -29,23 +39,25 @@
   width: 80%;
   height: 80%;
   object-fit: contain;
-  margin-left: 80px;
   justify-content: center;
   display: flex;
+  /* background-color: red; */
 }
 
 .headerhome {
-  width: 50%;
+  width: 65%;
   height: 100%;
   /* background-color: #dcd8d8; */
   display: flex;
   align-items: center;
+  /* justify-content: center; */
+  /* gap: 40px; */
   justify-content: space-evenly;
 }
 
 nav {
   font-size: 15px;
-  font-weight: 200;
+  font-weight: 500;
   font-family: poppins;
   cursor: pointer;
 }
@@ -61,12 +73,12 @@ nav:hover {
   /* background-color: #7fffd4; */
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   gap: 20px;
 }
 
 .headsignup {
-  width: 120px;
+  min-width: 120px;
   height: 60%;
   border-radius: 5px;
   border: 1.5px solid #2c7da0;
@@ -74,39 +86,59 @@ nav:hover {
   font-size: 20px;
   font-family: poppins;
   color: #2c7da0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
   background-color: white;
   position: relative;
-}
-.headsignup:hover{
-  /* border: 2px solid #2c7da0; */
+  outline: none;
   cursor: pointer;
-  border: none;
-  background-color: #2c7da0;
-  color: #fff;
+}
+
+.headsignupIcon{
+  width: 18px;
+  height: 18px;
+}
+
+.headsignupIcon img{
+  width: 100%;
+  height: 100%;
+}
+
+.headsignupIcon2{
+  display: none;
 }
 
 .headlogin {
-  width: 120px;
+  min-width: 120px;
   height: 60%;
   border: none;
   background-color: #2c7da0;
   border-radius: 5px;
   box-shadow: 2px 2px 4px #bcbaba;
   font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
   font-family: poppins;
   color: white;
   position: relative;
+  outline: none;
+  cursor: pointer;
 }
 
-.headlogin:hover{
-  cursor: pointer;
-  border: 1.5px solid #2c7da0;
-  background-color: #fff;
-  color: #2c7da0;
+/* .headlogin:hover{
+  
+} */
+
+.headsignupIcon4{
+  display: none;
 }
 
 @media screen and (max-width: 820px) {
-  .mainHeader {
+  .mainHeaderWrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -116,9 +148,9 @@ nav:hover {
   .landingPageBurgerMenu {
     display: flex;
     width: 40px;
-    height: 50%;
+    height: 100%;
     cursor: pointer; 
-    margin-right: 20px;
+    /* margin-right: 20px; */
     /* background-color: green;  */
   }
 
@@ -139,7 +171,7 @@ nav:hover {
 }
 
 @media screen and (max-width: 428px) {
-  .mainHeader {
+  .mainHeaderWrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;

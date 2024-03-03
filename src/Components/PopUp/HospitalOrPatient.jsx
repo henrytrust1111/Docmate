@@ -1,5 +1,7 @@
 import React from 'react'
 import "./HospitalOrPatient.css"
+import { MdLocalHospital } from "react-icons/md";
+import { FaPersonCirclePlus } from "react-icons/fa6";
 import { useNavigate } from 'react-router-dom'
 
 const HospitalOrPatient = () => {
@@ -12,8 +14,14 @@ const HospitalOrPatient = () => {
     }
   return (
     <div className='HospitalOrPatientPage'>
-        <p onClick={handlePatient}>Patient</p>
-        <p onClick={handleHospital}>Hospital</p>
+        <div className='HospitalOrPatientPageA' onClick={handlePatient}>
+        <FaPersonCirclePlus />
+          <p>patient</p>
+        </div>
+        <div className='HospitalOrPatientPageA' onClick={handleHospital}>
+        <MdLocalHospital />
+          <p>Hospital</p>
+        </div>
     </div>
   )
 }

@@ -1,17 +1,41 @@
 .HospitalOrPatientPage{
+    height: 100px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 20px;
-    background-color: aliceblue;
+    background-color: #fff;
     color: #2c7da0;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 10px;
     position: absolute;
-    bottom: -82px;
-    right: 30px;
+    top: 40px;
+    /* bottom: -82px; */
+    right: 0px;
+    animation: slideIn 0.7s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .HospitalOrPatientPage p:hover{
     color: #88d4f5;
     cursor: pointer;
+}
+
+.HospitalOrPatientPageA{
+    display: flex;
+    gap: 10px;
+}
+
+.HospitalOrPatientPageA:hover{
+    color: #88d4f5;
 }

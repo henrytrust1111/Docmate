@@ -37,7 +37,7 @@ const PatientHospitalSelection = ({
   const handleHospitalSelection = (id) => {
     // const selectedHospital = hospitals.find((hospital) => hospital.id === id);
     // console.log(selectedHospital);
-    // console.log(id);
+    console.log(id);
     localStorage.setItem("hospitalID",id)
     // const fetchData = async () => {
     //   try {
@@ -81,7 +81,7 @@ const PatientHospitalSelection = ({
                 </div>
               </div>
               <div className="dashboard-list-wrapper">
-                {hospitals.map((e, i) => (
+                {hospitals?.map((e, i) => (
                   <div className="list-container" key={i}>
                     <div className="s-n">{i + 1}</div>
                     <div className="attribute-fixed-width patient-profile-record">

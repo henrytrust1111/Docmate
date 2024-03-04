@@ -15,7 +15,7 @@ const AdminHeader = () => {
       <header className="dashboard-header">
         <div className="dashboard-header-wrapper">
           <div className="admin-dashboard-logo">
-            <img src="./DocMate.png" alt="logo" className="dashboard-logo" />
+            <img src="./icons/DocMate.png" alt="logo" className="dashboard-logo" />
             <img
               src="/icons/burgerMenu.svg"
               alt="menu"

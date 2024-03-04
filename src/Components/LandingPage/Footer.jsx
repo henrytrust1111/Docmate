@@ -67,7 +67,7 @@ const Footer = () => {
         </div>
         <div className="fourthfooterdiv">
           <div className="quicklink">
-            <h1 >Social Links</h1>
+            <h1>Social Links</h1>
           </div>
           <div className="quicklinktext soso">
             <div className="socials">

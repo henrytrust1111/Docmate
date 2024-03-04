@@ -15,12 +15,17 @@ const PatientDashboard = () => {
     useState(true);
   const [patientHospitalPage, setPatientHospitalPage] = useState(false);
   const [patientAppointmentForm, setPatientAppointmentForm] = useState(false);
+  const [patientProfilePage, setPatientProfilePage] = useState(false);
 
   return (
     <div className="admin-dashboard-container">
       <PatientHeader />
       <div className="admin-dashboard-holder">
-        <PatientLeftNav />
+        <PatientLeftNav
+          setPatientHospitalSelection={setPatientHospitalSelection}
+          setPatientHospitalPage={setPatientHospitalPage}
+          setPatientProfilePage={setPatientProfilePage}
+         />
         {patientHospitalSelection ? (
           <PatientHospitalSelection
             setPatientHospitalSelection={setPatientHospitalSelection}
@@ -36,9 +41,8 @@ const PatientDashboard = () => {
           setPatientHospitalSelection={setPatientHospitalSelection}
           setPatientAppointmentForm={setPatientAppointmentForm}
           />
-        ) : null}
+        ) :patientProfilePage? <PatientProfilePage />:null}
         {/* <PatientPayment /> */}
-        {/* <PatientProfilePage /> */}
         {/* <PatientProfileUpdate /> */}
         {/* <PatientAppointmentReview /> */}
         {/* <PatientRescheduleForm /> */}

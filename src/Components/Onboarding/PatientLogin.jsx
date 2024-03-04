@@ -88,7 +88,7 @@ const PatientLogin = () => {
             </h3>
           </div>
           <div className="btnnddiv">
-            <button className="submitbtn" onClick={HandleSubmit}>
+            <button className="submitbtn" onClick={HandleSubmit}> 
               {isLoading === true ? (
                 <div className="loader">
                   <Oval

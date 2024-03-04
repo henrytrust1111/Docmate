@@ -4,6 +4,7 @@ import {
   Routes,
   RouterProvider,
   createBrowserRouter,
+  HashRouter,
 } from "react-router-dom";
 import "./App.css";
 import Passwordresetsuc from "./Components/Passwordresestsuccesspage/Passwordresetsuc";
@@ -23,7 +24,7 @@ import Setnewpassword from "./Components/Setnewpassword/Setnewpassword";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Body />} />
         <Route path="/contactUs" element={<Contactus />} />
@@ -40,31 +41,8 @@ function App() {
         <Route path="/admin" element={<AdminDashboard />} />
         <Route path="/payment" element={<PaymentMethod />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
 export default App;
-
-// const route=createBrowserRouter([
-//   {
-//     path:"/",
-//     element:<AdminDashboard />
-//   },
-//   {
-//     path:"/patientDashboard",
-//     element:<PatientDashboard/>
-//   },
-//   {
-//     path:"/payment",
-//     element:<PaymentMethod/>
-//   }
-// ])
-
-// function App() {
-//   return (
-//     <RouterProvider  router={route}/>
-//   )
-// }
-
-// export default App

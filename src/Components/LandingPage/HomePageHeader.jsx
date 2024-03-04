@@ -8,6 +8,10 @@ import HeaderBurgerPopUp from "../PopUp/HeaderBurgerPopUp";
 
 const HomePageHeader = () => {
   const [popUp, setPopUp] = useState(false);
+  const [activeHome, setActiveHome] = useState(true);
+  const [activeAboutUs, setActiveAboutUs] = useState(false);
+  const [activeFaq, setActiveFaq] = useState(false);
+  const [activeContactUs, setActiveContactUs] = useState(false);
   const [menuPop, setMenuPop] = useState(false);
   const [popUp1, setPopUp1] = useState(false);
   const nav = useNavigate();
@@ -22,17 +26,34 @@ const HomePageHeader = () => {
     setPopUp1(!popUp1);
   };
   const handleAboutUs = () => {
+    setActiveAboutUs(true);
+    setActiveContactUs(false);
+    setActiveFaq(false);
+    setActiveHome(false);
     nav("/aboutUs");
   };
   const handleFaq = () => {
+    setActiveAboutUs(false);
+    setActiveContactUs(false);
+    setActiveFaq(true);
+    setActiveHome(false);
     nav("/faq");
   };
   const handleContactUs = () => {
+    setActiveAboutUs(false);
+    setActiveContactUs(true);
+    setActiveFaq(false);
+    setActiveHome(false);
     nav("/contactUs");
   };
   const handleHome = () => {
+    setActiveAboutUs(false);
+    setActiveContactUs(false);
+    setActiveFaq(false);
+    setActiveHome(true);
     nav("/");
   };
+  
 
   const handleMenu = () => {
     setMenuPop(!menuPop);
@@ -46,11 +67,31 @@ const HomePageHeader = () => {
           </div>
 
           <div className="headerhome">
-            <nav onClick={handleHome}>Home</nav>
-            <nav onClick={handleAboutUs}>About Us</nav>
-            <nav>Pricing</nav>
-            <nav onClick={handleFaq}>FAQ's</nav>
-            <nav onClick={handleContactUs}>Contact Us</nav>
+            <nav
+              onClick={()=>handleHome()}
+              style={activeHome ? { color: "#2c7da0" } : null}
+            >
+              Home
+            </nav>
+            <nav
+              onClick={()=>handleAboutUs()}
+              style={activeAboutUs ? { color: "#2c7da0" } : {color:"#272727"}}
+            >
+              About Us
+            </nav>
+            <Link to="price" spy={true} smooth={true} offset={50} duration={500} onClick={handleHome}><nav>Pricing</nav></Link>
+            <nav
+              onClick={handleFaq}
+              style={activeFaq ? { color: "#2c7da0" } : null}
+            >
+              FAQ's
+            </nav>
+            <nav
+              onClick={handleContactUs}
+              style={activeContactUs ? { color: "#2c7da0" } : null}
+            >
+              Contact Us
+            </nav>
           </div>
           <div className="registerbody">
             <button className="headsignup" onClick={handleSignUp}>
@@ -83,7 +124,7 @@ const HomePageHeader = () => {
           </div>
         </div>
       </div>
-      {menuPop ? <HeaderBurgerPopUp  setMenuPop={setMenuPop}/> : null}
+      {menuPop ? <HeaderBurgerPopUp setMenuPop={setMenuPop} /> : null}
     </>
   );
 };

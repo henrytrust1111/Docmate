@@ -1,15 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { useEffect } from "react";
 import "./PatientHospitalPage.css";
 import axios from "axios";
-const PatientHospitalPage = ({setPatientHospitalPage,setPatientAppointmentForm}) => {
-  const handleRequestAppointment= ()=>{
-    setPatientHospitalPage(false)
-    setPatientAppointmentForm(true)
-  }
+const PatientHospitalPage = ({
+  setPatientHospitalPage,
+  setPatientAppointmentForm,
+}) => {
+  const [hospital,setHospital] = useState()
+  const handleRequestAppointment = () => {
+    setPatientHospitalPage(false);
+    setPatientAppointmentForm(true);
+  };
+  console.log(hospital);
 
-  const id = localStorage.getItem("hospitalID")
-  const url = `https://doc-mate.onrender.com/oneappointment/${id}`;
+  const id = localStorage.getItem("hospitalID");
+  const url = `https://doc-mate.onrender.com/one-hospital/${id}`;
   const userInfo = JSON.parse(localStorage.getItem("loggedInUser"));
   const userToken = userInfo.token;
   const headers = {
@@ -20,9 +25,9 @@ const PatientHospitalPage = ({setPatientHospitalPage,setPatientAppointmentForm})
     const fetchData = async () => {
       try {
         const response = await axios.get(url, { headers });
-        console.log(response.data.data); // Assuming you want to log the response data
-        console.log(response.data); // Assuming you want to log the response data
-        // setHospital(response.data.data);
+        console.log(response.data.data);
+        console.log(response.data);
+        setHospital(response.data.data);
       } catch (error) {
         console.error("Error:", error);
         // console.error("Error Response:", error.response);
@@ -35,7 +40,7 @@ const PatientHospitalPage = ({setPatientHospitalPage,setPatientAppointmentForm})
   return (
     <div className="PatientHospitalPage-container">
       <div className="PatientHospitalPage-wrapper">
-        <h3>Welcome to Vivian's Hospital</h3>
+        <h3>Welcome to {hospital?.hospitalName}</h3>
         <div className="request-view-container" id="request-view-container">
           <div
             className="patient-request-view-box"

@@ -63,10 +63,12 @@ flex-direction: column;
 align-items: center;
 border: 1px solid#2c7da0;
 gap: 20px;
+border-top-right-radius: 15px;
+border-bottom-right-radius: 15px;
 
 }
 
-.signupdiv{
+/* .signupdiv{
  width: 85%;
  height: 10%;
  display: flex;
@@ -77,10 +79,28 @@ gap: 20px;
   font-size: 22px;
   font-family: Poppins;
   font-weight: 500;
+} */
+
+.rightpatentlogin >h1{
+  font-size: 22px;
+  font-family: Poppins;
+  font-weight: 500;
+}
+
+.forgotpass > h3{
+  font-size: 13px;
+  font-family: Poppins;
+  font-weight: 600;
+}
+
+.btnnddiv > h3{
+  font-size: 15px;
+  font-family: Poppins;
+  font-weight: 500;
 }
 
 .theform{
-  width: 90%;
+  width: 100%;
   height:  50px;
   display: flex;
   align-items: center;
@@ -142,7 +162,26 @@ gap: 20px;
  background-color: #27b7f5;
 }
 
-
+@media screen and (max-width:428px) {
+   .leftpatientlogin{
+    display: none;
+  
+   }
+  .patientloginholder{
+     width:90%;
 
   
+   }
 
+   .rightpatentlogin{
+    width: 100%;
+   
+   }
+
+   .signupdiv >h2{
+    font-size: 20px;
+    font-family: Poppins;
+    font-weight: 400;
+  } 
+
+}

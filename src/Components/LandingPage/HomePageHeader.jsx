@@ -5,6 +5,7 @@ import { Link } from "react-scroll";
 import { useNavigate } from "react-router-dom";
 import HospitalOrPatient from "../PopUp/HospitalOrPatient";
 import HeaderBurgerPopUp from "../PopUp/HeaderBurgerPopUp";
+import HospitalPopUp from "../PopUp/HospitalPopUp";
 
 const HomePageHeader = () => {
   const [popUp, setPopUp] = useState(false);
@@ -116,7 +117,7 @@ const HomePageHeader = () => {
                 )}
               </div>
               {/* <div className="headsignupIcon headsignupIcon4"><img src="/icons/caretRightDown.png" alt="caret" /></div> */}
-              {popUp1 ? <HospitalOrPatient /> : null}{" "}
+              {popUp1 ? <HospitalPopUp /> : null}{" "}
             </button>
           </div>
           <div className="landingPageBurgerMenu" onClick={handleMenu}>

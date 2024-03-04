@@ -15,6 +15,7 @@
     /* justify-content: center; */
     gap: 15px;
     text-align: center;
+    text-overflow: ellipsis;
     /* background-color: green; */
 
 }
@@ -27,9 +28,20 @@
 }
 .PatientInformationBoxContentHolder1 p{
     color: #2C7DA0;
-    text-align: center;
+    width: 100%;
+    /* text-align: center; */
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
 }
-
+/* .welcomeMessage{
+    color: red;
+    width: 50%;
+    white-space: nowrap;
+    overflow: hidden;
+} */
 /* Mobile view iphone-13 */
 @media screen and (width <= 428px) {
     .PatientInformationBoxContainer1 {

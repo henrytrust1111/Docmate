@@ -2,6 +2,7 @@ import React, { useState } from "react";
 // import "./AdminHeader.css";
 // import AdminBurgerMenu from "./AdminBurgerMenu";
 import PatientBurgerMenu from "./PatientBurgerMenu";
+import "./PatientHeader.css"
 
 const PatientHeader = () => {
   const [search, setSearch] = useState(false);
@@ -78,13 +79,13 @@ const PatientHeader = () => {
                 />
               )}
             </div>
-            <div className="notification">
+            {/* <div className="notification">
               <img src="/icons/notification.svg" alt="notification" />
               <div className="notification-quantity">5</div>
-            </div>
+            </div> */}
             <div className="dashboard-profile">
               <div className="profile-image-holder"></div>
-              <p style={{fontSize:"10px"}}>{welcomeMessage}</p>
+              <p style={{fontSize:"10px"}} className="welcomeMessage">{welcomeMessage}</p>
             </div>
           </div>
         </div>

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 import "./PatientHospitalPage.css";
+import Swal from "sweetalert2";
 import axios from "axios";
 const PatientHospitalPage = ({
   setPatientHospitalPage,
@@ -8,9 +9,16 @@ const PatientHospitalPage = ({
 }) => {
   const [hospital,setHospital] = useState()
   const handleRequestAppointment = () => {
-    setPatientHospitalPage(false);
-    setPatientAppointmentForm(true);
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "You have to update your profile first!",
+      footer: '<a href="#">Kindly go to view profile?</a>'
+    });
+    // setPatientHospitalPage(false);
+    // setPatientAppointmentForm(true);
   };
+
   console.log(hospital);
 
   const id = localStorage.getItem("hospitalID");

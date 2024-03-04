@@ -1,7 +1,14 @@
 import React from 'react'
 import "./ProfileCardComponent.css"
 
-const ProfileCardComponent = () => {
+const ProfileCardComponent = ({setPatientHospitalPage,setPatientProfileUpdate,setPatientProfilePage}) => {
+  const loggedInUserDetail = JSON.parse(localStorage.getItem("loggedInUserDetail"))
+  console.log(loggedInUserDetail);
+  const handleUpdate = ()=>{
+    setPatientHospitalPage(false)
+    setPatientProfilePage(false)
+    setPatientProfileUpdate(true)
+  }
   return (
     <div className='patientProfileCardComponent'>
       <div className="patientProfileCardComponentImageHolder">
@@ -9,10 +16,10 @@ const ProfileCardComponent = () => {
       </div>
       <div className="patientProfileCardComponentContentHolder">
       <div className="patientProfileCardComponentDetailHolder">
-        <p>David Adebayo</p>
+        <p>{loggedInUserDetail.data.firstName} {loggedInUserDetail.data.lastName}</p>
         <h5>Age: 54</h5>
       </div>
-      <div className="patientProfileCardComponentUpdateBtn">Update</div>
+      <div className="patientProfileCardComponentUpdateBtn" onClick={handleUpdate}>Update</div>
       </div>
     </div>
   )

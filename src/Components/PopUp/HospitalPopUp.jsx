@@ -4,13 +4,13 @@ import { MdLocalHospital } from "react-icons/md";
 import { FaPersonCirclePlus } from "react-icons/fa6";
 import { useNavigate } from 'react-router-dom'
 
-const HospitalOrPatient = () => {
+const HospitalPopUp = () => {
     const nav = useNavigate()
     const handlePatient = ()=>{
-        nav("/patientRegister")
+        nav("/patientLogin")
     }
     const handleHospital = ()=>{
-        nav("/hospitalRegister")
+        nav("/hospitaLogin")
     }
   return (
     <div className='HospitalOrPatientPage'>
@@ -26,4 +26,4 @@ const HospitalOrPatient = () => {
   )
 }
 
-export default HospitalOrPatient
+export default HospitalPopUp

@@ -11,7 +11,12 @@ const PatientAppointmentForm = ({setPatientAppointmentForm,setPatientHospitalSel
       setPatientAppointmentForm(false)
       setPatientHospitalSelection(true)
     }, 2000);
+
   }
+
+  // const data = { fullName, patientEmail, lastDiagnosis, presentSymptoms,lastVisitation };
+  // const Url = `https://doc-mate.onrender.com/request/${id}`;
+
   return (
     <>
        <div className="patientAppointmentForm-container">

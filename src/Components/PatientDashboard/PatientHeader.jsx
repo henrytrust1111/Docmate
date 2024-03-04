@@ -3,14 +3,19 @@ import React, { useState } from "react";
 // import AdminBurgerMenu from "./AdminBurgerMenu";
 import PatientBurgerMenu from "./PatientBurgerMenu";
 import "./PatientHeader.css"
+import { useNavigate } from "react-router-dom";
 
 const PatientHeader = () => {
   const [search, setSearch] = useState(false);
   const [searchValue, setSearchValue] = useState("");
   const [showDashboard,setShowDashboard] = useState(false)
+  const nav = useNavigate()
   const handleCancelIcon = () => {
     setSearchValue("");
     setSearch(false);
+  };
+  const handleIcon = () => {
+    nav("/")
   };
   const userInfo = JSON.parse(localStorage.getItem("loggedInUser"));
   const welcomeMessage = userInfo.message
@@ -20,7 +25,7 @@ const PatientHeader = () => {
       <header className="dashboard-header">
         <div className="dashboard-header-wrapper">
           <div className="admin-dashboard-logo">
-            <img src="/icons/DocMate.png" alt="logo" className="dashboard-logo" />
+            <img src="/icons/DocMate.png" alt="logo" className="dashboard-logo" onClick={handleIcon} />
             <img
               src="/icons/burgerMenu.svg"
               alt="menu"

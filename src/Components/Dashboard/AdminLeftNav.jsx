@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./AdminLeftNav.css";
+import { useNavigate } from "react-router-dom";
 
 const AdminLeftNav = ({
   setAdminPatientView,
@@ -12,6 +13,7 @@ const AdminLeftNav = ({
   const [dashboard,setDashboard] = useState(true)
   const [patient,setPatient] = useState(false)
   const [patientMouseOut,setPatientMouseOut] = useState(false)
+  const nav= useNavigate()
   const handleDashboardMouseOver = ()=>{
     setDashboard(true)
   }
@@ -61,6 +63,10 @@ const AdminLeftNav = ({
     setAdminAppointmentReview(false);
     setAdminAssignDoctor(false);
   };
+
+  const handleLogoutAdmin = ()=>{
+    nav("/hospitalLogin")
+  }
   return (
     <>
       <div className="admin-left-nav">
@@ -152,7 +158,7 @@ const AdminLeftNav = ({
               </div>
             </div>
           </div>
-          <div className="dashboard-content colored-icon" id="logout">
+          <div className="dashboard-content colored-icon" id="logout" onClick={handleLogoutAdmin}>
             <div className="dashboard-icon-container">
               <img
                 src="/icons/logout.svg"

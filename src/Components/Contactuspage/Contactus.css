@@ -20,13 +20,13 @@
 
 .ContactusHeropage{
     width: 100%;
-    height: 70%;
-    background-color: burlywood;
-    position: relative;
+    height: 80%;
+    /* background-color: burlywood; */
+    /* position: relative; */
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url(public/Rectangle4018.jpg);
+    background-image: url(public/Conatctusheropage.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     /* background-position: center; */
@@ -38,39 +38,55 @@
 
 .ContactusHeroTextpage{
     width: 100%;
-    height: 20%;
+    height: 30%;
     /* background-color: green; */
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content:center ;
 }
 
 .ContactusHeroText{
-    width: 67%;
-    height: 80%;
+    width: 55%;
+    height: 50%;
     /* background-color: darkgray; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 60px;
 }
 
 .ContactusHeroText h2{
     font-family: sans-serif;
-    font-weight: 800;
-    font-size: 30px;
+    font-size: 40px;
+    font-weight: 900;
     color: white;
 }
 
 
 .Contactuslistpage{
-    width: 80%;
-    height: 650px;
+    width: 100%;
+    height: 500px;
     /* background-color: red; */
-    position: absolute;
-    top: 370px;
-    left: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* position: absolute; */
+    /* top: 370px; */
+    /* left: 250px; */
 
 }
 
+.Contactuslistpagewrapper{
+    width: 85%;
+    height: 90%;
+    /* background-color: blue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .Contactusmainlistpage{
-    width: 80%;
+    width: 60%;
     height: 100%;
     background-color: white;
     border-radius: 10px;
@@ -82,6 +98,15 @@
     width: 60%;
     height: 100%;
     /* background-color: blue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Contactusmainlistleftpagewrapper{
+    width: 100%;
+    height: 90%;
+    /* background-color: red; */
 }
 
 .Contactusendmessgae{
@@ -89,27 +114,28 @@
     height: 13%;
     /* background-color: burlywood; */
     display: flex;
-    align-items: center;
-    justify-content: center;
+    /* align-items: center; */
+    /* justify-content: center; */
 }
 
 .Contactumainsendmessgae{
     width: 95%;
-    height: 100%;
+    height: 50%;
     /* background-color: darkmagenta; */
     display: flex;
     align-items: center;
+    margin-left: 10px;
 }
 
 .Contactumainsendmessgae h3{
     font-family: sans-serif;
-    font-weight: 600;
-    /* color: white; */
+    font-weight: 700;
+    /* color: red; */
 }
 
 .Contacttlefirstname{
     width: 100%;
-    height: 15%;
+    height: 20%;
     /* background-color: aqua; */
     display: flex;
     align-items: center;
@@ -132,19 +158,19 @@
 
 .Contactusfirstname{
     width: 100%;
-    height: 20%;
+    height: 25%;
     /* background-color: greenyellow; */
 }
 
 .Contactusfirstnamebox{
     width: 100%;
-    height: 80%;
+    height: 70%;
     /* background-color: darkorange; */
 }
 
 .Contactusfirstnamebox input{
     width: 95%;
-    height: 80%;
+    height: 50%;
     border-radius: 5px;
     border: solid #57B5B5 1px;
     border: hwb(hue white lightseagreen);
@@ -161,19 +187,19 @@
 
 .Contactuslastnameright{
     width: 100%;
-    height: 20%;
+    height: 25%;
     /* background-color: brown; */
 }
 
 .Contactuslastnamerightbox{
     width: 100%;
-    height: 80%;
+    height: 70%;
     /* background-color: darkgrey; */
 }
 
 .Contactuslastnamerightbox input{
     width: 95%;
-    height: 80%;
+    height: 50%;
     border-radius: 5px;
     border: solid #57B5B5 1px;
     border: hwb(hue white lightseagreen);
@@ -184,7 +210,7 @@
 
 .Contactseconlistleftpage{
     width: 100%;
-    height: 15%;
+    height: 20%;
     /* background-color: darkred; */
     display: flex;
     align-items: center;
@@ -199,19 +225,19 @@
 
 .Contactseconlistleftemail{
     width: 100%;
-    height: 20%;
+    height: 25%;
     /* background-color: lightgreen; */
 }
 
 .Contactseconlistleftemailinput{
     width: 100%;
-    height: 80%;
+    height: 50%;
     /* background-color: blueviolet; */
 }
 
 .Contactseconlistleftemailinput input{
     width: 48%;
-    height: 80%;
+    height: 70%;
     border-radius: 5px;
     border: solid  #57B5B5 1px;
     border: hwb(hue white lightseagreen);
@@ -221,7 +247,7 @@
 
 .Contactustitletpage{
     width: 100%;
-    height: 15%;
+    height: 20%;
     /* background-color: blanchedalmond; */
     display: flex;
     align-items: center;
@@ -236,19 +262,19 @@
 
 .Contactustitlettitlebox{
     width: 100%;
-    height: 20%;
+    height: 25%;
     /* background-color: aqua; */
 }
 
 .Contactustitlettitlinput{
     width: 100%;
-    height: 80%;
+    height: 50%;
     /* background-color: blueviolet; */
 }
 
 .Contactustitlettitlinput input{
     width: 98%;
-    height: 80%;
+    height: 70%;
     border-radius: 5px;
     border: solid  #57B5B5 1px;
     border: hwb(hue white lightseagreen);
@@ -259,7 +285,7 @@
 
 .Contactusthowcanwehelpyou{
     width: 100%;
-    height: 28%;
+    height: 20%;
     /* background-color: black; */
     display: flex;
     align-items: center;
@@ -331,20 +357,20 @@
 .Contactumainsubmibtn p{
     color: white;
     font-family: sans-serif;
-    font-size: 23px;
+    font-size: 12px;
 }
 
 .Contactusmainlistrightpage{
     width: 40%;
     height: 100%;
     background-color: #2C7DA0;
-    border-radius: 0px 10px 0px 0px;
+    border-radius: 0px 10px 10px 0px;
 }
 
 .Contactusmainlistrightpageup{
     width: 100%;
-    height: 50%;
-    /* background-color: #2C7DA0; */
+    height: 45%;
+    /* background-color: #11506b; */
 }
 
 .Contactusinforight{
@@ -372,7 +398,7 @@
 
 .Contactusinforighttext h3{
     font-family: sans-serif;
-    font-size: 22px;
+    font-size: 19px;
     color: white;
 }
 
@@ -436,7 +462,7 @@
 
 .Contactusboxlinetext h3{
     font-family: sans-serif;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 600;
     color: white;
 }
@@ -458,7 +484,7 @@
 
 .Contactdinfolinetext2 p{
     font-family: sans-serif;
-    font-size: 15px;
+    font-size: 10px;
     color: white;
 
 }
@@ -513,7 +539,7 @@
 
 .Contactusemailrightline1 h3{
     font-family: sans-serif;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 600;
     color: white;
 
@@ -527,16 +553,38 @@
 
 .Contactusemailrightline2 p{
     font-family: sans-serif;
-    font-size: 15px;
+    font-size: 10px;
     color: white;
 
 }
 
 .Contactusmainlistrightpagedown{
     width: 100%;
-    height: 50%;
-    background-color: aqua;
-    background-image: url(public/istockphoto-1422643304-612x612.jpg);
+    height: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: aqua; */
+    /* background-image: url(public/istockphoto-1422643304-612x612.jpg); */
+    /* background-position: center; */
+    /* object-fit: cover; */
+    /* object-fit: contain; */
+}
+
+.ContactusmainPr{
+    width: 80%;
+    height: 100%;
+    /* background-color: brown; */
+    background-image: url(public/Contactuspage2.png);
     background-position: center;
-    object-fit: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* border-radius: 40px; */
+
+}
+
+.spacingcontactus{
+    width: 100%;
+    height: 20px;
+    background-color: red;
 }

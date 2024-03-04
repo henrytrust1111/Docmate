@@ -6,6 +6,9 @@ const PatientLeftNav = ({setPatientProfilePage,setPatientHospitalSelection,setPa
   const handleLogout = () => {
     nav("/patientLogin");
   };
+  const handleLogoutPatient = ()=>{
+    nav("/patientLogin")
+  }
   const handlePatientRofile = () => {
     setPatientProfilePage(true);
     setPatientHospitalSelection(false);
@@ -59,7 +62,7 @@ const PatientLeftNav = ({setPatientProfilePage,setPatientHospitalSelection,setPa
               </div>
             </div>
           </div>
-          <div className="dashboard-content colored-icon" id="logout">
+          <div className="dashboard-content colored-icon" id="logout" onClick={handleLogoutPatient}>
             <div className="dashboard-icon-container">
               <img
                 src="/icons/logout.svg"

@@ -1,21 +1,28 @@
 import React, { useState } from "react";
 import "./AdminHeader.css";
 import AdminBurgerMenu from "./AdminBurgerMenu";
+import { useNavigate } from "react-router-dom";
 
 const AdminHeader = () => {
   const [search, setSearch] = useState(false);
   const [searchValue, setSearchValue] = useState("");
   const [showDashboard,setShowDashboard] = useState(false)
+  const nav= useNavigate()
   const handleCancelIcon = () => {
     setSearchValue("");
     setSearch(false);
   };
+
+  const handleIcon =()=>{
+    nav("/")
+  }
+
   return (
     <>
       <header className="dashboard-header">
         <div className="dashboard-header-wrapper">
           <div className="admin-dashboard-logo">
-            <img src="./icons/DocMate.png" alt="logo" className="dashboard-logo" />
+            <img src="./icons/DocMate.png" alt="logo" className="dashboard-logo" onClick={handleIcon} />
             <img
               src="/icons/burgerMenu.svg"
               alt="menu"

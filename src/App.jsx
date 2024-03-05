@@ -21,6 +21,7 @@ import Aboutus from "./Components/AboutUspage/Aboutus";
 import Faqpage from "./Components/Faqpage/Faqpage";
 import Setnewpassword from "./Components/Setnewpassword/Setnewpassword";
 import { Toaster } from "react-hot-toast";
+import PatientLogin2 from "./Components/Onboarding/PatientLogin2";
 
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
         <Route path="/patient" element={<PatientDashboard />} />
         <Route path="/admin" element={<AdminDashboard />} />
         <Route path="/payment" element={<PaymentMethod />} />
+        <Route path="/patientAppointment/:id" element={<PatientLogin2 />} />
       </Routes>
       <Toaster/>
     </HashRouter>

@@ -7,6 +7,7 @@ const PatientProfileUpdate = () => {
   const [allegies, setAllegies] = useState();
   const [patientAddress, setPatientAddress] = useState();
   const [gender, setGender] = useState();
+  const [age, setAge] = useState();
   console.log(bloodType);
   console.log(allegies);
 
@@ -51,12 +52,12 @@ const PatientProfileUpdate = () => {
             className="PatientProfileUpdate-container2"
             id="PatientProfileUpdate-container2"
           >
-            <div className="PatientProfileUpdate-input-container">
+            {/* <div className="PatientProfileUpdate-input-container">
               <label htmlFor="" className="PatientProfileUpdate-label">
                 Name:
               </label>
               <input type="text" className="PatientProfileUpdate-input-input" />
-            </div>
+            </div> */}
             <div className="PatientProfileUpdate-input-container">
               <label
                 htmlFor=""
@@ -78,12 +79,12 @@ const PatientProfileUpdate = () => {
               </label>
               <input type="text" className="PatientProfileUpdate-input-input" />
             </div>
-            <div className="PatientProfileUpdate-input-container">
+            {/* <div className="PatientProfileUpdate-input-container">
               <label htmlFor="" className="PatientProfileUpdate-label">
                 Email:
               </label>
               <input type="text" className="PatientProfileUpdate-input-input" />
-            </div>
+            </div> */}
             <div
               className="PatientProfileUpdate-input-container"
               id="updateFor-gender-age"
@@ -110,6 +111,7 @@ const PatientProfileUpdate = () => {
                 <input
                   type="text"
                   className="PatientProfileUpdate-input-input"
+                  onChange={(e) => setAge(e.target.value)}
                 />
               </div>
             </div>

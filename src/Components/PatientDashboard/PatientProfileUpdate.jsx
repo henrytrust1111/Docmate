@@ -4,23 +4,27 @@ import axios from "axios";
 
 const PatientProfileUpdate = () => {
   const [bloodType, setBloodType] = useState();
-  const [allegies, setAllegies] = useState();
+  const [allergies, setAllegies] = useState();
   const [patientAddress, setPatientAddress] = useState();
+  const [phoneNumber, setPhoneNumber] = useState();
   const [gender, setGender] = useState();
   const [age, setAge] = useState();
   console.log(bloodType);
-  console.log(allegies);
+  console.log(allergies);
+  console.log(age);
+  console.log(gender);
 
-  const data = { bloodType, allegies, patientAddress, gender };
+  const data = { bloodType, allergies, patientAddress, gender, age , phoneNumber, patientAddress};
 
   const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
   const id = loggedInUser?.data.id;
   const Url = `https://doc-mate.onrender.com/update-profile/${id}`;
-  const userToken = loggedInUser?.data.token;
+  const userToken = loggedInUser.token;
   console.log(userToken);
+  console.log(loggedInUser);
   const headers = {
-    // Authorization: `Bearer ${userToken}`,
-    Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWU2MTczMDc1ODc4MzU0ZjFiNjNjZDYiLCJlbWFpbCI6ImFkZWt1bmxlbWljaGFlbDEzMTlAZ21haWwuY29tIiwiaWF0IjoxNzA5NTc5MTkzLCJleHAiOjE3MDk2NjU1OTN9.gkHpEZ5cbyzqWgdWRsvXdzwUiJl6m3OphiRJhUvrtyw",
+    Authorization: `Bearer ${userToken}`,
+    // Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWU2MTczMDc1ODc4MzU0ZjFiNjNjZDYiLCJlbWFpbCI6ImFkZWt1bmxlbWljaGFlbDEzMTlAZ21haWwuY29tIiwiaWF0IjoxNzA5NTc5MTkzLCJleHAiOjE3MDk2NjU1OTN9.gkHpEZ5cbyzqWgdWRsvXdzwUiJl6m3OphiRJhUvrtyw",
   };
 
   const handleUpdate = async (e) => {
@@ -66,7 +70,7 @@ const PatientProfileUpdate = () => {
               >
                 Address:
               </label>
-              <input type="text" className="PatientProfileUpdate-input-input" />
+              <input type="text" className="PatientProfileUpdate-input-input" onChange={(e)=>setPatientAddress(e.target.value)} />
             </div>
             <div className="PatientProfileUpdate-input-container">
               <label
@@ -77,7 +81,7 @@ const PatientProfileUpdate = () => {
               >
                 PhoneNumber:
               </label>
-              <input type="text" className="PatientProfileUpdate-input-input" />
+              <input type="text" className="PatientProfileUpdate-input-input" onChange={(e)=>setPhoneNumber(e.target.value)} />
             </div>
             {/* <div className="PatientProfileUpdate-input-container">
               <label htmlFor="" className="PatientProfileUpdate-label">
@@ -94,14 +98,14 @@ const PatientProfileUpdate = () => {
                   Gender:
                 </label>
                 <select
-                  name=""
+                  name="gender"
                   id=""
                   className="updateSelect"
                   onChange={(e) => setGender(e.target.value)}
                 >
                   <option value="">Select gender</option>
-                  <option value="">Male</option>
-                  <option value="">Female</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
                 </select>
               </div>
               <div className="gender-update-container">
@@ -109,7 +113,7 @@ const PatientProfileUpdate = () => {
                   Age:
                 </label>
                 <input
-                  type="text"
+                  type="number"
                   className="PatientProfileUpdate-input-input"
                   onChange={(e) => setAge(e.target.value)}
                 />

@@ -15,14 +15,14 @@ const PatientProfilePage = ({setPatientHospitalPage,setPatientProfileUpdate,setP
                 <div className="PatientProfilePage-informationWrapper"><p>Information</p> <hr className='hr'/></div>
                 <div className="PatientProfilePage-detailWrapper">
                   <div className="PatientProfilePageDetailContainer1">
-                  <PatientInformationBox title="Gender" text="Male" />
-                  <PatientInformationBox title="Address" text="No 47, 4th Avenue D Close, Festac Town" />
+                  <PatientInformationBox title="Gender" text={loggedInUserDetail?.data.gender} />
+                  <PatientInformationBox title="Address" text={loggedInUserDetail?.data.patientAddress} />
                   <PatientInformationBox title="Email" text={loggedInUserDetail?.data.email} />
                   </div>
                   <div className="PatientProfilePageDetailContainer1">
-                  <PatientInformationBox title="PhoneMunber" text="08035874563  " />
-                  <PatientInformationBox title="Allergies" text="Milk" />
-                  <PatientInformationBox title="BloodType" text="0+[Positive]" />
+                  <PatientInformationBox title="PhoneMunber" text={loggedInUserDetail?.data.phoneNumber} />
+                  <PatientInformationBox title="Allergies" text={loggedInUserDetail?.data.allergies} />
+                  <PatientInformationBox title="BloodType" text={loggedInUserDetail?.data.bloodType} />
                     </div> 
                 </div>
         </div>

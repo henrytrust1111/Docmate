@@ -13,18 +13,18 @@ const PatientLeftNav = ({setPatientProfilePage,setPatientHospitalSelection,setPa
     Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWU2MTczMDc1ODc4MzU0ZjFiNjNjZDYiLCJlbWFpbCI6ImFkZWt1bmxlbWljaGFlbDEzMTlAZ21haWwuY29tIiwiaWF0IjoxNzA5NTc5MTkzLCJleHAiOjE3MDk2NjU1OTN9.gkHpEZ5cbyzqWgdWRsvXdzwUiJl6m3OphiRJhUvrtyw",
   };
 
-  const handleLogout = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await axios.put(Url,{ headers });
-      console.log(response.data);
-    } catch (error) {
-      console.log(error.response);
-    }
-  };
-  // const handleLogout = () => {
-  //   nav("/patientLogin");
+  // const handleLogout = async (e) => {
+  //   e.preventDefault();
+  //   try {
+  //     const response = await axios.put(Url,{ headers });
+  //     console.log(response.data);
+  //   } catch (error) {
+  //     console.log(error.response);
+  //   }
   // };
+  const handleLogout = () => {
+    nav("/patientLogin");
+  };
   // const handleLogoutPatient = ()=>{
   //   nav("/patientLogin")
   // }

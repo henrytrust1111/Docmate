@@ -67,6 +67,10 @@ const PatientLogin2 = () => {
     }
   };
 
+  const handleLogo = ()=>{
+    nav("/")
+  }
+
   const [show, setShow] = useState(false);
   const showEyeIcon = () => {
     setShow(!show);
@@ -76,7 +80,7 @@ const PatientLogin2 = () => {
     <div className="patientlogindiv">
       <div className="patientloginholder">
         <div className="leftpatientlogin">
-          <div className="upperleftpatientlogin">
+          <div className="upperleftpatientlogin" onClick={handleLogo}>
             <img src={image} alt="" className="logoimage11" />
           </div>
           <div className="lowerleftpatientregister"></div>

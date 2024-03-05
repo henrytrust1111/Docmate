@@ -92,12 +92,16 @@ const showEyecon = () => {
   setIsShow(!isshow)
 }
 
+const handleIcon =()=>{
+  nav("/")
+}
+
 
   return (
     <div className="patientregisterdiv">
       <div className="patientregisterholder">
         <div className="leftpatientregister">
-          <div className="upperleftpatientregister">
+          <div className="upperleftpatientregister" onClick={handleIcon}>
             <img src={image} alt="" className="logoimage11" />
           </div>
           <div className="lowerleftpatientregister"></div>

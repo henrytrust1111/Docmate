@@ -35,8 +35,7 @@ const PatientLogin = () => {
     e.preventDefault();
     try {
       setisLoading(true);
-      const response = await axios.post(Url, data);
-      // console.log(response.data);
+      const response = await axios.post(Url, data)
       console.log(response.data);
       console.log(response.data.token);
       const loggedInUserToken = response.data.token;
@@ -44,22 +43,16 @@ const PatientLogin = () => {
       localStorage.setItem("loggedInUser", JSON.stringify(loggedInUser));
       console.log(response);
       nav("/patient");
-      const success = response.status===200? "Success":"Error Occurred"
       Swal.fire({
         icon: "success",
         title: "You have logged in successfully",
         text: success,
       });
-
-      console.log(message);
     } catch (error) {
-      const errorMessage = error?.response
-        ? error.response.data.message
-        : "Check your network";
       Swal.fire({
         icon: "error",
         title: "oops",
-        text: errorMessage,
+        text: error.response.data.message,
       });
       console.log(errorMessage);
     } finally {
@@ -72,11 +65,19 @@ const PatientLogin = () => {
     setShow(!show);
   };
 
+  const handleLogo = ()=>{
+    nav("/")
+  }
+
+  const handleForgetPass = ()=>{
+    nav("/setPassword")
+  }
+
   return (
     <div className="patientlogindiv">
       <div className="patientloginholder">
         <div className="leftpatientlogin">
-          <div className="upperleftpatientlogin">
+          <div className="upperleftpatientlogin" onClick={handleLogo}>
             <img src={image} alt="" className="logoimage11" />
           </div>
           <div className="lowerleftpatientregister"></div>
@@ -109,7 +110,7 @@ const PatientLogin = () => {
           </div>
 
           <div className="forgotpass">
-            <h3>
+            <h3 onClick={handleForgetPass}>
               Forgot password{" "}
               <Link
                 style={{ textDecoration: "none", color: "#00a6fb" }}

@@ -3,6 +3,7 @@ import "./ProfileCardComponent.css"
 
 const ProfileCardComponent = ({setPatientHospitalPage,setPatientProfileUpdate,setPatientProfilePage}) => {
   const loggedInUserDetail = JSON.parse(localStorage.getItem("loggedInUser"))
+  const img = loggedInUserDetail?.data.profilePicture?.url
   console.log(loggedInUserDetail);
   const handleUpdate = ()=>{
     setPatientHospitalPage(false)
@@ -12,7 +13,7 @@ const ProfileCardComponent = ({setPatientHospitalPage,setPatientProfileUpdate,se
   return (
     <div className='patientProfileCardComponent'>
       <div className="patientProfileCardComponentImageHolder">
-        <img src="/images/profileExample.jpg" alt="" />
+        <img src={img} alt="" />
       </div>
       <div className="patientProfileCardComponentContentHolder">
       <div className="patientProfileCardComponentDetailHolder">

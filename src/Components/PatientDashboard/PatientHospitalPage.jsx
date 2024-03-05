@@ -9,14 +9,8 @@ const PatientHospitalPage = ({
 }) => {
   const [hospital,setHospital] = useState()
   const handleRequestAppointment = () => {
-    Swal.fire({
-      icon: "error",
-      title: "Oops...",
-      text: "You have to update your profile first!",
-      footer: '<a href="#">Kindly go to view profile?</a>'
-    });
-    // setPatientHospitalPage(false);
-    // setPatientAppointmentForm(true);
+    setPatientHospitalPage(false);
+    setPatientAppointmentForm(true);
   };
 
   console.log(hospital);

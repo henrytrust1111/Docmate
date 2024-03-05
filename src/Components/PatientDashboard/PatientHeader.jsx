@@ -19,6 +19,8 @@ const PatientHeader = ({patientHospitalSelection}) => {
   };
   const userInfo = JSON.parse(localStorage.getItem("loggedInUser"));
   const welcomeMessage = userInfo?.message
+  const img = userInfo?.data.profilePicture?.url
+  console.log(img.profilePicture?.url);
   console.log(welcomeMessage);
   return (
     <>
@@ -91,7 +93,9 @@ const PatientHeader = ({patientHospitalSelection}) => {
               <div className="notification-quantity">5</div>
             </div> */}
             <div className="dashboard-profile">
-              <div className="profile-image-holder"></div>
+              <div className="profile-image-holder">
+                <img src={img} alt="" />
+              </div>
               <p style={{fontSize:"10px"}} className="welcomeMessage">{welcomeMessage}</p>
             </div>
           </div>

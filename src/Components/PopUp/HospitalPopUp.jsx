@@ -10,7 +10,7 @@ const HospitalPopUp = () => {
         nav("/patientLogin")
     }
     const handleHospital = ()=>{
-        nav("/hospitaLogin")
+        nav("/hospitalLogin")
     }
   return (
     <div className='HospitalOrPatientPage'>

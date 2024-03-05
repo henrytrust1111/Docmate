@@ -14,6 +14,7 @@
     align-items: center;
     /* justify-content: center; */
     gap: 15px;
+    overflow: hidden;
     text-align: center;
     text-overflow: ellipsis;
     /* background-color: green; */
@@ -30,6 +31,9 @@
     color: #2C7DA0;
     width: 100%;
     /* text-align: center; */
+}
+
+#PatientInformationBoxContentHolderText{
     text-overflow: ellipsis;
     overflow: hidden;
     display: -webkit-box;

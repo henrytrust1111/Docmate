@@ -8,9 +8,8 @@ import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import { Oval } from "react-loader-spinner";
 import axios from "axios";
-import { IoEyeOutline } from 'react-icons/io5';
-import { FaRegEyeSlash } from 'react-icons/fa';
-
+import { IoEyeOutline } from "react-icons/io5";
+import { FaRegEyeSlash } from "react-icons/fa";
 
 const PatientLogin = () => {
   const [isLoading, setisLoading] = useState(false);
@@ -32,52 +31,46 @@ const PatientLogin = () => {
   const data = { email, password };
   const Url = "https://doc-mate.onrender.com/login";
 
-const HandleSubmit = async (e)=>{
+  const HandleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      setisLoading(true);
+      const response = await axios.post(Url, data);
+      // console.log(response.data);
+      console.log(response.data);
+      console.log(response.data.token);
+      const loggedInUserToken = response.data.token;
+      const loggedInUser = response.data;
+      localStorage.setItem("loggedInUser", JSON.stringify(loggedInUser));
+      console.log(response);
+      nav("/patient");
+      const success = response.status===200? "Success":"Error Occurred"
+      Swal.fire({
+        icon: "success",
+        title: "You have logged in successfully",
+        text: success,
+      });
 
-  e.preventDefault()
-  try{
-    setisLoading(true)
-    const response = await axios.post(Url,data)
-    // console.log(response.data);
-    console.log(response.data);
-    console.log(response.data.token);
-    const loggedInUserToken = response.data.token;
-    const loggedInUser = response.data;
-    localStorage.setItem("loggedInUser", JSON.stringify(loggedInUser));
-    console.log(response);
-    nav("/patient");
+      console.log(message);
+    } catch (error) {
+      const errorMessage = error?.response
+        ? error.response.data.message
+        : "Check your network";
+      Swal.fire({
+        icon: "error",
+        title: "oops",
+        text: errorMessage,
+      });
+      console.log(errorMessage);
+    } finally {
+      setisLoading(false);
+    }
+  };
 
-    Swal.fire({
-      icon: "error",
-      title: "Oops...",
-      text: "Something went wrong!",
-      footer: '<a href="#">Why do I have this issue?</a>'
-    });
-  
-    console.log( message)
-  
-  }
-  catch(error){
-    const errorMessage = error.response ? error.response.data.message: "error occured"
-    Swal.fire({
-      icon:'error',
-      title: 'oops',
-      text: errorMessage
-    })
-    console.log(errorMessage);
-   }
-   
-  finally{
-    setisLoading(false)
-    
-  }
-
-}
-
-const [show,setShow] = useState(false)
-const showEyeIcon = () => {
-  setShow(!show)
-}
+  const [show, setShow] = useState(false);
+  const showEyeIcon = () => {
+    setShow(!show);
+  };
 
   return (
     <div className="patientlogindiv">
@@ -92,29 +85,40 @@ const showEyeIcon = () => {
         <div className="rightpatentlogin">
           <h1>Login</h1>
 
-            <div className="theform">
-             <input type="text" name=" Email" placeholder="Email" 
-             onChange={HandleEmail}
-             />   
-                     </div>
-                     <div className="theformholders">
-            <div className="theformholdersWrapper">
-            <input required type={!show ? "password" : "text"} name="Password" placeholder="Password"
-              onChange={HandlePassword}
-            
+          <div className="theform">
+            <input
+              type="text"
+              name=" Email"
+              placeholder="Email"
+              onChange={HandleEmail}
             />
-            <div className="eye_icon" onClick={showEyeIcon}>
-            {!show ?<FaRegEyeSlash/> : <IoEyeOutline/>  }
+          </div>
+          <div className="theformholders">
+            <div className="theformholdersWrapper">
+              <input
+                required
+                type={!show ? "password" : "text"}
+                name="Password"
+                placeholder="Password"
+                onChange={HandlePassword}
+              />
+              <div className="eye_icon" onClick={showEyeIcon}>
+                {!show ? <FaRegEyeSlash /> : <IoEyeOutline />}
+              </div>
             </div>
-            </div>
-            
           </div>
 
-           <div className="forgotpass">
-            <h3>Forgot password <Link style={{textDecoration:"none",color:"#00a6fb"}} to='/setnewpassword'></Link></h3>
-            </div> 
-           <div className="btnnddiv">
-         {/* <button className="submitbtn" onClick={HandleSubmit}>
+          <div className="forgotpass">
+            <h3>
+              Forgot password{" "}
+              <Link
+                style={{ textDecoration: "none", color: "#00a6fb" }}
+                to="/setnewpassword"
+              ></Link>
+            </h3>
+          </div>
+          <div className="btnnddiv">
+            {/* <button className="submitbtn" onClick={HandleSubmit}>
          {isLoading === true ?
                 (<div className='loader'>
                   <Oval
@@ -132,35 +136,41 @@ const showEyeIcon = () => {
                      : <span>Login</span>}
            </button> */}
 
-           <button className="submitbttn" type="Login" onClick={HandleSubmit}>
-              {isLoading === true ?
-                (<div className='loader'>
+            <button className="submitbttn" type="Login" onClick={HandleSubmit}>
+              {isLoading === true ? (
+                <div className="loader">
                   <Oval
                     height={30}
                     width={30}
                     color="#fff"
                     visible={true}
-                    ariaLabel='oval-loading'
+                    ariaLabel="oval-loading"
                     secondaryColor="#030303"
                     strokeWidth={2}
                     strokeWidthSecondary={2}
                   />
-                </div>)
-                : <span>Login</span>}
+                </div>
+              ) : (
+                <span>Login</span>
+              )}
             </button>
-           <div/>
-         <h3>Already have an account ? 
-         <Link to='/patientRegister' style={{textDecoration:"none",color:"#00a6fb"}}>Sign Up</Link>
-         </h3>
-         </div>
-         </div>
-         </div>
-         </div>
-    
-  )
-}
+            <div />
+            <h3>
+              Already have an account ?
+              <Link
+                to="/patientRegister"
+                style={{ textDecoration: "none", color: "#00a6fb" }}
+              >
+                Sign Up
+              </Link>
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 export default PatientLogin;
-
 
 // import React, { useState } from "react";
 // import { useNavigate } from "react-router-dom";
@@ -252,7 +262,7 @@ export default PatientLogin;
 //             </h3>
 //           </div>
 //           <div className="btnnddiv">
-//             <button className="submitbtn" onClick={HandleSubmit}> 
+//             <button className="submitbtn" onClick={HandleSubmit}>
 //               {isLoading === true ? (
 //                 <div className="loader">
 //                   <Oval

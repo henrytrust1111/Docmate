@@ -6,7 +6,7 @@ const PatientInformationBox = ({title,text}) => {
     <div className='PatientInformationBoxContainer1'>
       <div className="PatientInformationBoxContentHolder1">
       <h4>{title}</h4>
-      <p>{text}</p>
+      <p id="PatientInformationBoxContentHolderText">{text}</p>
       </div>
     </div>
   )

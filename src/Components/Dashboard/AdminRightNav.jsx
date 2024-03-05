@@ -1,11 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./AdminRightNav.css";
+import axios from "axios";
 
 const AdminRightNav = ({setAdminPatientView,setAdminProfile,setAdminRightNav,setAdminPayment,setAdminAppointmentReview,setAdminAssignDoctor}) => {
   const [allAppointment,setAllAppointment] = useState(true)
   const [reschedules,setReschedules] = useState(false)
   const [attended,setAttented] = useState(false)
   const [unattended,setUnattended] = useState(false)
+  const [getAllAppointment,setGetAllAppointment] = useState()
+  const [getAllReschedules,setGetAllReschedules] = useState()
+  const [getAllConfirmed,setGetAllConfirmed] = useState()
+  const [getAllPending,setGetAllPending] = useState()
+  
 
   const handleAllAppointment = ()=>{
     setReschedules(false)
@@ -35,7 +41,9 @@ const AdminRightNav = ({setAdminPatientView,setAdminProfile,setAdminRightNav,set
     setUnattended(true)
   }
 
-  const handleViewAppointment= ()=>{
+  const handleViewAppointment= (id)=>{
+    console.log(id);
+    localStorage.setItem("userAppointmentID",id)
     setAdminRightNav(false)
     setAdminPatientView(false)
     setAdminProfile(false)
@@ -43,7 +51,71 @@ const AdminRightNav = ({setAdminPatientView,setAdminProfile,setAdminRightNav,set
     setAdminAppointmentReview(true)
     setAdminAssignDoctor(false)
   }
-  console.log(setAdminRightNav)
+  const url = "https://doc-mate.onrender.com/all-appointments";
+  const url1 = "https://doc-mate.onrender.com/pendingappointment";
+  const url2 = "https://doc-mate.onrender.com/get-all-confirmed";
+  const url3 = "https://doc-mate.onrender.com/all-pending-reschedule";
+  const loggedInHospital = JSON.parse(localStorage.getItem("loggedInHospital"))
+  const userToken = loggedInHospital?.token;
+  console.log(userToken);
+  const headers = {
+    Authorization: `Bearer ${userToken}`,
+  };
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(url, { headers });
+        console.log(response?.data);
+        console.log(response?.data.appointments);
+        setGetAllAppointment(response?.data.appointments)
+      } catch (error) {
+        console.error("Error:", error);
+        // console.error("Error Response:", error.response);
+      }
+    };
+    const fetchData1 = async () => {
+      try {
+        const response = await axios.get(url1, { headers });
+        console.log(response?.data);
+        console.log(response?.data.appointments);
+        setGetAllReschedules(response?.data.appointments)
+      } catch (error) {
+        console.error("Error:", error);
+        // console.error("Error Response:", error.response);
+      }
+    };
+    const fetchData2 = async () => {
+      try {
+        const response = await axios.get(url2, { headers });
+        console.log(response?.data);
+        console.log(response?.data.appointments);
+        setGetAllConfirm(response?.data.appointments)
+      } catch (error) {
+        console.error("Error:", error);
+        // console.error("Error Response:", error.response);
+      }
+    };
+    const fetchData3 = async () => {
+      try {
+        const response = await axios.get(url3, { headers });
+        console.log(response?.data);
+        console.log(response?.data.appointments);
+        setGetAllPending(response?.data.appointments)
+      } catch (error) {
+        console.error("Error:", error);
+        // console.error("Error Response:", error.response);
+      }
+    };
+
+    fetchData();
+    fetchData1();
+    fetchData2();
+    fetchData3();
+  }, []);
+
+console.log(getAllAppointment);
+
   return (
     <div className="admin-dashboard-right">
       <div className="admin-dashboard-right-wrapper">
@@ -55,7 +127,7 @@ const AdminRightNav = ({setAdminPatientView,setAdminProfile,setAdminRightNav,set
             <div className="select-dashboard-view-wrapper" id={allAppointment? "active-state":null} onClick={handleAllAppointment}>
               <div className={allAppointment? "select-dashboard-view-holder active-state-container":"select-dashboard-view-holder"}>
                 <div>
-                  <p>11</p>
+                  <p>{getAllAppointment?.length}</p>
                   <p>All Appointment</p>
                 </div>
               </div>
@@ -63,7 +135,7 @@ const AdminRightNav = ({setAdminPatientView,setAdminProfile,setAdminRightNav,set
             <div className="select-dashboard-view-wrapper" id={reschedules? "active-state":null} onClick={handleReschedules}>
               <div className={reschedules? "select-dashboard-view-holder active-state-container":"select-dashboard-view-holder"}>
                 <div>
-                  <p>11</p>
+                  <p>{getAllReschedules? getAllReschedules?.length:"0"}</p>
                   <p>Reschedules</p>
                 </div>
               </div>
@@ -71,7 +143,7 @@ const AdminRightNav = ({setAdminPatientView,setAdminProfile,setAdminRightNav,set
             <div className="select-dashboard-view-wrapper" id={attended? "active-state":null} onClick={handleAttended}>
               <div className={attended? "select-dashboard-view-holder active-state-container":"select-dashboard-view-holder"}>
                 <div>
-                  <p>11</p>
+                  <p>{getAllConfirmed? getAllConfirmed?.length:"0"}</p>
                   <p>Attended</p>
                 </div>
               </div>
@@ -79,7 +151,7 @@ const AdminRightNav = ({setAdminPatientView,setAdminProfile,setAdminRightNav,set
             <div className="select-dashboard-view-wrapper" id={unattended? "active-state":null} onClick={handleUnattended}>
               <div className={unattended? "select-dashboard-view-holder active-state-container":"select-dashboard-view-holder"}>
                 <div>
-                  <p>11</p>
+                  <p>{getAllPending? getAllPending?.length:"0"}</p>
                   <p>Unattended</p>
                 </div>
               </div>
@@ -106,374 +178,99 @@ const AdminRightNav = ({setAdminPatientView,setAdminProfile,setAdminRightNav,set
                 </div>
               </div>
               <div className="dashboard-list-wrapper">
-                <div className="list-container">
-                  <div className="s-n">1</div>
+                {allAppointment? getAllAppointment?.map((e,i)=>
+                  <div className="list-container" key={i}>
+                  <div className="s-n">{i+1}</div>
                   <div className="attribute-fixed-width patient-profile-record">
                     <div className="profile-img-view"></div>
                     <div className="name-view-profile-container">
-                      <p>Micheal Adekunle</p>
+                      <p>{e.fullName}</p>
                       <p className="colored-view-profile">View profile</p>
                     </div>
                   </div>
                   <div className="attribute-fixed-width email-record">
-                    Vivian@gmail.com
+                    {e.patientEmail}
                   </div>
                   <div className="attribute-fixed-width request-record">
-                    Appointment
+                    {e.status}
                   </div>
                   <div className="attribute-fixed-width date-record">
                     Today, 10 May 2023
                   </div>
                   <div className="delete-view-btn">
-                    <div className="view-button" onClick={handleViewAppointment}>View</div>
+                    <div className="view-button" onClick={()=>handleViewAppointment(e._id)}>View</div>
                     <div className="delete-button">Delete</div>
                   </div>
                 </div>
-                <div className="list-container">
-                  <div className="s-n">2</div>
+                ) :reschedules? getAllReschedules?.map((e,i)=>
+                <div className="list-container" key={i}>
+                <div className="s-n">{i+1}</div>
+                <div className="attribute-fixed-width patient-profile-record">
+                  <div className="profile-img-view"></div>
+                  <div className="name-view-profile-container">
+                    <p>{e.fullName}</p>
+                    <p className="colored-view-profile">View profile</p>
+                  </div>
+                </div>
+                <div className="attribute-fixed-width email-record">
+                  {e.patientEmail}
+                </div>
+                <div className="attribute-fixed-width request-record">
+                  {e.status}
+                </div>
+                <div className="attribute-fixed-width date-record">
+                  Today, 10 May 2023
+                </div>
+                <div className="delete-view-btn">
+                  <div className="view-button" onClick={()=>handleViewAppointment(e._id)}>View</div>
+                  <div className="delete-button">Delete</div>
+                </div>
+              </div>) :attended? getAllConfirmed?.map((e,i)=> <div className="list-container" key={i}>
+                  <div className="s-n">{i+1}</div>
                   <div className="attribute-fixed-width patient-profile-record">
                     <div className="profile-img-view"></div>
                     <div className="name-view-profile-container">
-                      <p>Micheal Adekunle</p>
+                      <p>{e.fullName}</p>
                       <p className="colored-view-profile">View profile</p>
                     </div>
                   </div>
                   <div className="attribute-fixed-width email-record">
-                    Vivian@gmail.com
-                  </div>
-                  <div className="attribute-fixed-width request-record reschedules">
-                    Reschedules
-                  </div>
-                  <div className="attribute-fixed-width date-record">
-                    Today, 10 May 2023
-                  </div>
-                  <div className="delete-view-btn">
-                    <div className="view-button">View</div>
-                    <div className="delete-button">Delete</div>
-                  </div>
-                </div>
-                <div className="list-container">
-                  <div className="s-n">3</div>
-                  <div className="attribute-fixed-width patient-profile-record">
-                    <div className="profile-img-view"></div>
-                    <div className="name-view-profile-container">
-                      <p>Micheal Adekunle</p>
-                      <p className="colored-view-profile">View profile</p>
-                    </div>
-                  </div>
-                  <div className="attribute-fixed-width email-record">
-                    Vivian@gmail.com
+                    {e.patientEmail}
                   </div>
                   <div className="attribute-fixed-width request-record">
-                    Appointment
+                    {e.status}
                   </div>
                   <div className="attribute-fixed-width date-record">
                     Today, 10 May 2023
                   </div>
                   <div className="delete-view-btn">
-                    <div className="view-button">View</div>
+                    <div className="view-button" onClick={()=>handleViewAppointment(e._id)}>View</div>
                     <div className="delete-button">Delete</div>
                   </div>
-                </div>
-                <div className="list-container">
-                  <div className="s-n">4</div>
+                </div>):unattended? getAllPending?.map((e,i)=> <div className="list-container" key={i}>
+                  <div className="s-n">{i+1}</div>
                   <div className="attribute-fixed-width patient-profile-record">
                     <div className="profile-img-view"></div>
                     <div className="name-view-profile-container">
-                      <p>Micheal Adekunle</p>
+                      <p>{e.fullName}</p>
                       <p className="colored-view-profile">View profile</p>
                     </div>
                   </div>
                   <div className="attribute-fixed-width email-record">
-                    Vivian@gmail.com
-                  </div>
-                  <div className="attribute-fixed-width request-record reschedules">
-                    Reschedules
-                  </div>
-                  <div className="attribute-fixed-width date-record">
-                    Today, 10 May 2023
-                  </div>
-                  <div className="delete-view-btn">
-                    <div className="view-button">View</div>
-                    <div className="delete-button">Delete</div>
-                  </div>
-                </div>
-                <div className="list-container">
-                  <div className="s-n">5</div>
-                  <div className="attribute-fixed-width patient-profile-record">
-                    <div className="profile-img-view"></div>
-                    <div className="name-view-profile-container">
-                      <p>Micheal Adekunle</p>
-                      <p className="colored-view-profile">View profile</p>
-                    </div>
-                  </div>
-                  <div className="attribute-fixed-width email-record">
-                    Vivian@gmail.com
+                    {e.patientEmail}
                   </div>
                   <div className="attribute-fixed-width request-record">
-                    Appointment
+                    {e.status}
                   </div>
                   <div className="attribute-fixed-width date-record">
                     Today, 10 May 2023
                   </div>
                   <div className="delete-view-btn">
-                    <div className="view-button">View</div>
+                    <div className="view-button" onClick={()=>handleViewAppointment(e._id)}>View</div>
                     <div className="delete-button">Delete</div>
                   </div>
-                </div>
-                <div className="list-container">
-                  <div className="s-n">6</div>
-                  <div className="attribute-fixed-width patient-profile-record">
-                    <div className="profile-img-view"></div>
-                    <div className="name-view-profile-container">
-                      <p>Micheal Adekunle</p>
-                      <p className="colored-view-profile">View profile</p>
-                    </div>
-                  </div>
-                  <div className="attribute-fixed-width email-record">
-                    Vivian@gmail.com
-                  </div>
-                  <div className="attribute-fixed-width request-record reschedules">
-                    Reschedules
-                  </div>
-                  <div className="attribute-fixed-width date-record">
-                    Today, 10 May 2023
-                  </div>
-                  <div className="delete-view-btn">
-                    <div className="view-button">View</div>
-                    <div className="delete-button">Delete</div>
-                  </div>
-                </div>
-                <div className="list-container">
-                  <div className="s-n">7</div>
-                  <div className="attribute-fixed-width patient-profile-record">
-                    <div className="profile-img-view"></div>
-                    <div className="name-view-profile-container">
-                      <p>Micheal Adekunle</p>
-                      <p className="colored-view-profile">View profile</p>
-                    </div>
-                  </div>
-                  <div className="attribute-fixed-width email-record">
-                    Vivian@gmail.com
-                  </div>
-                  <div className="attribute-fixed-width request-record">
-                    Appointment
-                  </div>
-                  <div className="attribute-fixed-width date-record">
-                    Today, 10 May 2023
-                  </div>
-                  <div className="delete-view-btn">
-                    <div className="view-button">View</div>
-                    <div className="delete-button">Delete</div>
-                  </div>
-                </div>
-                <div className="list-container">
-                  <div className="s-n">8</div>
-                  <div className="attribute-fixed-width patient-profile-record">
-                    <div className="profile-img-view"></div>
-                    <div className="name-view-profile-container">
-                      <p>Micheal Adekunle</p>
-                      <p className="colored-view-profile">View profile</p>
-                    </div>
-                  </div>
-                  <div className="attribute-fixed-width email-record">
-                    Vivian@gmail.com
-                  </div>
-                  <div className="attribute-fixed-width request-record reschedules">
-                    Reschedules
-                  </div>
-                  <div className="attribute-fixed-width date-record">
-                    Today, 10 May 2023
-                  </div>
-                  <div className="delete-view-btn">
-                    <div className="view-button">View</div>
-                    <div className="delete-button">Delete</div>
-                  </div>
-                </div>
-                <div className="list-container">
-                  <div className="s-n">8</div>
-                  <div className="attribute-fixed-width patient-profile-record">
-                    <div className="profile-img-view"></div>
-                    <div className="name-view-profile-container">
-                      <p>Micheal Adekunle</p>
-                      <p className="colored-view-profile">View profile</p>
-                    </div>
-                  </div>
-                  <div className="attribute-fixed-width email-record">
-                    Vivian@gmail.com
-                  </div>
-                  <div className="attribute-fixed-width request-record reschedules">
-                    Reschedules
-                  </div>
-                  <div className="attribute-fixed-width date-record">
-                    Today, 10 May 2023
-                  </div>
-                  <div className="delete-view-btn">
-                    <div className="view-button">View</div>
-                    <div className="delete-button">Delete</div>
-                  </div>
-                </div>
-                <div className="list-container">
-                  <div className="s-n">8</div>
-                  <div className="attribute-fixed-width patient-profile-record">
-                    <div className="profile-img-view"></div>
-                    <div className="name-view-profile-container">
-                      <p>Micheal Adekunle</p>
-                      <p className="colored-view-profile">View profile</p>
-                    </div>
-                  </div>
-                  <div className="attribute-fixed-width email-record">
-                    Vivian@gmail.com
-                  </div>
-                  <div className="attribute-fixed-width request-record reschedules">
-                    Reschedules
-                  </div>
-                  <div className="attribute-fixed-width date-record">
-                    Today, 10 May 2023
-                  </div>
-                  <div className="delete-view-btn">
-                    <div className="view-button">View</div>
-                    <div className="delete-button">Delete</div>
-                  </div>
-                </div>
-                <div className="list-container">
-                  <div className="s-n">8</div>
-                  <div className="attribute-fixed-width patient-profile-record">
-                    <div className="profile-img-view"></div>
-                    <div className="name-view-profile-container">
-                      <p>Micheal Adekunle</p>
-                      <p className="colored-view-profile">View profile</p>
-                    </div>
-                  </div>
-                  <div className="attribute-fixed-width email-record">
-                    Vivian@gmail.com
-                  </div>
-                  <div className="attribute-fixed-width request-record reschedules">
-                    Reschedules
-                  </div>
-                  <div className="attribute-fixed-width date-record">
-                    Today, 10 May 2023
-                  </div>
-                  <div className="delete-view-btn">
-                    <div className="view-button">View</div>
-                    <div className="delete-button">Delete</div>
-                  </div>
-                </div>
-                <div className="list-container">
-                  <div className="s-n">8</div>
-                  <div className="attribute-fixed-width patient-profile-record">
-                    <div className="profile-img-view"></div>
-                    <div className="name-view-profile-container">
-                      <p>Micheal Adekunle</p>
-                      <p className="colored-view-profile">View profile</p>
-                    </div>
-                  </div>
-                  <div className="attribute-fixed-width email-record">
-                    Vivian@gmail.com
-                  </div>
-                  <div className="attribute-fixed-width request-record reschedules">
-                    Reschedules
-                  </div>
-                  <div className="attribute-fixed-width date-record">
-                    Today, 10 May 2023
-                  </div>
-                  <div className="delete-view-btn">
-                    <div className="view-button">View</div>
-                    <div className="delete-button">Delete</div>
-                  </div>
-                </div>
-                <div className="list-container">
-                  <div className="s-n">8</div>
-                  <div className="attribute-fixed-width patient-profile-record">
-                    <div className="profile-img-view"></div>
-                    <div className="name-view-profile-container">
-                      <p>Micheal Adekunle</p>
-                      <p className="colored-view-profile">View profile</p>
-                    </div>
-                  </div>
-                  <div className="attribute-fixed-width email-record">
-                    Vivian@gmail.com
-                  </div>
-                  <div className="attribute-fixed-width request-record reschedules">
-                    Reschedules
-                  </div>
-                  <div className="attribute-fixed-width date-record">
-                    Today, 10 May 2023
-                  </div>
-                  <div className="delete-view-btn">
-                    <div className="view-button">View</div>
-                    <div className="delete-button">Delete</div>
-                  </div>
-                </div>
-                <div className="list-container">
-                  <div className="s-n">8</div>
-                  <div className="attribute-fixed-width patient-profile-record">
-                    <div className="profile-img-view"></div>
-                    <div className="name-view-profile-container">
-                      <p>Micheal Adekunle</p>
-                      <p className="colored-view-profile">View profile</p>
-                    </div>
-                  </div>
-                  <div className="attribute-fixed-width email-record">
-                    Vivian@gmail.com
-                  </div>
-                  <div className="attribute-fixed-width request-record reschedules">
-                    Reschedules
-                  </div>
-                  <div className="attribute-fixed-width date-record">
-                    Today, 10 May 2023
-                  </div>
-                  <div className="delete-view-btn">
-                    <div className="view-button">View</div>
-                    <div className="delete-button">Delete</div>
-                  </div>
-                </div>
-                <div className="list-container">
-                  <div className="s-n">8</div>
-                  <div className="attribute-fixed-width patient-profile-record">
-                    <div className="profile-img-view"></div>
-                    <div className="name-view-profile-container">
-                      <p>Micheal Adekunle</p>
-                      <p className="colored-view-profile">View profile</p>
-                    </div>
-                  </div>
-                  <div className="attribute-fixed-width email-record">
-                    Vivian@gmail.com
-                  </div>
-                  <div className="attribute-fixed-width request-record reschedules">
-                    Reschedules
-                  </div>
-                  <div className="attribute-fixed-width date-record">
-                    Today, 10 May 2023
-                  </div>
-                  <div className="delete-view-btn">
-                    <div className="view-button">View</div>
-                    <div className="delete-button">Delete</div>
-                  </div>
-                </div>
-                <div className="list-container">
-                  <div className="s-n">8</div>
-                  <div className="attribute-fixed-width patient-profile-record">
-                    <div className="profile-img-view"></div>
-                    <div className="name-view-profile-container">
-                      <p>Micheal Adekunle</p>
-                      <p className="colored-view-profile">View profile</p>
-                    </div>
-                  </div>
-                  <div className="attribute-fixed-width email-record">
-                    Vivian@gmail.com
-                  </div>
-                  <div className="attribute-fixed-width request-record reschedules">
-                    Reschedules
-                  </div>
-                  <div className="attribute-fixed-width date-record">
-                    Today, 10 May 2023
-                  </div>
-                  <div className="delete-view-btn">
-                    <div className="view-button">View</div>
-                    <div className="delete-button">Delete</div>
-                  </div>
-                </div>
+                </div>):null
+                }
               </div>
             </div>
           </div>

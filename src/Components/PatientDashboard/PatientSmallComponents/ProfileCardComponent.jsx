@@ -2,7 +2,7 @@ import React from 'react'
 import "./ProfileCardComponent.css"
 
 const ProfileCardComponent = ({setPatientHospitalPage,setPatientProfileUpdate,setPatientProfilePage}) => {
-  const loggedInUserDetail = JSON.parse(localStorage.getItem("loggedInUserDetail"))
+  const loggedInUserDetail = JSON.parse(localStorage.getItem("loggedInUser"))
   console.log(loggedInUserDetail);
   const handleUpdate = ()=>{
     setPatientHospitalPage(false)
@@ -16,7 +16,7 @@ const ProfileCardComponent = ({setPatientHospitalPage,setPatientProfileUpdate,se
       </div>
       <div className="patientProfileCardComponentContentHolder">
       <div className="patientProfileCardComponentDetailHolder">
-        <p>{loggedInUserDetail.data.firstName} {loggedInUserDetail.data.lastName}</p>
+        <p>{loggedInUserDetail?.data.firstName} {loggedInUserDetail?.data.lastName}</p>
         <h5>Age: 54</h5>
       </div>
       <div className="patientProfileCardComponentUpdateBtn" onClick={handleUpdate}>Update</div>

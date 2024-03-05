@@ -3,8 +3,8 @@ import "./PatientProfilePage.css"
 import ProfileCardComponent from './PatientSmallComponents/ProfileCardComponent'
 import PatientInformationBox from './PatientSmallComponents/PatientInformationBox'
 
-const PatientProfilePage = ({setPatientHospitalPage,setPatientProfileUpdate,setPatientProfilePage}) => {
-  const loggedInUserDetail = JSON.parse(localStorage.getItem("loggedInUserDetail"))
+const PatientProfilePage = ({setPatientHospitalPage,setPatientProfileUpdate,setPatientProfilePage,}) => {
+  const loggedInUserDetail = JSON.parse(localStorage.getItem("loggedInUser"))
   console.log(loggedInUserDetail);
   return (
     <div className='PatientProfilePage-container'>
@@ -17,7 +17,7 @@ const PatientProfilePage = ({setPatientHospitalPage,setPatientProfileUpdate,setP
                   <div className="PatientProfilePageDetailContainer1">
                   <PatientInformationBox title="Gender" text="Male" />
                   <PatientInformationBox title="Address" text="No 47, 4th Avenue D Close, Festac Town" />
-                  <PatientInformationBox title="Email" text={loggedInUserDetail.data.email} />
+                  <PatientInformationBox title="Email" text={loggedInUserDetail?.data.email} />
                   </div>
                   <div className="PatientProfilePageDetailContainer1">
                   <PatientInformationBox title="PhoneMunber" text="08035874563  " />

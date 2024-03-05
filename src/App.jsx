@@ -20,6 +20,7 @@ import HospitalRegister from "./Components/Onboarding/HospitalRegister";
 import Aboutus from "./Components/AboutUspage/Aboutus";
 import Faqpage from "./Components/Faqpage/Faqpage";
 import Setnewpassword from "./Components/Setnewpassword/Setnewpassword";
+import { Toaster } from "react-hot-toast";
 
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
         <Route path="/admin" element={<AdminDashboard />} />
         <Route path="/payment" element={<PaymentMethod />} />
       </Routes>
+      <Toaster/>
     </HashRouter>
   );
 }

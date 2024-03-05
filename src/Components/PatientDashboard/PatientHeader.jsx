@@ -5,7 +5,7 @@ import PatientBurgerMenu from "./PatientBurgerMenu";
 import "./PatientHeader.css"
 import { useNavigate } from "react-router-dom";
 
-const PatientHeader = () => {
+const PatientHeader = ({patientHospitalSelection}) => {
   const [search, setSearch] = useState(false);
   const [searchValue, setSearchValue] = useState("");
   const [showDashboard,setShowDashboard] = useState(false)
@@ -18,12 +18,12 @@ const PatientHeader = () => {
     nav("/")
   };
   const userInfo = JSON.parse(localStorage.getItem("loggedInUser"));
-  const welcomeMessage = userInfo.message
+  const welcomeMessage = userInfo?.message
   console.log(welcomeMessage);
   return (
     <>
       <header className="dashboard-header">
-        <div className="dashboard-header-wrapper">
+        <div className="dashboard-header-wrapper dashboard-header-wrapper2">
           <div className="admin-dashboard-logo">
             <img src="/icons/DocMate.png" alt="logo" className="dashboard-logo" onClick={handleIcon} />
             <img
@@ -33,7 +33,8 @@ const PatientHeader = () => {
               onClick={()=>setShowDashboard(true)} 
             />
           </div>
-          <div className="dashboard-search-bar">
+          {
+            patientHospitalSelection? <div className="dashboard-search-bar">
             <div className="search-box">
               <input
                 type="text"
@@ -56,7 +57,8 @@ const PatientHeader = () => {
                 )}
               </div>
             </div>
-          </div>
+          </div>: null
+          }
           <div className="dashboard-right" id="dashboard-right">
             {search && (
               <input

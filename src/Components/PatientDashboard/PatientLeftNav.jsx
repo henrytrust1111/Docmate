@@ -1,15 +1,34 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const PatientLeftNav = ({setPatientProfilePage,setPatientHospitalSelection,setPatientHospitalPage}) => {
   const nav = useNavigate();
-  const handleLogout = () => {
-    nav("/patientLogin");
+  const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+  const Url = `https://doc-mate.onrender.com/logout`;
+  const userToken = loggedInUser?.token;
+  console.log(userToken);
+  const headers = {
+    // Authorization: `Bearer ${userToken}`,
+    Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWU2MTczMDc1ODc4MzU0ZjFiNjNjZDYiLCJlbWFpbCI6ImFkZWt1bmxlbWljaGFlbDEzMTlAZ21haWwuY29tIiwiaWF0IjoxNzA5NTc5MTkzLCJleHAiOjE3MDk2NjU1OTN9.gkHpEZ5cbyzqWgdWRsvXdzwUiJl6m3OphiRJhUvrtyw",
   };
-  const handleLogoutPatient = ()=>{
-    nav("/patientLogin")
-  }
-  const handlePatientRofile = () => {
+
+  const handleLogout = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.put(Url,{ headers });
+      console.log(response.data);
+    } catch (error) {
+      console.log(error.response);
+    }
+  };
+  // const handleLogout = () => {
+  //   nav("/patientLogin");
+  // };
+  // const handleLogoutPatient = ()=>{
+  //   nav("/patientLogin")
+  // }
+  const handlePatientProfile = () => {
     setPatientProfilePage(true);
     setPatientHospitalSelection(false);
     setPatientHospitalPage(false);
@@ -41,7 +60,7 @@ const PatientLeftNav = ({setPatientProfilePage,setPatientHospitalSelection,setPa
                 <p>Dashboard</p>
               </div>
             </div>
-            <div className="dashboard-content colored-icon">
+            <div className="dashboard-content colored-icon"   onClick={handlePatientProfile}>
               <div className="dashboard-icon-container">
                 <img
                   src="/icons/colored-profile.svg"
@@ -56,13 +75,12 @@ const PatientLeftNav = ({setPatientProfilePage,setPatientHospitalSelection,setPa
               </div>
               <div
                 className="dashboard-text-container"
-                onClick={handlePatientRofile}
               >
                 <p>View Profile</p>
               </div>
             </div>
           </div>
-          <div className="dashboard-content colored-icon" id="logout" onClick={handleLogoutPatient}>
+          <div className="dashboard-content colored-icon" id="logout" onClick={handleLogout}>
             <div className="dashboard-icon-container">
               <img
                 src="/icons/logout.svg"
@@ -75,7 +93,7 @@ const PatientLeftNav = ({setPatientProfilePage,setPatientHospitalSelection,setPa
                 className="colored-payment"
               />
             </div>
-            <div className="dashboard-text-container" onClick={handleLogout}>
+            <div className="dashboard-text-container" >
               <p>Logout</p>
             </div>
           </div>

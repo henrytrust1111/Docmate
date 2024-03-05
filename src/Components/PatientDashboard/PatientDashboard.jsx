@@ -20,7 +20,7 @@ const PatientDashboard = () => {
 
   return (
     <div className="admin-dashboard-container">
-      <PatientHeader />
+      <PatientHeader patientHospitalSelection={patientHospitalSelection} />
       <div className="admin-dashboard-holder">
         <PatientLeftNav
           setPatientHospitalSelection={setPatientHospitalSelection}

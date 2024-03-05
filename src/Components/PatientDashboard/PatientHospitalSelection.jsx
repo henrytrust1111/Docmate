@@ -12,7 +12,7 @@ const PatientHospitalSelection = ({
 
   const url = "https://doc-mate.onrender.com/all-hospitals";
   const userInfo = JSON.parse(localStorage.getItem("loggedInUser"));
-  const userToken = userInfo.token;
+  const userToken = userInfo?.token;
   const headers = {
     Authorization: `Bearer ${userToken}`,
   };

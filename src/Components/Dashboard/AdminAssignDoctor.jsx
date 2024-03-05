@@ -1,16 +1,59 @@
-import React from "react";
+import React, { useState } from "react";
 import "./AdminAssignDoctor.css";
+import axios from "axios";
 
-const AdminAssignDoctor = ({setAdminPatientView,setAdminProfile,setAdminRightNav,setAdminPayment,setAdminAppointmentReview,setAdminAssignDoctor,setBookingReview}) => {
-  const handleAssignDoc = ()=>{
-    setAdminRightNav(false)
-    setAdminPatientView(false)
-    setAdminProfile(false)
-    setAdminPayment(false)
-    setAdminAppointmentReview(false)
-    setAdminAssignDoctor(false)
-    setBookingReview(true)
-  }
+const AdminAssignDoctor = ({
+  setAdminPatientView,
+  setAdminProfile,
+  setAdminRightNav,
+  setAdminPayment,
+  setAdminAppointmentReview,
+  setAdminAssignDoctor,
+  setBookingReview,
+}) => {
+  const [doctorName,setDoctorName] = useState()
+  const [fee,setFee] = useState(3000)
+  const [time,setTime] = useState()
+  const [speciality,setSpeciality] = useState()
+  const [date,setDay] = useState()
+  const [doctorsReview,setDoctorsReview] = useState()
+  console.log(doctorsReview)
+
+  const data = { doctorName,fee,time,speciality,date };
+  const id= localStorage.getItem("userAppointmentID")
+  const Url = `https://doc-mate.onrender.com/createAppointment/${id}`;
+  const loggedInHospital = JSON.parse(localStorage.getItem("loggedInHospital"))
+  const userToken = loggedInHospital?.token;
+  console.log(userToken);
+  const headers = {
+    Authorization: `Bearer ${userToken}`,
+  };
+
+  const handleAssignDoc = (e) => {
+    e.preventDefault();
+    try {
+      const response = axios.post(Url, data, {headers}).then((res)=>{
+        setDoctorsReview(res)
+        localStorage.setItem("doctorsReview",JSON.stringify(res.data))
+      })
+      // console.log(response.data);
+      // console.log(response.data.token);
+        // const DoctorsReview = localStorage.getItem("DoctorsReview",JSON.stringify(response.data))
+      // console.log(response?.data.message);
+
+      setAdminRightNav(false);
+      setAdminPatientView(false);
+      setAdminProfile(false);
+      setAdminPayment(false);
+      setAdminAppointmentReview(false);
+      setAdminAssignDoctor(false);
+      setBookingReview(true);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+
   return (
     <div className="AdminAssignDoctor-page">
       <div className="AdminAssignDoctor-wrapper">
@@ -31,6 +74,7 @@ const AdminAssignDoctor = ({setAdminPatientView,setAdminProfile,setAdminRightNav
                 type="text"
                 className="AdminAssignDoctor-input-input"
                 id="AdminAssignDoctor-input-input"
+                onChange={(e) => setDoctorName(e.target.value)}
               />
             </div>
             <div className="AdminAssignDoctor-content-inputs-wrapper">
@@ -45,6 +89,7 @@ const AdminAssignDoctor = ({setAdminPatientView,setAdminProfile,setAdminRightNav
                 type="text"
                 className="AdminAssignDoctor-input-input"
                 id="AdminAssignDoctor-input-input"
+                onChange={(e) => setSpeciality(e.target.value)}
               />
             </div>
             <div className="AdminAssignDoctor-content-inputs-wrapper">
@@ -56,9 +101,10 @@ const AdminAssignDoctor = ({setAdminPatientView,setAdminProfile,setAdminRightNav
                 Day of appointment:
               </label>
               <input
-                type="text"
+                type="date"
                 className="AdminAssignDoctor-input-input"
                 id="AdminAssignDoctor-input-input"
+                onChange={(e) => setDay(e.target.value)}
               />
             </div>
             <div className="AdminAssignDoctor-content-inputs-wrapper">
@@ -70,9 +116,10 @@ const AdminAssignDoctor = ({setAdminPatientView,setAdminProfile,setAdminRightNav
                 Time of appointment:
               </label>
               <input
-                type="text"
+                type="time"
                 className="AdminAssignDoctor-input-input"
                 id="AdminAssignDoctor-input-input"
+                onChange={(e) => setTime(e.target.value)}
               />
             </div>
             <div className="AdminAssignDoctor-content-inputs-wrapper">
@@ -87,12 +134,16 @@ const AdminAssignDoctor = ({setAdminPatientView,setAdminProfile,setAdminRightNav
                 type="text"
                 className="AdminAssignDoctor-input-input"
                 id="AdminAssignDoctor-input-input"
+                value={fee}
+                onChange={(e) => setFee(e.target.value)}
               />
             </div>
           </div>
         </div>
         <div className="AdminAssignDoctor-proceed-btn-container">
-          <div className="proceed-btn" onClick={handleAssignDoc} >Proceed</div>
+          <div className="proceed-btn" onClick={handleAssignDoc}>
+            Proceed
+          </div>
         </div>
       </div>
     </div>

@@ -34,6 +34,8 @@
   flex-direction: column;
 }
 
+
+
 .select-dashboard-view-container {
   width: 100%;
   min-height: 60px;
@@ -138,6 +140,7 @@
 .attribute-fixed-width {
   min-width: 200px;
   height: 100%;
+  /* background-color: red; */
 }
 .patient-attribute {
   font-size: 15px;
@@ -220,7 +223,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  /* background-color: green; */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 10ch;
+  max-width: 200px;
 }
+
 .request-record {
   display: flex;
   align-items: center;

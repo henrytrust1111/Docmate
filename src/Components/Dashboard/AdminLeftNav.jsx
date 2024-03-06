@@ -28,40 +28,20 @@ const AdminLeftNav = ({
     setPatientMouseOut(false)
   }
   const handleRightDiv = () => {
-    setAdminRightNav(true);
-    setAdminPatientView(false);
-    setAdminProfile(false);
-    setAdminPayment(false);
-    setAdminAppointmentReview(false);
-    setAdminAssignDoctor(false);
+    nav("/admin")
     setDashboard(true)
     setPatient(false)
   };
   const handlePatientView = () => {
-    setAdminRightNav(false);
-    setAdminPatientView(true);
-    setAdminProfile(false);
-    setAdminPayment(false);
-    setAdminAppointmentReview(false);
-    setAdminAssignDoctor(false);
+    nav("/admin/adminPatientView")
     setDashboard(false)
     setPatient(true)
   };
   const handleProfile = () => {
-    setAdminRightNav(false);
-    setAdminPatientView(false);
-    setAdminProfile(true);
-    setAdminPayment(false);
-    setAdminAppointmentReview(false);
-    setAdminAssignDoctor(false);
+  nav("/admin/adminProfile")
   };
   const handlePayment = () => {
-    setAdminRightNav(false);
-    setAdminPatientView(false);
-    setAdminProfile(false);
-    setAdminPayment(true);
-    setAdminAppointmentReview(false);
-    setAdminAssignDoctor(false);
+   nav("/admin/adminPayment")
   };
 
   const handleLogoutAdmin = ()=>{

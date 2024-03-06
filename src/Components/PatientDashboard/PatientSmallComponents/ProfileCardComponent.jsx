@@ -6,9 +6,7 @@ const ProfileCardComponent = ({setPatientHospitalPage,setPatientProfileUpdate,se
   const img = loggedInUserDetail?.data.profilePicture?.url
   console.log(loggedInUserDetail);
   const handleUpdate = ()=>{
-    setPatientHospitalPage(false)
-    setPatientProfilePage(false)
-    setPatientProfileUpdate(true)
+    nav("/patient/patientProfileUpdate")
   }
   return (
     <div className='patientProfileCardComponent'>

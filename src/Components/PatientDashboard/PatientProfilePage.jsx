@@ -1,14 +1,37 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./PatientProfilePage.css"
 import ProfileCardComponent from './PatientSmallComponents/ProfileCardComponent'
 import PatientInformationBox from './PatientSmallComponents/PatientInformationBox'
+import axios from 'axios'
 
 const PatientProfilePage = ({setPatientHospitalPage,setPatientProfileUpdate,setPatientProfilePage,}) => {
+  const [user,setUser] = useState()
   const loggedInUserDetail = JSON.parse(localStorage.getItem("loggedInUser"))
+  const userToken = loggedInUserDetail?.token;
+  console.log(userToken);
   console.log(loggedInUserDetail);
+  const headers = {
+    Authorization: `Bearer ${userToken}`,
+    // Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWU2MTczMDc1ODc4MzU0ZjFiNjNjZDYiLCJlbWFpbCI6ImFkZWt1bmxlbWljaGFlbDEzMTlAZ21haWwuY29tIiwiaWF0IjoxNzA5NTc5MTkzLCJleHAiOjE3MDk2NjU1OTN9.gkHpEZ5cbyzqWgdWRsvXdzwUiJl6m3OphiRJhUvrtyw",
+  };
+  const url = "https://doc-mate.onrender.com/get-one-user";
   useEffect(() => {
-    const Url = "https://doc-mate.onrender.com/get-one-user";
-  }, [])
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(url, { headers });
+        setUser(response.data.data)
+        console.log(response.data.data); 
+        // setHospital(response.data.data);
+      } catch (error) {
+        console.error("Error:", error);
+        // console.error("Error Response:", error.response);
+      }
+    };
+
+    fetchData();
+  }, [user])
+
+  
   
   return (
     <div className='PatientProfilePage-container'>
@@ -19,14 +42,14 @@ const PatientProfilePage = ({setPatientHospitalPage,setPatientProfileUpdate,setP
                 <div className="PatientProfilePage-informationWrapper"><p>Information</p> <hr className='hr'/></div>
                 <div className="PatientProfilePage-detailWrapper">
                   <div className="PatientProfilePageDetailContainer1">
-                  <PatientInformationBox title="Gender" text={loggedInUserDetail.data.gender? loggedInUserDetail?.data.gender: "No Gender"} />
-                  <PatientInformationBox title="Address" text={loggedInUserDetail.data.patientAddress? loggedInUserDetail?.data.patientAddress: "No Address"} />
-                  <PatientInformationBox title="Email" text={loggedInUserDetail?.data.email? loggedInUserDetail?.data.email: "No Email"} />
+                  <PatientInformationBox title="Gender" text={user?.gender? user?.gender: "No Gender"} />
+                  <PatientInformationBox title="Address" text={user?.patientAddress? user?.patientAddress: "No Address"} />
+                  <PatientInformationBox title="Email" text={user?.email? user?.email: "No Email"} />
                   </div>
                   <div className="PatientProfilePageDetailContainer1">
-                  <PatientInformationBox title="PhoneMunber" text={loggedInUserDetail?.data.phoneNumber? loggedInUserDetail?.data.phoneNumber: "No Address"} />
-                  <PatientInformationBox title="Allergies" text={loggedInUserDetail?.data.allergies? loggedInUserDetail?.data.allergies: "No Allergies"} />
-                  <PatientInformationBox title="BloodType" text={loggedInUserDetail?.data.bloodType? loggedInUserDetail?.data.bloodType: "No BloodType"} />
+                  <PatientInformationBox title="PhoneMunber" text={user?.phoneNumber? user?.phoneNumber: "No Address"} />
+                  <PatientInformationBox title="Allergies" text={user?.allergies? user?.allergies: "No Allergies"} />
+                  <PatientInformationBox title="BloodType" text={user?.bloodType? user?.bloodType: "No BloodType"} />
                     </div> 
                 </div>
         </div>

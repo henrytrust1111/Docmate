@@ -149,7 +149,7 @@ textarea {
 }
 
 /* Mobile view iphone-13 */
-@media screen and (width <= 480px) {
+@media screen and (max-width: 480px) {
   .patientAppointmentForm-container {
     min-width: 100%;
   }
@@ -172,16 +172,16 @@ textarea {
 }
 
 /* Mobile view iphone-5 */
-@media screen and (width <= 320px) {
+@media screen and (max-width: 320px) {
 }
 
 /*Tablet view*/
-@media screen and (width <= 768px) {
+@media screen and (max-width: 768px) {
   .patientAppointmentForm-container {
     width: calc(100% - 50px);
   }
 }
 
 /* big-tablet */
-@media screen and (width <= 834px) {
+@media screen and (max-width: 834px) {
 }

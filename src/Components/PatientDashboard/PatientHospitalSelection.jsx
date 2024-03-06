@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
+import "./PatientHospitalSelection.css"
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const PatientHospitalSelection = ({
   setPatientHospitalSelection,
@@ -32,25 +34,16 @@ const PatientHospitalSelection = ({
     fetchData();
   }, []);
 
+  const nav = useNavigate()
+
 
 
   const handleHospitalSelection = (id) => {
-    // const selectedHospital = hospitals.find((hospital) => hospital.id === id);
-    // console.log(selectedHospital);
     console.log(id);
     localStorage.setItem("hospitalID",id)
-    // const fetchData = async () => {
-    //   try {
-    //     const response = await axios.get(url, { headers });
-    //     console.log(response.data.data); // Assuming you want to log the response data
-    //     setHospital(response.data.data);
-    //   } catch (error) {
-    //     console.error("Error:", error);
-    //     // console.error("Error Response:", error.response);
-    //   }
-    // };
-    setPatientHospitalSelection(false);
-    setPatientHospitalPage(true);
+
+
+    nav("patient/patientHospitalPage")
   };
 
   return (
@@ -100,9 +93,10 @@ const PatientHospitalSelection = ({
                     <div className="attribute-fixed-width date-record">
                       {e.phoneNumber}
                     </div>
-                    <div className="delete-view-btn">
+                    <div className="delete-view-btn" id="hospitalCSS">
                       <div
                         className="delete-button"
+                        id="myView-btn"
                         onClick={()=>handleHospitalSelection(e._id)}
                       >
                         View

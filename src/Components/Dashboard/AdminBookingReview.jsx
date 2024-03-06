@@ -12,8 +12,7 @@ const AdminBookingReview = ({ setBookingReview, setAdminRightNav }) => {
   console.log(getAppointmentReview);
   const handleBookAppointment = () => {
     toast.success("This Appointment has sucessfully been confirmed");
-    setAdminRightNav(true);
-    setBookingReview(false);
+    nav("/admin")
   };
   // const handleBookAppointment = ()=>{
   //   setPopUp(true)

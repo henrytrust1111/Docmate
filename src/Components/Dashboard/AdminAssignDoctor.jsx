@@ -1,16 +1,9 @@
 import React, { useState } from "react";
 import "./AdminAssignDoctor.css";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
-const AdminAssignDoctor = ({
-  setAdminPatientView,
-  setAdminProfile,
-  setAdminRightNav,
-  setAdminPayment,
-  setAdminAppointmentReview,
-  setAdminAssignDoctor,
-  setBookingReview,
-}) => {
+const AdminAssignDoctor = () => {
   const [doctorName,setDoctorName] = useState()
   const [fee,setFee] = useState(3000)
   const [time,setTime] = useState()
@@ -18,6 +11,7 @@ const AdminAssignDoctor = ({
   const [date,setDay] = useState()
   const [doctorsReview,setDoctorsReview] = useState()
   console.log(doctorsReview)
+  const nav = useNavigate()
 
   const data = { doctorName,fee,time,speciality,date };
   const id= localStorage.getItem("userAppointmentID")
@@ -40,14 +34,7 @@ const AdminAssignDoctor = ({
       // console.log(response.data.token);
         // const DoctorsReview = localStorage.getItem("DoctorsReview",JSON.stringify(response.data))
       // console.log(response?.data.message);
-
-      setAdminRightNav(false);
-      setAdminPatientView(false);
-      setAdminProfile(false);
-      setAdminPayment(false);
-      setAdminAppointmentReview(false);
-      setAdminAssignDoctor(false);
-      setBookingReview(true);
+      nav("/admin/adminAppointmentReview/adminAssignDoctor/bookingReview")
     } catch (error) {
       console.log(error);
     }

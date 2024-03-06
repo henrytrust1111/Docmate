@@ -3,14 +3,16 @@ import { useEffect } from "react";
 import "./PatientHospitalPage.css";
 import Swal from "sweetalert2";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 const PatientHospitalPage = ({
   setPatientHospitalPage,
   setPatientAppointmentForm,
 }) => {
   const [hospital,setHospital] = useState()
+  const nav = useNavigate()
+  
   const handleRequestAppointment = () => {
-    setPatientHospitalPage(false);
-    setPatientAppointmentForm(true);
+    nav("/patient/patientHospitalPage/patientAppointmentForm");
   };
 
   console.log(hospital);

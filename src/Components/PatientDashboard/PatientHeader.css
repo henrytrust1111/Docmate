@@ -1,14 +1,32 @@
-/* .welcomeMessage{
-    color: red;
-    width: 50%;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-} */
+
 
 .dashboard-header-wrapper2{
     justify-content: space-between;
     /* background-color: red; */
+}
+
+.PatientHeaderSearch{
+    background-color: red;
+    /* position: relative; */
+}
+
+.search-results{
+    display: flex;
+    position: absolute;
+    z-index: 99;
+    bottom: -10px;
+    left: 390px;
+    width: 300px;
+    height: max-content;
+    background-color: rgb(75, 170, 170);
+}
+
+.search-results2{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-around;
+    z-index: 77;
 }
 
 .profile-image-holder{
@@ -20,3 +38,5 @@
     height: 100%;
     object-fit: contain;
 }
+
+

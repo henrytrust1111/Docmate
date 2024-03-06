@@ -25,25 +25,19 @@ const PatientLeftNav = ({setPatientProfilePage,setPatientHospitalSelection,setPa
   const handleLogout = () => {
     nav("/patientLogin");
   };
-  // const handleLogoutPatient = ()=>{
-  //   nav("/patientLogin")
-  // }
+ 
   const handlePatientProfile = () => {
-    setPatientProfilePage(true);
-    setPatientHospitalSelection(false);
-    setPatientHospitalPage(false);
+    nav("/patient/patientProfilePage")
   };
   const handlePatientDashboard = () => {
-    setPatientProfilePage(false);
-    setPatientHospitalSelection(true);
-    setPatientHospitalPage(false);
+    nav("/patient")
   };
   return (
     <>
       <div className="admin-left-nav">
         <div className="admin-left-nav-wrapper">
           <div className="dashboard-content-holder">
-            <div className="dashboard-content colored-icon">
+            <div className="dashboard-content colored-icon" onClick={handlePatientDashboard}>
               <div className="dashboard-icon-container">
                 <img
                   src="/icons/colored-dashboard.svg"
@@ -56,7 +50,7 @@ const PatientLeftNav = ({setPatientProfilePage,setPatientHospitalSelection,setPa
                   className="black-payment"
                 />
               </div>
-              <div className="dashboard-text-container" onClick={handlePatientDashboard}>
+              <div className="dashboard-text-container" >
                 <p>Dashboard</p>
               </div>
             </div>

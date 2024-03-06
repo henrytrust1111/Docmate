@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./AdminRightNav.css";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const AdminRightNav = ({setAdminPatientView,setAdminProfile,setAdminRightNav,setAdminPayment,setAdminAppointmentReview,setAdminAssignDoctor}) => {
   const [allAppointment,setAllAppointment] = useState(true)
@@ -12,7 +13,7 @@ const AdminRightNav = ({setAdminPatientView,setAdminProfile,setAdminRightNav,set
   const [getAllConfirmed,setGetAllConfirmed] = useState()
   const [getAllPending,setGetAllPending] = useState()
   
-
+const nav = useNavigate();
   const handleAllAppointment = ()=>{
     setReschedules(false)
     setAllAppointment(true)
@@ -44,12 +45,7 @@ const AdminRightNav = ({setAdminPatientView,setAdminProfile,setAdminRightNav,set
   const handleViewAppointment= (id)=>{
     console.log(id);
     localStorage.setItem("userAppointmentID",id)
-    setAdminRightNav(false)
-    setAdminPatientView(false)
-    setAdminProfile(false)
-    setAdminPayment(false)
-    setAdminAppointmentReview(true)
-    setAdminAssignDoctor(false)
+    nav("/admin/adminAppointmentReview")
   }
   const url = "https://doc-mate.onrender.com/all-appointments";
   const url1 = "https://doc-mate.onrender.com/pendingappointment";
@@ -90,7 +86,7 @@ const AdminRightNav = ({setAdminPatientView,setAdminProfile,setAdminRightNav,set
         const response = await axios.get(url2, { headers });
         console.log(response?.data);
         console.log(response?.data.appointments);
-        setGetAllConfirm(response?.data.appointments)
+        setGetAllConfirmed(response?.data.appointments)
       } catch (error) {
         console.error("Error:", error);
         // console.error("Error Response:", error.response);

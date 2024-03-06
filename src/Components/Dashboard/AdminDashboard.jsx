@@ -10,6 +10,7 @@ import AdminRescheduleReview from "./AdminRescheduleReview";
 import AdminPayment from "./AdminPayment";
 import AdminPatientView from "./AdminPatientView";
 import AdminProfile from "./AdminProfile";
+import { Outlet } from "react-router-dom";
 
 const AdminDashboard = () => {
   const [adminRightNav, setAdminRightNav] = useState(true);
@@ -25,13 +26,15 @@ const AdminDashboard = () => {
   console.log(adminPayment);
   console.log(adminAppointmentReview);
   console.log(adminAssignDoctor);
-  console.log(bookingReview)
+  console.log(bookingReview);
 
   return (
     <div className="admin-dashboard-container">
       <AdminHeader />
       <div className="admin-dashboard-holder">
-        <AdminLeftNav
+        <AdminLeftNav />
+        <Outlet />
+        {/* <AdminLeftNav
           setAdminPatientView={setAdminPatientView}
           setAdminProfile={setAdminProfile}
           setAdminRightNav={setAdminRightNav}
@@ -40,13 +43,13 @@ const AdminDashboard = () => {
           setAdminAssignDoctor={setAdminAssignDoctor}
         />
         {adminRightNav ? (
-          <AdminRightNav 
-          setAdminPatientView={setAdminPatientView}
-          setAdminProfile={setAdminProfile}
-          setAdminRightNav={setAdminRightNav}
-          setAdminPayment={setAdminPayment}
-          setAdminAppointmentReview={setAdminAppointmentReview}
-          setAdminAssignDoctor={setAdminAssignDoctor}
+          <AdminRightNav
+            setAdminPatientView={setAdminPatientView}
+            setAdminProfile={setAdminProfile}
+            setAdminRightNav={setAdminRightNav}
+            setAdminPayment={setAdminPayment}
+            setAdminAppointmentReview={setAdminAppointmentReview}
+            setAdminAssignDoctor={setAdminAssignDoctor}
           />
         ) : adminAppointmentReview ? (
           <AdminAppointmentReview
@@ -58,19 +61,29 @@ const AdminDashboard = () => {
             setAdminAssignDoctor={setAdminAssignDoctor}
             setBookingReview={setBookingReview}
           />
-        ) : adminAssignDoctor? (
-          <AdminAssignDoctor 
-          setAdminAppointmentReview={setAdminAppointmentReview}
+        ) : adminAssignDoctor ? (
+          <AdminAssignDoctor
+            setAdminAppointmentReview={setAdminAppointmentReview}
             setAdminPatientView={setAdminPatientView}
             setAdminProfile={setAdminProfile}
             setAdminRightNav={setAdminRightNav}
             setAdminPayment={setAdminPayment}
             setAdminAssignDoctor={setAdminAssignDoctor}
-          setBookingReview={setBookingReview}
+            setBookingReview={setBookingReview}
           />
-        ) : bookingReview? <AdminBookingReview setBookingReview={setBookingReview} setAdminRightNav={setAdminRightNav}/> : adminPatientView? <AdminPatientView />:adminPayment? <AdminPayment />:null }
+        ) : bookingReview ? (
+          <AdminBookingReview
+            setBookingReview={setBookingReview}
+            setAdminRightNav={setAdminRightNav}
+          />
+        ) : adminPatientView ? (
+          <AdminPatientView />
+        ) : adminPayment ? (
+          <AdminPayment />
+        ) : adminProfile ? (
+          <AdminProfile />
+        ) : null} */}
 
-        {/* <AdminProfile /> */}
         {/* <AdminRescheduleReview /> */}
       </div>
     </div>

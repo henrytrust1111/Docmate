@@ -2,17 +2,13 @@ import React, { useState } from "react";
 import "./AdminAppointmentReview.css";
 import { useEffect } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
-const AdminAppointmentReview = ({setAdminPatientView,setAdminProfile,setAdminRightNav,setAdminPayment,setAdminAppointmentReview,setAdminAssignDoctor,setBookingReview}) => {
+const AdminAppointmentReview = () => {
   const [getAppointmentReview,setGetAppointmentReview] = useState()
+  const nav = useNavigate()
   const handleAdminAppointmentReview = ()=>{
-    setAdminRightNav(false)
-    setAdminPatientView(false)
-    setAdminProfile(false)
-    setAdminPayment(false)
-    setAdminAppointmentReview(false)
-    setAdminAssignDoctor(true)
-    setBookingReview(false)
+    nav("/admin/adminAppointmentReview/adminAssignDoctor")
   }
 
   const id = localStorage.getItem("userAppointmentID")

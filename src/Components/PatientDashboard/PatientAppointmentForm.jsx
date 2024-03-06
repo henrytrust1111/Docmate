@@ -17,8 +17,8 @@ const PatientAppointmentForm = ({setPatientAppointmentForm,setPatientHospitalSel
   console.log(lastVisitation);
     // const fullName= fullNames.toLowerCase();
   const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
-  const id = loggedInUser.data?.id
-  console.log(id);
+  const id = localStorage.getItem("hospitalID");
+  
   const userToken = loggedInUser.token;
   const lowerCaseFullName = fullName ? fullName.toLowerCase() : fullName;
   const data = { fullName: lowerCaseFullName, lastDiagnosis, patientEmail, presentSymptoms, lastVisitation };
@@ -35,19 +35,18 @@ const PatientAppointmentForm = ({setPatientAppointmentForm,setPatientHospitalSel
     try {
       const response = await axios.post(Url, data, { headers });
       console.log(response.data);
-      setPatientAppointmentForm(false)
-      setPatientHospitalSelection(true)
+     nav("/patient")
       Swal.fire({
         title: "Success",
         text: response.data.message,
-        icon: "error",
+        icon: "success",
       });
     } catch (error) {
       console.log(error);
       Swal.fire({
         title: "error",
         text: error.response.data.message,
-        icon: "success",
+        icon: "error",
       });
     }
   };

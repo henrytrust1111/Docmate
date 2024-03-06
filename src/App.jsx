@@ -40,6 +40,7 @@ import AdminProfile from "./Components/Dashboard/AdminProfile";
 import AdminRescheduleReview from "./Components/Dashboard/AdminRescheduleReview";
 import AdminProfileUpdate from "./Components/Dashboard/AdminProfileUpdate";
 import PatientProfileUpdate from "./Components/PatientDashboard/PatientProfileUpdate";
+import SetNewPasswordHospital from "./Components/Setnewpassword/SetNewPasswordHospital";
 
 const route=createHashRouter([
   {
@@ -99,6 +100,10 @@ const route=createHashRouter([
   {
     path:"/setPassword",
     element:<Setnewpassword/>
+  },
+  {
+    path:"/setPasswordHospital",
+    element:<SetNewPasswordHospital/>
   },
   {
     path:"/passwordReset",

@@ -78,10 +78,6 @@ const route=createHashRouter([
   ],
   },
 
-  // {
-  //   path:"/payment",
-  //   element:<PaymentMethod/>
-  // },
   {
     path:"/contactUs",
     element:<Contactus/>

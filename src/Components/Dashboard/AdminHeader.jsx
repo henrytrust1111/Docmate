@@ -13,6 +13,8 @@ const AdminHeader = () => {
     setSearch(false);
   };
 
+  // const loggedInHospital= JSON.p
+
   const handleIcon =()=>{
     nav("/")
   }

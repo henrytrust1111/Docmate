@@ -2,3 +2,10 @@
     background-color: #fff;
     color: #2c7da0;
 }
+
+.attribute-fixed-width{
+    /* text-overflow: hidden; */
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}

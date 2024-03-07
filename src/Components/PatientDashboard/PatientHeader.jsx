@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 // import "./AdminHeader.css";
 // import AdminBurgerMenu from "./AdminBurgerMenu";
 import PatientBurgerMenu from "./PatientBurgerMenu";
+import { useNavigate } from "react-router-dom";
 import "./PatientHeader.css"
 import axios from "axios";
 const PatientHeader = () => {
@@ -9,10 +10,15 @@ const PatientHeader = () => {
   const [searchValue, setSearchValue] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   const [showDashboard, setShowDashboard] = useState(false)
+  const nav = useNavigate()
   const handleCancelIcon = () => {
     setSearchValue("");
     setSearch(false);
   };
+
+  const handleLogo = ()=>{
+    nav("/")
+  }
   const userInfo = JSON.parse(localStorage.getItem("loggedInUser"));
   const userToken = userInfo?.token;
   const welcomeMessage = userInfo.message
@@ -45,7 +51,7 @@ const PatientHeader = () => {
     <>
       <header className="dashboard-header">
         <div className="dashboard-header-wrapper">
-          <div className="admin-dashboard-logo">
+          <div className="admin-dashboard-logo" onClick={handleLogo}>
             <img src="/icons/DocMate.png"  alt="logo" className="dashboard-logo" />
             <img
               src="/icons/burgerMenu.svg"

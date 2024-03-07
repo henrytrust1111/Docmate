@@ -77,10 +77,7 @@ const route=createHashRouter([
       },
   ],
   },
-  // {
-  //   path:"/payment",
-  //   element:<PaymentMethod/>
-  // },
+
   // {
   //   path:"/payment",
   //   element:<PaymentMethod/>

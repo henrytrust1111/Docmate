@@ -53,12 +53,12 @@ const PatientHospitalPage = () => {
             </div>
             <p>Request an Appointment</p>
           </div>
-          <div className="patient-request-view-box">
+          {/* <div className="patient-request-view-box">
             <div className="request-appointment-icon">
               <img src="./icons/viewAppointment.svg" alt="" />
             </div>
             <p>View Appointment</p>
-          </div>
+          </div> */}
         </div>
         <div className="PatientHospitalPage-container-footer">
           <p>

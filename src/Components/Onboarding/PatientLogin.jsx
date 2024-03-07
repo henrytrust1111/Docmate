@@ -87,8 +87,8 @@ const PatientLogin = () => {
     <div className="patientlogindiv">
       <div className="patientloginholder">
         <div className="leftpatientlogin">
-          <div className="upperleftpatientlogin">
-            <img src={image} alt="" className="logoimage11" onClick={handlelogo} />
+          <div className="upperleftpatientlogin" onClick={handlelogo}>
+            <img src={image} alt="" className="logoimage11"/>
           </div>
           <div className="lowerleftpatientregister"></div>
           <img src={image2} alt="" className="image2" />

@@ -20,6 +20,7 @@ const PatientRegister = () => {
   const [password, setPassword] = useState('')
   const [confirmPassword, setConfirmpassword] = useState('')
   const [isLoading, setisLoading] = useState(false)
+  const nav = useNavigate()
 
   const handlefirstName = (e) => {
     const newfirstName = e.target.value
@@ -62,6 +63,7 @@ const PatientRegister = () => {
         text: response.data.message,
         icon: 'success'
       })
+      nav("/patient")
      }
      
     catch(error){
@@ -149,10 +151,9 @@ const handleIcon =()=>{
 
           <div className="theformholders">
             <div className="theformholdersWrapper">
-            <input required type={!show ? "Confimpassword" : "text"} name="ConfirmPassword" placeholder="ConfirmPassword"
+            <input required type={!isshow? "password" : "text"} name="Password" placeholder="ConfirmPassword"
               onChange={handleconfirmpassword}
               
-
             />
             <div className="eye_icon" onClick={showEyecon}>
             {!isshow ?<FaRegEyeSlash/> : <IoEyeOutline/>  }

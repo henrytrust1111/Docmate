@@ -81,14 +81,18 @@ const PatientAppointmentForm = ({setPatientAppointmentForm,setPatientHospitalSel
               <label htmlFor="" className='patientAppointmentForm-label'>Last Visitation:</label>
               <input type="date" className='patientAppointmentForm-input-input' onChange={(e)=>setLastVisitation(e.target.value)}/>
             </div>
+            <div className="patientAppointmentForm-input-container">
+              <label htmlFor="" className='patientAppointmentForm-label'>Email Address:</label>
+              <input type="email" className='patientAppointmentForm-input-input' onChange={(e)=>setEmail(e.target.value)}/>
+            </div>
             <div className="patientAppointmentForm-diagnosis-container">
               <label htmlFor="" className='patientAppointmentForm-diagnosis-label'>Present Diagnosis:</label>
               <textarea name="" id="" cols="30" rows="10" placeholder='Kindly add your last diagnosis if any' onChange={(e)=>setLastDiagnosis(e.target.value)}></textarea>
             </div>
-            <div className="patientAppointmentForm-diagnosis-container">
+            {/* <div className="patientAppointmentForm-diagnosis-container">
               <label htmlFor="" className='patientAppointmentForm-diagnosis-label'>Email:</label>
               <textarea name="" id="" cols="30" rows="10" placeholder='Kindly add your last diagnosis if any' onChange={(e)=>setEmail(e.target.value)}></textarea>
-            </div>
+            </div> */}
             <div className="patientAppointmentForm-diagnosis-container">
               <label htmlFor="" className='patientAppointmentForm-diagnosis-label'>Present Symtoms:</label>
               <textarea name="" id="" cols="30" rows="10" placeholder='Kindly add how you feel' onChange={(e)=>setPresentSymptoms(e.target.value)}></textarea>

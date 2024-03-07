@@ -14,7 +14,7 @@ const AdminHeader = () => {
   };
 
   const loggedInHospital= JSON.parse(localStorage.getItem("loggedInHospital"))
-  console.log(loggedInHospital?.data);
+  const hospitalName = (loggedInHospital?.hospitalName);
 
   const handleIcon =()=>{
     nav("/")
@@ -90,7 +90,7 @@ const AdminHeader = () => {
             </div>
             <div className="dashboard-profile">
               <div className="profile-image-holder"></div>
-              <p>Hi, Adekunle</p>
+              <p>{hospitalName? hospitalName: "Welcome" }</p>
             </div>
           </div>
         </div>

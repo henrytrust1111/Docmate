@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./PatientLogin.css";
 import image from "../../asset/icons/DocMate.png";
-import docimage2 from '../../asset/icons/DocMate1232.png'
 import image2 from "../../asset/icons/signup.png";
 import { Link } from "react-router-dom";
 // import { useDispatch } from "react-redux";

@@ -41,13 +41,14 @@ const PatientLogin = () => {
         "loggedInHospital",
         JSON.stringify(loggedInHospital)
       );
-      console.log(response.data.message);
+      console.log(response?.data.message);
+      nav("/admin");
       Swal.fire({
         title: "Registration Successful",
         text: response.data.message,
         icon: "success",
       });
-      nav("/admin");
+      
     } catch (error) {
       const errorMessage = error.response
         ? error.response.data.message

@@ -4,10 +4,7 @@ import "./PatientHospitalPage.css";
 import Swal from "sweetalert2";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-const PatientHospitalPage = ({
-  setPatientHospitalPage,
-  setPatientAppointmentForm,
-}) => {
+const PatientHospitalPage = () => {
   const [hospital,setHospital] = useState()
   const nav = useNavigate()
   
@@ -20,7 +17,7 @@ const PatientHospitalPage = ({
   const id = localStorage.getItem("hospitalID");
   const url = `https://doc-mate.onrender.com/one-hospital/${id}`;
   const userInfo = JSON.parse(localStorage.getItem("loggedInUser"));
-  const userToken = userInfo.token;
+  const userToken = userInfo?.token;
   const headers = {
     Authorization: `Bearer ${userToken}`,
   };
@@ -29,9 +26,9 @@ const PatientHospitalPage = ({
     const fetchData = async () => {
       try {
         const response = await axios.get(url, { headers });
-        console.log(response.data.data);
-        console.log(response.data);
-        setHospital(response.data.data);
+        console.log(response?.data.data);
+        console.log(response?.data);
+        setHospital(response?.data.data);
       } catch (error) {
         console.error("Error:", error);
         // console.error("Error Response:", error.response);

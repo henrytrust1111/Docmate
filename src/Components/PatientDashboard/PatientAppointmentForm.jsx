@@ -3,6 +3,7 @@ import "./PatientAppointmentForm.css"
 import PopUp from '../PopUp/PopUp'
 import Swal from "sweetalert2";
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom';
 
 const PatientAppointmentForm = ({setPatientAppointmentForm,setPatientHospitalSelection}) => {
   const [popUp, setPopUp] = useState(false)
@@ -11,6 +12,7 @@ const PatientAppointmentForm = ({setPatientAppointmentForm,setPatientHospitalSel
   const [presentSymptoms, setPresentSymptoms] = useState()
   const [lastVisitation, setLastVisitation] = useState()
   const [patientEmail, setEmail] = useState()
+  const nav = useNavigate()
   // console.log(fullName);
   console.log(lastDiagnosis);
   console.log(presentSymptoms);
@@ -45,7 +47,7 @@ const PatientAppointmentForm = ({setPatientAppointmentForm,setPatientHospitalSel
       console.log(error);
       Swal.fire({
         title: "error",
-        text: error.response.data.message,
+        text: error?.response.data.message,
         icon: "error",
       });
     }

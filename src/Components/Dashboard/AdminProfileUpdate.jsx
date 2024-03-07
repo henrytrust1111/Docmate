@@ -106,7 +106,7 @@ const AdminProfileUpdate = () => {
             </div>
           </div>
           <div className="PatientProfileUpdate-container3">
-            <div className="PatientProfileUpdate-btn" onClick={handleUpdate}>
+            <div className="PatientProfileUpdate-btn">
               Update
             </div>
           </div>

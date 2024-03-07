@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import PatientInformationBox from "../PatientDashboard/PatientSmallComponents/PatientInformationBox";
 import ProfileCardComponent from "../PatientDashboard/PatientSmallComponents/ProfileCardComponent";
+import { useNavigate } from "react-router-dom";
 
 const AdminProfile = ({
   setPatientHospitalPage,
@@ -17,6 +18,7 @@ const AdminProfile = ({
   const img = loggedInUserDetail?.data.profilePicture?.url
   console.log(userToken);
   console.log(loggedInUserDetail);
+  const nav = useNavigate()
   const headers = {
     Authorization: `Bearer ${userToken}`,
     // Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWU2MTczMDc1ODc4MzU0ZjFiNjNjZDYiLCJlbWFpbCI6ImFkZWt1bmxlbWljaGFlbDEzMTlAZ21haWwuY29tIiwiaWF0IjoxNzA5NTc5MTkzLCJleHAiOjE3MDk2NjU1OTN9.gkHpEZ5cbyzqWgdWRsvXdzwUiJl6m3OphiRJhUvrtyw",

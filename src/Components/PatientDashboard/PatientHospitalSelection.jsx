@@ -43,7 +43,7 @@ const PatientHospitalSelection = ({
     localStorage.setItem("hospitalID",id)
 
 
-    nav("patient/patientHospitalPage")
+    nav("/patient/patientHospitalPage")
   };
 
   return (

@@ -51,7 +51,7 @@ const AdminBookingReview = ({ setBookingReview, setAdminRightNav }) => {
     fetchData();
   }, []);
   const doctorsReview = JSON.parse(localStorage.getItem("doctorsReview"));
-  console.log(doctorsReview.appointment);
+  console.log(doctorsReview?.appointment);
   return (
     <>
       {/* {popUp? <PopUp text="Appointment booked successfully" image="./icons/success.svg" />:null} */}
@@ -96,23 +96,23 @@ const AdminBookingReview = ({ setBookingReview, setAdminRightNav }) => {
                 <div className="patient-review-check-down">
                   <div className="patient-review-check-down-content">
                     <h3>Doctor's Name</h3>
-                    <p>{doctorsReview.appointment.doctorName}</p>
+                    <p>{doctorsReview?.appointment.doctorName}</p>
                   </div>
                   <div className="patient-review-check-down-content">
                     <h3>Doctor's Speciality</h3>
-                    <p>{doctorsReview.appointment.speciality}</p>
+                    <p>{doctorsReview?.appointment.speciality}</p>
                   </div>
                   <div className="patient-review-check-down-content">
                     <h3>Appointment Day</h3>
-                    <p>{doctorsReview.appointment.date}</p>
+                    <p>{doctorsReview?.appointment.date}</p>
                   </div>
                   <div className="patient-review-check-down-content">
                     <h3>Appointment Time</h3>
-                    <p>{doctorsReview.appointment.time}</p>
+                    <p>{doctorsReview?.appointment.time}</p>
                   </div>
                   <div className="patient-review-check-down-content">
                     <h3>Fee</h3>
-                    <p>{doctorsReview.appointment.fee}</p>
+                    <p>{doctorsReview?.appointment.fee}</p>
                   </div>
                 </div>
               </div>

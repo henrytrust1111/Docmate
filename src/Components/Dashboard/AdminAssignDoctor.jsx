@@ -29,12 +29,13 @@ const AdminAssignDoctor = () => {
       const response = axios.post(Url, data, {headers}).then((res)=>{
         setDoctorsReview(res)
         localStorage.setItem("doctorsReview",JSON.stringify(res.data))
+        nav("/admin/adminAppointmentReview/adminAssignDoctor/bookingReview")
       })
       // console.log(response.data);
       // console.log(response.data.token);
         // const DoctorsReview = localStorage.getItem("DoctorsReview",JSON.stringify(response.data))
       // console.log(response?.data.message);
-      nav("/admin/adminAppointmentReview/adminAssignDoctor/bookingReview")
+
     } catch (error) {
       console.log(error);
     }

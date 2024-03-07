@@ -13,7 +13,8 @@ const AdminHeader = () => {
     setSearch(false);
   };
 
-  // const loggedInHospital= JSON.p
+  const loggedInHospital= JSON.parse(localStorage.getItem("loggedInHospital"))
+  console.log(loggedInHospital?.data);
 
   const handleIcon =()=>{
     nav("/")

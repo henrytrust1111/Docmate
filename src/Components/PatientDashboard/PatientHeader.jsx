@@ -21,7 +21,7 @@ const PatientHeader = () => {
   }
   const userInfo = JSON.parse(localStorage.getItem("loggedInUser"));
   const userToken = userInfo?.token;
-  const welcomeMessage = userInfo.message
+  const welcomeMessage = userInfo?.message
   console.log(welcomeMessage);
   const searchHospital = async () => {
     try {

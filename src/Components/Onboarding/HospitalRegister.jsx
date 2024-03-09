@@ -1,112 +1,106 @@
 import React, { useState } from "react";
 import "./HospitalRegister.css";
-import image1 from '../../asset/icons/DocMate.png'
-import image2 from "../../asset/icons/signup.png"
+import image1 from "../../asset/icons/DocMate.png";
+import image2 from "../../asset/icons/signup.png";
 import { Link, useNavigate } from "react-router-dom";
-import axios from 'axios'
- import Swal from "sweetalert2";
+import axios from "axios";
+import Swal from "sweetalert2";
 import { Oval } from "react-loader-spinner";
 // import { IoMdArrowRoundBack } from "react-icons/io";
 import { FaRegEyeSlash } from "react-icons/fa";
 import { IoEyeOutline } from "react-icons/io5";
 
-
-
 const HospitalRegister = () => {
-
-
-  const [hospitalName, setHospitalName] = useState('')
-  const [hospitalAddress, setHospitalAddress] = useState('')
-  const [phoneNumber, setPhoneNumber] = useState('')
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-  const [confirmPassword, setConfirmpassword] = useState('')
-  const [isLoading, setisLoading] = useState(false)
+  const [hospitalName, setHospitalName] = useState("");
+  const [hospitalAddress, setHospitalAddress] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmpassword] = useState("");
+  const [isLoading, setisLoading] = useState(false);
   // const [profilePicture,setProfilePicture] = useState ('')
 
   const handleHospitalName = (e) => {
-    const newHospitalName = e.target.value
-    setHospitalName(newHospitalName)
-  }
+    const newHospitalName = e.target.value;
+    setHospitalName(newHospitalName);
+  };
 
   const handleHospitalAddress = (e) => {
-    const newHospitalAddress = e.target.value
-    setHospitalAddress(newHospitalAddress)
-  }
-
-
-
+    const newHospitalAddress = e.target.value;
+    setHospitalAddress(newHospitalAddress);
+  };
 
   const handlephoneNumber = (e) => {
-    const newphoneNumber = e.target.value
-    setPhoneNumber(newphoneNumber)
-  }
-
-
+    const newphoneNumber = e.target.value;
+    setPhoneNumber(newphoneNumber);
+  };
 
   const handleemail = (e) => {
-    const newemail = e.target.value
-    setEmail(newemail)
-  }
+    const newemail = e.target.value;
+    setEmail(newemail);
+  };
 
   const handlepassword = (e) => {
-    const newpassword = e.target.value
-    setPassword(newpassword)
-  }
+    const newpassword = e.target.value;
+    setPassword(newpassword);
+  };
 
   const handleconfirmpassword = (e) => {
-    const newconfirmpassword = e.target.value
-    setConfirmpassword(newconfirmpassword)
-  }
+    const newconfirmpassword = e.target.value;
+    setConfirmpassword(newconfirmpassword);
+  };
 
-  const data = { hospitalName, hospitalAddress, phoneNumber, email, password, confirmPassword, }
-  const Url = 'https://doc-mate.onrender.com/signup'
+  const data = {
+    hospitalName,
+    hospitalAddress,
+    phoneNumber,
+    email,
+    password,
+    confirmPassword,
+  };
+  const Url = "https://doc-mate.onrender.com/signup";
 
   const HandleSubmit = async (e) => {
- e.preventDefault()
+    e.preventDefault();
 
- try{
-  setisLoading(true)
-  const response = await axios.post(Url, data)
-  console.log(response.data.message);
-  Swal.fire({
-    title: 'Registration Successful',
-    text: response.data.message,
-    icon: 'success'
-  })
- }
- 
- catch(error){
-  const errorMessage = error.response ? error.response.data.message: "error occured"
-  Swal.fire({
-    icon:'error',
-    title: 'oops',
-    text: errorMessage
-  })
-  console.log(errorMessage);
- }
- finally{
-  setisLoading(false)
- }
+    try {
+      setisLoading(true);
+      const response = await axios.post(Url, data);
+      console.log(response.data.message);
+      Swal.fire({
+        title: "Registration Successful",
+        text: response.data.message,
+        icon: "success",
+      });
+    } catch (error) {
+      const errorMessage = error.response
+        ? error.response.data.message
+        : "error occured";
+      Swal.fire({
+        icon: "error",
+        title: "oops",
+        text: errorMessage,
+      });
+      console.log(errorMessage);
+    } finally {
+      setisLoading(false);
+    }
+  };
 
-  }
+  //   const navigate = useNavigate()
+  // const natvigateback = () =>{
+  //   navigate ("/")
+  // }
 
-//   const navigate = useNavigate()
-// const natvigateback = () =>{
-//   navigate ("/")
-// }
+  const [show, setShow] = useState(false);
+  const showEyeIcon = () => {
+    setShow(!show);
+  };
 
-const [show,setShow] = useState(false)
-const showEyeIcon = () => {
-  setShow(!show)
-}
-
-const [isshow,setIsShow] = useState(false)
-const showEyecon = () => {
-  setIsShow(!isshow)
-}
-
-
+  const [isshow, setIsShow] = useState(false);
+  const showEyecon = () => {
+    setIsShow(!isshow);
+  };
 
   return (
     <div className="patientregisterdiv">
@@ -124,26 +118,38 @@ const showEyecon = () => {
           </div>
 
           <div className="theformholder">
-            <input required type="text" name=" HospitalName" placeholder="HospitalName"
+            <input
+              required
+              type="text"
+              name=" HospitalName"
+              placeholder="HospitalName"
               onChange={handleHospitalName}
             />
           </div>
 
           <div className="theformholder">
-            <input required type="text" name=" HospitalAddress" placeholder="HospitalAddress"
+            <input
+              required
+              type="text"
+              name=" HospitalAddress"
+              placeholder="HospitalAddress"
               onChange={handleHospitalAddress}
             />
           </div>
-    
 
           <div className="theformholder">
-            <input required type="text" name=" Phonenumber" placeholder="Phonenumber"
+            <input
+              required
+              type="text"
+              name=" Phonenumber"
+              placeholder="Phonenumber"
               onChange={handlephoneNumber}
             />
           </div>
 
           <div className="theformholder">
-            <input aria-required
+            <input
+              aria-required
               type="text"
               name=" Email"
               placeholder=" Email"
@@ -153,48 +159,66 @@ const showEyecon = () => {
 
           <div className="theformholders">
             <div className="theformholdersWrapper">
-            <input required type={!show ? "password" : "text"} name="Password" placeholder="Password"
-              onChange={handlepassword}
-            
-            />
-            <div className="eye_icon" onClick={showEyeIcon}>
-            {!show ?<FaRegEyeSlash/> : <IoEyeOutline/>  }
+              <input
+                required
+                type={!show ? "password" : "text"}
+                name="Password"
+                placeholder="Password"
+                onChange={handlepassword}
+              />
+              <div className="eye_icon" onClick={showEyeIcon}>
+                {!show ? <FaRegEyeSlash /> : <IoEyeOutline />}
+              </div>
             </div>
-            </div>
-            
           </div>
 
           <div className="theformholders">
-          <div className="theformholdersWrapper">
-          <input required type={!show ? "comfirmpassword" : "text"} name="ConfirmPassword" placeholder="ConfirmPassword"
-              onChange={handleconfirmpassword}
-            
-            />
-                    <div className="eye_icon" onClick={showEyecon}>
-            {!isshow ?<FaRegEyeSlash/> : <IoEyeOutline/>  }
+            <div className="theformholdersWrapper">
+              <input
+                required
+                type={!show ? "comfirmpassword" : "text"}
+                name="ConfirmPassword"
+                placeholder="ConfirmPassword"
+                onChange={handleconfirmpassword}
+              />
+              <div className="eye_icon" onClick={showEyecon}>
+                {!isshow ? <FaRegEyeSlash /> : <IoEyeOutline />}
+              </div>
             </div>
-            </div>
-            </div>
-    
+          </div>
 
           <div className="btnndiv">
-            <button className="submitbttn" type="Sign up" onClick={HandleSubmit}>
-              {isLoading === true ?
-                (<div className='loader'>
+            <button
+              className="submitbttn"
+              type="Sign up"
+              onClick={HandleSubmit}
+            >
+              {isLoading === true ? (
+                <div className="loader">
                   <Oval
                     height={30}
                     width={30}
                     color="#fff"
                     visible={true}
-                    ariaLabel='oval-loading'
+                    ariaLabel="oval-loading"
                     secondaryColor="#030303"
                     strokeWidth={2}
                     strokeWidthSecondary={2}
                   />
-                </div>)
-                : <span>Register</span>}
+                </div>
+              ) : (
+                <span>Register</span>
+              )}
             </button>
-            <p>Already have an account ? <Link style={{ textDecoration: "none", color: "#00a6fb" }} to='/hospitalLogin'>Login</Link></p>
+            <p>
+              Already have an account ?{" "}
+              <Link
+                style={{ textDecoration: "none", color: "#00a6fb" }}
+                to="/hospitalLogin"
+              >
+                Login
+              </Link>
+            </p>
           </div>
         </div>
       </div>
@@ -203,12 +227,9 @@ const showEyecon = () => {
       </div> */}
     </div>
   );
-}
-
+};
 
 export default HospitalRegister;
-
-
 
 // import React, { useState } from "react";
 // import "./HospitalRegister.css";
@@ -218,8 +239,6 @@ export default HospitalRegister;
 // import axios from 'axios'
 // //  import Swal from "sweetalert2";
 // import { Oval } from "react-loader-spinner";
-
-
 
 // const HospitalRegister = () => {
 
@@ -249,13 +268,10 @@ export default HospitalRegister;
 // // console.log(profilePicture);
 // //   }
 
-
 //   const  handlephoneNumber= (e) => {
 //     const newphoneNumber = e.target.value
 //     setPhoneNumber(newphoneNumber)
 //   }
-
-
 
 //   const handleemail = (e) => {
 //     const newemail = e.target.value
@@ -288,7 +304,7 @@ export default HospitalRegister;
 //     }
 //     catch (error) {
 //       console.log(error);
-     
+
 //     }
 //     finally {
 //       setisLoading(false)
@@ -296,7 +312,6 @@ export default HospitalRegister;
 //     }
 
 //   }
-
 
 //   return (
 //     <div className="patientregisterdiv">
@@ -384,6 +399,5 @@ export default HospitalRegister;
 //     </div>
 //   );
 // }
-
 
 // export default HospitalRegister;

@@ -21,7 +21,6 @@ import HospitalRegister from "./Components/Onboarding/HospitalRegister";
 import Aboutus from "./Components/AboutUspage/Aboutus";
 import Faqpage from "./Components/Faqpage/Faqpage";
 import Setnewpassword from "./Components/Setnewpassword/Setnewpassword";
-import { Toaster } from "react-hot-toast";
 import PatientLogin2 from "./Components/Onboarding/PatientLogin2";
 import PatientLeftNav from "./Components/PatientDashboard/PatientLeftNav";
 import PatientHospitalSelection from "./Components/PatientDashboard/PatientHospitalSelection";
@@ -41,140 +40,147 @@ import AdminRescheduleReview from "./Components/Dashboard/AdminRescheduleReview"
 import AdminProfileUpdate from "./Components/Dashboard/AdminProfileUpdate";
 import PatientProfileUpdate from "./Components/PatientDashboard/PatientProfileUpdate";
 import SetNewPasswordHospital from "./Components/Setnewpassword/SetNewPasswordHospital";
+import Enteremail from "./Components/EnterMailPage/Enteremail";
+import { Toaster } from "react-hot-toast";
 
-const route=createHashRouter([
+const route = createHashRouter([
   {
-    path:"/",
-    element:<Body/>
+    path: "/",
+    element: <Body />,
   },
   {
-    path:"/patient",
-    element:<PatientDashboard />,
+    path: "/patient",
+    element: <PatientDashboard />,
     children: [
       {
-          path: "/patient",
-          element: <PatientHospitalSelection />,
+        path: "/patient",
+        element: <PatientHospitalSelection />,
       },
       {
-          path: "/patient/patientHospitalPage",
-          element: <PatientHospitalPage />,
+        path: "/patient/patientHospitalPage",
+        element: <PatientHospitalPage />,
       },
       {
-          path: "/patient/patientHospitalPage/patientAppointmentForm",
-          element: <PatientAppointmentForm />,
+        path: "/patient/patientHospitalPage/patientAppointmentForm",
+        element: <PatientAppointmentForm />,
       },
       {
-          path: "/patient/patientProfilePage",
-          element: <PatientProfilePage />,
+        path: "/patient/patientProfilePage",
+        element: <PatientProfilePage />,
       },
       {
-          path: "/patient/patientProfileUpdate",
-          element: <PatientProfileUpdate />,
+        path: "/patient/patientProfileUpdate",
+        element: <PatientProfileUpdate />,
       },
       {
-          path: "/patient/patientAppointmentReview",
-          element: <PatientAppointmentReview />,
+        path: "/patient/patientAppointmentReview",
+        element: <PatientAppointmentReview />,
       },
-  ],
+    ],
   },
 
   {
-    path:"/contactUs",
-    element:<Contactus/>
+    path: "/contactUs",
+    element: <Contactus />,
   },
   {
-    path:"/aboutUs",
-    element:<Aboutus/>
+    path: "/enterEmail",
+    element: <Enteremail />,
   },
   {
-    path:"/fag",
-    element:<Faqpage/>
+    path: "/aboutUs",
+    element: <Aboutus />,
   },
   {
-    path:"/setPassword",
-    element:<Setnewpassword/>
+    path: "/fag",
+    element: <Faqpage />,
   },
   {
-    path:"/setPasswordHospital",
-    element:<SetNewPasswordHospital/>
+    path: "/setPassword",
+    element: <Setnewpassword />,
   },
   {
-    path:"/passwordReset",
-    element:<Passwordresetsuc/>
+    path: "/setPasswordHospital",
+    element: <SetNewPasswordHospital />,
   },
   {
-    path:"/patientRegister",
-    element:<PatientRegister/>
+    path: "/passwordReset",
+    element: <Passwordresetsuc />,
   },
   {
-    path:"/patientLogin",
-    element:<PatientLogin/>
+    path: "/patientRegister",
+    element: <PatientRegister />,
   },
   {
-    path:"/hospitalLogin",
-    element:<HospitalLogin/>
+    path: "/patientLogin",
+    element: <PatientLogin />,
   },
   {
-    path:"/hospitalRegister",
-    element:<HospitalRegister/>
+    path: "/hospitalLogin",
+    element: <HospitalLogin />,
   },
   {
-    path:"/patientAppointment/:id",
-    element:<PatientLogin2/>
+    path: "/hospitalRegister",
+    element: <HospitalRegister />,
   },
   {
-    path:"/admin",
-    element:<AdminDashboard/>,
-    children:[
+    path: "/patientAppointment/:id",
+    element: <PatientLogin2 />,
+  },
+  {
+    path: "/admin",
+    element: <AdminDashboard />,
+    children: [
       {
-        path:"/admin",
-        element:<AdminRightNav/>
+        path: "/admin",
+        element: <AdminRightNav />,
       },
       {
-        path:"/admin/adminAppointmentReview",
-        element:<AdminAppointmentReview/>
+        path: "/admin/adminAppointmentReview",
+        element: <AdminAppointmentReview />,
       },
       {
-        path:"/admin/adminAppointmentReview/adminAssignDoctor",
-        element:<AdminAssignDoctor/>
+        path: "/admin/adminAppointmentReview/adminAssignDoctor",
+        element: <AdminAssignDoctor />,
       },
       {
-        path:"/admin/adminAppointmentReview/adminAssignDoctor/bookingReview",
-        element:<AdminBookingReview/>
+        path: "/admin/adminAppointmentReview/adminAssignDoctor/bookingReview",
+        element: <AdminBookingReview />,
       },
       {
-        path:"/admin/adminPatientView",
-        element:<AdminPatientView/>
+        path: "/admin/adminPatientView",
+        element: <AdminPatientView />,
       },
       {
-        path:"/admin/adminPayment",
-        element:<AdminPayment/>
+        path: "/admin/adminPayment",
+        element: <AdminPayment />,
       },
       {
-        path:"/admin/adminProfile",
-        element:<AdminProfile/>
+        path: "/admin/adminProfile",
+        element: <AdminProfile />,
       },
       {
         path: "/admin/adminProfileUpdate",
-        element: <AdminProfileUpdate/>,
-    },
-      {
-        path:"/admin/adminRescheduleReview",
-        element:<AdminRescheduleReview/>
+        element: <AdminProfileUpdate />,
       },
-    ]
+      {
+        path: "/admin/adminRescheduleReview",
+        element: <AdminRescheduleReview />,
+      },
+    ],
   },
-  
-])
+]);
 
 function App() {
   return (
-    <RouterProvider  router={route}/>
-  )
+    <>
+      <Toaster />
+      <RouterProvider router={route} />
+    </>
+  );
 }
 
-export default App
-
+export default App;
 
 // function App() {
 //   return (
@@ -196,13 +202,12 @@ export default App
 //         <Route path="/payment" element={<PaymentMethod />} />
 //         <Route path="/patientAppointment/:id" element={<PatientLogin2 />} />
 //       </Routes>
-//       <Toaster/>
+//
 //     </HashRouter>
 //   );
 // }
 
 // export default App;
-
 
 // {
 //   path: "/",

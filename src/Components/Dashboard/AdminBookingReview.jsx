@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import "./AdminBookingReview.css";
 import PopUp from "../PopUp/PopUp";
 import axios from "axios";
-// import { ToastContainer, toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 import toast from "react-hot-toast";
 
@@ -14,16 +13,7 @@ const AdminBookingReview = ({ setBookingReview, setAdminRightNav }) => {
     toast.success("This Appointment has sucessfully been confirmed");
     nav("/admin")
   };
-  // const handleBookAppointment = ()=>{
-  //   setPopUp(true)
-  //   setTimeout(() => {
-  //     setPopUp(false)
-  //     setAdminRightNav(true)
-  //     setBookingReview(false)
-  //   }, 2000);
 
-  // setTimeout(false)
-  // }
 
   const id = localStorage.getItem("userAppointmentID");
   console.log(id);

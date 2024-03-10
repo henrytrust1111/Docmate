@@ -1,7 +1,9 @@
 import React from "react";
 import "./Testimonia.css";
-import image from "../../asset/icons/lady.png";
-import image11 from "../../asset/icons/star.png";
+import image from "/images/michaelAdekunle.jpg";
+import vivian from "/images/vivianNzemeke.jpg";
+import Godwin from "/images/godwinDavid.jpg";
+import image11 from "/star.png";
 
 const Testimonial = () => {
   return (
@@ -39,15 +41,15 @@ const Testimonial = () => {
         <div className="carrddiv">
           <div className="uppercarrddiv">
             <div className="leftborderdiv">
-              <img src={image} alt="" />{" "}
+              <img src={Godwin} alt="" />{" "}
             </div>
-            <h1>Godwin </h1>
+            <h1>Godwin David Nwasah</h1>
           </div>
 
           <div className="midcarrddiv">
             <p>Overall rating</p>
             <div className="middcarrdimg">
-              <img src={image11} alt="" />{" "}
+              <img src={image11} alt="star" />{" "}
             </div>
           </div>
 
@@ -62,9 +64,9 @@ const Testimonial = () => {
         <div className="carrddiv">
           <div className="uppercarrddiv">
             <div className="leftborderdiv">
-              <img src={image} alt="" />{" "}
+              <img src={vivian} alt="" />{" "}
             </div>
-            <h1>Rose Adoyi</h1>
+            <h1>Vivian Nzemeke</h1>
           </div>
 
           <div className="midcarrddiv">

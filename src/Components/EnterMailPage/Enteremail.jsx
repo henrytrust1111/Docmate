@@ -46,7 +46,7 @@ const Enteremail = () => {
         <div className="EnteremailsucmainBody">
           <div className="Entermainheader">
             <div className="EnteremailmainheaderLogo" onClick={handleLogo}>
-              <img src="public/docmate3.png" alt="" />
+              <img src="public/docmate1232.png" alt="" />
             </div>
           </div>
           <div className="Enteremailtheader">

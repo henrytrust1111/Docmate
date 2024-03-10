@@ -77,16 +77,17 @@
 }
 
 .leftborderdiv{
-    width:16%;
-    height: 60%;
-    border-radius: 55px;
-    /* background-color: green; */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: green;
 
 }
 .leftborderdiv >img{
     width:100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: inherit;
 }
 
 .midcarrddiv{
@@ -97,14 +98,26 @@
     justify-content: space-between;
     font-size: 15px;
     font-family: Poppins;
-    font-weight: 700;
-    
+    font-weight: 700;  
 }
 
-.middcarrd>img{
-    width: 50%;
+.midcarrddiv p{
+    width: 40%;
+    font-size: 13px;
+}
+
+.middcarrdimg{
+    width: 60%;
     height: 100%;
-    /* background-color: pink; */
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    /* background-color: #000; */
+}
+
+.middcarrdimg img{
+    width: 80%;
+    height: 80%;
 }
 
 .docmatetextdiv{

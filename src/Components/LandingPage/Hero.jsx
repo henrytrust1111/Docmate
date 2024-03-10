@@ -23,7 +23,7 @@ const Hero = () => {
             </h1>
           </div>
           <div className="btndiv">
-            <button className="started">Get Started </button>
+            {/* <button className="started">Get Started </button> */}
           </div>
         </div>
 

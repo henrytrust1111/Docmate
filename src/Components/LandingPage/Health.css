@@ -19,6 +19,7 @@
   font-size: 35px;
   font-weight: 500;
   font-family: Poppins;
+  line-height: 1.5;
   text-align: center;
   color: white;
 }
@@ -32,16 +33,18 @@
 }
 
 .bodybtn{
-    width: 47%;
+    width: max-content;
+    padding: 0px 20px 0px 20px;
     height: 30%;
     border:2px solid #2e444e ;
-    background-color:#167197;
+    background-color:#fff;
     border-radius: 5px;
     /* box-shadow: 0px 0px 5px; */
     border: none;
     font-size: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: white;
+    color: #2c7da0;
+
 }
 
 @media screen and (max-width:820px) {

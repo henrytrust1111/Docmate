@@ -9,7 +9,7 @@ const Health = () => {
           Try DocMate</h1>
     </div>
     <div className="healthbodybtndiv">
-     <button className='bodybtn'>Get Started</button>
+     <button className='bodybtn'>Get Started </button>
     </div>
     </div>
   )

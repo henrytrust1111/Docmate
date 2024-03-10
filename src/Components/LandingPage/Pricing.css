@@ -177,10 +177,14 @@
   .upperpricingdiv {
     gap: 20px;
   }
-  /* .allcardsdiv {
-    background-color: aqua;
-  } */
-
+  
+  .allcardsdiv {
+    width: 100%;
+    height: max-content;
+    flex-wrap: wrap;
+    gap: 25px;
+    /* background-color: red; */
+  }
   .pricingcarddiv {
     width: 40%;
     height: 500px;
@@ -193,9 +197,10 @@
     /* background-color: red; */
   }
 
-  .pricingcarddivFirst{
+
+  /* .pricingcarddivFirst{
     display: none;
-  }
+  } */
 
   .pricingtextdiv > h2 {
     font-size: 33px;
@@ -216,9 +221,9 @@
 }
 
 @media screen and (max-width: 550px) {
-  .pricingcarddivFirst2{
+  /* .pricingcarddivFirst2{
     display: none;
-  }
+  } */
   .pricingcarddiv{
     width: 80%;
   }

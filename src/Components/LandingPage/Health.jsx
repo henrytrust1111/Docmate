@@ -8,9 +8,9 @@ const Health = () => {
       <h1>Want An Easy Way To Manage Your Health?
           Try DocMate</h1>
     </div>
-    <div className="healthbodybtndiv">
+    {/* <div className="healthbodybtndiv">
      <button className='bodybtn'>Get Started </button>
-    </div>
+    </div> */}
     </div>
   )
 }

@@ -124,7 +124,7 @@
   }
 
   /* Mobile view iphone-13 */
-@media screen and (width <= 480px) {  
+@media screen and (max-width: 480px) {  
     .PatientPaymentPageWrapper {
         width: 90% !important;
         height: 70% !important;
@@ -141,7 +141,7 @@
   }
   
   /* Mobile view iphone-5 */
-  @media screen and (width <= 320px) {
+  @media screen and (max-width: 320px) {
     .PatientPaymentPageWrapper {
         width: 94% !important;
         height: 90% !important;
@@ -149,11 +149,11 @@
   }
   
   /*Tablet view*/
-  @media screen and (width <= 768px) {
+  @media screen and (max-width: 768px) {
   }
   
   /* big-tablet */
-  @media screen and (width <= 834px) {
+  @media screen and (max-width: 834px) {
     .PatientPaymentPageWrapper {
         width: 70%;
         height: 50%;

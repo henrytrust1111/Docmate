@@ -1,15 +1,8 @@
 import React, { useState } from "react";
 import PatientHeader from "./PatientHeader";
-// import PatientHospitalPage from "./PatientHospitalPage";
 import PatientLeftNav from "./PatientLeftNav";
-// import PatientAppointmentForm from "./PatientAppointmentForm";
-// import PatientProfileUpdate from "./PatientProfileUpdate";
-// import PatientAppointmentReview from "./PatientAppointmentReview";
-// import PatientRescheduleForm from "../PopUp/PatientRescheduleForm";
-// import PatientHospitalSelection from "./PatientHospitalSelection";
-// import PatientProfilePage from "./PatientProfilePage";
-// import PatientPayment from "./PatientPayment";
 import { Outlet } from "react-router-dom";
+import "./PatientDashboard.css"
 
 const PatientDashboard = () => {
   const [patientHospitalSelection, setPatientHospitalSelection] =
@@ -24,6 +17,7 @@ const PatientDashboard = () => {
       <PatientHeader patientHospitalSelection={patientHospitalSelection} />
       <div className="admin-dashboard-holder">
         <PatientLeftNav />
+        {/* <h1 className="helloWorld">HELLO WORLD</h1> */}
         <Outlet />
         {/* <PatientLeftNav
           setPatientHospitalSelection={setPatientHospitalSelection}

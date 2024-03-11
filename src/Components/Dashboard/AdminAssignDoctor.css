@@ -96,7 +96,7 @@
 }
 
 /* Mobile view iphone-13 */
-@media screen and (width <= 480px) {
+@media screen and (max-width: 480px) {
   .AdminAssignDoctor-page {
     min-width: 100%;
   }
@@ -134,7 +134,7 @@
 }
 
 /* Mobile view iphone-5 */
-@media screen and (width <= 320px) {
+@media screen and (max-width: 320px) {
     #AdminAssignDoctor-content-label {
         font-size: 15px;
       }
@@ -159,7 +159,7 @@
 }
 
 /*Tablet view*/
-@media screen and (width <= 768px) {
+@media screen and (max-width: 768px) {
   .AdminAssignDoctor-page {
     width: calc(100% - 50px);
   }
@@ -181,7 +181,7 @@
 }
 
 /* big-tablet */
-@media screen and (width <= 834px) {
+@media screen and (max-width: 834px) {
     .AdminAssignDoctor-wrapper {
         width: 90%;
         height: 95%;

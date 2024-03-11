@@ -285,7 +285,7 @@
 }
 
 /* Mobile view iphone-13 */
-@media screen and (width <= 480px) {
+@media screen and (max-width: 480px) {
   .admin-dashboard-right {
     min-width: 100%;
   }
@@ -297,7 +297,7 @@
 }
 
 /* Mobile view iphone-5 */
-@media screen and (width <= 320px) {
+@media screen and (max-width: 320px) {
   .select-dashboard-view-wrapper {
     min-width: 120px;
     font-size: 11px;
@@ -308,7 +308,7 @@
 }
 
 /*Tablet view*/
-@media screen and (width <= 768px) {
+@media screen and (max-width: 768px) {
   .admin-dashboard-right {
     width: calc(100% - 50px);
   }

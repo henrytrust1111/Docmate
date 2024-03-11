@@ -125,7 +125,7 @@
 }
 
 /* Mobile view iphone-13 */
-@media screen and (width <= 480px) {
+@media screen and (max-width: 480px) {
   .PatientProfileUpdate-container {
     min-width: 100%;
   }
@@ -142,7 +142,7 @@
 }
 
 /* Mobile view iphone-5 */
-@media screen and (width <= 320px) {
+@media screen and (max-width: 320px) {
   .PatientProfileUpdate-holder{
     /* height: 90%; */
     min-height: max-content;
@@ -174,21 +174,21 @@
 
 }
 /* Mobile view iphone-XR */
-@media screen and (width <= 375px) {
+@media screen and (max-width: 375px) {
   #updateFor-gender-age{
     gap: 30px;
   }
 }
 
 /*Tablet view*/
-@media screen and (width <= 768px) {
+@media screen and (max-width: 768px) {
   .PatientProfileUpdate-container {
     width: calc(100% - 50px);
   }
 }
 
 /* big-tablet */
-@media screen and (width <= 834px) {
+@media screen and ( max-width:834px) {
   .PatientProfileUpdate-wrapper {
     width: 90%;
   }

@@ -2,6 +2,9 @@
   justify-content: space-between;
   /* background-color: red; */
 }
+.dashboard-header-wrapper{
+  justify-content: space-between;
+}
 
 .search-results {
   width: 100%;

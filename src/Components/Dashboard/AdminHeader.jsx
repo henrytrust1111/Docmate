@@ -33,7 +33,7 @@ const AdminHeader = () => {
               onClick={()=>setShowDashboard(true)} 
             />
           </div>
-          <div className="dashboard-search-bar">
+          {/* <div className="dashboard-search-bar">
             <div className="search-box">
               <input
                 type="text"
@@ -56,9 +56,9 @@ const AdminHeader = () => {
                 )}
               </div>
             </div>
-          </div>
+          </div> */}
           <div className="dashboard-right" id="dashboard-right">
-            {search && (
+            {/* {search && (
               <input
                 type="text"
                 className="mobile-search-bar"
@@ -66,10 +66,10 @@ const AdminHeader = () => {
                 value={searchValue}
                 onChange={(e) => setSearchValue(e.target.value)}
               />
-            )}
-            <div className="search-icon">
+            )} */}
+            {/* <div className="search-icon"> */}
               {/* <img src="/icons/search.svg" alt="search" onClick={()=>setSearch(true)}/> */}
-              {search ? (
+              {/* {search ? (
                 <img
                   src="/icons/cancel.svg"
                   alt="search"
@@ -83,7 +83,7 @@ const AdminHeader = () => {
                   onClick={() => setSearch(true)}
                 />
               )}
-            </div>
+            </div> */}
             <div className="notification">
               <img src="/icons/notification.svg" alt="notification" />
               <div className="notification-quantity">5</div>

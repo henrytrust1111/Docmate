@@ -4,6 +4,9 @@ import PopUp from '../PopUp/PopUp'
 import Swal from "sweetalert2";
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom';
+import { ThemeContext } from '../context/Theme'
+import { useContext } from 'react'
+import { useLayoutEffect } from 'react'
 
 const PatientAppointmentForm = ({setPatientAppointmentForm,setPatientHospitalSelection}) => {
   const [popUp, setPopUp] = useState(false)
@@ -13,10 +16,17 @@ const PatientAppointmentForm = ({setPatientAppointmentForm,setPatientHospitalSel
   const [lastVisitation, setLastVisitation] = useState()
   const [patientEmail, setEmail] = useState()
   const nav = useNavigate()
-  // console.log(fullName);
-  console.log(lastDiagnosis);
-  console.log(presentSymptoms);
-  console.log(lastVisitation);
+  const {showSearch,setShowSearch} = useContext(ThemeContext)
+  console.log(showSearch);
+  useLayoutEffect(() => {
+    const fetchData = ()=>{
+      setShowSearch(false)
+      
+    }
+
+    fetchData()
+    console.log(showSearch);
+  }, [])
     // const fullName= fullNames.toLowerCase();
   const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
   const id = localStorage.getItem("hospitalID");

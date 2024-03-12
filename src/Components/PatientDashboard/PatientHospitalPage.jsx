@@ -3,6 +3,10 @@ import { useEffect } from "react";
 import "./PatientHospitalPage.css";
 import Swal from "sweetalert2";
 import axios from "axios";
+import { ThemeContext } from '../context/Theme'
+import { useContext } from 'react'
+import { useLayoutEffect } from 'react'
+
 import { useNavigate } from "react-router-dom";
 const PatientHospitalPage = () => {
   const [hospital,setHospital] = useState()
@@ -11,8 +15,17 @@ const PatientHospitalPage = () => {
   const handleRequestAppointment = () => {
     nav("/patient/patientHospitalPage/patientAppointmentForm");
   };
+  const {showSearch,setShowSearch} = useContext(ThemeContext)
+  console.log(showSearch);
+  useLayoutEffect(() => {
+    const fetchData = ()=>{
+      setShowSearch(false)
+      
+    }
 
-  console.log(hospital);
+    fetchData()
+    console.log(showSearch);
+  }, [])
 
   const id = localStorage.getItem("hospitalID");
   const url = `https://doc-mate.onrender.com/one-hospital/${id}`;

@@ -1,8 +1,21 @@
 import React from 'react'
 import "./PatientAppointmentReview.css"
+import { ThemeContext } from '../context/Theme'
+import { useContext } from 'react'
+import { useLayoutEffect } from 'react'
 
 const PatientAppointmentReview = () => {
+  const {showSearch,setShowSearch} = useContext(ThemeContext)
+  console.log(showSearch);
+  useLayoutEffect(() => {
+    const fetchData = ()=>{
+      setShowSearch(false)
+      
+    }
 
+    fetchData()
+    console.log(showSearch);
+  }, [])
 
   // console.log(key);
   function payKorapay() {

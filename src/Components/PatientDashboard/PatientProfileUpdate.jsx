@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import "./PatientProfileUpdate.css";
 import axios from "axios";
+import { ThemeContext } from '../context/Theme'
+import { useContext } from 'react'
+import { useLayoutEffect } from 'react'
 
 const PatientProfileUpdate = () => {
   const [bloodType, setBloodType] = useState();
@@ -22,6 +25,17 @@ const PatientProfileUpdate = () => {
   const userToken = loggedInUser.token;
   console.log(userToken);
   console.log(loggedInUser);
+  const {showSearch,setShowSearch} = useContext(ThemeContext)
+  console.log(showSearch);
+  useLayoutEffect(() => {
+    const fetchData = ()=>{
+      setShowSearch(false)
+      
+    }
+
+    fetchData()
+    console.log(showSearch);
+  }, [])
   const headers = {
     Authorization: `Bearer ${userToken}`,
     // Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWU2MTczMDc1ODc4MzU0ZjFiNjNjZDYiLCJlbWFpbCI6ImFkZWt1bmxlbWljaGFlbDEzMTlAZ21haWwuY29tIiwiaWF0IjoxNzA5NTc5MTkzLCJleHAiOjE3MDk2NjU1OTN9.gkHpEZ5cbyzqWgdWRsvXdzwUiJl6m3OphiRJhUvrtyw",

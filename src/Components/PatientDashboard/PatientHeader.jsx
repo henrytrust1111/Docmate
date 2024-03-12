@@ -5,11 +5,16 @@ import PatientBurgerMenu from "./PatientBurgerMenu";
 import { useNavigate } from "react-router-dom";
 import "./PatientHeader.css";
 import axios from "axios";
+import { ThemeContext } from "../context/Theme";
+import { useContext } from "react";
+
 const PatientHeader = () => {
   const [search, setSearch] = useState(false);
   const [searchValue, setSearchValue] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   const [showDashboard, setShowDashboard] = useState(false);
+  const { showSearch, setShowSearch } = useContext(ThemeContext);
+  console.log(showSearch);
   const nav = useNavigate();
   const handleCancelIcon = () => {
     setSearchValue("");
@@ -77,17 +82,45 @@ const PatientHeader = () => {
               onClick={() => setShowDashboard(true)}
             />
           </div>
-          <div className="dashboard-search-bar">
-            <div className="search-box PatientHeaderSearch">
+          {showSearch ? (
+            <div className="dashboard-search-bar">
+              <div className="search-box PatientHeaderSearch">
+                <input
+                  type="text"
+                  className="search-input"
+                  placeholder="Search"
+                  value={searchValue}
+                  onClick={() => setSearch(true)}
+                  onChange={(e) => setSearchValue(e.target.value)}
+                />
+                <div className="search-icon">
+                  {search ? (
+                    <img
+                      src="/icons/cancel.svg"
+                      alt="search"
+                      onClick={handleCancelIcon}
+                      className="cancel-icon"
+                    />
+                  ) : (
+                    <img src="/icons/search.svg" alt="search" />
+                  )}
+                </div>
+              </div>
+            </div>
+          ) : null}
+          <div className="dashboard-right" id="dashboard-right">
+            {search && showSearch ? (
               <input
                 type="text"
-                className="search-input"
+                className="mobile-search-bar"
                 placeholder="Search"
                 value={searchValue}
-                onClick={() => setSearch(true)}
                 onChange={(e) => setSearchValue(e.target.value)}
               />
+            ) : null}
+            {showSearch ? (
               <div className="search-icon">
+                {/* <img src="/icons/search.svg" alt="search" onClick={()=>setSearch(true)}/> */}
                 {search ? (
                   <img
                     src="/icons/cancel.svg"
@@ -96,38 +129,14 @@ const PatientHeader = () => {
                     className="cancel-icon"
                   />
                 ) : (
-                  <img src="/icons/search.svg" alt="search" />
+                  <img
+                    src="/icons/search.svg"
+                    alt="search"
+                    onClick={() => setSearch(true)}
+                  />
                 )}
               </div>
-            </div>
-          </div>
-          <div className="dashboard-right" id="dashboard-right">
-            {search && (
-              <input
-                type="text"
-                className="mobile-search-bar"
-                placeholder="Search"
-                value={searchValue}
-                onChange={(e) => setSearchValue(e.target.value)}
-              />
-            )}
-            <div className="search-icon">
-              {/* <img src="/icons/search.svg" alt="search" onClick={()=>setSearch(true)}/> */}
-              {search ? (
-                <img
-                  src="/icons/cancel.svg"
-                  alt="search"
-                  onClick={handleCancelIcon}
-                  className="cancel-icon"
-                />
-              ) : (
-                <img
-                  src="/icons/search.svg"
-                  alt="search"
-                  onClick={() => setSearch(true)}
-                />
-              )}
-            </div>
+            ) : null}
             <div className="notification">
               <img src="/icons/notification.svg" alt="notification" />
               <div className="notification-quantity">5</div>
@@ -145,4 +154,3 @@ const PatientHeader = () => {
 };
 
 export default PatientHeader;
-

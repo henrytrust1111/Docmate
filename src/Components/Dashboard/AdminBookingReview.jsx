@@ -4,11 +4,13 @@ import PopUp from "../PopUp/PopUp";
 import axios from "axios";
 import "react-toastify/dist/ReactToastify.css";
 import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 
-const AdminBookingReview = ({ setBookingReview, setAdminRightNav }) => {
+const AdminBookingReview = () => {
   const [popUp, setPopUp] = useState(false);
   const [getAppointmentReview, setGetAppointmentReview] = useState();
   console.log(getAppointmentReview);
+  const nav = useNavigate()
   const handleBookAppointment = () => {
     toast.success("This Appointment has sucessfully been confirmed");
     nav("/admin")

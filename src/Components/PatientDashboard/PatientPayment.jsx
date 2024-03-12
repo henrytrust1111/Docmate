@@ -1,6 +1,20 @@
 import React from 'react'
 import "./PatientPayment.css"
+import { ThemeContext } from '../context/Theme'
+import { useContext } from 'react'
+import { useLayoutEffect } from 'react'
 const PatientPayment = () => {
+  const {showSearch,setShowSearch} = useContext(ThemeContext)
+  console.log(showSearch);
+  useLayoutEffect(() => {
+    const fetchData = ()=>{
+      setShowSearch(false)
+      
+    }
+
+    fetchData()
+    console.log(showSearch);
+  }, [])
   return (
     <div className='PatientPaymentPage'>
       <div className="PatientPaymentPageWrapper">

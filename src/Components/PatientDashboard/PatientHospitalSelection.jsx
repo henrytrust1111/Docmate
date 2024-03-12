@@ -1,16 +1,23 @@
 import React, { useEffect, useState } from "react";
-import "./PatientHospitalSelection.css"
+import "./PatientHospitalSelection.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { ThemeContext } from "../context/Theme";
+import { useContext } from "react";
+import { useLayoutEffect } from "react";
 
-const PatientHospitalSelection = ({
-  setPatientHospitalSelection,
-  setPatientHospitalPage,
-}) => {
+const PatientHospitalSelection = () => {
   const [hospitals, setHospital] = useState([]);
+  const { showSearch, setShowSearch } = useContext(ThemeContext);
+  console.log(showSearch);
+  useLayoutEffect(() => {
+    const fetchData = () => {
+      setShowSearch(true);
+    };
 
-  console.log(hospitals);
-
+    fetchData();
+    console.log(showSearch);
+  }, []);
 
   const url = "https://doc-mate.onrender.com/all-hospitals";
   const userInfo = JSON.parse(localStorage.getItem("loggedInUser"));
@@ -34,16 +41,13 @@ const PatientHospitalSelection = ({
     fetchData();
   }, []);
 
-  const nav = useNavigate()
-
-
+  const nav = useNavigate();
 
   const handleHospitalSelection = (id) => {
     console.log(id);
-    localStorage.setItem("hospitalID",id)
+    localStorage.setItem("hospitalID", id);
 
-
-    nav("/patient/patientHospitalPage")
+    nav("/patient/patientHospitalPage");
   };
 
   return (
@@ -97,7 +101,7 @@ const PatientHospitalSelection = ({
                       <div
                         className="delete-button"
                         id="myView-btn"
-                        onClick={()=>handleHospitalSelection(e._id)}
+                        onClick={() => handleHospitalSelection(e._id)}
                       >
                         View
                       </div>

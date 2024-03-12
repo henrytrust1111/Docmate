@@ -28,7 +28,10 @@ const PatientHospitalPage = () => {
   }, [])
 
   const id = localStorage.getItem("hospitalID");
-  const url = `https://doc-mate.onrender.com/one-hospital/${id}`;
+  const id2 = localStorage.getItem("hospitalIDSearch");
+  console.log(id2);
+  console.log(id? id:"no id");
+  const url = `https://doc-mate.onrender.com/one-hospital/${id? id:id2}`;
   const userInfo = JSON.parse(localStorage.getItem("loggedInUser"));
   const userToken = userInfo?.token;
   const headers = {
@@ -44,7 +47,7 @@ const PatientHospitalPage = () => {
         setHospital(response?.data.data);
       } catch (error) {
         console.error("Error:", error);
-        // console.error("Error Response:", error.response);
+        console.error("Error Response:", error.response); 
       }
     };
 

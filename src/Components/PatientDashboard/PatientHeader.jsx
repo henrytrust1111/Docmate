@@ -13,6 +13,7 @@ const PatientHeader = () => {
   const [searchValue, setSearchValue] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   const [showDashboard, setShowDashboard] = useState(false);
+  const [showSearchResult1, setShowSearchResult1] = useState(true);
   const { showSearch, setShowSearch } = useContext(ThemeContext);
   console.log(showSearch);
   const nav = useNavigate();
@@ -54,19 +55,33 @@ const PatientHeader = () => {
     }
   }, [searchValue]);
 
+  const handleHospitalSelection = (id) => {
+    // console.log(id);
+    localStorage.removeItem("hospitalID")
+    localStorage.setItem("hospitalIDSearch", id);
+    setShowSearchResult1(false);
+    nav("/patient/patientHospitalPage");
+  };
+
   return (
     <>
       {/* <div className="helloWorld">Welcome</div> */}
-      <div className="search-results">
-        <div className="search-results4">
-          {searchResults?.map((result, index) => (
-            <div key={index} className="search-results3">
-              <h4>{result?.hospitalName}</h4>
-              <p>{result?.hospitalAddress}</p>
-            </div>
-          ))}
+      {showSearchResult1 ? (
+        <div className="search-results">
+          <div className="search-results4">
+            {searchResults?.map((result, index) => (
+              <div
+                key={index}
+                className="search-results3"
+                onClick={() => handleHospitalSelection(result._id)}
+              >
+                <h4>{result?.hospitalName}</h4>
+                <p>{result?.hospitalAddress}</p>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
+      ) : null}
       <header className="dashboard-header">
         <div className="dashboard-header-wrapper">
           <div className="admin-dashboard-logo" onClick={handleLogo}>

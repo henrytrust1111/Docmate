@@ -9,14 +9,14 @@ import { useLayoutEffect } from "react";
 const PatientHospitalSelection = () => {
   const [hospitals, setHospital] = useState([]);
   const { showSearch, setShowSearch } = useContext(ThemeContext);
-  console.log(showSearch);
+  // console.log(showSearch);
   useLayoutEffect(() => {
     const fetchData = () => {
       setShowSearch(true);
     };
 
     fetchData();
-    console.log(showSearch);
+    // console.log(showSearch);
   }, []);
 
   const url = "https://doc-mate.onrender.com/all-hospitals";
@@ -44,7 +44,8 @@ const PatientHospitalSelection = () => {
   const nav = useNavigate();
 
   const handleHospitalSelection = (id) => {
-    console.log(id);
+    // console.log(id);
+    localStorage.removeItem("hospitalIDSearch")
     localStorage.setItem("hospitalID", id);
 
     nav("/patient/patientHospitalPage");

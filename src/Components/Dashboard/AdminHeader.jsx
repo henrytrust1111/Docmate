@@ -8,6 +8,8 @@ const AdminHeader = () => {
   const [searchValue, setSearchValue] = useState("");
   const [showDashboard,setShowDashboard] = useState(false)
   const nav= useNavigate()
+const notificationLength = parseInt(localStorage.getItem("notificationLength"))
+ console.log(notificationLength);
   const handleCancelIcon = () => {
     setSearchValue("");
     setSearch(false);
@@ -86,7 +88,7 @@ const AdminHeader = () => {
             </div> */}
             <div className="notification">
               <img src="/icons/notification.svg" alt="notification" />
-              <div className="notification-quantity">5</div>
+              <div className="notification-quantity">{notificationLength}</div>
             </div>
             <div className="dashboard-profile">
               <div className="profile-image-holder"></div>

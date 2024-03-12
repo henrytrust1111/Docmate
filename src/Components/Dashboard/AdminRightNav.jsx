@@ -3,7 +3,7 @@ import "./AdminRightNav.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const AdminRightNav = ({setAdminPatientView,setAdminProfile,setAdminRightNav,setAdminPayment,setAdminAppointmentReview,setAdminAssignDoctor}) => {
+const AdminRightNav = () => {
   const [allAppointment,setAllAppointment] = useState(true)
   const [reschedules,setReschedules] = useState(false)
   const [attended,setAttented] = useState(false)
@@ -12,6 +12,8 @@ const AdminRightNav = ({setAdminPatientView,setAdminProfile,setAdminRightNav,set
   const [getAllReschedules,setGetAllReschedules] = useState()
   const [getAllConfirmed,setGetAllConfirmed] = useState()
   const [getAllPending,setGetAllPending] = useState()
+  const notificationLength = getAllAppointment?.length;
+ localStorage.setItem("notificationLength", notificationLength)
   
 const nav = useNavigate();
   const handleAllAppointment = ()=>{
@@ -148,7 +150,7 @@ console.log(getAllAppointment);
               <div className={unattended? "select-dashboard-view-holder active-state-container":"select-dashboard-view-holder"}>
                 <div>
                   <p>{getAllPending? getAllPending?.length:"0"}</p>
-                  <p>Unattended</p>
+                  <p>Pending</p>
                 </div>
               </div>
             </div>
@@ -178,10 +180,10 @@ console.log(getAllAppointment);
                   <div className="list-container" key={i}>
                   <div className="s-n">{i+1}</div>
                   <div className="attribute-fixed-width patient-profile-record">
-                    <div className="profile-img-view"></div>
+                    {/* <div className="profile-img-view"></div> */}
                     <div className="name-view-profile-container">
                       <p>{e.fullName}</p>
-                      <p className="colored-view-profile">View profile</p>
+                      {/* <p className="colored-view-profile">View profile</p> */}
                     </div>
                   </div>
                   <div className="attribute-fixed-width email-record">
@@ -202,10 +204,10 @@ console.log(getAllAppointment);
                 <div className="list-container" key={i}>
                 <div className="s-n">{i+1}</div>
                 <div className="attribute-fixed-width patient-profile-record">
-                  <div className="profile-img-view"></div>
+                  {/* <div className="profile-img-view"></div> */}
                   <div className="name-view-profile-container">
                     <p>{e.fullName}</p>
-                    <p className="colored-view-profile">View profile</p>
+                    {/* <p className="colored-view-profile">View profile</p> */}
                   </div>
                 </div>
                 <div className="attribute-fixed-width email-record">
@@ -224,10 +226,10 @@ console.log(getAllAppointment);
               </div>) :attended? getAllConfirmed?.map((e,i)=> <div className="list-container" key={i}>
                   <div className="s-n">{i+1}</div>
                   <div className="attribute-fixed-width patient-profile-record">
-                    <div className="profile-img-view"></div>
+                    {/* <div className="profile-img-view"></div> */}
                     <div className="name-view-profile-container">
                       <p>{e.fullName}</p>
-                      <p className="colored-view-profile">View profile</p>
+                      {/* <p className="colored-view-profile">View profile</p> */}
                     </div>
                   </div>
                   <div className="attribute-fixed-width email-record">
@@ -246,10 +248,10 @@ console.log(getAllAppointment);
                 </div>):unattended? getAllPending?.map((e,i)=> <div className="list-container" key={i}>
                   <div className="s-n">{i+1}</div>
                   <div className="attribute-fixed-width patient-profile-record">
-                    <div className="profile-img-view"></div>
+                    {/* <div className="profile-img-view"></div> */}
                     <div className="name-view-profile-container">
                       <p>{e.fullName}</p>
-                      <p className="colored-view-profile">View profile</p>
+                      {/* <p className="colored-view-profile">View profile</p> */}
                     </div>
                   </div>
                   <div className="attribute-fixed-width email-record">

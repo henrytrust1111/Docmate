@@ -84,10 +84,11 @@ const PatientHeader = () => {
       ) : null}
       <header className="dashboard-header">
         <div className="dashboard-header-wrapper">
-          <div className="admin-dashboard-logo" onClick={handleLogo}>
+          <div className="admin-dashboard-logo" >
             <img
               src="/icons/DocMate.png"
               alt="logo"
+              onClick={handleLogo}
               className="dashboard-logo"
             />
             <img

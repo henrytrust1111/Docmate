@@ -121,7 +121,7 @@ const HomePageHeader = () => {
             </button>
           </div>
           <div className="landingPageBurgerMenu" onClick={handleMenu}>
-            <img src="/icons/burgerMenu2.svg" alt="" />
+            <img src="/icons/menu.png" alt="" />
           </div>
         </div>
       </div>

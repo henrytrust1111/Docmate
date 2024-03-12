@@ -49,8 +49,8 @@ const HeaderBurgerPopUp = ({setMenuPop}) => {
           <div onClick={handleAboutUs}>About Us</div>
           <div >Pricing</div>
           <div onClick={handleFaq}>FAQ</div>
-          <div onClick={handlePatientRegister}>Patient Register</div>
-          <div onClick={handleHospitalRegister}>Hospital Register</div>
+          <div onClick={handlePatientRegister}>Patient SignUp</div>
+          <div onClick={handleHospitalRegister}>Hospital SignUp</div>
         </div>
       </div>
     </div>

@@ -10,10 +10,14 @@ const AdminHeader = () => {
   const nav= useNavigate()
 const notificationLength = parseInt(localStorage.getItem("notificationLength"))
  console.log(notificationLength);
-  const handleCancelIcon = () => {
-    setSearchValue("");
-    setSearch(false);
-  };
+  // const handleCancelIcon = () => {
+  //   setSearchValue("");
+  //   setSearch(false);
+  // };
+
+  const handleNotification = ()=>{
+    nav("/admin")
+  }
 
   const loggedInHospital= JSON.parse(localStorage.getItem("loggedInHospital"))
   const hospitalName = (loggedInHospital?.hospitalName);
@@ -86,7 +90,7 @@ const notificationLength = parseInt(localStorage.getItem("notificationLength"))
                 />
               )}
             </div> */}
-            <div className="notification">
+            <div className="notification" onClick={handleNotification}>
               <img src="/icons/notification.svg" alt="notification" />
               <div className="notification-quantity">{notificationLength}</div>
             </div>

@@ -92,7 +92,7 @@ const route = createHashRouter([
     element: <Aboutus />,
   },
   {
-    path: "/fag",
+    path: "/faq",
     element: <Faqpage />,
   },
   {

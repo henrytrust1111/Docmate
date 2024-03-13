@@ -3,6 +3,8 @@ import "./Testimonia.css";
 import image from "/images/michaelAdekunle.jpg";
 import vivian from "/images/vivianNzemeke.jpg";
 import Godwin from "/images/godwinDavid.jpg";
+import Henry from "/images/Henry.jpg";
+import Rose from "/images/Rose.jpg";
 import image11 from "/star.png";
 
 const Testimonial = () => {
@@ -15,7 +17,6 @@ const Testimonial = () => {
           about us
         </h1>
       </div>
-
       <div className="testimonalcarddiv">
         <div className="carrddiv">
           <div className="uppercarrddiv">
@@ -32,9 +33,9 @@ const Testimonial = () => {
           </div>
           <div className="docmatetextdiv">
             <p id="testimonialsP">
-              “ has made transitioning on my own very easy.
-              I wouldn't be as organized as I am without this software so I have
-              nothing but good things to say.”
+              “ has made transitioning on my own very easy. I wouldn't be as
+              organized as I am without this software so I have nothing but good
+              things to say.”
             </p>
           </div>
         </div>
@@ -67,6 +68,52 @@ const Testimonial = () => {
               <img src={vivian} alt="" />{" "}
             </div>
             <h1>Vivian Nzemeke</h1>
+          </div>
+
+          <div className="midcarrddiv">
+            <p>Overall rating</p>
+            <div className="middcarrdimg">
+              <img src={image11} alt="" />{" "}
+            </div>
+          </div>
+
+          <div className="docmatetextdiv">
+            <p>
+              “<span>DocMate</span> has made transitioning on my own very easy.
+              I wouldn't be as organized as I am without this software so I have
+              nothing but good things to say.”{" "}
+            </p>
+          </div>
+        </div>
+        <div className="carrddiv">
+          <div className="uppercarrddiv">
+            <div className="leftborderdiv">
+              <img src={Henry} alt="" />{" "}
+            </div>
+            <h1>Trust Henry</h1>
+          </div>
+
+          <div className="midcarrddiv">
+            <p>Overall rating</p>
+            <div className="middcarrdimg">
+              <img src={image11} alt="" />{" "}
+            </div>
+          </div>
+
+          <div className="docmatetextdiv">
+            <p>
+              “<span>DocMate</span> has made transitioning on my own very easy.
+              I wouldn't be as organized as I am without this software so I have
+              nothing but good things to say.”{" "}
+            </p>
+          </div>
+        </div>
+        <div className="carrddiv">
+          <div className="uppercarrddiv">
+            <div className="leftborderdiv">
+              <img src={Rose} alt="" />{" "}
+            </div>
+            <h1>Rose Adoyi</h1>
           </div>
 
           <div className="midcarrddiv">

@@ -12,10 +12,10 @@ const PatientProfileUpdate = () => {
   const [phoneNumber, setPhoneNumber] = useState();
   const [gender, setGender] = useState();
   const [age, setAge] = useState();
-  console.log(bloodType);
-  console.log(allergies);
-  console.log(age);
-  console.log(gender);
+  // console.log(bloodType);
+  // console.log(allergies);
+  // console.log(age);
+  // console.log(gender);
 
   const data = { bloodType, allergies, patientAddress, gender, age , phoneNumber, patientAddress};
 

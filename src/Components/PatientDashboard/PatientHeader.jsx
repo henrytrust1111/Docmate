@@ -25,10 +25,13 @@ const PatientHeader = () => {
   const handleLogo = () => {
     nav("/");
   };
+  
   const userInfo = JSON.parse(localStorage.getItem("loggedInUser"));
+  const img = userInfo?.data.profilePicture?.url
+  console.log(img);
   const userToken = userInfo?.token;
   const welcomeMessage = userInfo?.message;
-  console.log(welcomeMessage);
+  // console.log(welcomeMessage);
   const searchHospital = async () => {
     try {
       const response = await axios.get(
@@ -158,7 +161,9 @@ const PatientHeader = () => {
               <div className="notification-quantity">5</div>
             </div> */}
             <div className="dashboard-profile">
-              <div className="profile-image-holder"></div>
+              <div className="profile-image-holder">
+                <img src={img} alt="" />
+              </div>
               <p style={{ fontSize: "10px" }}>{welcomeMessage}</p>
             </div>
           </div>

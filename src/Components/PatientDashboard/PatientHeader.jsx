@@ -25,6 +25,9 @@ const PatientHeader = () => {
   const handleLogo = () => {
     nav("/");
   };
+  const handlePatientProfile = () => {
+    nav("/patient/patientProfilePage");
+  };
   
   const userInfo = JSON.parse(localStorage.getItem("loggedInUser"));
   const img = userInfo?.data.profilePicture?.url
@@ -161,7 +164,7 @@ const PatientHeader = () => {
               <div className="notification-quantity">5</div>
             </div> */}
             <div className="dashboard-profile">
-              <div className="profile-image-holder">
+              <div className="profile-image-holder" onClick={handlePatientProfile}>
                 <img src={img} alt="" />
               </div>
               <p style={{ fontSize: "10px" }}>{welcomeMessage}</p>

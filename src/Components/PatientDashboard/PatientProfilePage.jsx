@@ -45,11 +45,7 @@ const PatientProfilePage = () => {
     <div className="PatientProfilePage-container">
       <div className="PatientProfilePage-wrapper">
         <div className="PatientProfilePage-cardWrapper">
-          <ProfileCardComponent
-            // setPatientHospitalPage={setPatientHospitalPage}
-            // setPatientProfileUpdate={setPatientProfileUpdate}
-            // setPatientProfilePage={setPatientProfilePage}
-          />
+          <ProfileCardComponent />
         </div>
         <div className="PatientProfilePage-informationWrapper">
           <p>Information</p> <hr className="hr" />

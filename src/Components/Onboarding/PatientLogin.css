@@ -109,7 +109,7 @@ border-bottom-right-radius: 15px;
  }
 
 .theform > input{
-  width: 90%;
+  width: 95%;
   height: 100%;
   border: 1px solid lightblue;
   background-color: red;
@@ -125,7 +125,7 @@ border-bottom-right-radius: 15px;
  }
 
 .forgotpass{
-  width: 90%;
+  width: 95%;
   height: 3%;
   display: flex;
   align-items: flex-end;
@@ -143,10 +143,11 @@ border-bottom-right-radius: 15px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  gap: 5px;
 }
 
 .submitbtn{
-  width: 90%;
+  width: 95%;
   height: 50px;
   background-color:#2c7da0;
   border: none;

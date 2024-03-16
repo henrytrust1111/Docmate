@@ -1,54 +1,79 @@
 import React, { useState } from "react";
 import "./PatientProfileUpdate.css";
 import axios from "axios";
-import { ThemeContext } from '../context/Theme'
-import { useContext } from 'react'
-import { useLayoutEffect } from 'react'
+import { ThemeContext } from "../context/Theme";
+import { useContext } from "react";
+import { useLayoutEffect } from "react";
 
 const PatientProfileUpdate = () => {
   const [bloodType, setBloodType] = useState();
+  const [isLoading, setIsloading] = useState(false);
   const [allergies, setAllegies] = useState();
   const [patientAddress, setPatientAddress] = useState();
   const [phoneNumber, setPhoneNumber] = useState();
   const [gender, setGender] = useState();
   const [age, setAge] = useState();
+  const [image, setImage] = useState();
+  console.log(image);
   // console.log(bloodType);
   // console.log(allergies);
   // console.log(age);
   // console.log(gender);
 
-  const data = { bloodType, allergies, patientAddress, gender, age , phoneNumber, patientAddress};
+  const data = {
+    bloodType,
+    allergies,
+    patientAddress,
+    gender,
+    age,
+    phoneNumber,
+    patientAddress,
+  };
 
   const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+  const firstName = loggedInUser?.data.firstName;
+  const lastName = loggedInUser?.data.lastName;
+  const address = loggedInUser?.data.patientAddress;
+  const number = loggedInUser?.data.phoneNumber;
+  console.log(address);
+  console.log(loggedInUser.data);
   const id = loggedInUser?.data.id;
   const Url = `https://doc-mate.onrender.com/update-profile/${id}`;
   const userToken = loggedInUser.token;
-  console.log(userToken);
-  console.log(loggedInUser);
-  const {showSearch,setShowSearch} = useContext(ThemeContext)
-  console.log(showSearch);
-  useLayoutEffect(() => {
-    const fetchData = ()=>{
-      setShowSearch(false)
-      
-    }
+  // console.log(userToken);
+  // console.log(loggedInUser);
+  const { showSearch, setShowSearch } = useContext(ThemeContext);
+  // console.log(showSearch);
 
-    fetchData()
-    console.log(showSearch);
-  }, [])
+  useLayoutEffect(() => {
+    const fetchData = () => {
+      setShowSearch(false);
+    };
+
+    fetchData();
+    // console.log(showSearch);
+  }, []);
   const headers = {
     Authorization: `Bearer ${userToken}`,
-    // Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWU2MTczMDc1ODc4MzU0ZjFiNjNjZDYiLCJlbWFpbCI6ImFkZWt1bmxlbWljaGFlbDEzMTlAZ21haWwuY29tIiwiaWF0IjoxNzA5NTc5MTkzLCJleHAiOjE3MDk2NjU1OTN9.gkHpEZ5cbyzqWgdWRsvXdzwUiJl6m3OphiRJhUvrtyw",
   };
 
   const handleUpdate = async (e) => {
     e.preventDefault();
     try {
+      setIsloading(true)
       const response = await axios.put(Url, data, { headers });
       console.log(response.data);
     } catch (error) {
       console.log(error);
+    }finally{
+      setIsloading(false)
     }
+  };
+
+  const handleFile = (e) => {
+    const file = e.target.files[0];
+    const url = URL.createObjectURL(file);
+    setImage(url);
   };
 
   return (
@@ -60,10 +85,20 @@ const PatientProfileUpdate = () => {
               className="Patient-imageUpload-container"
               id="upload-image-container1"
             >
-              <input type="file" id="insertFile" style={{ display: "none" }} />
-              <label htmlFor="insertFile" className="upload-your-file">
-                Upload your file
-              </label>
+              <input
+                type="file"
+                id="insertFile"
+                style={{ display: "none" }}
+                onChange={(e) => handleFile(e)}
+              />
+
+              {image ? (
+                <img src={image} alt="" />
+              ) : (
+                <label htmlFor="insertFile" className="upload-your-file">
+                  Upload your file
+                </label>
+              )}
             </div>
           </div>
           <div
@@ -84,7 +119,12 @@ const PatientProfileUpdate = () => {
               >
                 Address:
               </label>
-              <input type="text" className="PatientProfileUpdate-input-input" onChange={(e)=>setPatientAddress(e.target.value)} />
+              <input
+                type="text"
+                placeholder={address? address:"input your home address"}
+                className="PatientProfileUpdate-input-input"
+                onChange={(e) => setPatientAddress(e.target.value)}
+              />
             </div>
             <div className="PatientProfileUpdate-input-container">
               <label
@@ -95,7 +135,11 @@ const PatientProfileUpdate = () => {
               >
                 PhoneNumber:
               </label>
-              <input type="text" className="PatientProfileUpdate-input-input" onChange={(e)=>setPhoneNumber(e.target.value)} />
+              <input
+                type="text"
+                className="PatientProfileUpdate-input-input"
+                onChange={(e) => setPhoneNumber(e.target.value)}
+              />
             </div>
             {/* <div className="PatientProfileUpdate-input-container">
               <label htmlFor="" className="PatientProfileUpdate-label">
@@ -149,7 +193,7 @@ const PatientProfileUpdate = () => {
               </label>
               <input
                 type="text"
-                placeholder="Optiona"
+                placeholder="Optional"
                 className="PatientProfileUpdate-input-input"
                 onChange={(e) => setBloodType(e.target.value)}
               />
@@ -157,7 +201,9 @@ const PatientProfileUpdate = () => {
           </div>
           <div className="PatientProfileUpdate-container3">
             <div className="PatientProfileUpdate-btn" onClick={handleUpdate}>
-              Update
+              {
+                isLoading? "Updating...":"Update"
+              }
             </div>
           </div>
         </div>

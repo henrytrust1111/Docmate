@@ -51,6 +51,7 @@
   justify-content: center;
   border: 1px solid #bebebe;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  /* background-color: green; */
 }
 
 .PatientProfileUpdate-container2 {
@@ -161,6 +162,7 @@
 #upload-image-container1{
   width: 50%;
   height: 150px;
+  background-color: blue;
 } 
 #updateFor-gender-age{
   width: 100%;

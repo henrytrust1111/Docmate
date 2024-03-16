@@ -40,7 +40,7 @@ const ProfileCardComponent = () => {
       <div className="patientProfileCardComponentContentHolder">
       <div className="patientProfileCardComponentDetailHolder">
         <p>{loggedInUserDetail?.data.firstName} {loggedInUserDetail?.data.lastName}</p>
-        <h5>Age: {user?.age ? user?.age : "..."}</h5>
+        <h5>Age: {user?.age ? user?.age : "??"}</h5>
       </div>
       <div className="patientProfileCardComponentUpdateBtn" onClick={handleUpdate}>Update</div>
       </div>

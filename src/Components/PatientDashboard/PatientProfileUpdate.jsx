@@ -4,6 +4,8 @@ import axios from "axios";
 import { ThemeContext } from "../context/Theme";
 import { useContext } from "react";
 import { useLayoutEffect } from "react";
+import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
 const PatientProfileUpdate = () => {
   const [bloodType, setBloodType] = useState();
@@ -14,6 +16,7 @@ const PatientProfileUpdate = () => {
   const [gender, setGender] = useState();
   const [age, setAge] = useState();
   const [image, setImage] = useState();
+  const nav = useNavigate()
   console.log(image);
   // console.log(bloodType);
   // console.log(allergies);
@@ -31,10 +34,10 @@ const PatientProfileUpdate = () => {
   };
 
   const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
-  const firstName = loggedInUser?.data.firstName;
-  const lastName = loggedInUser?.data.lastName;
   const address = loggedInUser?.data.patientAddress;
   const number = loggedInUser?.data.phoneNumber;
+  const allergy = loggedInUser?.data.allergies;
+  const blood = loggedInUser?.data.bloodType;
   console.log(address);
   console.log(loggedInUser.data);
   const id = loggedInUser?.data.id;
@@ -63,8 +66,19 @@ const PatientProfileUpdate = () => {
       setIsloading(true)
       const response = await axios.put(Url, data, { headers });
       console.log(response.data);
+      nav("/patient/patientProfilePage")
+      Swal.fire({
+        title: "Update Successful",
+        text: response.data.message,
+        icon: "success",
+      });
     } catch (error) {
-      console.log(error);
+      console.log(error.response.data.message);
+      Swal.fire({
+        title: "Error Message",
+        text: error.response.data.message,
+        icon: "error",
+      });
     }finally{
       setIsloading(false)
     }
@@ -137,6 +151,7 @@ const PatientProfileUpdate = () => {
               </label>
               <input
                 type="text"
+                placeholder={number? number:"please input your phone number"}
                 className="PatientProfileUpdate-input-input"
                 onChange={(e) => setPhoneNumber(e.target.value)}
               />
@@ -172,6 +187,7 @@ const PatientProfileUpdate = () => {
                 </label>
                 <input
                   type="number"
+                  placeholder={age? age: "fill your age"}
                   className="PatientProfileUpdate-input-input"
                   onChange={(e) => setAge(e.target.value)}
                 />
@@ -183,6 +199,7 @@ const PatientProfileUpdate = () => {
               </label>
               <input
                 type="text"
+                placeholder={allergy? allergy:"please input allegies"}
                 className="PatientProfileUpdate-input-input"
                 onChange={(e) => setAllegies(e.target.value)}
               />
@@ -193,7 +210,7 @@ const PatientProfileUpdate = () => {
               </label>
               <input
                 type="text"
-                placeholder="Optional"
+                placeholder={blood? blood:"please input your bloodType e.g. A+"}
                 className="PatientProfileUpdate-input-input"
                 onChange={(e) => setBloodType(e.target.value)}
               />

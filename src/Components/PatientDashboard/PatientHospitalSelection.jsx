@@ -85,18 +85,18 @@ const PatientHospitalSelection = () => {
                     <div className="attribute-fixed-width patient-profile-record">
                       {/* <div className="profile-img-view"></div> */}
                       <div className="name-view-profile-container">
-                        <p>{e.hospitalName}</p>
+                        <p id="patientDetailTrunc">{e.hospitalName}</p>
                         {/* <p className="colored-view-profile">View profile</p> */}
                       </div>
                     </div>
                     <div className="attribute-fixed-width email-record">
-                      {e.hospitalAddress}
+                      <p id="patientDetailTrunc">{e.hospitalAddress}</p>
                     </div>
                     <div className="attribute-fixed-width request-record">
-                      {e.email}
+                      <p id="patientDetailTrunc">{e.email}</p>
                     </div>
                     <div className="attribute-fixed-width date-record">
-                      {e.phoneNumber}
+                     <p> {e.phoneNumber}</p>
                     </div>
                     <div className="delete-view-btn" id="hospitalCSS">
                       <div

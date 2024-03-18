@@ -58,7 +58,7 @@ const PatientRegister = () => {
         text: response.data.message,
         icon: "success",
       });
-      nav("/patient");
+      nav("/patientLogin");
     } catch (error) {
       const errorMessage = error.response
         ? error.response.data.message

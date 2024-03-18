@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-const PatientLeftNav = ({setPatientProfilePage,setPatientHospitalSelection,setPatientHospitalPage}) => {
+const PatientLeftNav = () => {
   const nav = useNavigate();
   const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
   const Url = `https://doc-mate.onrender.com/logout`;

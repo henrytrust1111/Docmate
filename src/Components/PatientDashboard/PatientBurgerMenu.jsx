@@ -11,9 +11,11 @@ const PatientBurgerMenu = ({ showDashboard }) => {
   };
 
   const handlePatientProfile = () => {
+    showDashboard(false)
     nav("/patient/patientProfilePage");
   };
   const handlePatientDashboard = () => {
+    showDashboard(false)
     nav("/patient");
   };
   return (

@@ -34,18 +34,15 @@
 }
 
 #PatientInformationBoxContentHolderText{
+    width: 90%;
+    overflow: hidden;
     text-overflow: ellipsis;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-}
-/* .welcomeMessage{
-    color: red;
-    width: 50%;
     white-space: nowrap;
-    overflow: hidden;
-} */
+    /* display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical; */
+}
+
 /* Mobile view iphone-13 */
 @media screen and (width <= 428px) {
     .PatientInformationBoxContainer1 {

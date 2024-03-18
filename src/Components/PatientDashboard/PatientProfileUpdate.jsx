@@ -15,9 +15,9 @@ const PatientProfileUpdate = () => {
   const [phoneNumber, setPhoneNumber] = useState();
   const [gender, setGender] = useState();
   const [age, setAge] = useState();
-  const [image, setImage] = useState();
-  const nav = useNavigate()
-  console.log(image);
+  const [profilePicture, setProfilePicture] = useState();
+  const nav = useNavigate();
+  // console.log(profilePicture);
   // console.log(bloodType);
   // console.log(allergies);
   // console.log(age);
@@ -38,8 +38,8 @@ const PatientProfileUpdate = () => {
   const number = loggedInUser?.data.phoneNumber;
   const allergy = loggedInUser?.data.allergies;
   const blood = loggedInUser?.data.bloodType;
-  console.log(address);
-  console.log(loggedInUser.data);
+  // console.log(address);
+  // console.log(loggedInUser.data);
   const id = loggedInUser?.data.id;
   const Url = `https://doc-mate.onrender.com/update-profile/${id}`;
   const userToken = loggedInUser.token;
@@ -60,13 +60,44 @@ const PatientProfileUpdate = () => {
     Authorization: `Bearer ${userToken}`,
   };
 
+  const handleUpdate1 = async (e) => {
+    e.preventDefault();
+    try {
+      if (!profilePicture) {
+        console.log("try to select an Image");
+        throw new Error("Profile picture is not selected");
+      }
+      // setIsloading(true)
+      const response = await axios.put(
+        "https://doc-mate.onrender.com/uploadimage",
+        { profilePicture },
+        { headers }
+      );
+      console.log(response.data);
+      // nav("/patient/patientProfilePage")
+      Swal.fire({
+        title: "Update Successful",
+        text: response.data.message,
+        icon: "success",
+      });
+    } catch (error) {
+      console.log(error.response);
+      Swal.fire({
+        title: "Error Message",
+        text: error.response.data.message,
+        icon: "error",
+      });
+    } finally {
+      // setIsloading(false)
+    }
+  };
   const handleUpdate = async (e) => {
     e.preventDefault();
     try {
-      setIsloading(true)
+      setIsloading(true);
       const response = await axios.put(Url, data, { headers });
       console.log(response.data);
-      nav("/patient/patientProfilePage")
+      nav("/patient/patientProfilePage");
       Swal.fire({
         title: "Update Successful",
         text: response.data.message,
@@ -79,15 +110,17 @@ const PatientProfileUpdate = () => {
         text: error.response.data.message,
         icon: "error",
       });
-    }finally{
-      setIsloading(false)
+    } finally {
+      setIsloading(false);
     }
   };
 
   const handleFile = (e) => {
     const file = e.target.files[0];
     const url = URL.createObjectURL(file);
-    setImage(url);
+    console.log(url);
+    console.log("goog");
+    setProfilePicture(url);
   };
 
   return (
@@ -106,8 +139,8 @@ const PatientProfileUpdate = () => {
                 onChange={(e) => handleFile(e)}
               />
 
-              {image ? (
-                <img src={image} alt="" />
+              {profilePicture ? (
+                <img src={profilePicture} alt="" />
               ) : (
                 <label htmlFor="insertFile" className="upload-your-file">
                   Upload your file
@@ -135,7 +168,7 @@ const PatientProfileUpdate = () => {
               </label>
               <input
                 type="text"
-                placeholder={address? address:"input your home address"}
+                placeholder={address ? address : "input your home address"}
                 className="PatientProfileUpdate-input-input"
                 onChange={(e) => setPatientAddress(e.target.value)}
               />
@@ -151,7 +184,7 @@ const PatientProfileUpdate = () => {
               </label>
               <input
                 type="text"
-                placeholder={number? number:"please input your phone number"}
+                placeholder={number ? number : "please input your phone number"}
                 className="PatientProfileUpdate-input-input"
                 onChange={(e) => setPhoneNumber(e.target.value)}
               />
@@ -187,7 +220,7 @@ const PatientProfileUpdate = () => {
                 </label>
                 <input
                   type="number"
-                  placeholder={age? age: "fill your age"}
+                  placeholder={age ? age : "fill your age"}
                   className="PatientProfileUpdate-input-input"
                   onChange={(e) => setAge(e.target.value)}
                 />
@@ -199,7 +232,7 @@ const PatientProfileUpdate = () => {
               </label>
               <input
                 type="text"
-                placeholder={allergy? allergy:"please input allegies"}
+                placeholder={allergy ? allergy : "please input allegies"}
                 className="PatientProfileUpdate-input-input"
                 onChange={(e) => setAllegies(e.target.value)}
               />
@@ -210,7 +243,9 @@ const PatientProfileUpdate = () => {
               </label>
               <input
                 type="text"
-                placeholder={blood? blood:"please input your bloodType e.g. A+"}
+                placeholder={
+                  blood ? blood : "please input your bloodType e.g. A+"
+                }
                 className="PatientProfileUpdate-input-input"
                 onChange={(e) => setBloodType(e.target.value)}
               />
@@ -218,9 +253,10 @@ const PatientProfileUpdate = () => {
           </div>
           <div className="PatientProfileUpdate-container3">
             <div className="PatientProfileUpdate-btn" onClick={handleUpdate}>
-              {
-                isLoading? "Updating...":"Update"
-              }
+              {isLoading ? "Updating..." : "Update"}
+            </div>
+            <div className="PatientProfileUpdate-btn" onClick={handleUpdate1}>
+              Update Image
             </div>
           </div>
         </div>

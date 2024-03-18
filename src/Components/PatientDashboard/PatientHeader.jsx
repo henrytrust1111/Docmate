@@ -15,7 +15,7 @@ const PatientHeader = () => {
   const [showDashboard, setShowDashboard] = useState(false);
   const [showSearchResult1, setShowSearchResult1] = useState(true);
   const { showSearch, setShowSearch } = useContext(ThemeContext);
-  console.log(showSearch);
+  // console.log(showSearch);
   const nav = useNavigate();
   const handleCancelIcon = () => {
     setSearchValue("");
@@ -31,7 +31,7 @@ const PatientHeader = () => {
   
   const userInfo = JSON.parse(localStorage.getItem("loggedInUser"));
   const img = userInfo?.data.profilePicture?.url
-  console.log(img);
+  // console.log(img);
   const userToken = userInfo?.token;
   const welcomeMessage = userInfo?.message;
   // console.log(welcomeMessage);

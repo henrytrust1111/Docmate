@@ -34,7 +34,7 @@ const ServiceCard = () => {
         </section>
 
         <article className="carddiv2">
-          <div className="carddiv2Img">
+          <div className="carddiv2Img secureImg">
             <img src={image4} alt="" />
           </div>
           <h1>Secure</h1>

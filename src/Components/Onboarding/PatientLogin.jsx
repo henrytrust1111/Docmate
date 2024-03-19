@@ -94,7 +94,9 @@ const PatientLogin = () => {
           <img src={image2} alt="" className="image2" />
         </div>
         <div className="rightpatentlogin">
-
+        <div className="rightSignUpLogo">
+            <img src="/docmate3.png" alt="" onClick={handlelogo} />
+          </div>
         {/* <div className="mobilelogo1">
           <img src={docimage2}alt="" />
         </div> */}

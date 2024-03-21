@@ -22,7 +22,7 @@ const PatientProfileUpdate = () => {
   // console.log(allergies);
   // console.log(age);
   // console.log(gender);
-
+  const data1 = {profilePicture}
   const data = {
     bloodType,
     allergies,
@@ -62,15 +62,18 @@ const PatientProfileUpdate = () => {
 
   const handleUpdate1 = async (e) => {
     e.preventDefault();
+    console.log(data1);
     try {
       if (!profilePicture) {
         console.log("try to select an Image");
         throw new Error("Profile picture is not selected");
       }
       // setIsloading(true)
+      const formData = new FormData();
+      formData.append('profilePicture', profilePicture);
       const response = await axios.put(
         "https://doc-mate.onrender.com/uploadimage",
-        { profilePicture },
+        formData,
         { headers }
       );
       console.log(response.data);
@@ -117,10 +120,12 @@ const PatientProfileUpdate = () => {
 
   const handleFile = (e) => {
     const file = e.target.files[0];
-    const url = URL.createObjectURL(file);
-    console.log(url);
-    console.log("goog");
-    setProfilePicture(url);
+    // const url = URL.createObjectURL(file);
+    // console.log(url);
+    setProfilePicture(file);
+    // const formData = new FormData();
+    // formData.append('profilePicture', file);
+    // console.log(formData);
   };
 
   return (

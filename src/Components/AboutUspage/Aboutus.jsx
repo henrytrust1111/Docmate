@@ -255,7 +255,7 @@ const Aboutus = () => {
                       <div className="Ourterfirstcirclbox1"></div>
                       <div className="OurterFourfiflineclbox">
                         <div className="Ourterfirstcname1">
-                          <h3>Adekunle Michael</h3>
+                          <h3>Nzemeke Vivian</h3>
                         </div>
                         <div className="Ourterfirstcname2">
                           <p>BackEnd Developer</p>

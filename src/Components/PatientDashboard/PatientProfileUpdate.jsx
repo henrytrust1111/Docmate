@@ -16,13 +16,14 @@ const PatientProfileUpdate = () => {
   const [gender, setGender] = useState();
   const [age, setAge] = useState();
   const [profilePicture, setProfilePicture] = useState();
+  const [profilePicture1, setProfilePicture1] = useState();
   const nav = useNavigate();
   // console.log(profilePicture);
   // console.log(bloodType);
   // console.log(allergies);
   // console.log(age);
   // console.log(gender);
-  const data1 = {profilePicture}
+  const data1 = { profilePicture };
   const data = {
     bloodType,
     allergies,
@@ -70,7 +71,7 @@ const PatientProfileUpdate = () => {
       }
       // setIsloading(true)
       const formData = new FormData();
-      formData.append('profilePicture', profilePicture);
+      formData.append("profilePicture", profilePicture);
       const response = await axios.put(
         "https://doc-mate.onrender.com/uploadimage",
         formData,
@@ -120,9 +121,10 @@ const PatientProfileUpdate = () => {
 
   const handleFile = (e) => {
     const file = e.target.files[0];
-    // const url = URL.createObjectURL(file);
+    const url = URL.createObjectURL(file);
     // console.log(url);
     setProfilePicture(file);
+    setProfilePicture1(url);
     // const formData = new FormData();
     // formData.append('profilePicture', file);
     // console.log(formData);
@@ -133,6 +135,11 @@ const PatientProfileUpdate = () => {
       <div className="PatientProfileUpdate-holder">
         <div className="PatientProfileUpdate-wrapper">
           <div className="PatientProfileUpdate-container1">
+            {profilePicture1 ? (
+              <label htmlFor="insertFile" className="changePhotoContainer">
+                Change Photo
+              </label>
+            ) : null}
             <div
               className="Patient-imageUpload-container"
               id="upload-image-container1"
@@ -145,7 +152,7 @@ const PatientProfileUpdate = () => {
               />
 
               {profilePicture ? (
-                <img src={profilePicture} alt="" />
+                <img src={profilePicture1} alt="" />
               ) : (
                 <label htmlFor="insertFile" className="upload-your-file">
                   Upload your file

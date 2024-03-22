@@ -34,8 +34,15 @@
   height: 30%;
   display: flex;
   justify-content: flex-end;
-  /* align-items: end; */
-  /* background-color: gray; */
+  gap: 20px;
+  align-items: center;
+}
+
+
+.changePhotoContainer{
+  background-color: #2bb673;
+  padding: 10px;
+  border-radius: 6px;
 }
 
 .upload-your-file{

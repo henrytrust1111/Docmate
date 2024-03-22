@@ -96,7 +96,7 @@ const PatientHospitalSelection = () => {
                       <p id="patientDetailTrunc">{e.email}</p>
                     </div>
                     <div className="attribute-fixed-width date-record">
-                     <p> {e.phoneNumber}</p>
+                     <p id="patientDetailTrunc"> {e.phoneNumber}</p>
                     </div>
                     <div className="delete-view-btn" id="hospitalCSS">
                       <div

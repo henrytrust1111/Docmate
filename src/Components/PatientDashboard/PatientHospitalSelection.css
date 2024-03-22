@@ -4,6 +4,7 @@
 }
 
 #patientDetailTrunc{
+    text-align: center;
     width: 90%;
     overflow: hidden;
     text-overflow: ellipsis;

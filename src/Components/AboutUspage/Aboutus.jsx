@@ -244,10 +244,10 @@ const Aboutus = () => {
                       <div className="Ourterfirstcirclbox1"></div>
                       <div className="OurterFourthcirclinebox">
                         <div className="Ourterfirstcname1">
-                          <h3>Adekunle Michael</h3>
+                          <h3>Adoyi Rose</h3>
                         </div>
                         <div className="Ourterfirstcname2">
-                          <p>BackEnd Developer</p>
+                          <p>FrontEnd Developer</p>
                         </div>
                       </div>
                     </div>

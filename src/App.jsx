@@ -42,6 +42,7 @@ import PatientProfileUpdate from "./Components/PatientDashboard/PatientProfileUp
 import SetNewPasswordHospital from "./Components/Setnewpassword/SetNewPasswordHospital";
 import Enteremail from "./Components/EnterMailPage/Enteremail";
 import { Toaster } from "react-hot-toast";
+import Blog from "./Components/BlogPage/Blog";
 
 const route = createHashRouter([
   {
@@ -86,6 +87,10 @@ const route = createHashRouter([
   {
     path: "/enterEmail",
     element: <Enteremail />,
+  },
+  {
+    path: "/blog",
+    element: <Blog />,
   },
   {
     path: "/aboutUs",

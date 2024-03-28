@@ -9,7 +9,6 @@ const Hero = () => {
         <div className="leftHero">
           <div className="Docdiv">
             <h1>
-              {" "}
               <span>DocMate</span> Provides <br />
               Best And Affordable <br />
               Health Care

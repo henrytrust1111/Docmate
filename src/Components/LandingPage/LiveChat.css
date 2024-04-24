@@ -1,0 +1,25 @@
+
+.chat-icon {
+    width: 5%;
+    height: 10%;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: white;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999; 
+    cursor: pointer; 
+  }
+
+  .chat-icon:hover{
+    
+  }
+
+  .chat-icon>img{
+    width: 90%;
+    height: 90%;
+ 
+  }

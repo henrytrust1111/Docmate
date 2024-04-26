@@ -43,6 +43,7 @@ import SetNewPasswordHospital from "./Components/Setnewpassword/SetNewPasswordHo
 import Enteremail from "./Components/EnterMailPage/Enteremail";
 import { Toaster } from "react-hot-toast";
 import Blog from "./Components/BlogPage/Blog";
+// import Livechat from "./Components/Livechatpage/Livechat";
 
 const route = createHashRouter([
   {

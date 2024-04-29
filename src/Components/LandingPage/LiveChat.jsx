@@ -1,23 +1,19 @@
-import React from 'react'
+import React from "react";
 import { Link } from "react-router-dom";
-import './LiveChat.css'
-
+import "./LiveChat.css";
 
 const LiveChat = () => {
-
- 
-  
-
   return (
-    <div className='chat-icon'>
-      <Link
-      to="/welcomepage">
-      
-        <img src='/bubble-chat.png' alt=""        style={{   width: "90%", height: "90%"}}
- />
-        </Link>
+    <div className="chat-icon">
+      <Link to="/welcomepage">
+        <img
+          src="/bubble-chat.png"
+          alt=""
+          style={{ width: "90%", height: "90%" }}
+        />
+      </Link>
     </div>
-  )
-}
+  );
+};
 
-export default LiveChat
+export default LiveChat;

@@ -12,6 +12,7 @@ import "./Body.css"
 import { ThemeContext } from '../context/Theme'
 import { useContext } from 'react'
 import { useLayoutEffect } from 'react'
+import LiveChat from './LiveChat'
 
 
 const Body = () => {
@@ -28,6 +29,7 @@ const Body = () => {
   }, [])
   return (
     <div className='bodyHolder'>
+       <LiveChat />
        <HomePageHeader />
       <Hero/>
       <Services/>

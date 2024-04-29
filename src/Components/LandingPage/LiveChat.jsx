@@ -13,7 +13,7 @@ const LiveChat = () => {
       <Link
       to="/welcomepage">
       
-        <img src={'../../public/bubble-chat.png'} alt=""        style={{   width: "90%", height: "90%"}}
+        <img src='/bubble-chat.png' alt=""        style={{   width: "90%", height: "90%"}}
  />
         </Link>
     </div>

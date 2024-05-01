@@ -3,6 +3,7 @@ import PatientHeader from "./PatientHeader";
 import PatientLeftNav from "./PatientLeftNav";
 import { Outlet } from "react-router-dom";
 import "./PatientDashboard.css"
+import LiveChat from "../LandingPage/LiveChat";
 
 const PatientDashboard = () => {
   const [patientHospitalSelection, setPatientHospitalSelection] =
@@ -17,6 +18,7 @@ const PatientDashboard = () => {
       <PatientHeader patientHospitalSelection={patientHospitalSelection} />
       <div className="admin-dashboard-holder">
         <PatientLeftNav />
+       <LiveChat />
         {/* <h1 className="helloWorld">HELLO WORLD</h1> */}
         <Outlet />
         {/* <PatientLeftNav

@@ -3,15 +3,22 @@ import Frame1 from "../../asset/Frame1.png";
 import Frame2 from "../../asset/Frame2.png";
 import Swal from "sweetalert2";
 import axios from "axios";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { io } from "socket.io-client"
+
 
 const Livechat = () => {
   const [input, setInput] = useState();
-  const [output, setOutput] = useState();
-  console.log(input);
+  const [output, setOutput] = useState([]);
+  const [reverseOutput, setReverseOutput] = useState([]);
+  // console.log(input);
   const url = "https://doc-mate.onrender.com/api/messages";
+  // const url = "http://localhost:3000/api/messages";
   const url1 = "https://doc-mate.onrender.com/api/get-messages";
-  //   const socket = io("https://doc-mate.onrender.com/api/messages");
+  // const url1 = "http://localhost:3000/api/get-messages";
+  const socket = io("https://doc-mate.onrender.com");
+  // const socket = io("http://localhost:3000");
+    
 
   const userInfo = JSON.parse(localStorage.getItem("loggedInUser"));
   const userToken = userInfo?.token;
@@ -20,13 +27,13 @@ const Livechat = () => {
   };
 
   const data = { message: input };
-  console.log(typeof data);
+  // console.log(typeof data);
 
   const handleGet = async () => {
     try {
       const response = await axios.get(url1, { headers });
-      console.log(response.data.messages);
-      setOutput(response.data.messages); // Clear input after sending
+      const show = response.data.messages.reverse()
+      setOutput(show); // Clear input after sending
     } catch (error) {
       console.log("Message sent:", input);
       console.log(error);
@@ -40,14 +47,18 @@ const Livechat = () => {
 
   const handleSend = async (e) => {
     e.preventDefault();
-    console.log(input);
+    // console.log(input);
     if (!input) {
       console.log("the input is empty");
     }
     try {
       const response = await axios.post(url, data, { headers });
-      handleGet();
+      // handleGet();
       // setInput(""); // Clear input after sending
+      socket.on('response', (datas)=>{
+        console.log(datas);
+        setOutput((prev)=> ([...prev, datas]))
+      });
     } catch (error) {
       console.log("Message sent:", input);
       console.log(error);
@@ -59,7 +70,15 @@ const Livechat = () => {
     }
   };
 
-  console.log(output);
+  useEffect(()=>{
+    handleGet()
+  },[])
+
+  useEffect(()=>{
+    const show = output.reverse()
+    setReverseOutput(show)
+    console.log("changed")
+  },[output])
 
   return (
     <div className="LivechatContainer">
@@ -73,9 +92,9 @@ const Livechat = () => {
           <div className="LiveChatdownWrapper">
             <div className="LivechatHello"></div>
             <div className="LivechatHi"></div>
-            {output?.map((e) =>
+            {reverseOutput?.map((e, i) =>
               e?.role === "user" ? (
-                <div className="LivechatHello" key={e._id}>
+                <div className="LivechatHello" key={i}>
                   <div className="LivechatProfilecircle1">
                     <div className="Leftlivechatprofile">
                       <img src={Frame2} alt="image" />
@@ -88,7 +107,7 @@ const Livechat = () => {
                   </div>
                 </div>
               ) : e?.role === "Bot" ? (
-                <div className="LivechatHello1" key={e._id}>
+                <div className="LivechatHello1" key={i}>
                   <div className="LivechatProfilecircle">
                     <div className="Leftlivechatprofile">
                       <img src={Frame1} alt="image" />

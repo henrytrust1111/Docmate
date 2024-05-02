@@ -3,21 +3,22 @@ import Frame1 from "../../asset/Frame1.png";
 import Frame2 from "../../asset/Frame2.png";
 import Swal from "sweetalert2";
 import axios from "axios";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { io } from "socket.io-client"
 
 
 const Livechat = () => {
   const [input, setInput] = useState();
   const [output, setOutput] = useState([]);
-  const [reverseOutput, setReverseOutput] = useState([]);
+  const scrollRef = useRef()
   // console.log(input);
-  const url = "https://doc-mate.onrender.com/api/messages";
+  const url = "https://doc-mate-rose.vercel.app/messages";
   // const url = "http://localhost:3000/api/messages";
-  const url1 = "https://doc-mate.onrender.com/api/get-messages";
+  const url1 = "https://doc-mate-rose.vercel.app/get-messages";
   // const url1 = "http://localhost:3000/api/get-messages";
-  const socket = io("https://doc-mate.onrender.com");
-  // const socket = io("http://localhost:3000");
+  // const socket = io("https://doc-mate.onrender.com");
+  // const socket = io("https://doc-mate-rose.vercel.app");
+  const socket = io("http://localhost:3000");
     
 
   const userInfo = JSON.parse(localStorage.getItem("loggedInUser"));
@@ -32,8 +33,8 @@ const Livechat = () => {
   const handleGet = async () => {
     try {
       const response = await axios.get(url1, { headers });
-      const show = response.data.messages.reverse()
-      setOutput(show); // Clear input after sending
+      response.data.messages.reverse()
+      setOutput(response.data.messages); // Clear input after sending
     } catch (error) {
       console.log("Message sent:", input);
       console.log(error);
@@ -55,10 +56,13 @@ const Livechat = () => {
       const response = await axios.post(url, data, { headers });
       // handleGet();
       // setInput(""); // Clear input after sending
-      socket.on('response', (datas)=>{
-        console.log(datas);
-        setOutput((prev)=> ([...prev, datas]))
-      });
+      setOutput((prev)=> ([...prev, data].reverse()))
+      if(response){
+        socket.on('response', (datas)=>{
+          console.log(datas);
+          setOutput((prev)=> ([...prev, datas].reverse()))
+        });
+      }
     } catch (error) {
       console.log("Message sent:", input);
       console.log(error);
@@ -75,9 +79,7 @@ const Livechat = () => {
   },[])
 
   useEffect(()=>{
-    const show = output.reverse()
-    setReverseOutput(show)
-    console.log("changed")
+    scrollRef.current?.scrollIntoView({behavior: "smooth"});
   },[output])
 
   return (
@@ -90,14 +92,14 @@ const Livechat = () => {
       <div className="LivechatDown">
         <div className="LiveChatdownBox">
           <div className="LiveChatdownWrapper">
-            <div className="LivechatHello"></div>
-            <div className="LivechatHi"></div>
-            {reverseOutput?.map((e, i) =>
-              e?.role === "user" ? (
-                <div className="LivechatHello" key={i}>
+            {/* <div className="LivechatHello"></div>
+            <div className="LivechatHi"></div> */}
+            {output?.reverse().map((e, i) =>
+            (
+                <div ref={scrollRef} className={e?.role === "user" ? "LivechatHello":"LivechatHello1"} key={i}>
                   <div className="LivechatProfilecircle1">
                     <div className="Leftlivechatprofile">
-                      <img src={Frame2} alt="image" />
+                      <img src={e?.role === "user" ? Frame2: Frame1} alt="image" />
                     </div>
                     <div className="Rightlivechattext">
                       <div className="Rightlivechattextwrap">
@@ -106,20 +108,7 @@ const Livechat = () => {
                     </div>
                   </div>
                 </div>
-              ) : e?.role === "Bot" ? (
-                <div className="LivechatHello1" key={i}>
-                  <div className="LivechatProfilecircle">
-                    <div className="Leftlivechatprofile">
-                      <img src={Frame1} alt="image" />
-                    </div>
-                    <div className="Rightlivechattext">
-                      <div className="Rightlivechattextwrap">
-                        <p>{e.message}</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ) : null
+              )
             )}
           </div>
         </div>

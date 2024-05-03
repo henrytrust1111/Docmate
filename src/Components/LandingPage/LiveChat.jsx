@@ -19,11 +19,12 @@ const LiveChat = () => {
     }
   };
   return (
-    <div className="chat-icon" onClick={handleChat}>
+    <div className="chat-icon">
       <img
         src="/bubble-chat.png"
         alt=""
         style={{ width: "90%", height: "90%" }}
+        onClick={handleChat}
       />
       {/* <Link to="/chat"></Link> */}
     </div>

@@ -7,7 +7,7 @@ const LiveChat = () => {
   const nav = useNavigate();
   const handleChat = () => {
     const userInfo = JSON.parse(localStorage.getItem("loggedInUser"));
-    const userToken = JSON.parse(localStorage.getItem("loggedInUserToken"));
+    const userToken = localStorage.getItem("loggedInUserToken");
     if (userInfo && userToken) {
       nav("/chat");
     } else {
@@ -26,7 +26,6 @@ const LiveChat = () => {
         style={{ width: "90%", height: "90%" }}
         onClick={handleChat}
       />
-      {/* <Link to="/chat"></Link> */}
     </div>
   );
 };

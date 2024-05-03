@@ -5,18 +5,19 @@ import Swal from "sweetalert2";
 
 const LiveChat = () => {
   const nav = useNavigate();
-  function handleChat() {
+  const handleChat = () => {
     const userInfo = JSON.parse(localStorage.getItem("loggedInUser"));
     const userToken = JSON.parse(localStorage.getItem("loggedInUserToken"));
     if (userInfo && userToken) {
       nav("/chat");
+    } else {
+      Swal.fire({
+        icon: "error",
+        title: "Invalid Entrance",
+        text: "Please you have to be Logged-in first",
+      });
     }
-    Swal.fire({
-      icon: "error",
-      title: "Invalid Entrance",
-      text: "Please you have to be Logged-in first",
-    });
-  }
+  };
   return (
     <div className="chat-icon" onClick={handleChat}>
       <img

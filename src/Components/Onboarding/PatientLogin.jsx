@@ -34,12 +34,12 @@ const PatientLogin = () => {
 
   const HandleSubmit = async (e) => {
 
-    // e.preventDefault()
+    e.preventDefault()  
     try {
       setisLoading(true)
       const response = await axios.post(Url, data)
       // console.log(response.data);
-      console.log(response.data);
+      console.log(response);
       console.log(response.data.token);
       const loggedInUserToken = response.data.token;
       const loggedInUser = response.data;

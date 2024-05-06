@@ -1,0 +1,93 @@
+.Aboutusheropage {
+  width: 100%;
+  height: 80vh;
+  /* background-color: blue; */
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  background-image: url(/Rectangle.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: contain;
+  margin-top: 68px;
+}
+
+.Aboutusherotext {
+  width: 100%;
+  height: 30%;
+  /* background-color: green; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Aboutusherotextbox {
+  width: 80%;
+  height: 100%;
+  /* background-color: red; */
+}
+
+.Aboutusherotext1 {
+  width: 100%;
+  height: 50%;
+  color: white;
+  /* background-color: aqua; */
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  font-weight: 800;
+  /* font-style: normal; */
+}
+
+.Aboutusherotext2 {
+  width: 50%;
+  height: 50%;
+  /* background-color: burlywood; */
+  color: white;
+}
+
+.Aboutusherotext2 p {
+  font-size: 18px;
+}
+
+@media screen and (max-width:700px) {
+.Aboutusheropage{
+  height: max-content;
+  padding-block: 50px;
+}
+
+.Aboutusherotextbox {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.Aboutusherotext1 {
+  width: max-content;
+  height: max-content;
+  color: white;
+  font-size: 24px;
+  text-transform: uppercase;
+  word-spacing: 1px;
+  font-weight: 700;
+}
+
+.Aboutusherotext2 {
+  width: 80%;
+  height: max-content;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.Aboutusherotext2 p {
+  font-size: 18px;
+}
+
+  
+}

@@ -1,0 +1,122 @@
+
+.Empowerimprovehealth {
+    width: 100%;
+    height: max-content;
+    /* background-color: blue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  
+  .Empowerimprovehealthbox {
+    width: 80%;
+    height: 50vh;
+    background-color: white;
+    display: flex;
+    gap: 35px;
+    /* box-shadow: 0px 10px 5px 0px rgba(223,226,235,0.75); */
+  }
+  
+  .Empowerimprovehealthbox1 {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    /* background-color: blue; */
+  }
+  
+  .Empowerimprovehealthtext {
+    width: 100%;
+    /* height: 30%; */
+    /* background-color: brown; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .Empowerimprovehealthtext1 {
+    width: 100%;
+    /* height: 100%; */
+    /* background-color: green; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .Empowerimprovehealthtext1 h2 {
+    width: 60%;
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+  }
+  
+  .Empowerimprovehealthtextbox2 {
+    width: 100%;
+    /* height: 60%; */
+    /* background-color: yellow; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .Empowerimprovehealthtext2 {
+    width: 100%;
+    height: 100%;
+    /* background-color: aqua; */
+  }
+  
+  .Empowerimprovehealthtext2 p {
+    font-size: 16px;
+    line-height: 1.3;
+    text-align: center;
+  }
+  
+  .Empowerimprovehealthbox2 {
+    width: 50%;
+    height: 100%;
+    /* background-color: red; */
+    background-image: url(/Empower2.webp);
+  }
+
+  @media screen and (max-width:700px) {
+    .Empowerimprovehealthbox {
+      width: 90%;
+      height: max-content;
+      /* background-color: white; */
+      /* background-color: green; */
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .Empowerimprovehealthbox2{
+      height: 50vh;
+      width: 100%;
+      background-position: right;
+      border-radius: 5px;
+    }
+
+    .Empowerimprovehealthbox1{
+      width: 100%;
+    }
+
+    .Empowerimprovehealthtext{
+      width: 100%;
+      /* background-color: red; */
+    }
+    
+    .Empowerimprovehealthtext1{
+      width: 100%;
+      /* background-color: tan; */
+    }
+
+    .Empowerimprovehealthtext1 h2 {
+      width: 100%;
+      font-weight: 700;
+      font-size: 24px;
+      text-align: center;
+    }
+  }
+  

@@ -45,6 +45,7 @@ import { Toaster } from "react-hot-toast";
 import Blog from "./Components/BlogPage/Blog";
 import Livechat from "./Components/Livechatpage/Livechat";
 import WelcomePage from "./Components/LiveChat/WelcomePage";
+import Pharmacy from "./Components/Pharmacy/Pharmacy";
 
 const route = createHashRouter([
   {
@@ -109,6 +110,10 @@ const route = createHashRouter([
   {
     path: "/faq",
     element: <Faqpage />,
+  },
+  {
+    path: "/pharmacy",
+    element: <Pharmacy />,
   },
   {
     path: "/setPassword",

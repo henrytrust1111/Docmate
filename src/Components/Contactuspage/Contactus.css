@@ -7,20 +7,20 @@
 
 .Contactuspage{
     width: 100%;
-    height: max-content;
+    height: 100vh;
     /* background-color: aqua; */
 }
 
 
 .ContactusMainpage{
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     /* background-color: blue; */
 }
 
 .ContactusHeropage{
     width: 100%;
-    height: 80%;
+    height: 100%;
     /* background-color: burlywood; */
     /* position: relative; */
     display: flex;
@@ -42,22 +42,22 @@
     /* background-color: green; */
     display: flex;
     align-items: center;
-    justify-content:center ;
+    justify-content: center;
+   
 }
 
 .ContactusHeroText{
     width: 55%;
-    height: 50%;
+    height: 90%;
     /* background-color: darkgray; */
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding-top: 60px;
+    /* padding-top: 60px; */
 }
 
 .ContactusHeroText h2{
     font-family: sans-serif;
-    font-size: 30px;
+    font-size: 35px;
     font-weight: 800;
     color: white;
 }
@@ -65,20 +65,18 @@
 
 .Contactuslistpage{
     width: 100%;
-    height: 450px;
+    height: 85vh;
     /* background-color: red; */
     display: flex;
     align-items: center;
     justify-content: center;
-    /* position: absolute; */
-    /* top: 370px; */
-    /* left: 250px; */
+ 
 
 }
 
 .Contactuslistpagewrapper{
-    width: 85%;
-    height: 80%;
+    width: 100%;
+    height: 100%;
     /* background-color: blue; */
     display: flex;
     align-items: center;
@@ -86,21 +84,22 @@
 }
 
 .Contactusmainlistpage{
-    width: 55%;
-    height: 90%;
-    background-color: white;
+    width: 60%;
+    height: 80%;
     border-radius: 10px;
-    border: solid #57B5B5 1px;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .Contactusmainlistleftpage{
-    width: 60%;
+    width: 55%;
     height: 100%;
     /* background-color: blue; */
     display: flex;
     align-items: center;
     justify-content: center;
+    border: solid #57B5B5 1px;
 }
 
 .Contactusmainlistleftpagewrapper{
@@ -131,7 +130,7 @@
     font-family: sans-serif;
     font-weight: 700;
     /* color: red; */
-    font-size: 17px;
+    font-size: 25px;
 }
 
 .Contacttlefirstname{
@@ -164,7 +163,7 @@
 }
 
 .Contactusfirstname p{
-    font-size: 10px;
+    font-size: 17px;
     font-family: sans-serif;
 }
 
@@ -176,11 +175,12 @@
 
 .Contactusfirstnamebox input{
     width: 95%;
-    height: 50%;
+    height: 65%;
     border-radius: 5px;
     border: solid #57B5B5 1px;
     border: hwb(hue white lightseagreen);
     padding: 7px;
+    /* font-size: 15px; */
     outline: none;
 
 }
@@ -198,7 +198,7 @@
 }
 
 .Contactuslastnameright p{
-    font-size: 10px;
+    font-size: 17px;
     font-family: sans-serif;
 }
 
@@ -210,8 +210,8 @@
 }
 
 .Contactuslastnamerightbox input{
-    width: 95%;
-    height: 50%;
+    width: 100%;
+    height: 65%;
     border-radius: 5px;
     border: solid #57B5B5 1px;
     border: hwb(hue white lightseagreen);
@@ -242,13 +242,13 @@
 }
 
 .Contactseconlistleftemail p{
-    font-size: 10px;
+    font-size: 17px;
     font-family: sans-serif;
 }
 
 .Contactseconlistleftemailinput{
     width: 100%;
-    height: 50%;
+    height: 65%;
     /* background-color: blueviolet; */
 }
 
@@ -284,7 +284,7 @@
 }
 
 .Contactustitlettitlebox p{
-    font-size: 10px;
+    font-size: 17px;
     font-family: sans-serif;
 }
 
@@ -296,7 +296,7 @@
 
 .Contactustitlettitlinput input{
     width: 98%;
-    height: 70%;
+    height: 100%;
     border-radius: 5px;
     border: solid  #57B5B5 1px;
     border: hwb(hue white lightseagreen);
@@ -351,8 +351,8 @@
 }
 
 .Contactusdubmibtn{
-    width: 28%;
-    height: 60%;
+    width: 38%;
+    height: 68%;
     /* background-color: lightblue; */
 
 }
@@ -365,7 +365,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 8px;
+    border-radius: 10px;
     border: solid  #57B5B5 1px;
     border: hwb(hue white lightseagreen);
 }
@@ -376,8 +376,9 @@
     background-color: #2C7DA0;
     color: white;
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
+    font-size: 17px;
     /* border: solid  #57B5B5 1px; */
 }
 
@@ -387,11 +388,6 @@
     color: white;
 }
 
-.Contactumainsubmibtn p{
-    color: white;
-    font-family: sans-serif;
-    font-size: 12px;
-}
 
 .Contactusmainlistrightpage{
     width: 40%;
@@ -431,7 +427,7 @@
 
 .Contactusinforighttext h3{
     font-family: sans-serif;
-    font-size: 17px;
+    font-size: 23px;
     color: white;
 }
 
@@ -495,8 +491,9 @@
 
 .Contactusboxlinetext h3{
     font-family: sans-serif;
-    font-size: 12px;
+    font-size: 17px;
     font-weight: 600;
+    line-height: 60px;
     color: white;
 }
 
@@ -517,7 +514,8 @@
 
 .Contactdinfolinetext2 p{
     font-family: sans-serif;
-    font-size: 7px;
+    font-size: 14px;
+    /* line-height: 20px; */
     color: white;
 
 }
@@ -572,8 +570,9 @@
 
 .Contactusemailrightline1 h3{
     font-family: sans-serif;
-    font-size: 12px;
+    font-size: 17px;
     font-weight: 600;
+    line-height: 60px;
     color: white;
 
 }
@@ -586,7 +585,7 @@
 
 .Contactusemailrightline2 p{
     font-family: sans-serif;
-    font-size: 7px;
+    font-size: 14px;
     color: white;
 
 }
@@ -605,13 +604,14 @@
 }
 
 .ContactusmainPr{
-    width: 80%;
+    width: 100%;
     height: 100%;
     /* background-color: brown; */
-    background-image: url(/Contactuspage2.png);
+    background-image: url(src/asset/Contactusphoto.png);
     background-position: center;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
+    /* object-fit: contain; */
     /* border-radius: 40px; */
 
 }
@@ -619,7 +619,7 @@
 .spacingcontactus{
     width: 100%;
     height: 20px;
-    background-color: red;
+    /* background-color: red; */
 }
 
 @media only screen and (max-width:765px){
@@ -629,240 +629,750 @@
         /* background-color: blue; */
     }
 
-    .ContactusHeropage{
+    .ContactusMainpage{
         width: 100%;
-        height: 70%;
-        background-size: cover;
-        background-repeat: no-repeat;
-        /* background-position: center; */
-        object-fit: contain;
+        height: 80vh;
+        /* background-color: blue; */
     }
 
+    .ContactusHeroText{
+        width: 55%;
+        height: 90%;
+        /* background-color: darkgray; */
+        display: flex;
+        align-items: center;
+        /* padding-top: 60px; */
+    }
+    
     .ContactusHeroText h2{
-        font-size: 25px;
+        font-family: sans-serif;
+        font-size: 33px;
+        font-weight: 800;
+        color: white;
     }
 
+    .Contactuslistpage{
+        width: 100%;
+        height: 85vh;
+        /* background-color: red; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* position: absolute; */
+        /* top: 370px; */
+        /* left: 250px; */
+    
+    }
+    
     .Contactuslistpagewrapper{
         width: 100%;
+        height: 100%;
+        /* background-color: blue; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .Contactusmainlistpage{
+        width: 75%;
         height: 80%;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .Contactusmainlistleftpage{
+        width: 55%;
+        height: 100%;
+        /* background-color: blue; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: solid #57B5B5 1px;
     }
 
+    .Contactusmainlistleftpagewrapper{
+        width: 100%;
+        height: 90%;
+        /* background-color: red; */
+    }
+    
+    .Contactusendmessgae{
+        width: 100%;
+        height: 13%;
+        /* background-color: burlywood; */
+        display: flex;
+        /* align-items: center; */
+        /* justify-content: center; */
+    }
+    
+    .Contactumainsendmessgae{
+        width: 95%;
+        height: 50%;
+        /* background-color: darkmagenta; */
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+    }
+    
     .Contactumainsendmessgae h3{
-        font-size: 15px;
+        font-family: sans-serif;
+        font-weight: 700;
+        /* color: red; */
+        font-size: 22px;
     }
 
+    .Contactusfirstname{
+        width: 100%;
+        height: 25%;
+        /* background-color: greenyellow; */
+    }
+    
     .Contactusfirstname p{
-        font-size: 8px;
-    }
-
-    .Contactuslastnameright p{
-        font-size: 8px;
-    }
-
-    .Contactseconlistleftemail p{
-        font-size: 8px;
-    }
-
-    .Contactustitlettitlebox p{
-        font-size: 8px;
-    }
-
-    .Contactusinforighttext h3{
         font-size: 15px;
+        font-family: sans-serif;
     }
 
-    .Contactusboxlinetext h3{
-        font-size: 9px;
+    .Contactuslastnameright{
+        width: 100%;
+        height: 25%;
+        /* background-color: brown; */
+    }
+    
+    .Contactuslastnameright p{
+        font-size: 15px;
+        font-family: sans-serif;
     }
 
-    .Contactdinfolinetext2 p{
-        font-size: 6px;
+    .Contactseconlistleftemail{
+        width: 100%;
+        height: 25%;
+        /* background-color: lightgreen; */
+    }
+    
+    .Contactseconlistleftemail p{
+        font-size: 15px;
+        font-family: sans-serif;
     }
 
-    .Contactusemailrightline1 h3{
-        font-size:9px ;
+    .Contactustitlettitlebox{
+        width: 100%;
+        height: 25%;
+        /* background-color: aqua; */
+    }
+    
+    .Contactustitlettitlebox p{
+        font-size: 15px;
+        font-family: sans-serif;
     }
 
-    .Contactusemailrightline2 p{
-        font-size: 6px;
-    }
+    
+.Contactumainsubmibtn{
+    width: 95%;
+    height: 100%;
+    background-color: #2C7DA0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: solid  #57B5B5 1px;
+    border: hwb(hue white lightseagreen);
+}
+
+.Contactumainsubmibtn button{
+    width: 100%;
+    height: 100%;
+    background-color: #2C7DA0;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    /* border: solid  #57B5B5 1px; */
+}
+
+.Contactusinforighttbox{
+    width: 60%;
+    height: 100%;
+    /* background-color: blueviolet; */
+}
+
+.Contactusinforighttext{
+    width: 100%;
+    height: 80%;
+    /* background-color: green; */
+    display: flex;
+    align-items: center;
+}
+
+.Contactusinforighttext h3{
+    font-family: sans-serif;
+    font-size: 19px;
+    color: white;
+}
+
+.Contactsecondinfotext{
+    width: 100%;
+    height: 30%;
+    /* background-color: aqua; */
+    display: flex;
+    /* display: flex;
+    align-self: center;
+    justify-content: center; */
+}
+
+.Contactsecondinfobox{
+    width: 30%;
+    height: 100%;
+    /* background-color: burlywood; */
+}
+
+.Contactsecondinfoboxicon{
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.ContactusCall{
+    width: 45%;
+    height: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: #F9BB1D;
 
 }
-@media only screen and (max-width:428px){
+
+.Contactsecondinfobox2{
+    width: 70%;
+    height: 100%;
+    /* background-color: blue; */
+}
+
+.Contactusecondinfoboxline1{
+    width: 100%;
+    height: 50%;
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Contactusboxlinetext{
+    width: 80%;
+    height: 100%;
+    /* background-color: blueviolet; */
+    display: flex;
+    align-items: center;
+}
+
+.Contactusboxlinetext h3{
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 60px;
+    color: white;
+}
+
+.Contactdinfoboxline2{
+    width: 100%;
+    height: 50%;
+    /* background-color: green; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Contactdinfolinetext2{
+    width: 80%;
+    height: 100%;
+    /* background-color: aqua; */
+}
+
+.Contactdinfolinetext2 p{
+    font-family: sans-serif;
+    font-size: 12px;
+    /* line-height: 20px; */
+    color: white;
+
+}
+
+.Contactusmainlistrightpage2{
+    width: 100%;
+    height: 30%;
+    /* background-color: blue; */
+    display: flex;
+}
+
+.Contactusmainlistrightbox{
+    width: 30%;
+    height: 100%;
+    /* background-color: blueviolet; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: #F9BB1D;
+}
+
+.Contactusemail{
+    width: 45%;
+    height: 45%;
+
+}
+
+.Contactusmainlistrightbox2{
+    width: 70%;
+    height: 100%;
+    /* background-color: blanchedalmond; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Contactusemailrightbox2{
+    width: 80%;
+    height: 100%;
+    /* background-color:darkorange; */
+    /* display: flex;
+    align-items: center; */
+}
+
+.Contactusemailrightline1{
+    width: 100%;
+    height: 50%;
+    /* background-color: green; */
+    display: flex;
+    align-items: center;
+}
+
+.Contactusemailrightline1 h3{
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 60px;
+    color: white;
+
+}
+
+.Contactusemailrightline2{
+    width: 100%;
+    height: 50%;
+    /* background-color: gray; */
+}
+
+.Contactusemailrightline2 p{
+    font-family: sans-serif;
+    font-size: 12px;
+    color: white;
+
+}
+
+.Contactusmainlistrightpagedown{
+    width: 100%;
+    height: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: aqua; */
+    /* background-image: url(public/istockphoto-1422643304-612x612.jpg); */
+    /* background-position: center; */
+    /* object-fit: cover; */
+    /* object-fit: contain; */
+}
+
+.ContactusmainPr{
+    width: 100%;
+    height: 100%;
+    /* background-color: brown; */
+    background-image: url(src/asset/Contactusphoto.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* object-fit: contain; */
+    /* border-radius: 40px; */
+
+}
+
+}
+
+@media only screen and (max-width:480px){
     .ContactusMainpage{
         width: 100%;
         height: 100vh;
         /* background-color: blue; */
     }
 
-    .ContactusHeropage{
-        width: 100%;
-        height: 70%;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        object-fit: contain;
-    }
-
-    .ContactusHeroText h2{
-        font-size: 15px;
-    }
-
-    .Contactuslistpagewrapper{
-        width: 100%;
-        height: 65%;
-    }
-
-    .Contactumainsendmessgae h3{
-        font-size: 11px;
-    }
-
-    .Contactusfirstname p{
-        font-size: 6px;
-    }
-
-    .Contactuslastnameright p{
-        font-size: 6px;
-    }
-
-    .Contactseconlistleftemail p{
-        font-size: 6px;
-    }
-
-    .Contactustitlettitlebox p{
-        font-size: 6px;
-    }
-
-    .Contactusinforighttext h3{
-        font-size: 50%;
-    }
-
-    .Contactusboxlinetext h3{
-        font-size: 6px;
-    }
-
-    .Contactdinfolinetext2 p{
-        font-size: 4px;
-    }
-
-    .Contactusemailrightline1 h3{
-        font-size:6px ;
-    }
-
-    .Contactusemailrightline2 p{
-        font-size: 4px;
-    }
-
-    .Contactumainsubmibtn {
-        width: 100%;
-        height: 100%;
-        /* background-color: red; */
-    }
-
-    .Contactusdubmibtn{
-        width: 38%;
-        height: 70%;
-    }
-
-    .Contactumainsubmibtn p{
-        font-size: 7px;
-    }
-
-    .Contactussendme{
-        width: 20%;
-        height: 50%;
-    }
-
-}
-@media only screen and (max-width:320px){
     .ContactusMainpage{
         width: 100%;
-        height: 100vh;
+        height: 80vh;
         /* background-color: blue; */
     }
 
-    .ContactusHeropage{
-        width: 100%;
-        height: 60%;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        object-fit: contain;
+    .ContactusHeroText{
+        width: 55%;
+        height: 90%;
+        /* background-color: darkgray; */
+        display: flex;
+        align-items: center;
+        /* padding-top: 60px; */
     }
-
+    
     .ContactusHeroText h2{
-        font-size: 15px;
+        font-family: sans-serif;
+        font-size: 33px;
+        font-weight: 800;
+        color: white;
     }
 
+    .Contactuslistpage{
+        width: 100%;
+        height: 85vh;
+        /* background-color: red; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* position: absolute; */
+        /* top: 370px; */
+        /* left: 250px; */
+    
+    }
+    
     .Contactuslistpagewrapper{
         width: 100%;
-        height: 45%;
-    }
-
-    .Contactumainsendmessgae h3{
-        font-size: 9px;
-    }
-
-    .Contactusfirstname p{
-        font-size: 5px;
-    }
-
-    .Contactuslastnameright p{
-        font-size: 5px;
-    }
-
-    .Contactseconlistleftemail p{
-        font-size: 5px;
-    }
-
-    .Contactustitlettitlebox p{
-        font-size: 5px;
-    }
-
-    .Contactusinforighttext h3{
-        font-size: 6px;
-    }
-
-    .Contactusboxlinetext h3{
-        font-size: 5px;
-    }
-
-    .Contactdinfolinetext2 p{
-        font-size: 3px;
-    }
-
-    .Contactusemailrightline1 h3{
-        font-size:5px ;
-    }
-
-    .Contactusemailrightline2 p{
-        font-size: 3px;
-    }
-
-    .Contactumainsubmibtn {
-        width: 100%;
         height: 100%;
+        /* background-color: blue; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .Contactusmainlistpage{
+        width: 75%;
+        height: 80%;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    
+    .Contactusmainlistleftpage{
+        width: 55%;
+        height: 100%;
+        /* background-color: blue; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: solid #57B5B5 1px;
+    }
+
+    .Contactusmainlistleftpagewrapper{
+        width: 100%;
+        height: 90%;
         /* background-color: red; */
     }
-
-    .Contactusdubmibtn{
-        width: 38%;
-        height: 70%;
-    }
-
-    .Contactumainsubmibtn p{
-        font-size: 6px;
-    }
-
-    .Contactussendme{
-        width: 18%;
-        height: 50%;
-    }
-
-    .Contactusthowcanwehelpyouinput textarea{
+    
+    .Contactusendmessgae{
         width: 100%;
-        height: 100%;
-        initial-letter: 2px;
+        height: 13%;
+        /* background-color: burlywood; */
+        display: flex;
+        /* align-items: center; */
+        /* justify-content: center; */
     }
+    
+    .Contactumainsendmessgae{
+        width: 95%;
+        height: 50%;
+        /* background-color: darkmagenta; */
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+    }
+    
+    .Contactumainsendmessgae h3{
+        font-family: sans-serif;
+        font-weight: 700;
+        /* color: red; */
+        font-size: 22px;
+    }
+
+    .Contactusfirstname{
+        width: 100%;
+        height: 25%;
+        /* background-color: greenyellow; */
+    }
+    
+    .Contactusfirstname p{
+        font-size: 15px;
+        font-family: sans-serif;
+    }
+
+    .Contactuslastnameright{
+        width: 100%;
+        height: 25%;
+        /* background-color: brown; */
+    }
+    
+    .Contactuslastnameright p{
+        font-size: 15px;
+        font-family: sans-serif;
+    }
+
+    .Contactseconlistleftemail{
+        width: 100%;
+        height: 25%;
+        /* background-color: lightgreen; */
+    }
+    
+    .Contactseconlistleftemail p{
+        font-size: 15px;
+        font-family: sans-serif;
+    }
+
+    .Contactustitlettitlebox{
+        width: 100%;
+        height: 25%;
+        /* background-color: aqua; */
+    }
+    
+    .Contactustitlettitlebox p{
+        font-size: 15px;
+        font-family: sans-serif;
+    }
+
+    
+.Contactumainsubmibtn{
+    width: 95%;
+    height: 100%;
+    background-color: #2C7DA0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: solid  #57B5B5 1px;
+    border: hwb(hue white lightseagreen);
+}
+
+.Contactumainsubmibtn button{
+    width: 100%;
+    height: 100%;
+    background-color: #2C7DA0;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    /* border: solid  #57B5B5 1px; */
+}
+
+.Contactusinforighttbox{
+    width: 60%;
+    height: 100%;
+    /* background-color: blueviolet; */
+}
+
+.Contactusinforighttext{
+    width: 100%;
+    height: 80%;
+    /* background-color: green; */
+    display: flex;
+    align-items: center;
+}
+
+.Contactusinforighttext h3{
+    font-family: sans-serif;
+    font-size: 19px;
+    color: white;
+}
+
+.Contactsecondinfotext{
+    width: 100%;
+    height: 30%;
+    /* background-color: aqua; */
+    display: flex;
+    /* display: flex;
+    align-self: center;
+    justify-content: center; */
+}
+
+.Contactsecondinfobox{
+    width: 30%;
+    height: 100%;
+    /* background-color: burlywood; */
+}
+
+.Contactsecondinfoboxicon{
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.ContactusCall{
+    width: 45%;
+    height: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: #F9BB1D;
+
+}
+
+.Contactsecondinfobox2{
+    width: 70%;
+    height: 100%;
+    /* background-color: blue; */
+}
+
+.Contactusecondinfoboxline1{
+    width: 100%;
+    height: 50%;
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Contactusboxlinetext{
+    width: 80%;
+    height: 100%;
+    /* background-color: blueviolet; */
+    display: flex;
+    align-items: center;
+}
+
+.Contactusboxlinetext h3{
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 60px;
+    color: white;
+}
+
+.Contactdinfoboxline2{
+    width: 100%;
+    height: 50%;
+    /* background-color: green; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Contactdinfolinetext2{
+    width: 80%;
+    height: 100%;
+    /* background-color: aqua; */
+}
+
+.Contactdinfolinetext2 p{
+    font-family: sans-serif;
+    font-size: 12px;
+    /* line-height: 20px; */
+    color: white;
+
+}
+
+.Contactusmainlistrightpage2{
+    width: 100%;
+    height: 30%;
+    /* background-color: blue; */
+    display: flex;
+}
+
+.Contactusmainlistrightbox{
+    width: 30%;
+    height: 100%;
+    /* background-color: blueviolet; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: #F9BB1D;
+}
+
+.Contactusemail{
+    width: 45%;
+    height: 45%;
+
+}
+
+.Contactusmainlistrightbox2{
+    width: 70%;
+    height: 100%;
+    /* background-color: blanchedalmond; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Contactusemailrightbox2{
+    width: 80%;
+    height: 100%;
+    /* background-color:darkorange; */
+    /* display: flex;
+    align-items: center; */
+}
+
+.Contactusemailrightline1{
+    width: 100%;
+    height: 50%;
+    /* background-color: green; */
+    display: flex;
+    align-items: center;
+}
+
+.Contactusemailrightline1 h3{
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 60px;
+    color: white;
+
+}
+
+.Contactusemailrightline2{
+    width: 100%;
+    height: 50%;
+    /* background-color: gray; */
+}
+
+.Contactusemailrightline2 p{
+    font-family: sans-serif;
+    font-size: 12px;
+    color: white;
+
+}
+
+.Contactusmainlistrightpagedown{
+    width: 100%;
+    height: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: aqua; */
+    /* background-image: url(public/istockphoto-1422643304-612x612.jpg); */
+    /* background-position: center; */
+    /* object-fit: cover; */
+    /* object-fit: contain; */
+}
+
+.ContactusmainPr{
+    width: 100%;
+    height: 100%;
+    /* background-color: brown; */
+    background-image: url(src/asset/Contactusphoto.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* object-fit: contain; */
+    /* border-radius: 40px; */
+
+}
 
 }

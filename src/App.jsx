@@ -46,6 +46,7 @@ import Blog from "./Components/BlogPage/Blog";
 import Livechat from "./Components/Livechatpage/Livechat";
 import WelcomePage from "./Components/LiveChat/WelcomePage";
 import Pharmacy from "./Components/Pharmacy/Pharmacy";
+import Contactuspage from "./Components/Contactuspage/Contactuspage";
 
 const route = createHashRouter([
   {
@@ -85,7 +86,7 @@ const route = createHashRouter([
 
   {
     path: "/contactUs",
-    element: <Contactus />,
+    element: <Contactuspage />,
   },
   {
     path: "/enterEmail",

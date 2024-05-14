@@ -1,5 +1,6 @@
 import Footer from "../LandingPage/Footer"
 import HomePageHeader from "../LandingPage/HomePageHeader"
+import Contactfaq from "./Contactfaq"
 import Contactus from "./Contactus"
 import "./Contactuspage.css"
 
@@ -14,6 +15,8 @@ const Contactuspage =()=>{
         </div>
       </div>
       <div></div>
+      <Contactfaq/>
+  
       <Footer />
         
         

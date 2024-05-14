@@ -5,7 +5,7 @@ import "./Faqpage.css";
 const Faqpage = () => {
   return (
     <>
-      <HomePageHeader />
+      {/* <HomePageHeader /> */}
       <div className="FaqMainbody">
         <div className="Faqbodycon">
           <div className="Faqheropage">
@@ -29,9 +29,7 @@ const Faqpage = () => {
                     The DocMate Appointment Management System is an innovative
                     platform designed to streamline the process of scheduling
                     and managing appointments at the hospital. It offers
-                    patients a convenient way to book appointments, allows staff
-                    to efficiently manage schedules, and enhances overall
-                    healthcare delivery.
+                    patients a convenient way to book appointments.
                   </p>
                 </div>
               </div>
@@ -122,8 +120,7 @@ const Faqpage = () => {
               <div className="WhatisDAMStext">
                 <div className="WhatisDAMStext1">
                   <h2>
-                    What should I do if I encounter technical difficulties or
-                    have questions?
+                    What should I do if I encounter technical difficulties?
                   </h2>
                 </div>
               </div>
@@ -133,8 +130,7 @@ const Faqpage = () => {
                     If you encounter any technical difficulties or have
                     questions about using our system, please don't hesitate to
                     reach out to our customer support team. We're here to assist
-                    you and ensure that your experience with our Hospital
-                    Appointment Management System is seamless and hassle-free.
+                    you and ensure that your experience is seamless and hassle-free.
                   </p>
                 </div>
               </div>

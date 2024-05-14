@@ -19,7 +19,6 @@ import PatientLogin from "./Components/Onboarding/PatientLogin";
 import HospitalLogin from "./Components/Onboarding/HospitalLogin";
 import HospitalRegister from "./Components/Onboarding/HospitalRegister";
 import Aboutus from "./Components/AboutUspage/Aboutus";
-import Faqpage from "./Components/Faqpage/Faqpage";
 import Setnewpassword from "./Components/Setnewpassword/Setnewpassword";
 import PatientLogin2 from "./Components/Onboarding/PatientLogin2";
 import PatientLeftNav from "./Components/PatientDashboard/PatientLeftNav";
@@ -47,6 +46,7 @@ import Livechat from "./Components/Livechatpage/Livechat";
 import WelcomePage from "./Components/LiveChat/WelcomePage";
 import Pharmacy from "./Components/Pharmacy/Pharmacy";
 import Contactuspage from "./Components/Contactuspage/Contactuspage";
+import Faqlandpage from "./Components/Faqpage/Faqlandpage";
 
 const route = createHashRouter([
   {
@@ -110,7 +110,7 @@ const route = createHashRouter([
   },
   {
     path: "/faq",
-    element: <Faqpage />,
+    element: <Faqlandpage />,
   },
   {
     path: "/pharmacy",

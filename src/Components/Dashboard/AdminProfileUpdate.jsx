@@ -1,6 +1,56 @@
-import React from 'react'
+import React, { useState } from "react";
+import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const AdminProfileUpdate = () => {
+  const [address, setAddress] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [email, setEmail] = useState("");
+  const nav = useNavigate();
+  const [isLoading, setIsloading] = useState(false);
+  console.log(address, phoneNumber, email);
+
+  const loggedInHospital = JSON.parse(localStorage.getItem("loggedInHospital"));
+  const id = loggedInHospital?.data.id;
+  const Url = `https://doc-mate.onrender.com/admin-profile-update/${id}`;
+  const hospitalToken = loggedInHospital?.token;
+  const headers = {
+    Authorization: `Bearer ${hospitalToken}`,
+  };
+  console.log(id);
+  // console.log(loggedInHospital?.data);
+
+  const handleUpdate = async (e) => {
+    e.preventDefault();
+    const data = {
+      address:address,
+      phoneNumber:phoneNumber,
+      email:email,
+    };
+    // console.log(data);
+    try {
+      setIsloading(true);
+      console.log(isLoading);
+      const response = await axios.put(Url, data, { headers });
+      console.log(response);
+      Swal.fire({
+        title: "Update Successful",
+        text: "Profile data updated successfully",
+        icon: "success",
+      });
+    } catch (error) {
+      Swal.fire({
+        title: "Error Message",
+        text: error.response,
+        icon: "error",
+      });
+      console.error(error);
+    } finally {
+      setIsloading(false);
+    }
+  };
+
   return (
     <div className="PatientProfileUpdate-container">
       <div className="PatientProfileUpdate-holder">
@@ -20,100 +70,50 @@ const AdminProfileUpdate = () => {
             className="PatientProfileUpdate-container2"
             id="PatientProfileUpdate-container2"
           >
-            {/* <div className="PatientProfileUpdate-input-container">
-              <label htmlFor="" className="PatientProfileUpdate-label">
-                Name:
-              </label>
-              <input type="text" className="PatientProfileUpdate-input-input" />
-            </div> */}
             <div className="PatientProfileUpdate-input-container">
-              <label
-                htmlFor=""
-                className="PatientProfileUpdate-label"
-                onChange={(e) => setPatientAddress(e.target.value)}
-              >
+              <label htmlFor="" className="PatientProfileUpdate-label">
                 Address:
               </label>
-              <input type="text" className="PatientProfileUpdate-input-input" onChange={(e)=>setPatientAddress(e.target.value)} />
+              <input
+                type="text"
+                className="PatientProfileUpdate-input-input"
+                onChange={(e) => setAddress(e.target.value)}
+              />
             </div>
             <div className="PatientProfileUpdate-input-container">
               <label
                 htmlFor=""
                 className="PatientProfileUpdate-label"
                 placeholder="Optional"
-                onChange={(e) => setPhoneNumber(e.target.value)}
               >
                 PhoneNumber:
-              </label>
-              <input type="text" className="PatientProfileUpdate-input-input" onChange={(e)=>setPhoneNumber(e.target.value)} />
-            </div>
-            {/* <div className="PatientProfileUpdate-input-container">
-              <label htmlFor="" className="PatientProfileUpdate-label">
-                Email:
-              </label>
-              <input type="text" className="PatientProfileUpdate-input-input" />
-            </div> */}
-            <div
-              className="PatientProfileUpdate-input-container"
-              id="updateFor-gender-age"
-            >
-              <div className="gender-update-container">
-                <label htmlFor="" className="PatientProfileUpdate-label">
-                  Gender:
-                </label>
-                <select
-                  name="gender"
-                  id=""
-                  className="updateSelect"
-                  onChange={(e) => setGender(e.target.value)}
-                >
-                  <option value="">Select gender</option>
-                  <option value="Male">Male</option>
-                  <option value="Female">Female</option>
-                </select>
-              </div>
-              <div className="gender-update-container">
-                <label htmlFor="" className="PatientProfileUpdate-label">
-                  Age:
-                </label>
-                <input
-                  type="number"
-                  className="PatientProfileUpdate-input-input"
-                  onChange={(e) => setAge(e.target.value)}
-                />
-              </div>
-            </div>
-            <div className="PatientProfileUpdate-input-container">
-              <label htmlFor="" className="PatientProfileUpdate-label">
-                Allegies:
               </label>
               <input
                 type="text"
                 className="PatientProfileUpdate-input-input"
-                onChange={(e) => setAllegies(e.target.value)}
+                onChange={(e) => setPhoneNumber(e.target.value)}
               />
             </div>
             <div className="PatientProfileUpdate-input-container">
               <label htmlFor="" className="PatientProfileUpdate-label">
-                BloodType:
+                Email:
               </label>
               <input
                 type="text"
-                placeholder="Optiona"
+                onChange={(e) => setEmail(e.target.value)}
                 className="PatientProfileUpdate-input-input"
-                onChange={(e) => setBloodType(e.target.value)}
               />
             </div>
           </div>
           <div className="PatientProfileUpdate-container3">
-            <div className="PatientProfileUpdate-btn">
-              Update
+            <div className="PatientProfileUpdate-btn" onClick={handleUpdate}>
+              {isLoading ? "Updating..." : "Update"}
             </div>
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default AdminProfileUpdate
+export default AdminProfileUpdate;

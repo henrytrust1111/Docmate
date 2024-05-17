@@ -18,11 +18,9 @@ const PatientLogin = () => {
 
   const HandleEmail = (e) => {
     setEmail(e.target.value);
-    console.log(email);
   };
   const HandlePassword = (e) => {
     setPassword(e.target.value);
-    console.log(password);
   };
   const data = { email, password };
   const Url = "https://doc-mate.onrender.com/adminlogin";
@@ -32,10 +30,6 @@ const PatientLogin = () => {
     try {
       setisLoading(true);
       const response = await axios.post(Url, data);
-      console.log(response.data);
-      console.log(response.data.message);
-      console.log(response.data.token);
-      const loggedInHospitalToken = response.data.token;
       const loggedInHospital = response.data;
       localStorage.setItem(
         "loggedInHospital",
@@ -58,7 +52,7 @@ const PatientLogin = () => {
         title: "oops",
         text: errorMessage,
       });
-      console.log(errorMessage);
+      console.error(errorMessage);
     } finally {
       setisLoading(false);
     }

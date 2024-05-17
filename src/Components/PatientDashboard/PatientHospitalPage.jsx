@@ -3,35 +3,34 @@ import { useEffect } from "react";
 import "./PatientHospitalPage.css";
 import Swal from "sweetalert2";
 import axios from "axios";
-import { ThemeContext } from '../context/Theme'
-import { useContext } from 'react'
-import { useLayoutEffect } from 'react'
+import { ThemeContext } from "../context/Theme";
+import { useContext } from "react";
+import { useLayoutEffect } from "react";
 
 import { useNavigate } from "react-router-dom";
 const PatientHospitalPage = () => {
-  const [hospital,setHospital] = useState()
-  const nav = useNavigate()
-  
+  const [hospital, setHospital] = useState();
+  const nav = useNavigate();
+
   const handleRequestAppointment = () => {
     nav("/patient/patientHospitalPage/patientAppointmentForm");
   };
-  const {showSearch,setShowSearch} = useContext(ThemeContext)
+  const { showSearch, setShowSearch } = useContext(ThemeContext);
   console.log(showSearch);
   useLayoutEffect(() => {
-    const fetchData = ()=>{
-      setShowSearch(false)
-      
-    }
+    const fetchData = () => {
+      setShowSearch(false);
+    };
 
-    fetchData()
+    fetchData();
     console.log(showSearch);
-  }, [])
+  }, []);
 
   const id = localStorage.getItem("hospitalID");
   const id2 = localStorage.getItem("hospitalIDSearch");
   console.log(id2);
-  console.log(id? id:"no id");
-  const url = `https://doc-mate.onrender.com/one-hospital/${id? id:id2}`;
+  console.log(id ? id : "no id");
+  const url = `https://doc-mate.onrender.com/one-hospital/${id ? id : id2}`;
   const userInfo = JSON.parse(localStorage.getItem("loggedInUser"));
   const userToken = userInfo?.token;
   const headers = {
@@ -47,7 +46,7 @@ const PatientHospitalPage = () => {
         setHospital(response?.data.data);
       } catch (error) {
         console.error("Error:", error);
-        console.error("Error Response:", error.response); 
+        console.error("Error Response:", error.response);
       }
     };
 
@@ -69,12 +68,12 @@ const PatientHospitalPage = () => {
             </div>
             <p>Request an Appointment</p>
           </div>
-          <div className="patient-request-view-box">
+          {/* <div className="patient-request-view-box">
             <div className="request-appointment-icon">
               <img src="./icons/viewAppointment.svg" alt="" />
             </div>
             <p>View Appointments</p>
-          </div>
+          </div> */}
         </div>
         <div className="PatientHospitalPage-container-footer">
           <p>

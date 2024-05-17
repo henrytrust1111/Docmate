@@ -45,49 +45,46 @@ const nav = useNavigate();
   }
 
   const handleViewAppointment= (id)=>{
-    console.log(id);
     localStorage.setItem("userAppointmentID",id)
     nav("/admin/adminAppointmentReview")
   }
+  // const delete1= (id)=>{
+  // const url4 = `https://doc-mate.onrender.com/delete-patient/${id}`;
+  // }
+
+ 
+  
+
   const url = "https://doc-mate.onrender.com/all-appointments";
   const url1 = "https://doc-mate.onrender.com/pendingappointment";
   const url2 = "https://doc-mate.onrender.com/get-all-confirmed";
   const url3 = "https://doc-mate.onrender.com/all-pending-reschedule";
   const loggedInHospital = JSON.parse(localStorage.getItem("loggedInHospital"))
   const userToken = loggedInHospital?.token;
-  console.log(userToken);
   const headers = {
     Authorization: `Bearer ${userToken}`,
   };
 
+ 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get(url, { headers });
-        console.log(response?.data);
-        console.log(response?.data.appointments);
         setGetAllAppointment(response?.data.appointments)
       } catch (error) {
         console.error("Error:", error);
-        // console.error("Error Response:", error.response);
       }
     };
     const fetchData1 = async () => {
       try {
         const response = await axios.get(url1, { headers });
-        console.log(response?.data);
-        console.log(response?.data.appointments);
         setGetAllReschedules(response?.data.appointments)
       } catch (error) {
-        console.error("Error:", error);
-        // console.error("Error Response:", error.response);
       }
     };
     const fetchData2 = async () => {
       try {
         const response = await axios.get(url2, { headers });
-        console.log(response?.data);
-        console.log(response?.data.appointments);
         setGetAllConfirmed(response?.data.appointments)
       } catch (error) {
         console.error("Error:", error);
@@ -97,8 +94,6 @@ const nav = useNavigate();
     const fetchData3 = async () => {
       try {
         const response = await axios.get(url3, { headers });
-        console.log(response?.data);
-        console.log(response?.data.appointments);
         setGetAllPending(response?.data.appointments)
       } catch (error) {
         console.error("Error:", error);
@@ -106,13 +101,24 @@ const nav = useNavigate();
       }
     };
 
+    
+
     fetchData();
     fetchData1();
     fetchData2();
     fetchData3();
   }, []);
 
-console.log(getAllAppointment);
+  const delete1 = async (id) => {
+    try {
+      const url4 = `https://doc-mate.onrender.com/delete-patient/${id}`;
+      const response = await axios.delete(url4, { headers });
+      fetchData(); 
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  };
+
 
   return (
     <div className="admin-dashboard-right">
@@ -197,7 +203,7 @@ console.log(getAllAppointment);
                   </div>
                   <div className="delete-view-btn">
                     <div className="view-button" onClick={()=>handleViewAppointment(e._id)}>View</div>
-                    <div className="delete-button">Delete</div>
+                    <div className="delete-button" onClick={()=>delete1(e._id)}>Delete</div>
                   </div>
                 </div>
                 ) :reschedules? getAllReschedules?.map((e,i)=>
@@ -221,7 +227,7 @@ console.log(getAllAppointment);
                 </div>
                 <div className="delete-view-btn">
                   <div className="view-button" onClick={()=>handleViewAppointment(e._id)}>View</div>
-                  <div className="delete-button">Delete</div>
+                  <div className="delete-button" onClick={()=>delete1(e._id)}>Delete</div>
                 </div>
               </div>) :attended? getAllConfirmed?.map((e,i)=> <div className="list-container" key={i}>
                   <div className="s-n">{i+1}</div>
@@ -243,7 +249,7 @@ console.log(getAllAppointment);
                   </div>
                   <div className="delete-view-btn">
                     <div className="view-button" onClick={()=>handleViewAppointment(e._id)}>View</div>
-                    <div className="delete-button">Delete</div>
+                    <div className="delete-button" onClick={()=>delete1(e._id)}>Delete</div>
                   </div>
                 </div>):unattended? getAllPending?.map((e,i)=> <div className="list-container" key={i}>
                   <div className="s-n">{i+1}</div>
@@ -265,7 +271,7 @@ console.log(getAllAppointment);
                   </div>
                   <div className="delete-view-btn">
                     <div className="view-button" onClick={()=>handleViewAppointment(e._id)}>View</div>
-                    <div className="delete-button">Delete</div>
+                    <div className="delete-button" onClick={()=>delete1(e._id)}>Delete</div>
                   </div>
                 </div>):null
                 }

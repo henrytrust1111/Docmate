@@ -43,7 +43,14 @@ const AdminBookingReview = () => {
     fetchData();
   }, []);
   const doctorsReview = JSON.parse(localStorage.getItem("doctorsReview"));
-  console.log(doctorsReview?.appointment);
+
+const isoDate = getAppointmentReview?.lastVisitation;
+  const date = new Date(isoDate);
+  const options = { day: "2-digit", month: "2-digit", year: "numeric" };
+  const formattedDate = date.toLocaleDateString("en-GB", options);
+  const lastVisitation = formattedDate==="Invalid Date"? "none": formattedDate;
+
+  console.log(lastVisitation);
   return (
     <>
       {/* {popUp? <PopUp text="Appointment booked successfully" image="./icons/success.svg" />:null} */}
@@ -67,15 +74,15 @@ const AdminBookingReview = () => {
                   </div>
                   <div className="patient-review-check-down-content">
                     <h3>Last Visitation</h3>
-                    <p>{getAppointmentReview?.lastVisitation}</p>
+                    <p>{lastVisitation}</p>
                   </div>
                   <div className="patient-review-check-down-content">
                     <h3>Last Diagnosis</h3>
-                    <p>{getAppointmentReview?.lastDiagnosis}</p>
+                    <p>{getAppointmentReview?.lastDiagnosis? getAppointmentReview?.lastDiagnosis:"none"}</p>
                   </div>
                   <div className="patient-review-check-down-content">
                     <h3>Present Symtoms</h3>
-                    <p>{getAppointmentReview?.presentSymptoms}</p>
+                    <p>{getAppointmentReview?.presentSymptoms? getAppointmentReview?.presentSymptoms:"none"}</p>
                   </div>
                 </div>
               </div>

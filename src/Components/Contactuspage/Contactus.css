@@ -1,24 +1,24 @@
-*{
+* {
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
     /* background-color: red; */
 }
 
-.Contactuspage{
+.Contactuspage {
     width: 100%;
     height: 100vh;
     /* background-color: aqua; */
 }
 
 
-.ContactusMainpage{
+.ContactusMainpage {
     width: 100%;
     height: 80vh;
     /* background-color: blue; */
 }
 
-.ContactusHeropage{
+.ContactusHeropage {
     width: 100%;
     height: 100%;
     /* background-color: burlywood; */
@@ -33,20 +33,20 @@
     object-fit: contain;
 
 
-    
+
 }
 
-.ContactusHeroTextpage{
+.ContactusHeroTextpage {
     width: 100%;
     height: 30%;
     /* background-color: green; */
     display: flex;
     align-items: center;
     justify-content: center;
-   
+
 }
 
-.ContactusHeroText{
+.ContactusHeroText {
     width: 55%;
     height: 90%;
     /* background-color: darkgray; */
@@ -55,7 +55,7 @@
     /* padding-top: 60px; */
 }
 
-.ContactusHeroText h2{
+.ContactusHeroText h2 {
     font-family: sans-serif;
     font-size: 35px;
     font-weight: 800;
@@ -63,18 +63,18 @@
 }
 
 
-.Contactuslistpage{
+.Contactuslistpage {
     width: 100%;
     height: 95vh;
     /* background-color: red; */
     display: flex;
     align-items: center;
     justify-content: center;
- 
+
 
 }
 
-.Contactuslistpagewrapper{
+.Contactuslistpagewrapper {
     width: 100%;
     height: 100%;
     /* background-color: blue; */
@@ -83,7 +83,7 @@
     justify-content: center;
 }
 
-.Contactusmainlistpage{
+.Contactusmainlistpage {
     width: 75%;
     height: 80%;
     border-radius: 10px;
@@ -92,23 +92,25 @@
     justify-content: space-between;
 }
 
-.Contactusmainlistleftpage{
+.Contactusmainlistleftpage {
     width: 55%;
     height: 100%;
-    /* background-color: blue; */
+    background-color: whites;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: solid #57B5B5 1px;
+    border-radius: 10px 0px 0px 10px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    /* border: solid #57B5B5 1px; */
 }
 
-.Contactusmainlistleftpagewrapper{
+.Contactusmainlistleftpagewrapper {
     width: 100%;
     height: 90%;
     /* background-color: red; */
 }
 
-.Contactusendmessgae{
+.Contactusendmessgae {
     width: 100%;
     height: 13%;
     /* background-color: burlywood; */
@@ -117,7 +119,7 @@
     /* justify-content: center; */
 }
 
-.Contactumainsendmessgae{
+.Contactumainsendmessgae {
     width: 95%;
     height: 50%;
     /* background-color: darkmagenta; */
@@ -126,14 +128,14 @@
     margin-left: 10px;
 }
 
-.Contactumainsendmessgae h3{
+.Contactumainsendmessgae h3 {
     font-family: sans-serif;
     font-weight: 800;
     color: #272727;
     font-size: 25px;
 }
 
-.Contacttlefirstname{
+.Contacttlefirstname {
     width: 100%;
     height: 20%;
     /* background-color: aqua; */
@@ -142,13 +144,14 @@
     justify-content: center;
 }
 
-.Contacttlemainfirstname{
+.Contacttlemainfirstname {
     width: 95%;
     height: 100%;
     /* background-color: red; */
     display: flex;
 }
-.Contactusfirstnameleft{
+
+.Contactusfirstnameleft {
     width: 50%;
     height: 100%;
     /* background-color: green; */
@@ -156,24 +159,24 @@
 
 }
 
-.Contactusfirstname{
+.Contactusfirstname {
     width: 100%;
     height: 25%;
     /* background-color: greenyellow; */
 }
 
-.Contactusfirstname p{
+.Contactusfirstname p {
     font-size: 17px;
     font-family: sans-serif;
 }
 
-.Contactusfirstnamebox{
+.Contactusfirstnamebox {
     width: 100%;
     height: 70%;
     /* background-color: darkorange; */
 }
 
-.Contactusfirstnamebox input{
+.Contactusfirstnamebox input {
     width: 95%;
     height: 65%;
     border-radius: 5px;
@@ -185,31 +188,31 @@
 
 }
 
-.Contactusfirstnameright{
+.Contactusfirstnameright {
     width: 50%;
     height: 100%;
     /* background-color: blueviolet; */
 }
 
-.Contactuslastnameright{
+.Contactuslastnameright {
     width: 100%;
     height: 25%;
     /* background-color: brown; */
 }
 
-.Contactuslastnameright p{
+.Contactuslastnameright p {
     font-size: 17px;
     font-family: sans-serif;
 }
 
 
-.Contactuslastnamerightbox{
+.Contactuslastnamerightbox {
     width: 100%;
     height: 70%;
     /* background-color: darkgrey; */
 }
 
-.Contactuslastnamerightbox input{
+.Contactuslastnamerightbox input {
     width: 100%;
     height: 65%;
     border-radius: 5px;
@@ -220,7 +223,7 @@
 
 }
 
-.Contactseconlistleftpage{
+.Contactseconlistleftpage {
     width: 100%;
     height: 20%;
     /* background-color: darkred; */
@@ -229,40 +232,40 @@
     justify-content: center;
 }
 
-.Contactseconlistleftbox{
+.Contactseconlistleftbox {
     width: 95%;
     height: 100%;
     /* background-color: aqua; */
 }
 
-.Contactseconlistleftemail{
+.Contactseconlistleftemail {
     width: 100%;
     height: 25%;
     /* background-color: lightgreen; */
 }
 
-.Contactseconlistleftemail p{
+.Contactseconlistleftemail p {
     font-size: 17px;
     font-family: sans-serif;
 }
 
-.Contactseconlistleftemailinput{
+.Contactseconlistleftemailinput {
     width: 100%;
     height: 65%;
     /* background-color: blueviolet; */
 }
 
-.Contactseconlistleftemailinput input{
+.Contactseconlistleftemailinput input {
     width: 48%;
     height: 70%;
     border-radius: 5px;
-    border: solid  #57B5B5 1px;
+    border: solid #57B5B5 1px;
     border: hwb(hue white lightseagreen);
     outline: none;
     padding-left: 7px;
 }
 
-.Contactustitletpage{
+.Contactustitletpage {
     width: 100%;
     height: 20%;
     /* background-color: blanchedalmond; */
@@ -271,56 +274,30 @@
     justify-content: center;
 }
 
-.Contactustitletpagebox{
+.Contactustitletpagebox {
     width: 95%;
     height: 100%;
     /* background-color: grey; */
 }
 
-.Contactustitlettitlebox{
+.Contactustitlettitlebox {
     width: 100%;
     height: 25%;
     /* background-color: aqua; */
 }
 
-.Contactustitlettitlebox p{
+.Contactustitlettitlebox p {
     font-size: 17px;
     font-family: sans-serif;
 }
 
-.Contactustitlettitlinput{
+.Contactustitlettitlinput {
     width: 100%;
     height: 50%;
     /* background-color: blueviolet; */
 }
 
-.Contactustitlettitlinput input{
-    width: 98%;
-    height: 100%;
-    border-radius: 5px;
-    border: solid  #57B5B5 1px;
-    border: hwb(hue white lightseagreen);
-    padding: 7px;
-    outline: none;
-
-}
-
-.Contactusthowcanwehelpyou{
-    width: 100%;
-    height: 20%;
-    /* background-color: black; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.Contactusthowcanwehelpyouinput{
-    width: 95%;
-    height: 100%;
-    /* background-color: green; */
-}
-
-.Contactusthowcanwehelpyouinput textarea{
+.Contactustitlettitlinput input {
     width: 98%;
     height: 100%;
     border-radius: 5px;
@@ -331,7 +308,33 @@
 
 }
 
-.Contactusdubmitform{
+.Contactusthowcanwehelpyou {
+    width: 100%;
+    height: 20%;
+    /* background-color: black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Contactusthowcanwehelpyouinput {
+    width: 95%;
+    height: 100%;
+    /* background-color: green; */
+}
+
+.Contactusthowcanwehelpyouinput textarea {
+    width: 98%;
+    height: 100%;
+    border-radius: 5px;
+    border: solid #57B5B5 1px;
+    border: hwb(hue white lightseagreen);
+    padding: 7px;
+    outline: none;
+
+}
+
+.Contactusdubmitform {
     width: 100%;
     height: 14%;
     /* background-color: hotpink; */
@@ -340,17 +343,17 @@
     justify-content: center;
 }
 
-.Contactusdubmitformbox{
+.Contactusdubmitformbox {
     width: 95%;
     height: 100%;
     /* background-color: gray; */
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    
+
 }
 
-.Contactusdubmibtn{
+.Contactusdubmibtn {
     width: 38%;
     height: 68%;
     /* background-color: lightblue; */
@@ -358,7 +361,7 @@
 }
 
 
-.Contactumainsubmibtn{
+.Contactumainsubmibtn {
     width: 95%;
     height: 100%;
     background-color: #2C7DA0;
@@ -366,11 +369,11 @@
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-    border: solid  #57B5B5 1px;
+    border: solid #57B5B5 1px;
     border: hwb(hue white lightseagreen);
 }
 
-.Contactumainsubmibtn button{
+.Contactumainsubmibtn button {
     width: 100%;
     height: 100%;
     background-color: #2C7DA0;
@@ -382,42 +385,49 @@
     /* border: solid  #57B5B5 1px; */
 }
 
-.Contactussendme{
+.Contactussendme {
     width: 30%;
     height: 50%;
     color: white;
 }
 
 
-.Contactusmainlistrightpage{
+.Contactusmainlistrightpage {
     width: 40%;
     height: 100%;
-    background-color: #2C7DA0;
-    border-radius: 0px 10px 10px 0px;
+    /* background-color: #2C7DA0; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    /* border-radius: 0px 10px 10px 0px; */
+
 }
 
-.Contactusmainlistrightpageup{
+.Contactusmainlistrightpageup {
     width: 100%;
     height: 45%;
-    /* background-color: #11506b; */
+    background-color: white;
+    border-radius: 0px 10px 10px 0px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 
-.Contactusinforight{
+.Contactusinforight {
     width: 100%;
     height: 25%;
     /* background-color: red; */
     display: flex;
     align-items: center;
-    justify-content:center ;
+    justify-content: center;
 }
 
-.Contactusinforighttbox{
+.Contactusinforighttbox {
     width: 60%;
     height: 100%;
     /* background-color: blueviolet; */
 }
 
-.Contactusinforighttext{
+.Contactusinforighttext {
     width: 100%;
     height: 80%;
     /* background-color: green; */
@@ -425,15 +435,15 @@
     align-items: center;
 }
 
-.Contactusinforighttext h3{
+.Contactusinforighttext h3 {
     font-family: sans-serif;
     font-size: 23px;
     font-weight: 800;
     line-height: 60px;
-    color: white;
+    color: #272727;
 }
 
-.Contactsecondinfotext{
+.Contactsecondinfotext {
     width: 100%;
     height: 30%;
     /* background-color: aqua; */
@@ -443,13 +453,13 @@
     justify-content: center; */
 }
 
-.Contactsecondinfobox{
+.Contactsecondinfobox {
     width: 30%;
     height: 100%;
     /* background-color: burlywood; */
 }
 
-.Contactsecondinfoboxicon{
+.Contactsecondinfoboxicon {
     width: 100%;
     height: 100%;
     /* background-color: red; */
@@ -458,7 +468,7 @@
     justify-content: flex-end;
 }
 
-.ContactusCall{
+.ContactusCall {
     width: 45%;
     height: 45%;
     display: flex;
@@ -468,13 +478,13 @@
 
 }
 
-.Contactsecondinfobox2{
+.Contactsecondinfobox2 {
     width: 70%;
     height: 100%;
     /* background-color: blue; */
 }
 
-.Contactusecondinfoboxline1{
+.Contactusecondinfoboxline1 {
     width: 100%;
     height: 50%;
     /* background-color: aqua; */
@@ -483,7 +493,7 @@
     justify-content: center;
 }
 
-.Contactusboxlinetext{
+.Contactusboxlinetext {
     width: 80%;
     height: 100%;
     /* background-color: blueviolet; */
@@ -491,15 +501,15 @@
     align-items: center;
 }
 
-.Contactusboxlinetext h3{
+.Contactusboxlinetext h3 {
     font-family: sans-serif;
     font-size: 20px;
     font-weight: 700;
     line-height: 60px;
-    color: white;
+    color: #272727;
 }
 
-.Contactdinfoboxline2{
+.Contactdinfoboxline2 {
     width: 100%;
     height: 50%;
     /* background-color: green; */
@@ -508,28 +518,28 @@
     justify-content: center;
 }
 
-.Contactdinfolinetext2{
+.Contactdinfolinetext2 {
     width: 80%;
     height: 100%;
     /* background-color: aqua; */
 }
 
-.Contactdinfolinetext2 p{
+.Contactdinfolinetext2 p {
     font-family: sans-serif;
     font-size: 16px;
     /* line-height: 20px; */
-    color: white;
+    color: #272727;
 
 }
 
-.Contactusmainlistrightpage2{
+.Contactusmainlistrightpage2 {
     width: 100%;
     height: 30%;
     /* background-color: blue; */
     display: flex;
 }
 
-.Contactusmainlistrightbox{
+.Contactusmainlistrightbox {
     width: 30%;
     height: 100%;
     /* background-color: blueviolet; */
@@ -539,13 +549,13 @@
     color: #F9BB1D;
 }
 
-.Contactusemail{
+.Contactusemail {
     width: 45%;
     height: 45%;
 
 }
 
-.Contactusmainlistrightbox2{
+.Contactusmainlistrightbox2 {
     width: 70%;
     height: 100%;
     /* background-color: blanchedalmond; */
@@ -554,7 +564,7 @@
     justify-content: center;
 }
 
-.Contactusemailrightbox2{
+.Contactusemailrightbox2 {
     width: 80%;
     height: 100%;
     /* background-color:darkorange; */
@@ -562,7 +572,7 @@
     align-items: center; */
 }
 
-.Contactusemailrightline1{
+.Contactusemailrightline1 {
     width: 100%;
     height: 50%;
     /* background-color: green; */
@@ -570,34 +580,36 @@
     align-items: center;
 }
 
-.Contactusemailrightline1 h3{
+.Contactusemailrightline1 h3 {
     font-family: sans-serif;
     font-size: 20px;
     font-weight: 700;
     line-height: 60px;
-    color: white
+    color: #272727;
 
 }
 
-.Contactusemailrightline2{
+.Contactusemailrightline2 {
     width: 100%;
     height: 50%;
     /* background-color: gray; */
 }
 
-.Contactusemailrightline2 p{
+.Contactusemailrightline2 p {
     font-family: sans-serif;
     font-size: 16px;
-    color: white;
+    color: #272727;
 
 }
 
-.Contactusmainlistrightpagedown{
+.Contactusmainlistrightpagedown {
     width: 100%;
-    height: 55%;
+    height: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #2C7DA0;
+    border-radius: 0px 10px 10px 0px;
     /* background-color: aqua; */
     /* background-image: url(public/istockphoto-1422643304-612x612.jpg); */
     /* background-position: center; */
@@ -605,7 +617,7 @@
     /* object-fit: contain; */
 }
 
-.ContactusmainPr{
+.ContactusmainPr {
     width: 100%;
     height: 100%;
     /* background-color: brown; */
@@ -618,26 +630,26 @@
 
 }
 
-.spacingcontactus{
+.spacingcontactus {
     width: 100%;
     height: 20px;
     /* background-color: red; */
 }
 
-@media only screen and (max-width:765px){
-    .ContactusMainpage{
+@media only screen and (max-width:765px) {
+    .ContactusMainpage {
         width: 100%;
         height: 100vh;
         /* background-color: blue; */
     }
 
-    .ContactusMainpage{
+    .ContactusMainpage {
         width: 100%;
         height: 80vh;
         /* background-color: blue; */
     }
 
-    .ContactusHeroText{
+    .ContactusHeroText {
         width: 55%;
         height: 90%;
         /* background-color: darkgray; */
@@ -645,26 +657,26 @@
         align-items: center;
         /* padding-top: 60px; */
     }
-    
-    .ContactusHeroText h2{
+
+    .ContactusHeroText h2 {
         font-family: sans-serif;
         font-size: 33px;
         font-weight: 800;
         color: white;
     }
 
-    .Contactuslistpage{
+    .Contactuslistpage {
         width: 100%;
         height: 95vh;
         /* background-color: red; */
         display: flex;
         align-items: center;
         justify-content: center;
-     
-    
+
+
     }
-    
-    .Contactuslistpagewrapper{
+
+    .Contactuslistpagewrapper {
         width: 100%;
         height: 100%;
         /* background-color: blue; */
@@ -673,32 +685,35 @@
         justify-content: center;
     }
 
-    .Contactusmainlistpage{
-        width: 90%;
+    .Contactusmainlistpage {
+        width: 95%;
         height: 80%;
         border-radius: 10px;
         display: flex;
         align-items: center;
+        /* background-color: red; */
         justify-content: space-between;
     }
-    
-    .Contactusmainlistleftpage{
+
+    .Contactusmainlistleftpage {
         width: 55%;
         height: 100%;
-        /* background-color: blue; */
+        background-color: white;
         display: flex;
         align-items: center;
         justify-content: center;
-        border: solid #57B5B5 1px;
+        border-radius: 10px 0px 0px 10px;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+        /* border: solid #57B5B5 1px; */
     }
 
-    .Contactusmainlistleftpagewrapper{
+    .Contactusmainlistleftpagewrapper {
         width: 100%;
         height: 90%;
         /* background-color: red; */
     }
-    
-    .Contactusendmessgae{
+
+    .Contactusendmessgae {
         width: 100%;
         height: 13%;
         /* background-color: burlywood; */
@@ -706,8 +721,8 @@
         /* align-items: center; */
         /* justify-content: center; */
     }
-    
-    .Contactumainsendmessgae{
+
+    .Contactumainsendmessgae {
         width: 95%;
         height: 50%;
         /* background-color: darkmagenta; */
@@ -715,306 +730,330 @@
         align-items: center;
         margin-left: 10px;
     }
-    
-    .Contactumainsendmessgae h3{
+
+    .Contactumainsendmessgae h3 {
         font-family: sans-serif;
         font-weight: 800;
         color: #272727;
         font-size: 22px;
     }
 
-    .Contactusfirstname{
+    .Contactusfirstname {
         width: 100%;
         height: 25%;
         /* background-color: greenyellow; */
     }
-    
-    .Contactusfirstname p{
+
+    .Contactusfirstname p {
         font-size: 15px;
         font-family: sans-serif;
     }
 
-    .Contactuslastnameright{
+    .Contactuslastnameright {
         width: 100%;
         height: 25%;
         /* background-color: brown; */
     }
-    
-    .Contactuslastnameright p{
+
+    .Contactuslastnameright p {
         font-size: 15px;
         font-family: sans-serif;
     }
 
-    .Contactseconlistleftemail{
+    .Contactseconlistleftemail {
         width: 100%;
         height: 25%;
         /* background-color: lightgreen; */
     }
-    
-    .Contactseconlistleftemail p{
+
+    .Contactseconlistleftemail p {
         font-size: 15px;
         font-family: sans-serif;
     }
 
-    .Contactustitlettitlebox{
+    .Contactustitlettitlebox {
         width: 100%;
         height: 25%;
         /* background-color: aqua; */
     }
-    
-    .Contactustitlettitlebox p{
+
+    .Contactustitlettitlebox p {
         font-size: 15px;
         font-family: sans-serif;
     }
 
-    
-.Contactumainsubmibtn{
-    width: 95%;
-    height: 100%;
-    background-color: #2C7DA0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    border: solid  #57B5B5 1px;
-    border: hwb(hue white lightseagreen);
-}
 
-.Contactumainsubmibtn button{
-    width: 100%;
-    height: 100%;
-    background-color: #2C7DA0;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 16px;
-    /* border: solid  #57B5B5 1px; */
-}
+    .Contactumainsubmibtn {
+        width: 95%;
+        height: 100%;
+        background-color: #2C7DA0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        /* border: solid  #57B5B5 1px; */
+        border: hwb(hue white lightseagreen);
+    }
 
-.Contactusinforighttbox{
-    width: 60%;
-    height: 100%;
-    /* background-color: blueviolet; */
-}
+    .Contactumainsubmibtn button {
+        width: 100%;
+        height: 100%;
+        background-color: #2C7DA0;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 16px;
+        /* border: solid  #57B5B5 1px; */
+    }
 
-.Contactusinforighttext{
-    width: 100%;
-    height: 80%;
-    /* background-color: green; */
-    display: flex;
-    align-items: center;
-}
+    .Contactusmainlistrightpage {
+        width: 40%;
+        height: 100%;
+        /* background-color: #2C7DA0; */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        /* border-radius: 0px 10px 10px 0px; */
 
-.Contactusinforighttext h3{
-    font-family: sans-serif;
-    font-size: 20px;
-    font-weight: 800;
-    line-height: 60px;
-    color: white;
-}
+    }
 
-.Contactsecondinfotext{
-    width: 100%;
-    height: 30%;
-    /* background-color: aqua; */
-    display: flex;
-    /* display: flex;
+    .Contactusmainlistrightpageup {
+        width: 100%;
+        height: 45%;
+        background-color: white;
+        border-radius: 0px 10px 10px 0px;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    }
+
+    .Contactusinforighttbox {
+        width: 60%;
+        height: 100%;
+        /* background-color: blueviolet; */
+    }
+
+    .Contactusinforighttext {
+        width: 100%;
+        height: 80%;
+        /* background-color: green; */
+        display: flex;
+        align-items: center;
+    }
+
+    .Contactusinforighttext h3 {
+        font-family: sans-serif;
+        font-size: 20px;
+        font-weight: 800;
+        line-height: 60px;
+        color: #272727;
+    }
+
+    .Contactsecondinfotext {
+        width: 100%;
+        height: 30%;
+        /* background-color: aqua; */
+        display: flex;
+        /* display: flex;
     align-self: center;
     justify-content: center; */
-}
+    }
 
-.Contactsecondinfobox{
-    width: 30%;
-    height: 100%;
-    /* background-color: burlywood; */
-}
+    .Contactsecondinfobox {
+        width: 30%;
+        height: 100%;
+        /* background-color: burlywood; */
+    }
 
-.Contactsecondinfoboxicon{
-    width: 100%;
-    height: 100%;
-    /* background-color: red; */
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
+    .Contactsecondinfoboxicon {
+        width: 100%;
+        height: 100%;
+        /* background-color: red; */
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
 
-.ContactusCall{
-    width: 45%;
-    height: 45%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    color: #F9BB1D;
+    .ContactusCall {
+        width: 45%;
+        height: 45%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        color: #F9BB1D;
 
-}
+    }
 
-.Contactsecondinfobox2{
-    width: 70%;
-    height: 100%;
-    /* background-color: blue; */
-}
+    .Contactsecondinfobox2 {
+        width: 70%;
+        height: 100%;
+        /* background-color: blue; */
+    }
 
-.Contactusecondinfoboxline1{
-    width: 100%;
-    height: 50%;
-    /* background-color: aqua; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    .Contactusecondinfoboxline1 {
+        width: 100%;
+        height: 50%;
+        /* background-color: aqua; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-.Contactusboxlinetext{
-    width: 80%;
-    height: 100%;
-    /* background-color: blueviolet; */
-    display: flex;
-    align-items: center;
-}
+    .Contactusboxlinetext {
+        width: 80%;
+        height: 100%;
+        /* background-color: blueviolet; */
+        display: flex;
+        align-items: center;
+    }
 
-.Contactusboxlinetext h3{
-    font-family: sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 60px;
-    color: white;
-}
+    .Contactusboxlinetext h3 {
+        font-family: sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 60px;
+        color: #272727;
+    }
 
-.Contactdinfoboxline2{
-    width: 100%;
-    height: 50%;
-    /* background-color: green; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    .Contactdinfoboxline2 {
+        width: 100%;
+        height: 50%;
+        /* background-color: green; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-.Contactdinfolinetext2{
-    width: 80%;
-    height: 100%;
-    /* background-color: aqua; */
-}
+    .Contactdinfolinetext2 {
+        width: 80%;
+        height: 100%;
+        /* background-color: aqua; */
+    }
 
-.Contactdinfolinetext2 p{
-    font-family: sans-serif;
-    font-size: 14px;
-    /* line-height: 20px; */
-    color: white;
+    .Contactdinfolinetext2 p {
+        font-family: sans-serif;
+        font-size: 14px;
+        /* line-height: 20px; */
+        color: #272727;
 
-}
+    }
 
-.Contactusmainlistrightpage2{
-    width: 100%;
-    height: 30%;
-    /* background-color: blue; */
-    display: flex;
-}
+    .Contactusmainlistrightpage2 {
+        width: 100%;
+        height: 30%;
+        /* background-color: blue; */
+        display: flex;
+    }
 
-.Contactusmainlistrightbox{
-    width: 30%;
-    height: 100%;
-    /* background-color: blueviolet; */
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    color: #F9BB1D;
-}
+    .Contactusmainlistrightbox {
+        width: 30%;
+        height: 100%;
+        /* background-color: blueviolet; */
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        color: #F9BB1D;
+    }
 
-.Contactusemail{
-    width: 45%;
-    height: 45%;
+    .Contactusemail {
+        width: 45%;
+        height: 45%;
 
-}
+    }
 
-.Contactusmainlistrightbox2{
-    width: 70%;
-    height: 100%;
-    /* background-color: blanchedalmond; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    .Contactusmainlistrightbox2 {
+        width: 70%;
+        height: 100%;
+        /* background-color: blanchedalmond; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-.Contactusemailrightbox2{
-    width: 80%;
-    height: 100%;
-    /* background-color:darkorange; */
-    /* display: flex;
+    .Contactusemailrightbox2 {
+        width: 80%;
+        height: 100%;
+        /* background-color:darkorange; */
+        /* display: flex;
     align-items: center; */
+    }
+
+    .Contactusemailrightline1 {
+        width: 100%;
+        height: 50%;
+        /* background-color: green; */
+        display: flex;
+        align-items: center;
+    }
+
+    .Contactusemailrightline1 h3 {
+        font-family: sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 60px;
+        color: #272727;
+
+    }
+
+    .Contactusemailrightline2 {
+        width: 100%;
+        height: 50%;
+        /* background-color: gray; */
+    }
+
+    .Contactusemailrightline2 p {
+        font-family: sans-serif;
+        font-size: 14px;
+        /* line-height: 20px; */
+        color: #272727;
+    }
+
+
+    .Contactusmainlistrightpagedown {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #2C7DA0;
+        border-radius: 0px 10px 10px 0px;
+        /* background-color: aqua; */
+        /* background-image: url(public/istockphoto-1422643304-612x612.jpg); */
+        /* background-position: center; */
+        /* object-fit: cover; */
+        /* object-fit: contain; */
+    }
+
+    .ContactusmainPr {
+        width: 100%;
+        height: 100%;
+        /* background-color: brown; */
+        background-image: url(src/asset/Contactusphoto.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        /* object-fit: contain; */
+        /* border-radius: 40px; */
+
+    }
+
+
 }
 
-.Contactusemailrightline1{
-    width: 100%;
-    height: 50%;
-    /* background-color: green; */
-    display: flex;
-    align-items: center;
-}
-
-.Contactusemailrightline1 h3{
-    font-family: sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 60px;
-    color: white;
-
-}
-
-.Contactusemailrightline2{
-    width: 100%;
-    height: 50%;
-    /* background-color: gray; */
-}
-
-.Contactusemailrightline2 p{
-    font-family: sans-serif;
-    font-size: 14px;
-    /* line-height: 20px; */
-    color: white;
-}
-
-.Contactusmainlistrightpagedown{
-    width: 100%;
-    height: 55%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* background-color: aqua; */
-    /* background-image: url(public/istockphoto-1422643304-612x612.jpg); */
-    /* background-position: center; */
-    /* object-fit: cover; */
-    /* object-fit: contain; */
-}
-
-.ContactusmainPr{
-    width: 100%;
-    height: 100%;
-    /* background-color: brown; */
-    background-image: url(src/asset/Contactusphoto.png);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    /* object-fit: contain; */
-    /* border-radius: 40px; */
-
-}
-
-}
-
-@media only screen and (max-width:480px){
-    .ContactusMainpage{
+@media only screen and (max-width:480px) {
+    .ContactusMainpage {
         width: 100%;
         height: 100vh;
         /* background-color: blue; */
     }
 
-    .ContactusMainpage{
+    .ContactusMainpage {
         width: 100%;
         height: 80vh;
         /* background-color: blue; */
     }
 
-    .ContactusHeroText{
+    .ContactusHeroText {
         width: 55%;
         height: 90%;
         /* background-color: darkgray; */
@@ -1022,26 +1061,26 @@
         align-items: center;
         /* padding-top: 60px; */
     }
-    
-    .ContactusHeroText h2{
+
+    .ContactusHeroText h2 {
         font-family: sans-serif;
         font-size: 30px;
         font-weight: 800;
         color: white;
     }
 
-    .Contactuslistpage{
+    .Contactuslistpage {
         width: 100%;
-        height: 100vh;
+        height: 850px;
         /* background-color: red; */
         display: flex;
         align-items: center;
         justify-content: center;
-     
-    
+
+
     }
-    
-    .Contactuslistpagewrapper{
+
+    .Contactuslistpagewrapper {
         width: 100%;
         height: 100%;
         /* background-color: blue; */
@@ -1050,7 +1089,7 @@
         justify-content: center;
     }
 
-    .Contactusmainlistpage{
+    .Contactusmainlistpage {
         width: 90%;
         height: 80%;
         border-radius: 10px;
@@ -1059,24 +1098,27 @@
         justify-content: space-between;
         flex-direction: column;
     }
-    
-    .Contactusmainlistleftpage{
-        width: 90%;
-        height: 65%;
+
+    .Contactusmainlistleftpage {
+        width: 97%;
+        height: 67%;
         /* background-color: blue; */
+        background-color: white;
         display: flex;
         align-items: center;
         justify-content: center;
-        border: solid #57B5B5 1px;
+        border-radius: 10px;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+        /* border: solid #57B5B5 1px; */
     }
 
-    .Contactusmainlistleftpagewrapper{
+    .Contactusmainlistleftpagewrapper {
         width: 100%;
         height: 88%;
         /* background-color: red; */
     }
-    
-    .Contactusendmessgae{
+
+    .Contactusendmessgae {
         width: 100%;
         height: 13%;
         /* background-color: burlywood; */
@@ -1084,8 +1126,8 @@
         /* align-items: center; */
         /* justify-content: center; */
     }
-    
-    .Contactumainsendmessgae{
+
+    .Contactumainsendmessgae {
         width: 95%;
         height: 50%;
         /* background-color: darkmagenta; */
@@ -1093,320 +1135,338 @@
         align-items: center;
         margin-left: 10px;
     }
-    
-    .Contactumainsendmessgae h3{
+
+    .Contactumainsendmessgae h3 {
         font-family: sans-serif;
         font-weight: 800;
         color: #272727;
         font-size: 19px;
     }
 
-    .Contactusfirstname{
+    .Contactusfirstname {
         width: 100%;
         height: 25%;
         /* background-color: greenyellow; */
     }
-    
-    .Contactusfirstname p{
+
+    .Contactusfirstname p {
         font-size: 13px;
         font-family: sans-serif;
     }
 
-    .Contactuslastnameright{
+    .Contactuslastnameright {
         width: 100%;
         height: 25%;
         /* background-color: brown; */
     }
-    
-    .Contactuslastnameright p{
+
+    .Contactuslastnameright p {
         font-size: 13px;
         font-family: sans-serif;
     }
 
-    .Contactseconlistleftemail{
+    .Contactseconlistleftemail {
         width: 100%;
         height: 25%;
         /* background-color: lightgreen; */
     }
-    
-    .Contactseconlistleftemail p{
+
+    .Contactseconlistleftemail p {
         font-size: 13px;
         font-family: sans-serif;
     }
 
-    .Contactustitlettitlebox{
+    .Contactustitlettitlebox {
         width: 100%;
         height: 25%;
         /* background-color: aqua; */
     }
-    
-    .Contactustitlettitlebox p{
+
+    .Contactustitlettitlebox p {
         font-size: 13px;
         font-family: sans-serif;
     }
 
-    
-.Contactumainsubmibtn{
-    width: 95%;
-    height: 100%;
-    background-color: #2C7DA0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    border: solid  #57B5B5 1px;
-    border: hwb(hue white lightseagreen);
-}
 
-.Contactumainsubmibtn button{
-    width: 100%;
-    height: 100%;
-    background-color: #2C7DA0;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 14px;
-    /* border: solid  #57B5B5 1px; */
-}
+    .Contactumainsubmibtn {
+        width: 95%;
+        height: 100%;
+        background-color: #2C7DA0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        border: solid #57B5B5 1px;
+        border: hwb(hue white lightseagreen);
+    }
 
-.Contactusmainlistrightpage{
-    width: 90%;
-    height: 30%;
-    background-color: #2C7DA0;
-    border-radius:10px 10px 10px 10px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-}
+    .Contactumainsubmibtn button {
+        width: 100%;
+        height: 100%;
+        background-color: #2C7DA0;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 14px;
+        /* border: solid  #57B5B5 1px; */
+    }
 
-.Contactusmainlistrightpageup{
-    width: 100%;
-    height: 100%;
-    /* background-color: #11506b; */
-}
+    .Contactusmainlistrightpage {
+        width: 97%;
+        height: 28%;
+        /* background-color: #2C7DA0; */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        /* border-radius: 0px 10px 10px 0px; */
 
-.Contactusinforighttbox{
-    width: 60%;
-    height: 100%;
-    /* background-color: blueviolet; */
-}
+    }
+    .Contactusmainlistrightpageup {
+        width: 100%;
+        height: 100%;
+        /* background-color: red; */
+        border-radius: 10px ;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    }
 
-.Contactusinforighttext{
-    width: 100%;
-    height: 80%;
-    /* background-color: green; */
-    display: flex;
-    align-items: center;
-}
 
-.Contactusinforighttext h3{
-    font-family: sans-serif;
-    font-size: 19px;
-    font-weight: 800;
-    line-height: 60px;
-    color: white;
-}
 
-.Contactsecondinfotext{
-    width: 100%;
-    height: 30%;
-    /* background-color: aqua; */
-    display: flex;
-    /* display: flex;
+    .Contactusmainlistrightpageup {
+        width: 100%;
+        height: 100%;
+        /* background-color: #11506b; */
+    }
+
+    .Contactusinforighttbox {
+        width: 60%;
+        height: 100%;
+        /* background-color: blueviolet; */
+    }
+
+    .Contactusinforighttext {
+        width: 100%;
+        height: 80%;
+        /* background-color: green; */
+        display: flex;
+        align-items: center;
+    }
+
+    .Contactusinforighttext h3 {
+        font-family: sans-serif;
+        font-size: 19px;
+        font-weight: 800;
+        line-height: 60px;
+        color:  #272727;
+    }
+
+    .Contactsecondinfotext {
+        width: 100%;
+        height: 30%;
+        /* background-color: aqua; */
+        display: flex;
+        /* display: flex;
     align-self: center;
     justify-content: center; */
-}
+    }
 
-.Contactsecondinfobox{
-    width: 30%;
-    height: 100%;
-    /* background-color: burlywood; */
-}
+    .Contactsecondinfobox {
+        width: 30%;
+        height: 100%;
+        /* background-color: burlywood; */
+    }
 
-.Contactsecondinfoboxicon{
-    width: 100%;
-    height: 100%;
-    /* background-color: red; */
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
+    .Contactsecondinfoboxicon {
+        width: 100%;
+        height: 100%;
+        /* background-color: red; */
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
 
-.ContactusCall{
-    width: 45%;
-    height: 45%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    color: #F9BB1D;
+    .ContactusCall {
+        width: 45%;
+        height: 45%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        color: #F9BB1D;
 
-}
+    }
 
-.Contactsecondinfobox2{
-    width: 70%;
-    height: 100%;
-    /* background-color: blue; */
-}
+    .Contactsecondinfobox2 {
+        width: 70%;
+        height: 100%;
+        /* background-color: blue; */
+    }
 
-.Contactusecondinfoboxline1{
-    width: 100%;
-    height: 50%;
-    /* background-color: aqua; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    .Contactusecondinfoboxline1 {
+        width: 100%;
+        height: 50%;
+        /* background-color: aqua; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-.Contactusboxlinetext{
-    width: 80%;
-    height: 100%;
-    /* background-color: blueviolet; */
-    display: flex;
-    align-items: center;
-}
+    .Contactusboxlinetext {
+        width: 80%;
+        height: 100%;
+        /* background-color: blueviolet; */
+        display: flex;
+        align-items: center;
+    }
 
-.Contactusboxlinetext h3{
-    font-family: sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 60px;
-    color: white;
-}
+    .Contactusboxlinetext h3 {
+        font-family: sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 60px;
+        color:  #272727;
+    }
 
-.Contactdinfoboxline2{
-    width: 100%;
-    height: 50%;
-    /* background-color: green; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    .Contactdinfoboxline2 {
+        width: 100%;
+        height: 50%;
+        /* background-color: green; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-.Contactdinfolinetext2{
-    width: 80%;
-    height: 100%;
-    /* background-color: aqua; */
-}
+    .Contactdinfolinetext2 {
+        width: 80%;
+        height: 100%;
+        /* background-color: aqua; */
+    }
 
-.Contactdinfolinetext2 p{
-    font-family: sans-serif;
-    font-size: 13px;
-    /* line-height: 20px; */
-    color: white;
+    .Contactdinfolinetext2 p {
+        font-family: sans-serif;
+        font-size: 13px;
+        /* line-height: 20px; */
+        color:  #272727;
 
-}
+    }
 
-.Contactusmainlistrightpage2{
-    width: 100%;
-    height: 30%;
-    /* background-color: blue; */
-    display: flex;
-}
+    .Contactusmainlistrightpage2 {
+        width: 100%;
+        height: 30%;
+        /* background-color: blue; */
+        display: flex;
+    }
 
-.Contactusmainlistrightbox{
-    width: 30%;
-    height: 100%;
-    /* background-color: blueviolet; */
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    color: #F9BB1D;
-}
+    .Contactusmainlistrightbox {
+        width: 30%;
+        height: 100%;
+        /* background-color: blueviolet; */
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        color: #F9BB1D;
+    }
 
-.Contactusemail{
-    width: 45%;
-    height: 45%;
+    .Contactusemail {
+        width: 45%;
+        height: 45%;
 
-}
+    }
 
-.Contactusmainlistrightbox2{
-    width: 70%;
-    height: 100%;
-    /* background-color: blanchedalmond; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    .Contactusmainlistrightbox2 {
+        width: 70%;
+        height: 100%;
+        /* background-color: blanchedalmond; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-.Contactusemailrightbox2{
-    width: 80%;
-    height: 100%;
-    /* background-color:darkorange; */
-    /* display: flex;
+    .Contactusemailrightbox2 {
+        width: 80%;
+        height: 100%;
+        /* background-color:darkorange; */
+        /* display: flex;
     align-items: center; */
+    }
+
+    .Contactusemailrightline1 {
+        width: 100%;
+        height: 50%;
+        /* background-color: green; */
+        display: flex;
+        align-items: center;
+    }
+
+    .Contactusemailrightline1 h3 {
+        font-family: sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 60px;
+        color:  #272727;
+
+    }
+
+    .Contactusemailrightline2 {
+        width: 100%;
+        height: 50%;
+        /* background-color: gray; */
+    }
+
+    .Contactusemailrightline2 p {
+        font-family: sans-serif;
+        font-size: 13px;
+        /* line-height: 20px; */
+        color:  #272727;
+    }
+
+    .Contactusmainlistrightpagedown {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #2C7DA0;
+        border-radius: 0px 10px 10px 0px;
+        /* background-color: aqua; */
+        /* background-image: url(public/istockphoto-1422643304-612x612.jpg); */
+        /* background-position: center; */
+        /* object-fit: cover; */
+        /* object-fit: contain; */
+    }
+
+    .ContactusmainPr {
+        width: 100%;
+        height: 100%;
+        /* background-color: brown; */
+        background-image: url(src/asset/Contactusphoto.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        /* object-fit: contain; */
+        /* border-radius: 40px; */
+
+    }
+
+
 }
 
-.Contactusemailrightline1{
-    width: 100%;
-    height: 50%;
-    /* background-color: green; */
-    display: flex;
-    align-items: center;
-}
 
-.Contactusemailrightline1 h3{
-    font-family: sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 60px;
-    color: white;
 
-}
-
-.Contactusemailrightline2{
-    width: 100%;
-    height: 50%;
-    /* background-color: gray; */
-}
-
-.Contactusemailrightline2 p{
-    font-family: sans-serif;
-    font-size: 13px;
-    /* line-height: 20px; */
-    color: white;
-}
-
-.Contactusmainlistrightpagedown{
-    width: 100%;
-    height: 55%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* background-color: aqua; */
-    /* background-image: url(public/istockphoto-1422643304-612x612.jpg); */
-    /* background-position: center; */
-    /* object-fit: cover; */
-    /* object-fit: contain; */
-}
-
-.ContactusmainPr{
-    width: 100%;
-    height: 100%;
-    /* background-color: brown; */
-    background-image: url(src/asset/Contactusphoto.png);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    display: none;
-    /* object-fit: contain; */
-    /* border-radius: 40px; */
-
-}
-
-}
-@media only screen and (max-width:320px){
-    .ContactusMainpage{
+@media only screen and (max-width:320px) {
+    .ContactusMainpage {
         width: 100%;
         height: 100vh;
         /* background-color: blue; */
     }
 
-    .ContactusMainpage{
+    .ContactusMainpage {
         width: 100%;
-        height: 80vh;
+        height: 70vh;
         /* background-color: blue; */
     }
 
-    .ContactusHeroText{
+    .ContactusHeroText {
         width: 55%;
         height: 90%;
         /* background-color: darkgray; */
@@ -1414,26 +1474,26 @@
         align-items: center;
         /* padding-top: 60px; */
     }
-    
-    .ContactusHeroText h2{
+
+    .ContactusHeroText h2 {
         font-family: sans-serif;
-        font-size: 26px;
+        font-size: 25px;
         font-weight: 800;
         color: white;
     }
 
-    .Contactuslistpage{
+    .Contactuslistpage {
         width: 100%;
-        height: 100vh;
+        height: 850px;
         /* background-color: red; */
         display: flex;
         align-items: center;
         justify-content: center;
-     
-    
+
+
     }
-    
-    .Contactuslistpagewrapper{
+
+    .Contactuslistpagewrapper {
         width: 100%;
         height: 100%;
         /* background-color: blue; */
@@ -1442,8 +1502,8 @@
         justify-content: center;
     }
 
-    .Contactusmainlistpage{
-        width: 90%;
+    .Contactusmainlistpage {
+        width: 100%;
         height: 80%;
         border-radius: 10px;
         display: flex;
@@ -1451,24 +1511,27 @@
         justify-content: space-between;
         flex-direction: column;
     }
-    
-    .Contactusmainlistleftpage{
-        width: 90%;
-        height: 65%;
+
+    .Contactusmainlistleftpage {
+        width: 100%;
+        height: 67%;
         /* background-color: blue; */
+        background-color: white;
         display: flex;
         align-items: center;
         justify-content: center;
-        border: solid #57B5B5 1px;
+        border-radius: 10px;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+        /* border: solid #57B5B5 1px; */
     }
 
-    .Contactusmainlistleftpagewrapper{
+    .Contactusmainlistleftpagewrapper {
         width: 100%;
         height: 88%;
         /* background-color: red; */
     }
-    
-    .Contactusendmessgae{
+
+    .Contactusendmessgae {
         width: 100%;
         height: 13%;
         /* background-color: burlywood; */
@@ -1476,8 +1539,8 @@
         /* align-items: center; */
         /* justify-content: center; */
     }
-    
-    .Contactumainsendmessgae{
+
+    .Contactumainsendmessgae {
         width: 95%;
         height: 50%;
         /* background-color: darkmagenta; */
@@ -1485,304 +1548,320 @@
         align-items: center;
         margin-left: 10px;
     }
-    
-    .Contactumainsendmessgae h3{
+
+    .Contactumainsendmessgae h3 {
         font-family: sans-serif;
         font-weight: 800;
         color: #272727;
         font-size: 18px;
     }
 
-    .Contactusfirstname{
+    .Contactusfirstname {
         width: 100%;
         height: 25%;
         /* background-color: greenyellow; */
     }
-    
-    .Contactusfirstname p{
+
+    .Contactusfirstname p {
         font-size: 12px;
         font-family: sans-serif;
     }
 
-    .Contactuslastnameright{
+    .Contactuslastnameright {
         width: 100%;
         height: 25%;
         /* background-color: brown; */
     }
-    
-    .Contactuslastnameright p{
+
+    .Contactuslastnameright p {
         font-size: 12px;
         font-family: sans-serif;
     }
 
-    .Contactseconlistleftemail{
+    .Contactseconlistleftemail {
         width: 100%;
         height: 25%;
         /* background-color: lightgreen; */
     }
-    
-    .Contactseconlistleftemail p{
+
+    .Contactseconlistleftemail p {
         font-size: 12px;
         font-family: sans-serif;
     }
 
-    .Contactustitlettitlebox{
+    .Contactustitlettitlebox {
         width: 100%;
         height: 25%;
         /* background-color: aqua; */
     }
-    
-    .Contactustitlettitlebox p{
+
+    .Contactustitlettitlebox p {
         font-size: 12px;
         font-family: sans-serif;
     }
 
-    
-.Contactumainsubmibtn{
-    width: 95%;
-    height: 100%;
-    background-color: #2C7DA0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    border: solid  #57B5B5 1px;
-    border: hwb(hue white lightseagreen);
-}
 
-.Contactumainsubmibtn button{
-    width: 100%;
-    height: 100%;
-    background-color: #2C7DA0;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 12px;
-    /* border: solid  #57B5B5 1px; */
-}
+    .Contactumainsubmibtn {
+        width: 95%;
+        height: 100%;
+        background-color: #2C7DA0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        border: solid #57B5B5 1px;
+        border: hwb(hue white lightseagreen);
+    }
 
-.Contactusmainlistrightpage{
-    width: 90%;
-    height: 30%;
-    background-color: #2C7DA0;
-    border-radius:10px 10px 10px 10px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-}
+    .Contactumainsubmibtn button {
+        width: 100%;
+        height: 100%;
+        background-color: #2C7DA0;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 13px;
+        /* border: solid  #57B5B5 1px; */
+    }
 
-.Contactusmainlistrightpageup{
-    width: 100%;
-    height: 100%;
-    /* background-color: #11506b; */
-}
+    .Contactusmainlistrightpage {
+        width: 100%;
+        height: 28%;
+        /* background-color: #2C7DA0; */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        /* border-radius: 0px 10px 10px 0px; */
 
-.Contactusinforighttbox{
-    width: 60%;
-    height: 100%;
-    /* background-color: blueviolet; */
-}
+    }
+    .Contactusmainlistrightpageup {
+        width: 100%;
+        height: 100%;
+        /* background-color: red; */
+        border-radius: 10px ;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    }
 
-.Contactusinforighttext{
-    width: 100%;
-    height: 80%;
-    /* background-color: green; */
-    display: flex;
-    align-items: center;
-}
 
-.Contactusinforighttext h3{
-    font-family: sans-serif;
-    font-size: 18px;
-    font-weight: 800;
-    line-height: 60px;
-    color: white;
-}
 
-.Contactsecondinfotext{
-    width: 100%;
-    height: 30%;
-    /* background-color: aqua; */
-    display: flex;
-    /* display: flex;
+    .Contactusmainlistrightpageup {
+        width: 100%;
+        height: 100%;
+        /* background-color: #11506b; */
+    }
+
+    .Contactusinforighttbox {
+        width: 60%;
+        height: 100%;
+        /* background-color: blueviolet; */
+    }
+
+    .Contactusinforighttext {
+        width: 100%;
+        height: 80%;
+        /* background-color: green; */
+        display: flex;
+        align-items: center;
+    }
+
+    .Contactusinforighttext h3 {
+        font-family: sans-serif;
+        font-size: 18px;
+        font-weight: 800;
+        line-height: 60px;
+        color:  #272727;
+    }
+
+    .Contactsecondinfotext {
+        width: 100%;
+        height: 30%;
+        /* background-color: aqua; */
+        display: flex;
+        /* display: flex;
     align-self: center;
     justify-content: center; */
-}
+    }
 
-.Contactsecondinfobox{
-    width: 30%;
-    height: 100%;
-    /* background-color: burlywood; */
-}
+    .Contactsecondinfobox {
+        width: 30%;
+        height: 100%;
+        /* background-color: burlywood; */
+    }
 
-.Contactsecondinfoboxicon{
-    width: 100%;
-    height: 100%;
-    /* background-color: red; */
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
+    .Contactsecondinfoboxicon {
+        width: 100%;
+        height: 100%;
+        /* background-color: red; */
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
 
-.ContactusCall{
-    width: 45%;
-    height: 45%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    color: #F9BB1D;
+    .ContactusCall {
+        width: 45%;
+        height: 45%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        color: #F9BB1D;
 
-}
+    }
 
-.Contactsecondinfobox2{
-    width: 70%;
-    height: 100%;
-    /* background-color: blue; */
-}
+    .Contactsecondinfobox2 {
+        width: 70%;
+        height: 100%;
+        /* background-color: blue; */
+    }
 
-.Contactusecondinfoboxline1{
-    width: 100%;
-    height: 50%;
-    /* background-color: aqua; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    .Contactusecondinfoboxline1 {
+        width: 100%;
+        height: 50%;
+        /* background-color: aqua; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-.Contactusboxlinetext{
-    width: 80%;
-    height: 100%;
-    /* background-color: blueviolet; */
-    display: flex;
-    align-items: center;
-}
+    .Contactusboxlinetext {
+        width: 80%;
+        height: 100%;
+        /* background-color: blueviolet; */
+        display: flex;
+        align-items: center;
+    }
 
-.Contactusboxlinetext h3{
-    font-family: sans-serif;
-    font-size: 15px;
-    font-weight: 700;
-    line-height: 60px;
-    color: white;
-}
+    .Contactusboxlinetext h3 {
+        font-family: sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 60px;
+        color:  #272727;
+    }
 
-.Contactdinfoboxline2{
-    width: 100%;
-    height: 50%;
-    /* background-color: green; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    .Contactdinfoboxline2 {
+        width: 100%;
+        height: 50%;
+        /* background-color: green; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-.Contactdinfolinetext2{
-    width: 80%;
-    height: 100%;
-    /* background-color: aqua; */
-}
+    .Contactdinfolinetext2 {
+        width: 80%;
+        height: 100%;
+        /* background-color: aqua; */
+    }
 
-.Contactdinfolinetext2 p{
-    font-family: sans-serif;
-    font-size: 12px;
-    /* line-height: 20px; */
-    color: white;
+    .Contactdinfolinetext2 p {
+        font-family: sans-serif;
+        font-size: 12px;
+        /* line-height: 20px; */
+        color:  #272727;
 
-}
+    }
 
-.Contactusmainlistrightpage2{
-    width: 100%;
-    height: 30%;
-    /* background-color: blue; */
-    display: flex;
-}
+    .Contactusmainlistrightpage2 {
+        width: 100%;
+        height: 30%;
+        /* background-color: blue; */
+        display: flex;
+    }
 
-.Contactusmainlistrightbox{
-    width: 30%;
-    height: 100%;
-    /* background-color: blueviolet; */
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    color: #F9BB1D;
-}
+    .Contactusmainlistrightbox {
+        width: 30%;
+        height: 100%;
+        /* background-color: blueviolet; */
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        color: #F9BB1D;
+    }
 
-.Contactusemail{
-    width: 45%;
-    height: 45%;
+    .Contactusemail {
+        width: 45%;
+        height: 45%;
 
-}
+    }
 
-.Contactusmainlistrightbox2{
-    width: 70%;
-    height: 100%;
-    /* background-color: blanchedalmond; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    .Contactusmainlistrightbox2 {
+        width: 70%;
+        height: 100%;
+        /* background-color: blanchedalmond; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-.Contactusemailrightbox2{
-    width: 80%;
-    height: 100%;
-    /* background-color:darkorange; */
-    /* display: flex;
+    .Contactusemailrightbox2 {
+        width: 80%;
+        height: 100%;
+        /* background-color:darkorange; */
+        /* display: flex;
     align-items: center; */
+    }
+
+    .Contactusemailrightline1 {
+        width: 100%;
+        height: 50%;
+        /* background-color: green; */
+        display: flex;
+        align-items: center;
+    }
+
+    .Contactusemailrightline1 h3 {
+        font-family: sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 60px;
+        color:  #272727;
+
+    }
+
+    .Contactusemailrightline2 {
+        width: 100%;
+        height: 50%;
+        /* background-color: gray; */
+    }
+
+    .Contactusemailrightline2 p {
+        font-family: sans-serif;
+        font-size: 12px;
+        /* line-height: 20px; */
+        color:  #272727;
+    }
+
+    .Contactusmainlistrightpagedown {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #2C7DA0;
+        border-radius: 0px 10px 10px 0px;
+        /* background-color: aqua; */
+        /* background-image: url(public/istockphoto-1422643304-612x612.jpg); */
+        /* background-position: center; */
+        /* object-fit: cover; */
+        /* object-fit: contain; */
+    }
+
+    .ContactusmainPr {
+        width: 100%;
+        height: 100%;
+        /* background-color: brown; */
+        background-image: url(src/asset/Contactusphoto.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        /* object-fit: contain; */
+        /* border-radius: 40px; */
+
+    }
+
+
 }
 
-.Contactusemailrightline1{
-    width: 100%;
-    height: 50%;
-    /* background-color: green; */
-    display: flex;
-    align-items: center;
-}
-
-.Contactusemailrightline1 h3{
-    font-family: sans-serif;
-    font-size: 15px;
-    font-weight: 700;
-    line-height: 60px;
-    color: white;
-
-}
-
-.Contactusemailrightline2{
-    width: 100%;
-    height: 50%;
-    /* background-color: gray; */
-}
-
-.Contactusemailrightline2 p{
-    font-family: sans-serif;
-    font-size: 12px;
-    /* line-height: 20px; */
-    color: white;
-}
-
-.Contactusmainlistrightpagedown{
-    width: 100%;
-    height: 55%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* background-color: aqua; */
-    /* background-image: url(public/istockphoto-1422643304-612x612.jpg); */
-    /* background-position: center; */
-    /* object-fit: cover; */
-    /* object-fit: contain; */
-}
-
-.ContactusmainPr{
-    width: 100%;
-    height: 100%;
-    /* background-color: brown; */
-    background-image: url(src/asset/Contactusphoto.png);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    display: none;
-    /* object-fit: contain; */
-    /* border-radius: 40px; */
-
-}
-
-}
 

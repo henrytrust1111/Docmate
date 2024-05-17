@@ -30,7 +30,7 @@
 
 .LivechatText >h1{
     font-size: 30px;
-    font-weight: 700;
+    font-weight: 800;
     font-family: sans-serif;
     color: #2D7DA0;
 
@@ -52,7 +52,6 @@
     background-color: #D9D9D9;
     /* background-color: red; */
     /* padding-block: 200px; */
-
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -64,7 +63,7 @@
     width: 95%;
     height: 100%;
     /* background-color: blue; */
-    padding-block-start: 900px;
+    padding-block-start: 800px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -100,7 +99,7 @@
 }
 .LivechatProfilecircle1{
     width: 100%;
-    height: 60%;
+    height: 70%;
     /* background-color: yellow; */
     display: flex;
     align-items: center;
@@ -118,12 +117,876 @@
 }
 .Leftlivechatprofile >img{
     width: 100%;
-    height: 1000%;
+    height: 80%;
     object-fit: contain;
 }
 
 .Rightlivechattext{
-    width:100%;
+    width:95%;
+    height: max-content;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+      border-radius: 40px 40px 40px 0px;
+    
+}
+.Rightlivechattextwrap{
+    width: 85%;
+    height: 80%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+}
+.Rightlivechattextwrap >p{
+    font-size: 18px;
+    font-family: sans-serif;
+    line-height: 30px;
+    font-weight: 500;
+}
+
+
+.LivechatHi{
+    width: 100%;
+    height: 22%;
+    /* background-color: darkorange; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.LeftlivechatHiprofilecircle{
+    width: 50%;
+    height: 100%;
+    /* background-color: red; */
+}
+
+
+.RightlivechatHiprofilecircle{
+    width: 50%;
+    height: 60%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.LeftlivechatHiprofile{
+    width: 76%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px 50px 0px 40px;
+    /* animation: slideIn 0.4s ease-in-out; */
+}
+/* 
+@keyframes slideIn {
+    from {
+      bottom: 100%;
+    }
+    to {
+      bottom: 0;
+    }
+  } */
+.LeftlivechatHiProfilewrap{
+    width: 80%;
+    height: 80%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+}
+.LeftlivechatHiProfilewrap >p{
+    font-size: 18px;
+    font-family: sans-serif;
+    line-height: 30px;
+    font-weight: 500;
+}
+
+
+.RightlivechatHiprofile{
+    width: 20%;
+    height: 100%;
+    background-color: whitesmoke;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.RightlivechatHiprofile >img{
+    width: 60%;
+    height: 60%;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+.SendtextContainer{
+    width: 80%;
+    height: 15%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Sendtextmainbody{
+    width: 100%;
+    height: 80%;
+    background-color: #D9D9D9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.sendtextlivechatwrap{
+    width: 95%;
+    height: 80%;
+    /* background-color: green; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Leftsendtectlivechat{
+    width: 68%;
+    height: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Leftsendtectlivechat >input{
+    width: 100%;
+    height: 80%;
+    font-family: sans-serif;
+    border-radius: 10px;
+    font-family: sans-serif;
+    border: none;
+    font-size: 17px;
+    padding: 7px;
+    outline: none;
+}
+
+
+.Rightsendtectlivechat{
+    width: 30%;
+    height: 100%;
+    /* background-color: blue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Rightsendtectlivechat >button{
+    width: 100%;
+    height: 80%;
+    border-radius: 10px;
+    background-color: #2D7DA0;
+    border: #2D7DA0;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: sans-serif;
+}
+.Rightsendtectlivechat>button:hover{
+    background-color: lightblue;
+    
+}
+
+@media screen and (Width <=765px) {
+    .LivechatContainer{
+        width: 100%;
+        height: 100vh;
+       
+    }
+
+    .LivechatTop{
+        width: 100%;
+        height: 10%;
+        /* background-color: blue; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .LivechatText{
+        width: 50%;
+        height: 80%;
+        /* background-color: darkcyan; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .LivechatText >h1{
+        font-size: 29px;
+        font-weight: 800;
+        font-family: sans-serif;
+        color: #2D7DA0;
+    
+    }
+
+    .LivechatDown{
+        width: 100%;
+        height: 90%;
+        /* background-color: yellow; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .LiveChatdownBox{
+        width: 80%;
+        height: 85%;
+        background-color: #D9D9D9;
+        /* background-color: red; */
+        /* padding-block: 200px; */
+    
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow-y: scroll;
+    }
+    .LiveChatdownWrapper{
+        width: 95%;
+        height: 100%;
+        /* background-color: blue; */
+        padding-block-start: 700px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        
+    }
+
+    .LivechatHello{
+        width: 100%;
+        height: max-content;
+        /* background-color: red; */
+        display: flex;
+        align-items: center;
+    }
+    .LivechatHello1{
+        width: 100%;
+        height: max-content;
+        /* background-color: aqua; */
+        display: flex;
+        /* flex-direction: column; */
+        align-items: center;
+    }
+
+    
+.LivechatProfilecircle{
+    width: 100%;
+    height: max-content;
+    /* background-color: purple; */
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+}
+.LivechatProfilecircle1{
+    width: 100%;
+    height: 70%;
+    /* background-color: yellow; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.Leftlivechatprofile{
+    width: 50px;
+    height: 50px;
+    background-color: rgba(128, 128, 128, 0.706);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border-radius: 50%; */
+}
+.Leftlivechatprofile >img{
+    width: 100%;
+    height: 80%;
+    object-fit: contain;
+}
+
+
+.Rightlivechattext{
+    width:90%;
+    height: max-content;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+      border-radius: 40px 40px 40px 0px;
+    
+}
+.Rightlivechattextwrap{
+    width: 85%;
+    height: 80%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+}
+.Rightlivechattextwrap >p{
+    font-size: 17px;
+    font-family: sans-serif;
+    line-height: 25px;
+    font-weight: 500;
+}
+
+.LivechatHi{
+    width: 100%;
+    height: 22%;
+    /* background-color: darkorange; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.LeftlivechatHiprofilecircle{
+    width: 50%;
+    height: 100%;
+    /* background-color: red; */
+}
+
+
+.RightlivechatHiprofilecircle{
+    width: 50%;
+    height: 60%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.LeftlivechatHiprofile{
+    width: 76%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px 50px 0px 40px;
+    /* animation: slideIn 0.4s ease-in-out; */
+}
+
+.LeftlivechatHiProfilewrap{
+    width: 80%;
+    height: 80%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+}
+.LeftlivechatHiProfilewrap >p{
+    font-size: 17px;
+    font-family: sans-serif;
+    line-height: 30px;
+    font-weight: 500;
+}
+
+.RightlivechatHiprofile{
+    width: 20%;
+    height: 100%;
+    background-color: whitesmoke;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.RightlivechatHiprofile >img{
+    width: 60%;
+    height: 60%;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+
+.SendtextContainer{
+    width: 80%;
+    height: 15%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Sendtextmainbody{
+    width: 100%;
+    height: 80%;
+    background-color: #D9D9D9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.sendtextlivechatwrap{
+    width: 95%;
+    height: 80%;
+    /* background-color: green; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Leftsendtectlivechat{
+    width: 68%;
+    height: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Leftsendtectlivechat >input{
+    width: 100%;
+    height: 80%;
+    font-family: sans-serif;
+    border-radius: 10px;
+    font-family: sans-serif;
+    border: none;
+    font-size: 17px;
+    padding: 7px;
+    outline: none;
+}
+
+
+.Rightsendtectlivechat{
+    width: 30%;
+    height: 100%;
+    /* background-color: blue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Rightsendtectlivechat >button{
+    width: 100%;
+    height: 80%;
+    border-radius: 10px;
+    background-color: #2D7DA0;
+    border: #2D7DA0;
+    color: white;
+    cursor: pointer;
+    font-size: 17px;
+    font-family: sans-serif;
+}
+.Rightsendtectlivechat>button:hover{
+    background-color: lightblue;
+    
+}
+
+}
+
+@media screen and (Width <=480px) {
+    .LivechatContainer{
+        width: 100%;
+        height: 100vh;
+       
+    }
+
+    .LivechatTop{
+        width: 100%;
+        height: 10%;
+        /* background-color: blue; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .LivechatText{
+        width: 50%;
+        height: 80%;
+        /* background-color: darkcyan; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .LivechatText >h1{
+        font-size: 28px;
+        font-weight: 800;
+        font-family: sans-serif;
+        color: #2D7DA0;
+    
+    }
+
+    .LivechatDown{
+        width: 100%;
+        height: 90%;
+        /* background-color: yellow; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .LiveChatdownBox{
+        width: 98%;
+        height: 80%;
+        background-color: #D9D9D9;
+        /* background-color: red; */
+        /* padding-block: 200px; */
+    
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow-y: scroll;
+    }
+    .LiveChatdownWrapper{
+        width: 95%;
+        height: 100%;
+        /* background-color: blue; */
+        padding-block-start: 700px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        
+    }
+
+    .LivechatHello{
+        width: 100%;
+        height: max-content;
+        /* background-color: red; */
+        display: flex;
+        align-items: center;
+    }
+    .LivechatHello1{
+        width: 100%;
+        height: max-content;
+        /* background-color: aqua; */
+        display: flex;
+        /* flex-direction: column; */
+        align-items: center;
+    }
+
+    
+.LivechatProfilecircle{
+    width: 100%;
+    height: max-content;
+    /* background-color: purple; */
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+}
+.LivechatProfilecircle1{
+    width: 100%;
+    height: 70%;
+    /* background-color: yellow; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.Leftlivechatprofile{
+    width: 50px;
+    height: 50px;
+    background-color: rgba(128, 128, 128, 0.706);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border-radius: 50%; */
+}
+.Leftlivechatprofile >img{
+    width: 100%;
+    height: 80%;
+    object-fit: contain;
+}
+
+
+.Rightlivechattext{
+    width:87%;
+    height: max-content;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+      border-radius: 40px 40px 40px 0px;
+    
+}
+.Rightlivechattextwrap{
+    width: 85%;
+    height: 80%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+}
+.Rightlivechattextwrap >p{
+    font-size: 16px;
+    font-family: sans-serif;
+    line-height: 25px;
+    font-weight: 500;
+}
+
+.LivechatHi{
+    width: 100%;
+    height: 22%;
+    /* background-color: darkorange; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.LeftlivechatHiprofilecircle{
+    width: 50%;
+    height: 100%;
+    /* background-color: red; */
+}
+
+
+.RightlivechatHiprofilecircle{
+    width: 50%;
+    height: 60%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.LeftlivechatHiprofile{
+    width: 76%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px 50px 0px 40px;
+    /* animation: slideIn 0.4s ease-in-out; */
+}
+
+.LeftlivechatHiProfilewrap{
+    width: 80%;
+    height: 80%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+}
+.LeftlivechatHiProfilewrap >p{
+    font-size: 17px;
+    font-family: sans-serif;
+    line-height: 30px;
+    font-weight: 500;
+}
+
+.RightlivechatHiprofile{
+    width: 20%;
+    height: 100%;
+    background-color: whitesmoke;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.RightlivechatHiprofile >img{
+    width: 60%;
+    height: 60%;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+
+.SendtextContainer{
+    width: 98%;
+    height: 20%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Sendtextmainbody{
+    width: 100%;
+    height: 80%;
+    background-color: #D9D9D9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.sendtextlivechatwrap{
+    width: 95%;
+    height: 80%;
+    /* background-color: green; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Leftsendtectlivechat{
+    width: 83%;
+    height: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Leftsendtectlivechat >input{
+    width: 100%;
+    height: 80%;
+    font-family: sans-serif;
+    border-radius: 10px;
+    font-family: sans-serif;
+    border: none;
+    font-size: 17px;
+    padding: 7px;
+    outline: none;
+}
+
+
+.Rightsendtectlivechat{
+    width: 15%;
+    height: 100%;
+    /* background-color: blue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Rightsendtectlivechat >button{
+    width: 100%;
+    height: 80%;
+    border-radius: 10px;
+    background-color: #2D7DA0;
+    border: #2D7DA0;
+    color: white;
+    cursor: pointer;
+    font-size: 17px;
+    font-family: sans-serif;
+}
+.Rightsendtectlivechat>button:hover{
+    background-color: lightblue;
+    
+}
+
+}
+@media screen and (Width <=320px) {
+    .LivechatContainer{
+        width: 100%;
+        height: 100vh;
+       
+    }
+
+    .LivechatTop{
+        width: 100%;
+        height: 10%;
+        /* background-color: blue; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .LivechatText{
+        width: 50%;
+        height: 80%;
+        /* background-color: darkcyan; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .LivechatText >h1{
+        font-size: 25px;
+        font-weight: 800;
+        font-family: sans-serif;
+        color: #2D7DA0;
+    
+    }
+
+    .LivechatDown{
+        width: 100%;
+        height: 90%;
+        /* background-color: yellow; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .LiveChatdownBox{
+        width: 98%;
+        height: 80%;
+        background-color: #D9D9D9;
+        /* background-color: red; */
+        /* padding-block: 200px; */
+    
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow-y: scroll;
+    }
+    .LiveChatdownWrapper{
+        width: 95%;
+        height: 100%;
+        /* background-color: blue; */
+        padding-block-start: 700px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        
+    }
+
+    .LivechatHello{
+        width: 100%;
+        height: max-content;
+        /* background-color: red; */
+        display: flex;
+        align-items: center;
+    }
+    .LivechatHello1{
+        width: 100%;
+        height: max-content;
+        /* background-color: aqua; */
+        display: flex;
+        /* flex-direction: column; */
+        align-items: center;
+    }
+
+    
+.LivechatProfilecircle{
+    width: 100%;
+    height: max-content;
+    /* background-color: purple; */
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+}
+.LivechatProfilecircle1{
+    width: 100%;
+    height: 70%;
+    /* background-color: yellow; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.Leftlivechatprofile{
+    width: 43px;
+    height: 45px;
+    background-color: rgba(128, 128, 128, 0.706);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border-radius: 50%; */
+}
+.Leftlivechatprofile >img{
+    width: 100%;
+    height: 80%;
+    object-fit: contain;
+}
+
+
+.Rightlivechattext{
+    width:83%;
     height: max-content;
     background-color: white;
     display: flex;
@@ -140,11 +1003,11 @@
     align-items: center;
 }
 .Rightlivechattextwrap >p{
-    font-size: 17px;
+    font-size: 15px;
     font-family: sans-serif;
+    line-height: 20px;
     font-weight: 500;
 }
-
 
 .LivechatHi{
     width: 100%;
@@ -178,7 +1041,9 @@
     align-items: center;
     justify-content: center;
     border-radius: 40px 50px 0px 40px;
+    /* animation: slideIn 0.4s ease-in-out; */
 }
+
 .LeftlivechatHiProfilewrap{
     width: 80%;
     height: 80%;
@@ -189,9 +1054,9 @@
 .LeftlivechatHiProfilewrap >p{
     font-size: 17px;
     font-family: sans-serif;
+    line-height: 30px;
     font-weight: 500;
 }
-
 
 .RightlivechatHiprofile{
     width: 20%;
@@ -210,8 +1075,9 @@
     object-fit: contain;
 }
 
+
 .SendtextContainer{
-    width: 80%;
+    width: 98%;
     height: 15%;
     /* background-color: red; */
     display: flex;
@@ -239,7 +1105,7 @@
 }
 
 .Leftsendtectlivechat{
-    width: 68%;
+    width: 83%;
     height: 100%;
     /* background-color: red; */
     display: flex;
@@ -260,270 +1126,7 @@
 
 
 .Rightsendtectlivechat{
-    width: 30%;
-    height: 100%;
-    /* background-color: blue; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.Rightsendtectlivechat >button{
-    width: 100%;
-    height: 80%;
-    border-radius: 10px;
-    background-color: #2D7DA0;
-    border: #2D7DA0;
-    color: white;
-    cursor: pointer;
-    font-size: 17px;
-    font-family: sans-serif;
-}
-.Rightsendtectlivechat>button:hover{
-    background-color: lightblue;
-    
-}
-
-@media screen and (Width <=800px) {
-    .LivechatContainer{
-        width: 100%;
-        height: 100vh;
-       
-    }
-
-    
-.LivechatTop{
-    width: 100%;
-    height: 8%;
-    /* background-color: blue; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.LivechatText{
-    width: 50%;
-    height: 80%;
-    /* background-color: darkcyan; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.LivechatText >h1{
-    font-size: 28px;
-    font-weight: 700;
-    font-family: sans-serif;
-    color: #2D7DA0;
-
-}
-
-.LivechatDown{
-    width: 100%;
-    height: 90%;
-    /* background-color: yellow; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.LiveChatdownBox{
-    width: 50%;
-    height: 80%;
-    background-color: #D9D9D9;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    /* background-color: red; */
-    justify-content: center;
-
-}
-
-.LiveChatdownWrapper{
-    width: 95%;
-    height: 100%;
-    /* background-color: blue; */
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-direction: column;
-    overflow-y: scroll;
-    /* padding-block-start: 1000px; */
-}
-
-.LivechatHello{
-    width: 100%;
-    height: 20%;
-    /* background-color: aqua; */
-    display: flex;
-    align-items: center;
-    
-}
-
-.LivechatProfilecircle{
-    width: 50%;
-    height: 50%;
-    /* background-color: red; */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.Leftlivechatprofile{
-    width: 20%;
-    height: 80%;
-    background-color: rgba(128, 128, 128, 0.706);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.Leftlivechatprofile >img{
-    width: 60%;
-    height: 60%;
-    border-radius: 50%;
-    object-fit: contain;
-}
-
-.Rightlivechattext{
-    width:76%;
-    height: 100%;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-      border-radius: 40px 40px 40px 0px;
-    
-}
-.Rightlivechattextwrap{
-    width: 80%;
-    height: 80%;
-    /* background-color: red; */
-    display: flex;
-    align-items: center;
-}
-.Rightlivechattextwrap >p{
-    font-size: 15px;
-    font-family: sans-serif;
-    font-weight: 500;
-}
-
-.LivechatHi{
-    width: 100%;
-    height: 20%;
-    /* background-color: darkorange; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.LeftlivechatHiprofilecircle{
-    width: 50%;
-    height: 100%;
-    /* background-color: red; */
-}
-
-
-.RightlivechatHiprofilecircle{
-    width: 50%;
-    height: 50%;
-    /* background-color: red; */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.LeftlivechatHiprofile{
-    width: 76%;
-    height: 100%;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 40px 50px 0px 40px;
-}
-.LeftlivechatHiProfilewrap{
-    width: 80%;
-    height: 80%;
-    /* background-color: red; */
-    display: flex;
-    align-items: center;
-}
-.LeftlivechatHiProfilewrap >p{
-    font-size: 15px;
-    font-family: sans-serif;
-    font-weight: 500;
-}
-
-
-.RightlivechatHiprofile{
-    width: 20%;
-    height: 80%;
-    background-color: whitesmoke;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-.RightlivechatHiprofile >img{
-    width: 60%;
-    height: 60%;
-    border-radius: 50%;
-    object-fit: contain;
-}
-
-
-.SendtextContainer{
-    width: 50%;
-    height: 12%;
-    /* background-color: red; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.Sendtextmainbody{
-    width: 100%;
-    height: 80%;
-    background-color: #D9D9D9;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-}
-
-.sendtextlivechatwrap{
-    width: 95%;
-    height: 80%;
-    /* background-color: green; */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.Leftsendtectlivechat{
-    width: 68%;
-    height: 100%;
-    /* background-color: red; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.Leftsendtectlivechat >input{
-    width: 100%;
-    height: 80%;
-    font-family: sans-serif;
-    border-radius: 10px;
-    font-family: sans-serif;
-    border: none;
-    font-size: 15px;
-    padding: 7px;
-    outline: none;
-}
-
-
-.Rightsendtectlivechat{
-    width: 30%;
+    width: 15%;
     height: 100%;
     /* background-color: blue; */
     display: flex;
@@ -547,808 +1150,5 @@
     
 }
 
-
-}
-
-@media screen and (Width <=600px) {
-    .LivechatContainer{
-        width: 100%;
-        height: 100vh;
-       
-    }
-
-    
-.LivechatTop{
-    width: 100%;
-    height: 10%;
-    /* background-color: blue; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.LivechatText{
-    width: 50%;
-    height: 80%;
-    /* background-color: darkcyan; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.LivechatText >h1{
-    font-size: 28px;
-    font-weight: 700;
-    font-family: sans-serif;
-    color: #2D7DA0;
-
-}
-
-.LivechatDown{
-    width: 100%;
-    height: 90%;
-    /* background-color: yellow; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.LiveChatdownBox{
-    width: 50%;
-    height: 80%;
-    background-color: #D9D9D9;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-
-.LiveChatdownWrapper{
-    width: 95%;
-    height: 100%;
-    /* background-color: blue; */
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-direction: column;
-    overflow-y: scroll;
-}
-
-.LivechatHello{
-    width: 100%;
-    height: 20%;
-    /* background-color: aqua; */
-    display: flex;
-    align-items: center;
-    
-}
-
-.LivechatProfilecircle{
-    width: 50%;
-    height: 40%;
-    /* background-color: red; */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.Leftlivechatprofile{
-    width: 20%;
-    height: 75%;
-    background-color: rgba(128, 128, 128, 0.706);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.Leftlivechatprofile >img{
-    width: 60%;
-    height: 60%;
-    border-radius: 50%;
-    object-fit: contain;
-}
-
-.Rightlivechattext{
-    width:76%;
-    height: 100%;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-      border-radius: 40px 40px 40px 0px;
-    
-}
-.Rightlivechattextwrap{
-    width: 80%;
-    height: 80%;
-    /* background-color: red; */
-    display: flex;
-    align-items: center;
-}
-.Rightlivechattextwrap >p{
-    font-size: 13px;
-    font-family: sans-serif;
-    font-weight: 500;
-}
-
-.LivechatHi{
-    width: 100%;
-    height: 20%;
-    /* background-color: darkorange; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.LeftlivechatHiprofilecircle{
-    width: 50%;
-    height: 100%;
-    /* background-color: red; */
-}
-
-
-.RightlivechatHiprofilecircle{
-    width: 50%;
-    height: 40%;
-    /* background-color: red; */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.LeftlivechatHiprofile{
-    width: 76%;
-    height: 100%;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 40px 50px 0px 40px;
-}
-.LeftlivechatHiProfilewrap{
-    width: 80%;
-    height: 80%;
-    /* background-color: red; */
-    display: flex;
-    align-items: center;
-}
-.LeftlivechatHiProfilewrap >p{
-    font-size: 13px;
-    font-family: sans-serif;
-    font-weight: 500;
-}
-
-
-.RightlivechatHiprofile{
-    width: 20%;
-    height: 75%;
-    background-color: whitesmoke;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-.RightlivechatHiprofile >img{
-    width: 60%;
-    height: 60%;
-    border-radius: 50%;
-    object-fit: contain;
-}
-
-
-.SendtextContainer{
-    width: 50%;
-    height: 20%;
-    /* background-color: red; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-   
-}
-
-.Sendtextmainbody{
-    width: 100%;
-    height: 90%;
-    background-color: #D9D9D9;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* flex-direction: column; */
-    /* flex-wrap: wrap; */
-    border-radius: 10px;
-}
-
-.sendtextlivechatwrap{
-    width: 95%;
-    height: 90%;
-    /* background-color: green; */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
-}
-
-.Leftsendtectlivechat{
-    width: 100%;
-    height: 100%;
-    /* background-color: red; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.Leftsendtectlivechat >input{
-    width: 100%;
-    height: 100%;
-    font-family: sans-serif;
-    border-radius: 10px;
-    font-family: sans-serif;
-    border: none;
-    font-size: 13px;
-    padding: 7px;
-    outline: none;
-}
-
-
-.Rightsendtectlivechat{
-    width: 100%;
-    height: 100%;
-    /* background-color: blue; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.Rightsendtectlivechat >button{
-    width: 100%;
-    height: 80%;
-    border-radius: 10px;
-    background-color: #2D7DA0;
-    border: #2D7DA0;
-    color: white;
-    cursor: pointer;
-    font-size: 13px;
-    font-family: sans-serif;
-}
-.Rightsendtectlivechat>button:hover{
-    background-color: lightblue;
-    
-}
-
-
-}
-@media screen and (Width <=480px) {
-    .LivechatContainer{
-        width: 100%;
-        height: 100vh;
-    
-    }
-
-    
-.LivechatTop{
-    width: 100%;
-    height: 15%;
-    /* background-color: blue; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.LivechatText{
-    width: 50%;
-    height: 100%;
-    /* background-color: darkcyan; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.LivechatText >h1{
-    font-size: 28px;
-    font-weight: 700;
-    font-family: sans-serif;
-    color: #2D7DA0;
-
-}
-
-.LivechatDown{
-    width: 100%;
-    height: 85%;
-    /* background-color: yellow; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.LiveChatdownBox{
-    width: 100%;
-    height: 80%;
-    background-color: #D9D9D9;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-
-.LiveChatdownWrapper{
-    width: 95%;
-    height: 100%;
-    /* background-color: blue; */
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-direction: column;
-    overflow-y: scroll;
-}
-
-.LivechatHello{
-    width: 100%;
-    height: 22%;
-    /* background-color: aqua; */
-    display: flex;
-    align-items: center;
-    
-}
-
-.LivechatProfilecircle{
-    width: 50%;
-    height: 40%;
-    /* background-color: red; */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.Leftlivechatprofile{
-    width: 19%;
-    height: 95%;
-    background-color: rgba(128, 128, 128, 0.706);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.Leftlivechatprofile >img{
-    width: 60%;
-    height: 60%;
-    border-radius: 50%;
-    object-fit: contain;
-}
-
-.Rightlivechattext{
-    width:76%;
-    height: 100%;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-      border-radius: 40px 40px 40px 0px;
-    
-}
-.Rightlivechattextwrap{
-    width: 80%;
-    height: 80%;
-    /* background-color: red; */
-    display: flex;
-    align-items: center;
-}
-.Rightlivechattextwrap >p{
-    font-size: 12px;
-    font-family: sans-serif;
-    font-weight: 500;
-}
-
-.LivechatHi{
-    width: 100%;
-    height: 22%;
-    /* background-color: darkorange; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.LeftlivechatHiprofilecircle{
-    width: 50%;
-    height: 100%;
-    /* background-color: red; */
 }
 
-
-.RightlivechatHiprofilecircle{
-    width: 50%;
-    height: 40%;
-    /* background-color: red; */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.LeftlivechatHiprofile{
-    width: 76%;
-    height: 100%;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 40px 50px 0px 40px;
-}
-.LeftlivechatHiProfilewrap{
-    width: 80%;
-    height: 80%;
-    /* background-color: red; */
-    display: flex;
-    align-items: center;
-}
-.LeftlivechatHiProfilewrap >p{
-    font-size: 12px;
-    font-family: sans-serif;
-    font-weight: 500;
-}
-
-
-.RightlivechatHiprofile{
-    width: 19%;
-    height: 95%;
-    background-color: whitesmoke;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-.RightlivechatHiprofile >img{
-    width: 60%;
-    height: 60%;
-    border-radius: 50%;
-    object-fit: contain;
-}
-
-
-.SendtextContainer{
-    width: 100%;
-    height: 20%;
-    /* background-color: red; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-   
-}
-
-.Sendtextmainbody{
-    width: 100%;
-    height: 90%;
-    background-color: #D9D9D9;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* flex-direction: column; */
-    /* flex-wrap: wrap; */
-    border-radius: 10px;
-}
-
-.sendtextlivechatwrap{
-    width: 95%;
-    height: 90%;
-    /* background-color: green; */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
-}
-
-.Leftsendtectlivechat{
-    width: 100%;
-    height: 100%;
-    /* background-color: red; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.Leftsendtectlivechat >input{
-    width: 100%;
-    height: 100%;
-    font-family: sans-serif;
-    border-radius: 10px;
-    font-family: sans-serif;
-    border: none;
-    font-size: 12px;
-    padding: 7px;
-    outline: none;
-}
-
-
-.Rightsendtectlivechat{
-    width: 100%;
-    height: 100%;
-    /* background-color: blue; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.Rightsendtectlivechat >button{
-    width: 100%;
-    height: 80%;
-    border-radius: 10px;
-    background-color: #2D7DA0;
-    border: #2D7DA0;
-    color: white;
-    cursor: pointer;
-    font-size: 12px;
-    font-family: sans-serif;
-}
-.Rightsendtectlivechat>button:hover{
-    background-color: lightblue;
-    
-}
-
-
-}
-
-@media screen and (Width <=320px) {
-    .LivechatContainer{
-        width: 100%;
-        height: 100vh;
-       
-    }
-
-    
-.LivechatTop{
-    width: 100%;
-    height: 15%;
-    /* background-color: blue; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.LivechatText{
-    width: 50%;
-    height: 100%;
-    /* background-color: darkcyan; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.LivechatText >h1{
-    font-size: 25px;
-    font-weight: 700;
-    font-family: sans-serif;
-    color: #2D7DA0;
-
-}
-
-.LivechatDown{
-    width: 100%;
-    height: 85%;
-    /* background-color: yellow; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.LiveChatdownBox{
-    width: 100%;
-    height: 75%;
-    background-color: #D9D9D9;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-
-.LiveChatdownWrapper{
-    width: 95%;
-    height: 100%;
-    /* background-color: blue; */
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-direction: column;
-    overflow-y: scroll;
-}
-
-.LivechatHello{
-    width: 100%;
-    height: 22%;
-    /* background-color: aqua; */
-    display: flex;
-    align-items: center;
-    
-}
-
-.LivechatProfilecircle{
-    width: 50%;
-    height: 40%;
-    /* background-color: red; */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.Leftlivechatprofile{
-    width: 20%;
-    height: 85%;
-    background-color: rgba(128, 128, 128, 0.706);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.Leftlivechatprofile >img{
-    width: 60%;
-    height: 60%;
-    border-radius: 50%;
-    object-fit: contain;
-}
-
-.Rightlivechattext{
-    width:76%;
-    height: 100%;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-      border-radius: 40px 40px 40px 0px;
-    
-}
-.Rightlivechattextwrap{
-    width: 80%;
-    height: 80%;
-    /* background-color: red; */
-    display: flex;
-    align-items: center;
-}
-.Rightlivechattextwrap >p{
-    font-size: 10px;
-    font-family: sans-serif;
-    font-weight: 500;
-}
-
-.LivechatHi{
-    width: 100%;
-    height: 22%;
-    /* background-color: darkorange; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.LeftlivechatHiprofilecircle{
-    width: 50%;
-    height: 100%;
-    /* background-color: red; */
-}
-
-
-.RightlivechatHiprofilecircle{
-    width: 50%;
-    height: 40%;
-    /* background-color: red; */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.LeftlivechatHiprofile{
-    width: 76%;
-    height: 100%;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 40px 50px 0px 40px;
-}
-.LeftlivechatHiProfilewrap{
-    width: 80%;
-    height: 80%;
-    /* background-color: red; */
-    display: flex;
-    align-items: center;
-}
-.LeftlivechatHiProfilewrap >p{
-    font-size: 10px;
-    font-family: sans-serif;
-    font-weight: 500;
-}
-
-
-.RightlivechatHiprofile{
-    width: 20%;
-    height: 85%;
-    background-color: whitesmoke;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-.RightlivechatHiprofile >img{
-    width: 60%;
-    height: 60%;
-    border-radius: 50%;
-    object-fit: contain;
-}
-
-
-.SendtextContainer{
-    width: 100%;
-    height: 20%;
-    /* background-color: red; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-   
-}
-
-.Sendtextmainbody{
-    width: 100%;
-    height: 90%;
-    background-color: #D9D9D9;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* flex-direction: column; */
-    /* flex-wrap: wrap; */
-    border-radius: 10px;
-}
-
-.sendtextlivechatwrap{
-    width: 95%;
-    height: 90%;
-    /* background-color: green; */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
-}
-
-.Leftsendtectlivechat{
-    width: 100%;
-    height: 100%;
-    /* background-color: red; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.Leftsendtectlivechat >input{
-    width: 100%;
-    height: 100%;
-    font-family: sans-serif;
-    border-radius: 10px;
-    font-family: sans-serif;
-    border: none;
-    font-size: 10px;
-    padding: 7px;
-    outline: none;
-}
-
-
-.Rightsendtectlivechat{
-    width: 100%;
-    height: 100%;
-    /* background-color: blue; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.Rightsendtectlivechat >button{
-    width: 100%;
-    height: 80%;
-    border-radius: 10px;
-    background-color: #2D7DA0;
-    border: #2D7DA0;
-    color: white;
-    cursor: pointer;
-    font-size: 10px;
-    font-family: sans-serif;
-}
-.Rightsendtectlivechat>button:hover{
-    background-color: lightblue;
-    
-}
-
-
-}

@@ -1,27 +1,27 @@
-*{
+* {
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
     /* background-color: red; */
 }
 
-.FaqMainbody{
+.FaqMainbody {
     width: 100%;
     height: 100vh;
     /* background-color: aqua; */
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
 }
 
-.Faqbodycon{
+.Faqbodycon {
     width: 100%;
     height: 100%;
     /* background-color: blue; */
 }
 
-.Faqheropage{
+.Faqheropage {
     width: 100%;
     height: 70%;
     /* background-color: red; */
@@ -29,22 +29,11 @@
     align-items: center;
     justify-content: center;
     background-image: url(https://media.istockphoto.com/id/1905152156/photo/medical-team-training.jpg?s=612x612&w=0&k=20&c=e5BZNtGYNJ0bT73JiCFK73cLETqNVqP7hNpcZ5dv9Jc=);
-    /* background-repeat: no-repeat; */
     background-size: cover;
-    /* background-repeat: no-repeat; */
-    /* object-fit: contain; */
     background-position: center;
-
 }
-/* 
-.Faqheropage img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 
-} */
-
-.Faqheropagetext{
+.Faqheropagetext {
     width: 100%;
     height: 20%;
     /* background-color: blueviolet; */
@@ -53,19 +42,22 @@
     justify-content: center;
 }
 
-.Faqheropagetext h1{
+.Faqheropagetext h1 {
+    font-size: 35px;
+    font-weight: 800;
+    line-height: 60px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: white;
-    
+
 }
 
-.Faqspace{
+.Faqspace {
     width: 100%;
     height: 50px;
 }
 
 
-.WhatisDAMS{
+.WhatisDAMS {
     width: 100%;
     height: 230px;
     /* background-color: blueviolet; */
@@ -74,16 +66,20 @@
     justify-content: center;
 }
 
-.WhatisDAMSbox{
+.WhatisDAMSbox {
     width: 80%;
     height: 80%;
     /* background-color: white; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     border: solid lightseagreen 1px;
     border-radius: 10px;
 }
 
-.WhatisDAMStext{
-    width:100%;
+.WhatisDAMStext {
+    width: 100%;
     height: 30%;
     /* background-color: red; */
     display: flex;
@@ -91,7 +87,7 @@
     justify-content: center;
 }
 
-.WhatisDAMStext1{
+.WhatisDAMStext1 {
     width: 95%;
     height: 100%;
     /* background-color: aqua; */
@@ -99,13 +95,15 @@
     align-items: center;
 }
 
-.WhatisDAMStext1 h2{
-font-family: sans-serif;
-  /* background-color: #2c7da0; */
-  color: #2c7da0;
+.WhatisDAMStext1 h2 {
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 60px;
+    font-family: sans-serif;
+    color: #2c7da0;
 }
 
-.WhatisDAMStext2{
+.WhatisDAMStext2 {
     width: 100%;
     height: 60%;
     /* background-color: red; */
@@ -114,7 +112,7 @@ font-family: sans-serif;
     justify-content: center;
 }
 
-.WhatDAMs{
+.WhatDAMs {
     width: 95%;
     height: 100%;
     display: flex;
@@ -123,7 +121,14 @@ font-family: sans-serif;
     /* justify-content: center; */
 }
 
-.HWDISA{
+.WhatDAMs p {
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 30px;
+    font-family: sans-serif;
+}
+
+.HWDISA {
     width: 100%;
     height: 230px;
     /* background-color: blue; */
@@ -132,7 +137,7 @@ font-family: sans-serif;
     justify-content: center;
 }
 
-.HWDISAbox{
+.HWDISAbox {
     width: 80%;
     height: 80%;
     border: solid lightseagreen 1px;
@@ -140,10 +145,10 @@ font-family: sans-serif;
     display: flex;
     align-items: center;
     flex-direction: column;
-    
+
 }
 
-.HWDIStext{
+.HWDIStext {
     width: 100%;
     height: 30%;
     /* background-color: red; */
@@ -152,7 +157,7 @@ font-family: sans-serif;
     justify-content: center;
 }
 
-.HWDIStext1{
+.HWDIStext1 {
     width: 95%;
     height: 100%;
     /* background-color: blanchedalmond; */
@@ -160,14 +165,14 @@ font-family: sans-serif;
     align-items: center;
 }
 
-.HWDIStext1 h2{
+.HWDIStext1 h2 {
     font-family: sans-serif;
-  /* background-color: #2c7da0; */
-  color: #2c7da0;
+    /* background-color: #2c7da0; */
+    color: #2c7da0;
 
 }
 
-.HWDIStext2{
+.HWDIStext2 {
     width: 100%;
     height: 60%;
     /* background-color:green; */
@@ -176,13 +181,20 @@ font-family: sans-serif;
     justify-content: center;
 }
 
-.HWDIStexting{
+.HWDIStexting {
     width: 95%;
     height: 100%;
     /* background-color: burlywood; */
 }
 
-.WhatINTCORA{
+.HWDIStexting p {
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 30px;
+    font-family: sans-serif;
+}
+
+.WhatINTCORA {
     width: 100%;
     height: 230px;
     /* background-color: blueviolet; */
@@ -191,15 +203,15 @@ font-family: sans-serif;
     justify-content: center;
 }
 
-.WhatINTCORAbox{
+.WhatINTCORAbox {
     width: 80%;
     height: 80%;
     border: solid lightseagreen 1px;
     border-radius: 10px;
-    
+
 }
 
-.WhatINTCORAtext{
+.WhatINTCORAtext {
     width: 100%;
     height: 30%;
     /* background-color: blue; */
@@ -208,7 +220,7 @@ font-family: sans-serif;
     justify-content: center;
 }
 
-.WhatINTCORAtext1{
+.WhatINTCORAtext1 {
     width: 95%;
     height: 100%;
     /* background-color: burlywood; */
@@ -217,13 +229,13 @@ font-family: sans-serif;
     /* justify-content: center; */
 }
 
-.WhatINTCORAtext1 h2{
+.WhatINTCORAtext1 h2 {
     font-family: sans-serif;
     color: #2c7da0;
 
 }
 
-.WhatINTCORAbox2{
+.WhatINTCORAbox2 {
     width: 100%;
     height: 60%;
     /* background-color: aquamarine; */
@@ -232,13 +244,13 @@ font-family: sans-serif;
     justify-content: center;
 }
 
-.WhatINTCORAboxtext{
+.WhatINTCORAboxtext {
     width: 95%;
     height: 100%;
     /* background-color: red; */
 }
 
-.HWFIACIBA{
+.HWFIACIBA {
     width: 100%;
     height: 230px;
     /* background-color: blue; */
@@ -247,7 +259,7 @@ font-family: sans-serif;
     justify-content: center;
 }
 
-.HWFIACIBABox{
+.HWFIACIBABox {
     width: 80%;
     height: 80%;
     /* background-color: burlywood; */
@@ -255,7 +267,7 @@ font-family: sans-serif;
     border: solid lightseagreen 1px;
 }
 
-.HWFIACIBAtext{
+.HWFIACIBAtext {
     width: 100%;
     height: 30%;
     /* background-color: aquamarine; */
@@ -264,7 +276,7 @@ font-family: sans-serif;
     justify-content: center;
 }
 
-.HWFIACIBAtext1{
+.HWFIACIBAtext1 {
     width: 95%;
     height: 100%;
     /* background-color: red; */
@@ -272,14 +284,14 @@ font-family: sans-serif;
     align-items: center;
 }
 
-.HWFIACIBAtext1 h2{
+.HWFIACIBAtext1 h2 {
     font-family: sans-serif;
     color: #2c7da0;
 
 
 }
 
-.HWFIACIBABox2{
+.HWFIACIBABox2 {
     width: 100%;
     height: 60%;
     /* background-color: red; */
@@ -288,13 +300,20 @@ font-family: sans-serif;
     justify-content: center;
 }
 
-.HWFIACIBABox2text{
+.HWFIACIBABox2text {
     width: 95%;
     height: 100%;
     /* background-color: burlywood; */
 }
 
-.ISMPIFSEC{
+.HWFIACIBABox2text p {
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 30px;
+    font-family: sans-serif;
+}
+
+.ISMPIFSEC {
     width: 100%;
     height: 230px;
     /* background-color: blue; */
@@ -303,14 +322,14 @@ font-family: sans-serif;
     justify-content: center;
 }
 
-.ISMPIFSECBox{
+.ISMPIFSECBox {
     width: 80%;
     height: 80%;
     border: solid lightseagreen 1px;
     border-radius: 10px;
 }
 
-.ISMPIFSECText{
+.ISMPIFSECText {
     width: 100%;
     height: 30%;
     /* background-color: red; */
@@ -319,7 +338,7 @@ font-family: sans-serif;
     justify-content: center;
 }
 
-.ISMPIFSECText1{
+.ISMPIFSECText1 {
     width: 95%;
     height: 100%;
     /* background-color: burlywood; */
@@ -327,13 +346,13 @@ font-family: sans-serif;
     align-items: center;
 }
 
-.ISMPIFSECText1 h2{
+.ISMPIFSECText1 h2 {
     font-family: sans-serif;
     color: #2c7da0;
-    
+
 }
 
-.ISMPIFSECBox2{
+.ISMPIFSECBox2 {
     width: 100%;
     height: 60%;
     /* background-color: burlywood; */
@@ -342,14 +361,14 @@ font-family: sans-serif;
     justify-content: center;
 }
 
-.ISMPIFSECBox2TExt{
+.ISMPIFSECBox2TExt {
     width: 95%;
     height: 100%;
     /* background-color: blue; */
-    
+
 }
 
-.WHATSIDIETI{
+.WHATSIDIETI {
     width: 100%;
     height: 230px;
     /* background-color: blue; */
@@ -358,14 +377,14 @@ font-family: sans-serif;
     justify-content: center;
 }
 
-.WHATSIDIETIBox{
+.WHATSIDIETIBox {
     width: 80%;
     height: 80%;
     border-radius: 10px;
     border: solid lightseagreen 1px;
 }
 
-.WHATSIDIETItext{
+.WHATSIDIETItext {
     width: 100%;
     height: 30%;
     /* background-color: burlywood; */
@@ -374,7 +393,7 @@ font-family: sans-serif;
     justify-content: center;
 }
 
-.WHATSIDIETItext1{
+.WHATSIDIETItext1 {
     width: 95%;
     height: 100%;
     /* background-color: red; */
@@ -382,14 +401,14 @@ font-family: sans-serif;
     align-items: center;
 }
 
-.WHATSIDIETItext h2{
+.WHATSIDIETItext h2 {
     font-family: sans-serif;
     color: #2c7da0;
 
 
 }
 
-.WHATSIDIETIBox2{
+.WHATSIDIETIBox2 {
     width: 100%;
     height: 60%;
     /* background-color: red; */
@@ -398,19 +417,19 @@ font-family: sans-serif;
     justify-content: center;
 }
 
-.WHATSIDIETIBoxtext{
+.WHATSIDIETIBoxtext {
     width: 95%;
     height: 100%;
     /* background-color: green; */
 }
 
-.FAQspacing2{
+.FAQspacing2 {
     width: 100%;
     height: 60px;
     /* background-color: aqua; */
 }
 
-.CANTFWHATYLF{
+.CANTFWHATYLF {
     width: 100%;
     height: 100px;
     /* background-color: blue; */
@@ -419,7 +438,7 @@ font-family: sans-serif;
     justify-content: center;
 }
 
-.CANTFWHATYLFText{
+.CANTFWHATYLFText {
     width: 80%;
     height: 100%;
     /* background-color: burlywood; */
@@ -429,23 +448,26 @@ font-family: sans-serif;
     flex-direction: column;
 }
 
-.CANTFWHATYLFText1{
+.CANTFWHATYLFText1 {
     width: 80%;
-    height: 40%;
+    height: 50%;
     /* background-color: green; */
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.CANTFWHATYLFText1 h2{
+.CANTFWHATYLFText1 h2 {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 60px;
     font-family: sans-serif;
 
 }
 
-.CANTFWHATYLFText2{
+.CANTFWHATYLFText2 {
     width: 80%;
-    height: 30%;
+    height: 50%;
     /* background-color: rebeccapurple; */
     display: flex;
     align-items: center;
@@ -453,7 +475,14 @@ font-family: sans-serif;
 
 }
 
-.Faqcontactus{
+.CANTFWHATYLFText2 p {
+    font-size: 18px;
+    font-family: sans-serif;
+    font-weight: 500;
+    line-height: 30px;
+}
+
+.Faqcontactus {
     width: 100%;
     height: 115px;
     /* background-color: blue; */
@@ -462,7 +491,7 @@ font-family: sans-serif;
     justify-content: center;
 }
 
-.FaqcontactusBox{
+.FaqcontactusBox {
     width: 10%;
     height: 50%;
     background-color: #2c7da0;
@@ -472,184 +501,870 @@ font-family: sans-serif;
     justify-content: center;
 }
 
-.FaqcontactusBox button{
+.FaqcontactusBox button {
     width: 100%;
     height: 100%;
     background-color: #2c7da0;
     color: white;
     border: none;
+    font-size: 18px;
     border-radius: 5px;
     /* color: white; */
 }
 
 @media only screen and (max-width:765px) {
-.FaqMainbody{
-    width: 100%;
-    height: 100vh;
-}
-.WhatisDAMS{
-    width: 100%;
-}
-.WhatisDAMSbox{
-    width: 95%;
-}
-.WhatisDAMStext1 h2{
-    font-size: 20px;
-}
 
-.CANTFWHATYLFText{
-    width: 100%;
-}
-.CANTFWHATYLFText1 h2{
-    font-size: 17px;
-}
+    * {
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+        /* background-color: red; */
+    }
 
-.CANTFWHATYLFText2 p{
-    font-size:13px ;
-    text-align: center;
-}
-
-.FaqcontactusBox{
-    width: 10%;
-    height: 30%;
-}
-
-.FaqcontactusBox button{
-    font-size: 10px;
-}
-
-    
-}
-@media only screen and (max-width:428px) {
-    .FaqMainbody{
+    .FaqMainbody {
         width: 100%;
         height: 100vh;
+        /* background-color: aqua; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
     }
 
-    .Faqheropage{
+    .Faqbodycon {
         width: 100%;
-        height: 40%;
+        height: 100%;
+        /* background-color: blue; */
     }
 
-    .Faqheropagetext h1{
-        font-size: 15px;
-    }
-    .WhatisDAMS{
+    .Faqheropage {
         width: 100%;
+        height: 70%;
+        /* background-color: red; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url(https://media.istockphoto.com/id/1905152156/photo/medical-team-training.jpg?s=612x612&w=0&k=20&c=e5BZNtGYNJ0bT73JiCFK73cLETqNVqP7hNpcZ5dv9Jc=);
+        background-size: cover;
+        background-position: center;
     }
-    .WhatisDAMSbox{
+
+    .Faqheropagetext {
+        width: 100%;
+        height: 20%;
+        /* background-color: blueviolet; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .Faqheropagetext h1 {
+        font-size: 30px;
+        font-weight: 800;
+        line-height: 60px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: white;
+
+    }
+
+    .Faqspace {
+        width: 100%;
+        height: 50px;
+    }
+
+
+    .WhatisDAMS {
+        width: 100%;
+        height: 230px;
+        /* background-color: blueviolet; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .WhatisDAMSbox {
+        width: 80%;
+        height: 80%;
+        /* background-color: red; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border: solid lightseagreen 1px;
+        border-radius: 10px;
+    }
+
+    .WhatisDAMStext {
+        width: 100%;
+        height: 30%;
+        /* background-color: red; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .WhatisDAMStext1 {
         width: 95%;
-        text-align: center;
-    }
-    .WhatisDAMStext1 h2{
-        font-size: 15px;
-    }
-
-    .WhatDAMs p{
-        font-size: 13px;
+        height: 100%;
+        /* background-color: aqua; */
+        display: flex;
+        align-items: center;
     }
 
-    .WhatisDAMStext1 h2{
-        font-size: 15px;
+    .WhatisDAMStext1 h2 {
+        font-size: 20px;
+        font-weight: 800;
+        line-height: 30px;
+        font-family: sans-serif;
+        color: #2c7da0;
     }
 
-    .WhatINTCORAboxtext p{
-        font-size: 13px;
+
+    .WhatDAMs p {
+        font-size: 17px;
+        font-weight: 500;
+        line-height: 23px;
+        font-family: sans-serif;
     }
 
-    .HWFIACIBABox2text p{
-        font-size: 13px;
+    .HWDIStexting {
+        width: 95%;
+        height: 100%;
+        /* background-color: burlywood; */
     }
 
-    .HWDIStexting p{
-        font-size: 13px;
+    .HWDIStexting p {
+        font-size: 17px;
+        font-weight: 500;
+        line-height: 23px;
+        font-family: sans-serif;
     }
-    
-    .CANTFWHATYLFText{
+
+    .HWFIACIBABox2text p {
+        font-size: 17px;
+        font-weight: 500;
+        line-height: 23px;
+        font-family: sans-serif;
+    }
+
+    .CANTFWHATYLF {
         width: 100%;
+        height: 100px;
+        /* background-color: blue; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
-    
-    .CANTFWHATYLFText2 p{
-        font-size:10px ;
-        text-align: center;
+
+    .CANTFWHATYLFText {
+        width: 80%;
+        height: 100%;
+        /* background-color: burlywood; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
     }
-    
-    .FaqcontactusBox{
-        width: 20%;
+
+    .CANTFWHATYLFText1 {
+        width: 80%;
+        height: 50%;
+        /* background-color: green; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
-    .WhatINTCORAboxtext p{
-        font-size: 15px;
+
+    .CANTFWHATYLFText1 h2 {
+        font-size: 25px;
+        font-weight: 700;
+        line-height: 60px;
+        font-family: sans-serif;
 
     }
-    
-        
+
+    .CANTFWHATYLFText2 p {
+        font-size: 17px;
+        font-family: sans-serif;
+        font-weight: 500;
+        text-align: center;
+        line-height: 20px;
     }
+
+    .Faqcontactus {
+        width: 100%;
+        height: 115px;
+        /* background-color: blue; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .FaqcontactusBox {
+        width: 20%;
+        height: 50%;
+        background-color: #2c7da0;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .FaqcontactusBox button {
+        width: 100%;
+        height: 100%;
+        background-color: #2c7da0;
+        color: white;
+        border: none;
+        font-size: 17px;
+        border-radius: 5px;
+        /* color: white; */
+    }
+
+
+}
+
+
+
+
+
+@media only screen and (max-width:500px) {
+
+    * {
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+        /* background-color: red; */
+    }
+
+    .FaqMainbody {
+        width: 100%;
+        height: 80vh;
+        /* background-color: aqua; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .Faqbodycon {
+        width: 100%;
+        height: 100%;
+        /* background-color: blue; */
+    }
+
+    .Faqheropage {
+        width: 100%;
+        height: 70%;
+        /* background-color: red; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url(https://media.istockphoto.com/id/1905152156/photo/medical-team-training.jpg?s=612x612&w=0&k=20&c=e5BZNtGYNJ0bT73JiCFK73cLETqNVqP7hNpcZ5dv9Jc=);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .Faqheropagetext {
+        width: 100%;
+        height: 20%;
+        /* background-color: blueviolet; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .Faqheropagetext h1 {
+        font-size: 23px;
+        font-weight: 800;
+        line-height: 60px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: white;
+
+    }
+
+    .Faqspace {
+        width: 100%;
+        height: 40px;
+    }
+
+
+    .WhatisDAMS {
+        width: 100%;
+        height: 230px;
+        /* background-color: blueviolet; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .WhatisDAMSbox {
+        width: 90%;
+        height: 80%;
+        /* background-color: red; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border: solid lightseagreen 1px;
+        border-radius: 10px;
+    }
+
+    .WhatisDAMStext {
+        width: 100%;
+        height: 30%;
+        /* background-color: red; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .WhatisDAMStext1 {
+        width: 95%;
+        height: 100%;
+        /* background-color: aqua; */
+        display: flex;
+        align-items: center;
+    }
+
+    .WhatisDAMStext1 h2 {
+        font-size: 17px;
+        font-weight: 800;
+        line-height: 20px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: #2c7da0;
+    }
+
+
+    .WhatDAMs p {
+        font-size: 13px;
+        font-weight: 300;
+        line-height: 20px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .HWDIStexting {
+        width: 95%;
+        height: 100%;
+        /* background-color: burlywood; */
+    }
+
+    .HWDIStexting p {
+        font-size: 13px;
+        font-weight: 300;
+        line-height: 20px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .HWFIACIBABox2text p {
+        font-size: 13px;
+        font-weight: 300;
+        line-height: 20px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .CANTFWHATYLF {
+        width: 100%;
+        height: 100px;
+        /* background-color: blue; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .CANTFWHATYLFText {
+        width: 80%;
+        height: 100%;
+        /* background-color: burlywood; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .CANTFWHATYLFText1 {
+        width: 80%;
+        height: 50%;
+        /* background-color: green; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .CANTFWHATYLFText1 h2 {
+        font-size: 17px;
+        font-weight: 799;
+        line-height: 30px;
+        text-align: center;
+        font-family: sans-serif;
+
+    }
+
+    .CANTFWHATYLFText2 p {
+        font-size: 13px;
+        font-family: sans-serif;
+        font-weight: 300;
+        text-align: center;
+        line-height: 18px;
+    }
+
+    .Faqcontactus {
+        width: 100%;
+        height: 115px;
+        /* background-color: blue; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .FaqcontactusBox {
+        width: 20%;
+        height: 35%;
+        background-color: #2c7da0;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .FaqcontactusBox button {
+        width: 100%;
+        height: 100%;
+        background-color: #2c7da0;
+        color: white;
+        border: none;
+        font-size: 13px;
+        border-radius: 5px;
+        /* color: white; */
+    }
+
+
+}
+
+
+@media only screen and (max-width:370px) {
+
+    * {
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+        /* background-color: red; */
+    }
+
+    .FaqMainbody {
+        width: 100%;
+        height: 80vh;
+        /* background-color: aqua; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .Faqbodycon {
+        width: 100%;
+        height: 100%;
+        /* background-color: blue; */
+    }
+
+    .Faqheropage {
+        width: 100%;
+        height: 70%;
+        /* background-color: red; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url(https://media.istockphoto.com/id/1905152156/photo/medical-team-training.jpg?s=612x612&w=0&k=20&c=e5BZNtGYNJ0bT73JiCFK73cLETqNVqP7hNpcZ5dv9Jc=);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .Faqheropagetext {
+        width: 100%;
+        height: 20%;
+        /* background-color: blueviolet; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .Faqheropagetext h1 {
+        font-size: 20px;
+        font-weight: 800;
+        line-height: 60px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: white;
+
+    }
+
+    .Faqspace {
+        width: 100%;
+        height: 30px;
+    }
+
+
+    .WhatisDAMS {
+        width: 100%;
+        height: 230px;
+        /* background-color: blueviolet; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .WhatisDAMSbox {
+        width: 95%;
+        height: 80%;
+        /* background-color: red; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border: solid lightseagreen 1px;
+        border-radius: 10px;
+    }
+
+    .WhatisDAMStext {
+        width: 100%;
+        height: 30%;
+        /* background-color: red; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .WhatisDAMStext1 {
+        width: 95%;
+        height: 100%;
+        /* background-color: aqua; */
+        display: flex;
+        align-items: center;
+    }
+
+    .WhatisDAMStext1 h2 {
+        font-size: 16px;
+        font-weight: 800;
+        line-height: 20px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: #2c7da0;
+    }
+
+
+    .WhatDAMs p {
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 17px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .HWDIStexting {
+        width: 95%;
+        height: 100%;
+        /* background-color: burlywood; */
+    }
+
+    .HWDIStexting p {
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 17px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .HWFIACIBABox2text p {
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 17px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .CANTFWHATYLF {
+        width: 100%;
+        height: 100px;
+        /* background-color: blue; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .CANTFWHATYLFText {
+        width: 80%;
+        height: 100%;
+        /* background-color: burlywood; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .CANTFWHATYLFText1 {
+        width: 80%;
+        height: 50%;
+        /* background-color: green; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .CANTFWHATYLFText1 h2 {
+        font-size: 16px;
+        font-weight: 799;
+        text-align: center;
+        line-height: 20px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    }
+
+    .CANTFWHATYLFText2 p {
+        font-size: 12px;
+        font-family: sans-serif;
+        font-weight: 300;
+        text-align: center;
+        line-height: 15px;
+    }
+
+    .Faqcontactus {
+        width: 100%;
+        height: 115px;
+        /* background-color: blue; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .FaqcontactusBox {
+        width: 25%;
+        height: 30%;
+        background-color: #2c7da0;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .FaqcontactusBox button {
+        width: 100%;
+        height: 100%;
+        background-color: #2c7da0;
+        color: white;
+        border: none;
+        font-size: 12px;
+        border-radius: 5px;
+        /* color: white; */
+    }
+
+
+}
+
+
 @media only screen and (max-width:320px) {
-    .FaqMainbody{
-        width: 100%;
-        height: 100vh;
+
+    * {
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+        /* background-color: red; */
     }
 
-    .Faqheropage{
+    .FaqMainbody {
         width: 100%;
-        height: 40%;
+        height: 80vh;
+        /* background-color: aqua; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
     }
 
-    .Faqheropagetext h1{
-        font-size: 15px;
-    }
-    .WhatisDAMS{
+    .Faqbodycon {
         width: 100%;
+        height: 100%;
+        /* background-color: blue; */
     }
-    .WhatisDAMSbox{
+
+    .Faqheropage {
+        width: 100%;
+        height: 70%;
+        /* background-color: red; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url(https://media.istockphoto.com/id/1905152156/photo/medical-team-training.jpg?s=612x612&w=0&k=20&c=e5BZNtGYNJ0bT73JiCFK73cLETqNVqP7hNpcZ5dv9Jc=);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .Faqheropagetext {
+        width: 100%;
+        height: 20%;
+        /* background-color: blueviolet; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .Faqheropagetext h1 {
+        font-size: 18px;
+        font-weight: 800;
+        line-height: 60px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: white;
+
+    }
+
+    .Faqspace {
+        width: 100%;
+        height: 30px;
+    }
+
+
+    .WhatisDAMS {
+        width: 100%;
+        height: 230px;
+        /* background-color: blueviolet; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .WhatisDAMSbox {
+        width: 97%;
+        height: 80%;
+        /* background-color: red; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border: solid lightseagreen 1px;
+        border-radius: 10px;
+    }
+
+    .WhatisDAMStext {
+        width: 100%;
+        height: 30%;
+        /* background-color: red; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .WhatisDAMStext1 {
         width: 95%;
-        text-align: center;
+        height: 100%;
+        /* background-color: aqua; */
+        display: flex;
+        align-items: center;
     }
-    .WhatisDAMStext1 h2{
+
+    .WhatisDAMStext1 h2 {
         font-size: 15px;
+        font-weight: 800;
+        line-height: 20px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: #2c7da0;
     }
 
-    .WhatDAMs p{
-        font-size: 13px;
+
+    .WhatDAMs p {
+        font-size: 11px;
+        font-weight: 300;
+        line-height: 17px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
 
-    .WhatisDAMStext1 h2{
-        font-size: 15px;
+    .HWDIStexting {
+        width: 95%;
+        height: 100%;
+        /* background-color: burlywood; */
     }
 
-    .WhatINTCORAboxtext p{
-        font-size: 13px;
+    .HWDIStexting p {
+        font-size: 11px;
+        font-weight: 300;
+        line-height: 17px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
 
-    .HWFIACIBABox2text p{
-        font-size: 13px;
+    .HWFIACIBABox2text p {
+        font-size: 11px;
+        font-weight: 300;
+        line-height: 17px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
 
-    .HWDIStexting p{
-        font-size: 13px;
-    }
-    
-    .CANTFWHATYLFText{
+    .CANTFWHATYLF {
         width: 100%;
+        height: 100px;
+        /* background-color: blue; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
-    .CANTFWHATYLFText1 h2{
-        font-size: 14px;
+    .CANTFWHATYLFText {
+        width: 80%;
+        height: 100%;
+        /* background-color: burlywood; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
     }
-    
-    .CANTFWHATYLFText2 p{
-        font-size:10px ;
-        text-align: center;
+
+    .CANTFWHATYLFText1 {
+        width: 80%;
+        height: 50%;
+        /* background-color: green; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
-    
-    .FaqcontactusBox{
-        width: 20%;
-    }
-    .WhatINTCORAboxtext p{
+
+    .CANTFWHATYLFText1 h2 {
         font-size: 15px;
+        font-weight: 799;
+        text-align: center;
+        line-height: 20px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
 
     }
-    
-        
+
+    .CANTFWHATYLFText2 p {
+        font-size: 11px;
+        font-family: sans-serif;
+        font-weight: 300;
+        text-align: center;
+        line-height: 15px;
     }
 
+    .Faqcontactus {
+        width: 100%;
+        height: 115px;
+        /* background-color: blue; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .FaqcontactusBox {
+        width: 25%;
+        height: 30%;
+        background-color: #2c7da0;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .FaqcontactusBox button {
+        width: 100%;
+        height: 100%;
+        background-color: #2c7da0;
+        color: white;
+        border: none;
+        font-size: 11px;
+        border-radius: 5px;
+        /* color: white; */
+    }
+
+
+}

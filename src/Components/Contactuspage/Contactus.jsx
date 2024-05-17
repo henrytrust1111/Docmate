@@ -22,35 +22,6 @@ const Contactus = () => {
 
   console.log(firstName, lastName, email)
 
-
-  // const handlefirstname=(e)=>{
-  // const newfirstname= e.target.value
-  // setFirstname = (newfirstname)
-
-
-  // }
-
-  // const handlelastname = (e) =>{
-  //   const newlastname = e.target.value
-  //   setLastname = (newlastname)
-  // }
-
-  // const handleemail =(e) =>{
-  //   const newemail = e.target.value
-  //   setEmail = (newemail)
-  // }
-
-  // const handletitle = (e) =>{
-  // const newtitle = e.target.value
-  // setTitle = (newtitle)
-  // }
-
-  // const handlemessage = (e) =>{
-  //   const newmessage = e.targe.value
-  //   setMessage  (newmessage)
-  // }
-
-
   const HandleSubmit = async (e) => {
     e.target.value
     try {
@@ -112,7 +83,7 @@ const Contactus = () => {
                             <p>First Name</p>
                           </div>
                           <div className="Contactusfirstnamebox">
-                            <input type="text" placeholder="firstname" onChange={(e) => setFirstname(e.target.value)} value={firstName} />
+                            <input type="text" placeholder="" onChange={(e) => setFirstname(e.target.value)} value={firstName} />
                           </div>
                         </div>
                         <div className="Contactusfirstnameright">
@@ -120,7 +91,7 @@ const Contactus = () => {
                             <p>Last Name</p>
                           </div>
                           <div className="Contactuslastnamerightbox">
-                            <input type="text" placeholder="lastname"
+                            <input type="text" placeholder=""
 
                               onChange={(e) => setLastname(e.target.value)}
                               value={lastName} />
@@ -134,7 +105,7 @@ const Contactus = () => {
                           <p>Email</p>
                         </div>
                         <div className="Contactseconlistleftemailinput">
-                          <input type="email" placeholder="email" onChange={(e) => setEmail(e.target.value)}
+                          <input type="email" placeholder="" onChange={(e) => setEmail(e.target.value)}
                             value={email} />
                         </div>
                       </div>
@@ -145,7 +116,7 @@ const Contactus = () => {
                           <p>Title</p>
                         </div>
                         <div className="Contactustitlettitlinput">
-                          <input type="text" placeholder="title" onChange={(e) => setTitle(e.target.value)}
+                          <input type="text" placeholder="" onChange={(e) => setTitle(e.target.value)}
                             value={title} />
                         </div>
                       </div>
@@ -214,7 +185,7 @@ const Contactus = () => {
                             <h3>Email Address</h3>
                           </div>
                           <div className="Contactusemailrightline2">
-                            <p>simondavid5220@gmail.com</p>
+                            <p>docmate@gmail.com</p>
                           </div>
                         </div>
                       </div>

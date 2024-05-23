@@ -47,6 +47,7 @@ import WelcomePage from "./Components/LiveChat/WelcomePage";
 import Pharmacy from "./Components/Pharmacy/Pharmacy";
 import Contactuspage from "./Components/Contactuspage/Contactuspage";
 import Faqlandpage from "./Components/Faqpage/Faqlandpage";
+import PatientRescheduleForm from "./Components/PopUp/PatientRescheduleForm";
 
 const route = createHashRouter([
   {
@@ -78,8 +79,12 @@ const route = createHashRouter([
         element: <PatientProfileUpdate />,
       },
       {
-        path: "/patient/patientAppointmentReview",
+        path: "/patient/patientAppointmentReview/:id",
         element: <PatientAppointmentReview />,
+      },
+      {
+        path: "/patient/patientRescheduleForm",
+        element: <PatientRescheduleForm />,
       },
     ],
   },

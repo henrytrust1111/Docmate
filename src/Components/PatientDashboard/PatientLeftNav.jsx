@@ -7,7 +7,8 @@ const PatientLeftNav = () => {
   const nav = useNavigate();
   const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
   const userToken = loggedInUser?.token;
-  console.log(userToken);
+  
+  // console.log(userToken);
 
   const handleLogout = () => {
     localStorage.removeItem("loggedInUser");

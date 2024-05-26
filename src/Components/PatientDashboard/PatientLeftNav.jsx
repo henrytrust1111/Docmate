@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 const PatientLeftNav = () => {
   const [dashboard, setDashboard] = useState(true);
   const [profile, setProfile] = useState(false);
+  const [logout, setLogout] = useState(false);
   const nav = useNavigate();
   const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
   const userToken = loggedInUser?.token;
@@ -14,6 +15,9 @@ const PatientLeftNav = () => {
     localStorage.removeItem("loggedInUser");
     localStorage.removeItem("loggedInUserToken");
     nav("/patientLogin");
+    setLogout(true)
+    setDashboard(false)
+    setProfile(false)
   };
 
   const handlePatientProfile = () => {
@@ -89,22 +93,22 @@ const PatientLeftNav = () => {
             onClick={handleLogout}
           >
             <div className="dashboard-icon-container">
-              {profile ? (
+              {logout ? (
                 <img
                   src="/icons/logout.svg"
                   alt="dashboard"
-                  className="black-payment"
+                  // className="black-payment"
                 />
               ) : (
                 <img
                   src="/icons/colored-logout.svg"
                   alt="dashboard"
-                  className="colored-payment"
+                  // className="colored-payment"
                 />
               )}
             </div>
             <div className="dashboard-text-container">
-              <p>Logout</p>
+              <p style={logout ? { color: "#2c7da0" } : {}}>Logout</p>
             </div>
           </div>
         </div>

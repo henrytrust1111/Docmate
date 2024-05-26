@@ -48,6 +48,7 @@ import Pharmacy from "./Components/Pharmacy/Pharmacy";
 import Contactuspage from "./Components/Contactuspage/Contactuspage";
 import Faqlandpage from "./Components/Faqpage/Faqlandpage";
 import PatientRescheduleForm from "./Components/PopUp/PatientRescheduleForm";
+import AppointmentLogin from "./Components/Onboarding/AppointmentLogin";
 
 const route = createHashRouter([
   {
@@ -89,6 +90,10 @@ const route = createHashRouter([
     ],
   },
 
+  {
+    path: "/appointmentLogin",
+    element: <AppointmentLogin />,
+  },
   {
     path: "/contactUs",
     element: <Contactuspage />,

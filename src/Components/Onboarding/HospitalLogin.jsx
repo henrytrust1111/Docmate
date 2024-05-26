@@ -3,7 +3,6 @@ import "./PatientLogin.css";
 import image from "../../asset/icons/DocMate.png";
 import image2 from "../../asset/icons/signup.png";
 import { Link, useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
 import { Oval } from "react-loader-spinner";
 import axios from "axios";
 import Swal from "sweetalert2";
@@ -42,7 +41,6 @@ const PatientLogin = () => {
         text: response.data.message,
         icon: "success",
       });
-      
     } catch (error) {
       const errorMessage = error.response
         ? error.response.data.message
@@ -63,21 +61,30 @@ const PatientLogin = () => {
     setShow(!show);
   };
 
-  const handleLogo = ()=>{
-    nav("/")
-  }
+  const handleLogo = () => {
+    nav("/");
+  };
 
   return (
     <div className="patientlogindiv">
       <div className="patientloginholder">
         <div className="leftpatientlogin">
           <div className="upperleftpatientlogin">
-            <img src={image} alt="" className="logoimage11"  onClick={handleLogo}/>
+            <img
+              src={image}
+              alt=""
+              className="logoimage11"
+              onClick={handleLogo}
+            />
           </div>
           <div className="lowerleftpatientregister"></div>
           <img src={image2} alt="" className="image2" />
         </div>
+          
         <div className="rightpatentlogin">
+        <div className="rightSignUpLogo">
+            <img src="/docmate3.png" alt="" onClick={handleLogo} />
+          </div>
           <h1>Hospital Login</h1>
 
           <div className="theform">
@@ -121,7 +128,9 @@ const PatientLogin = () => {
               <Link
                 style={{ textDecoration: "none", color: "grey" }}
                 to="/setnewpassword"
-              >Forgot password</Link>
+              >
+                Forgot password
+              </Link>
             </h3>
           </div>
           <div className="btnnddiv">
@@ -161,5 +170,3 @@ const PatientLogin = () => {
 };
 
 export default PatientLogin;
-
-  

@@ -3,7 +3,6 @@ import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 import { ThemeContext } from "../context/Theme";
 import ClipLoader from "react-spinners/ClipLoader";
-// import Modal from "./Modal";
 import { FaCheckCircle, FaTimesCircle } from "react-icons/fa";
 import "./PatientAppointmentReview.css";
 import Modal from "./PatientSmallComponents/Modal/Modal";
@@ -29,6 +28,7 @@ const PatientAppointmentReview = () => {
   const userInfo = JSON.parse(localStorage.getItem("loggedInUser"));
   const params = useParams();
   const appointmentId = params.appointmentId;
+  // const appointmentId = "66522fb112a7ea5bd6f102fa";
   console.log(appointmentId);
   const url = "https://doc-mate.onrender.com/confirm-payment";
   const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
@@ -40,21 +40,17 @@ const PatientAppointmentReview = () => {
 
   useLayoutEffect(() => {
     setShowSearch(false);
-    if (appDetails) {
-      // setUser(userInfo.data);
-      setImage(userInfo.data.profilePicture?.url);
-      setFirstName(userInfo.data.firstName);
-      setLastName(userInfo.data.lastName);
-      setEmail(userInfo.data.email);
-      setPhoneNumber(userInfo.data.phoneNumber || -1);
-    }
   }, []);
-  console.log(email);
 
   const url2 = `https://doc-mate.onrender.com/app-details/${appointmentId}`;
 
   useEffect(() => {
     setShowSearch(false);
+      setImage(userInfo?.data.profilePicture?.url);
+      setFirstName(userInfo?.data.firstName);
+      setLastName(userInfo?.data.lastName);
+      setEmail(userInfo?.data.email);
+      setPhoneNumber(userInfo?.data.phoneNumber || -1);
     const script = document.createElement("script");
     script.src =
       "https://korablobstorage.blob.core.windows.net/modal-bucket/korapay-collections.min.js";
@@ -66,6 +62,7 @@ const PatientAppointmentReview = () => {
       try {
         const res = await axios.get(url2, { headers });
         setAppDetails(res.data.appointment);
+     
       } catch (error) {
         console.log(error);
       } finally {

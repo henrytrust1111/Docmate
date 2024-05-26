@@ -80,7 +80,7 @@ const route = createHashRouter([
         element: <PatientProfileUpdate />,
       },
       {
-        path: "/patient/patientAppointmentReview/:id",
+        path: "/patient/patientAppointmentReview/:appointmentId",
         element: <PatientAppointmentReview />,
       },
       {

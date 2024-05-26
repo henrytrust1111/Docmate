@@ -28,7 +28,8 @@ const PatientAppointmentReview = () => {
 
   const userInfo = JSON.parse(localStorage.getItem("loggedInUser"));
   const params = useParams();
-  const id = params.id;
+  const appointmentId = params.appointmentId;
+  console.log(appointmentId);
   const url = "https://doc-mate.onrender.com/confirm-payment";
   const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
   const userToken = loggedInUser?.token;
@@ -50,7 +51,7 @@ const PatientAppointmentReview = () => {
   }, []);
   console.log(email);
 
-  const url2 = `https://doc-mate.onrender.com/app-details/${id}`;
+  const url2 = `https://doc-mate.onrender.com/app-details/${appointmentId}`;
 
   useEffect(() => {
     setShowSearch(false);
@@ -121,7 +122,7 @@ const PatientAppointmentReview = () => {
           lastName,
           email,
           phoneNumber,
-          hospitalId: id,
+          hospitalId: appointmentId,
           appointmentDate: formattedDate,
         };
         confirmPayment(paymentData);

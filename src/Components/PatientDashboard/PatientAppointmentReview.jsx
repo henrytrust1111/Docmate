@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext, useLayoutEffect } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import { ThemeContext } from "../context/Theme";
 import ClipLoader from "react-spinners/ClipLoader";
@@ -19,6 +19,7 @@ const PatientAppointmentReview = () => {
   const [email, setEmail] = useState(null);
   const [phoneNumber, setPhoneNumber] = useState(null);
   const [date, setDate] = useState(null);
+  const nav = useNavigate();
 
   const [showModal, setShowModal] = useState(false);
   const [modalTitle, setModalTitle] = useState("");
@@ -46,11 +47,11 @@ const PatientAppointmentReview = () => {
 
   useEffect(() => {
     setShowSearch(false);
-      setImage(userInfo?.data.profilePicture?.url);
-      setFirstName(userInfo?.data.firstName);
-      setLastName(userInfo?.data.lastName);
-      setEmail(userInfo?.data.email);
-      setPhoneNumber(userInfo?.data.phoneNumber || -1);
+    setImage(userInfo?.data.profilePicture?.url);
+    setFirstName(userInfo?.data.firstName);
+    setLastName(userInfo?.data.lastName);
+    setEmail(userInfo?.data.email);
+    setPhoneNumber(userInfo?.data.phoneNumber || -1);
     const script = document.createElement("script");
     script.src =
       "https://korablobstorage.blob.core.windows.net/modal-bucket/korapay-collections.min.js";
@@ -62,7 +63,7 @@ const PatientAppointmentReview = () => {
       try {
         const res = await axios.get(url2, { headers });
         setAppDetails(res.data.appointment);
-     
+        console.log(res?.data.appointment.hospital);
       } catch (error) {
         console.log(error);
       } finally {
@@ -119,7 +120,7 @@ const PatientAppointmentReview = () => {
           lastName,
           email,
           phoneNumber,
-          hospitalId: appointmentId,
+          hospitalId: appDetails.hospital,
           appointmentDate: formattedDate,
         };
         confirmPayment(paymentData);
@@ -129,6 +130,11 @@ const PatientAppointmentReview = () => {
       },
     });
   };
+
+  const handleReschedules=()=>{
+    localStorage.setItem("appointmentId",appointmentId)
+    nav('/patient/patientRescheduleForm')
+  }
 
   if (isLoading && !appDetails) {
     return (
@@ -165,11 +171,9 @@ const PatientAppointmentReview = () => {
           </div>
         </div>
         <div className="PatientAppointmentReview-container3">
-          <Link to={'/patient/patientRescheduleForm'} style={{textDecoration:"none"}}>
-            <div className="PatientAppointmentReview-btn1">
-              Request a Reschedule
-            </div>
-          </Link>
+          <div className="PatientAppointmentReview-btn1">
+            Request a Reschedule
+          </div>
           <div className="PatientAppointmentReview-btn2" onClick={payKorapay}>
             Pay for appointment
           </div>

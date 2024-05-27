@@ -49,6 +49,7 @@ import Contactuspage from "./Components/Contactuspage/Contactuspage";
 import Faqlandpage from "./Components/Faqpage/Faqlandpage";
 import PatientRescheduleForm from "./Components/PopUp/PatientRescheduleForm";
 import AppointmentLogin from "./Components/Onboarding/AppointmentLogin";
+import PatientAppointmentHistory from "./Components/PatientDashboard/PatientAppointmentHistory";
 
 const route = createHashRouter([
   {
@@ -66,6 +67,10 @@ const route = createHashRouter([
       {
         path: "/patient/patientHospitalPage",
         element: <PatientHospitalPage />,
+      },
+      {
+        path: "/patient/patientHospitalPage/patientAppointmentHistory",
+        element: <PatientAppointmentHistory />,
       },
       {
         path: "/patient/patientHospitalPage/patientAppointmentForm",

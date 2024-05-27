@@ -1,40 +1,49 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import "./AdminPayment.css";
+import axios from "axios";
 
 const AdminPayment = () => {
-  const [allAppointment, setAllAppointment] = useState(true);
-  const [reschedules, setReschedules] = useState(false);
-  const [attended, setAttented] = useState(false);
-  const [unattended, setUnattended] = useState(false);
+  const [payments, setPayments] = useState([]);
+  const [error, setError] = useState(null);
+  const loggedInHospital = JSON.parse(localStorage.getItem("loggedInHospital"));
+  const userToken = loggedInHospital?.token;
+  // console.log(userToken);
+  // const headers = {
+  //   Authorization: `Bearer ${userToken}`,
+  // };
 
-  const handleAllAppointment = () => {
-    setReschedules(false);
-    setAllAppointment(true);
-    setAttented(false);
-    setUnattended(false);
+  useEffect(() => {
+    const fetchPayments = async () => {
+      try {
+        const response = await axios.get(
+          "https://doc-mate.onrender.com/all-payment",
+          {
+            headers: {
+              Authorization: `Bearer ${userToken}`,
+            },
+          }
+        );
+        setPayments(response.data.payments);
+        console.log(response.data.payments);
+      } catch (err) {
+        console.error("Error fetching payments:", err);
+        setError(
+          err.response ? err.response.data.message : "An error occurred"
+        );
+      }
+    };
+
+    fetchPayments();
+  }, [userToken]);
+
+  const formatDate = (isoDate) => {
+    const date = new Date(isoDate);
+    const options = { day: "2-digit", month: "2-digit", year: "numeric" };
+    const formattedDate = date.toLocaleDateString("en-GB", options);
+    return formattedDate === "Invalid Date" ? "none" : formattedDate;
   };
 
-  const handleReschedules = () => {
-    setReschedules(true);
-    setAllAppointment(false);
-    setAttented(false);
-    setUnattended(false);
-  };
-
-  const handleAttended = () => {
-    setReschedules(false);
-    setAllAppointment(false);
-    setAttented(true);
-    setUnattended(false);
-  };
-
-  const handleUnattended = () => {
-    setReschedules(false);
-    setAllAppointment(false);
-    setAttented(false);
-    setUnattended(true);
-  };
   return (
     <div className="admin-dashboard-right">
       <div className="admin-dashboard-right-wrapper">
@@ -63,51 +72,31 @@ const AdminPayment = () => {
                 </div>
               </div>
               <div className="dashboard-list-wrapper">
-                <div className="list-container">
-                  <div className="s-n">1</div>
-                  <div className="attribute-fixed-width patient-profile-record">
-                    <div className="profile-img-view"></div>
-                    <div className="name-view-profile-container">
-                      <p>Micheal Adekunle</p>
-                      <p className="colored-view-profile">View profile</p>
+                {payments?.map((e, i) => (
+                  <div className="list-container" key={i}>
+                    <div className="s-n">{i + 1}</div>
+                    <div className="attribute-fixed-width patient-profile-record">
+                      <div className="profile-img-view"></div>
+                      <div className="name-view-profile-container">
+                        <p>{`${e.firstName} ${e.lastName}`}</p>
+                        {/* <p className="colored-view-profile">View profile</p> */}
+                      </div>
+                    </div>
+                    <div className="attribute-fixed-width email-record">
+                      {e.email}
+                    </div>
+                    <div className="attribute-fixed-width request-record">
+                      {e.phoneNumber}
+                    </div>
+                    <div className="attribute-fixed-width date-record">
+                      {formatDate(e.paymentDate)}
+                    </div>
+                    <div className="delete-view-btn">
+                      <div className="delete-button">Delete</div>
                     </div>
                   </div>
-                  <div className="attribute-fixed-width email-record">
-                    Vivian@gmail.com
-                  </div>
-                  <div className="attribute-fixed-width request-record">
-                    07048526737
-                  </div>
-                  <div className="attribute-fixed-width date-record">
-                    Today, 10 May 2023
-                  </div>
-                  <div className="delete-view-btn">
-                    <div className="delete-button">Delete</div>
-                  </div>
-                </div>
-                <div className="list-container">
-                  <div className="s-n">2</div>
-                  <div className="attribute-fixed-width patient-profile-record">
-                    <div className="profile-img-view"></div>
-                    <div className="name-view-profile-container">
-                      <p>Micheal Adekunle</p>
-                      <p className="colored-view-profile">View profile</p>
-                    </div>
-                  </div>
-                  <div className="attribute-fixed-width email-record">
-                    Vivian@gmail.com
-                  </div>
-                  <div className="attribute-fixed-width request-record">
-                    08067735478
-                  </div>
-                  <div className="attribute-fixed-width date-record">
-                    Today, 10 May 2023
-                  </div>
-                  <div className="delete-view-btn">
-                    <div className="delete-button">Delete</div>
-                  </div>
-                </div>
-
+                ))}
+   
               </div>
             </div>
           </div>

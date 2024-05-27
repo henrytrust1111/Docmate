@@ -7,13 +7,16 @@ import { ThemeContext } from "../context/Theme";
 import { useContext } from "react";
 import { useLayoutEffect } from "react";
 
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const PatientHospitalPage = () => {
   const [hospital, setHospital] = useState();
   const nav = useNavigate();
 
   const handleRequestAppointment = () => {
     nav("/patient/patientHospitalPage/patientAppointmentForm");
+  };
+  const handleAppointmentHistory = () => {
+    nav("/patient/patientHospitalPage/patientAppointmentHistory");
   };
   const { showSearch, setShowSearch } = useContext(ThemeContext);
   console.log(showSearch);
@@ -68,12 +71,12 @@ const PatientHospitalPage = () => {
             </div>
             <p>Request an Appointment</p>
           </div>
-          {/* <div className="patient-request-view-box">
-            <div className="request-appointment-icon">
-              <img src="./icons/viewAppointment.svg" alt="" />
+            <div className="patient-request-view-box" onClick={handleAppointmentHistory}>
+              <div className="request-appointment-icon">
+                <img src="./icons/viewAppointment.svg" alt="" />
+              </div>
+              <p>View Appointments</p>
             </div>
-            <p>View Appointments</p>
-          </div> */}
         </div>
         <div className="PatientHospitalPage-container-footer">
           <p>

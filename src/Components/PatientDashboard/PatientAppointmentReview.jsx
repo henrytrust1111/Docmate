@@ -171,7 +171,7 @@ const PatientAppointmentReview = () => {
           </div>
         </div>
         <div className="PatientAppointmentReview-container3">
-          <div className="PatientAppointmentReview-btn1">
+          <div className="PatientAppointmentReview-btn1" onClick={handleReschedules}>
             Request a Reschedule
           </div>
           <div className="PatientAppointmentReview-btn2" onClick={payKorapay}>

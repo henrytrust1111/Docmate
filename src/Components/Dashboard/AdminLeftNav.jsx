@@ -2,51 +2,45 @@ import React, { useState } from "react";
 import "./AdminLeftNav.css";
 import { useNavigate } from "react-router-dom";
 
-const AdminLeftNav = ({
-  setAdminPatientView,
-  setAdminProfile,
-  setAdminRightNav,
-  setAdminPayment,
-  setAdminAppointmentReview,
-  setAdminAssignDoctor,
-}) => {
-  const [dashboard,setDashboard] = useState(true)
-  const [patient,setPatient] = useState(false)
-  const [patientMouseOut,setPatientMouseOut] = useState(false)
-  const nav= useNavigate()
-  const handleDashboardMouseOver = ()=>{
-    setDashboard(true)
-  }
-  const handleDashboardMouseOut = ()=>{
-    // setDashboard(false)
-  }
-  const handlePatientMouseOver = ()=>{
-    setPatient(true)
-    setPatientMouseOut(true)
-  }
-  const handlePatientMouseOut = ()=>{
-    setPatientMouseOut(false)
-  }
+const AdminLeftNav = () => {
+  const [dashboard, setDashboard] = useState(true);
+  const [patient, setPatient] = useState(false);
+  const [profile, setProfile] = useState(false);
+  const [payment, setPayment] = useState(false);
+  const nav = useNavigate();
+
   const handleRightDiv = () => {
-    nav("/admin")
-    setDashboard(true)
-    setPatient(false)
+    nav("/admin");
+    setDashboard(true);
+    setPatient(false);
+    setPayment(false);
+    setProfile(false);
   };
   const handlePatientView = () => {
-    nav("/admin/adminPatientView")
-    setDashboard(false)
-    setPatient(true)
+    nav("/admin/adminPatientView");
+    setDashboard(false);
+    setPatient(true);
+    setPayment(false);
+    setProfile(false);
   };
   const handleProfile = () => {
-  nav("/admin/adminProfile")
+    nav("/admin/adminProfile");
+    setDashboard(false);
+    setPatient(false);
+    setPayment(false);
+    setProfile(true);
   };
   const handlePayment = () => {
-   nav("/admin/adminPayment")
+    nav("/admin/adminPayment");
+    setDashboard(false);
+    setPatient(false);
+    setPayment(true);
+    setProfile(false);
   };
 
-  const handleLogoutAdmin = ()=>{
-    nav("/hospitalLogin")
-  }
+  const handleLogoutAdmin = () => {
+    nav("/hospitalLogin");
+  };
   return (
     <>
       <div className="admin-left-nav">
@@ -55,45 +49,47 @@ const AdminLeftNav = ({
             <div
               className="dashboard-content colored-icon"
               onClick={handleRightDiv}
-              onMouseOver={handleDashboardMouseOver}
-              onMouseOut={handleDashboardMouseOut}
             >
               <div className="dashboard-icon-container">
-                {dashboard?  <img
-                  src="/icons/colored-dashboard.svg"
-                  alt="dashboard"
-                  // className="colored-payment"
-                />:
-                <img
-                  src="/icons/dashboard.svg"
-                  alt="dashboard"
-                  className="black-payment"
-                />}
+                {dashboard ? (
+                  <img
+                    src="/icons/colored-dashboard.svg"
+                    alt="dashboard"
+                    // className="colored-payment"
+                  />
+                ) : (
+                  <img
+                    src="/icons/dashboard.svg"
+                    alt="dashboard"
+                    // className="black-payment"
+                  />
+                )}
               </div>
               <div className="dashboard-text-container">
-                <p >Dashboard</p>
+                <p style={dashboard ? { color: "#2c7da0" } : {}}>Dashboard</p>
               </div>
             </div>
             <div
               className="dashboard-content colored-icon"
               onClick={handlePatientView}
-              onMouseOver={handlePatientMouseOver}   
-              onMouseOut={handlePatientMouseOut}
             >
               <div className="dashboard-icon-container">
-                {patient?  <img
-                  src="/icons/colored-patient.svg"
-                  alt="dashboard"
-                  // className="colored-payment"
-                />:
-                <img
-                  src="/icons/patient.svg"
-                  alt="dashboard"
-                  className="black-payment"
-                />}
+                {patient ? (
+                  <img
+                    src="/icons/colored-patient.svg"
+                    alt="dashboard"
+                    // className="colored-payment"
+                  />
+                ) : (
+                  <img
+                    src="/icons/patient.svg"
+                    alt="dashboard"
+                    // className="black-payment"
+                  />
+                )}
               </div>
               <div className="dashboard-text-container">
-              <p >Patient</p>
+                <p style={patient ? { color: "#2c7da0" } : {}}>Patient</p>
               </div>
             </div>
             <div
@@ -101,20 +97,22 @@ const AdminLeftNav = ({
               onClick={handleProfile}
             >
               <div className="dashboard-icon-container">
-                {/* {viewProfile? } */}
-                <img
-                  src="/icons/colored-profile.svg"
-                  alt="dashboard"
-                  className="colored-payment"
-                />
-                <img
-                  src="/icons/profile.svg"
-                  alt="dashboard"
-                  className="black-payment"
-                />
+                {profile ? (
+                  <img
+                    src="/icons/colored-profile.svg"
+                    alt="dashboard"
+                    // className="colored-payment"
+                  />
+                ) : (
+                  <img
+                    src="/icons/profile.svg"
+                    alt="dashboard"
+                    // className="black-payment"
+                  />
+                )}
               </div>
               <div className="dashboard-text-container">
-                <p>View Profile</p>
+                <p style={profile ? { color: "#2c7da0" } : {}}> View Profile</p>
               </div>
             </div>
             <div
@@ -122,23 +120,30 @@ const AdminLeftNav = ({
               onClick={handlePayment}
             >
               <div className="dashboard-icon-container">
-                <img
-                  src="/icons/payment.svg"
-                  alt="dashboard"
-                  className="black-payment"
-                />
-                <img
+                {
+                  payment?
+                  <img
                   src="/icons/colored-payment.svg"
                   alt="dashboard"
-                  className="colored-payment"
-                />
+                  // className="colored-payment"
+                />: <img
+                src="/icons/payment.svg"
+                alt="dashboard"
+                // className="black-payment"
+              />
+                }
+               
               </div>
               <div className="dashboard-text-container">
-                <p>Payment</p>
+                <p style={payment ? { color: "#2c7da0" } : {}}>Payment</p>
               </div>
             </div>
           </div>
-          <div className="dashboard-content colored-icon" id="logout" onClick={handleLogoutAdmin}>
+          <div
+            className="dashboard-content colored-icon"
+            id="logout"
+            onClick={handleLogoutAdmin}
+          >
             <div className="dashboard-icon-container">
               <img
                 src="/icons/logout.svg"

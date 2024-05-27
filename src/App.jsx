@@ -49,6 +49,9 @@ import Contactuspage from "./Components/Contactuspage/Contactuspage";
 import Faqlandpage from "./Components/Faqpage/Faqlandpage";
 import PatientRescheduleForm from "./Components/PopUp/PatientRescheduleForm";
 
+import PatientRescheduleForm from "./Components/PopUp/PatientRescheduleForm";
+import AppointmentLogin from "./Components/Onboarding/AppointmentLogin";
+import PatientAppointmentHistory from "./Components/PatientDashboard/PatientAppointmentHistory";
 
 const route = createHashRouter([
   {
@@ -68,6 +71,10 @@ const route = createHashRouter([
         element: <PatientHospitalPage />,
       },
       {
+        path: "/patient/patientHospitalPage/patientAppointmentHistory",
+        element: <PatientAppointmentHistory />,
+      },
+      {
         path: "/patient/patientHospitalPage/patientAppointmentForm",
         element: <PatientAppointmentForm />,
       },
@@ -80,8 +87,12 @@ const route = createHashRouter([
         element: <PatientProfileUpdate />,
       },
       {
-        path: "/patient/patientAppointmentReview",
+        path: "/patient/patientAppointmentReview/:appointmentId",
         element: <PatientAppointmentReview />,
+      },
+      {
+        path: "/patient/patientRescheduleForm",
+        element: <PatientRescheduleForm />,
       },
 
       {
@@ -91,6 +102,10 @@ const route = createHashRouter([
     ],
   },
 
+  {
+    path: "/appointmentLogin",
+    element: <AppointmentLogin />,
+  },
   {
     path: "/contactUs",
     element: <Contactuspage />,
@@ -210,77 +225,3 @@ function App() {
 
 export default App;
 
-// function App() {
-//   return (
-//     <HashRouter>
-//       <Routes>
-//         <Route path="/" element={<Body />} />
-//         <Route path="/contactUs" element={<Contactus />} />
-//         <Route path="/aboutUs" element={<Aboutus />} />
-//         <Route path="/faq" element={<Faqpage />} />
-//         <Route path="/setPassword" element={<Setnewpassword />} />
-//         <Route path="/passwordReset" element={<Passwordresetsuc />} />
-//         <Route path="/patientRegister" element={<PatientRegister />} />
-//         <Route path="/patientLogin" element={<PatientLogin />} />
-//         <Route path="/hospitalLogin" element={<HospitalLogin />} />
-//         <Route path="/hospitalRegister" element={<HospitalRegister />} />
-//         <Route path="/dashboard" element={<PatientDashboard />} />
-//         <Route path="/patient" element={<PatientDashboard />} />
-//         <Route path="/admin" element={<AdminDashboard />} />
-//         <Route path="/payment" element={<PaymentMethod />} />
-//         <Route path="/patientAppointment/:id" element={<PatientLogin2 />} />
-//       </Routes>
-//
-//     </HashRouter>
-//   );
-// }
-
-// export default App;
-
-// {
-//   path: "/",
-//   errorElement: <ErrorPage />,
-//   element: <DashboardLayout />,
-//   children: [
-//       {
-//           path: "/:merchants/",
-//           element: <Stores />,
-//       },
-//       {
-//           path: ":merchants/:stores",
-//           element: <Dashboard />,
-//       },
-//       {
-//           path: ":merchants/:stores/dashboard",
-//           element: <Dashboard />,
-//       },
-//       {
-//           path: ":merchants/:stores/products",
-//           element: <Products />,
-//       },
-//       {
-//           path: ":merchants/:stores/orders",
-//           element: <Orders />,
-//       },
-//       {
-//           path: ":merchants/:stores/customers",
-//           element: <Customers/>,
-//       },
-//       {
-//           path: ":merchants/:stores/customers/order-history",
-//           element: <OrderHistory/>,
-//       },
-//       {
-//           path: ":merchants/:stores/support",
-//           element: <Support />,
-//       },
-//       {
-//           path: ":merchants/:stores/settings",
-//           element: <StoresSettings />,
-//       },
-//       {
-//           path: ":merchants/settings",
-//           element: <Settings />,
-//       },
-//   ],
-// },

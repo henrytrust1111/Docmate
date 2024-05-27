@@ -5,16 +5,16 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const AdminAppointmentReview = () => {
-  const [getAppointmentReview,setGetAppointmentReview] = useState()
-  const nav = useNavigate()
-  const handleAdminAppointmentReview = ()=>{
-    nav("/admin/adminAppointmentReview/adminAssignDoctor")
-  }
+  const [getAppointmentReview, setGetAppointmentReview] = useState();
+  const nav = useNavigate();
+  const handleAdminAppointmentReview = () => {
+    nav("/admin/adminAppointmentReview/adminAssignDoctor");
+  };
 
-  const id = localStorage.getItem("userAppointmentID")
+  const id = localStorage.getItem("userAppointmentID");
   console.log(id);
   const url = `https://doc-mate.onrender.com/oneappointment/${id}`;
-  const loggedInHospital = JSON.parse(localStorage.getItem("loggedInHospital"))
+  const loggedInHospital = JSON.parse(localStorage.getItem("loggedInHospital"));
   const userToken = loggedInHospital?.token;
   console.log(userToken);
   const headers = {
@@ -27,7 +27,7 @@ const AdminAppointmentReview = () => {
         const response = await axios.get(url, { headers });
         console.log(response?.data);
         console.log(response?.data.appointment);
-        setGetAppointmentReview(response?.data.appointment)
+        setGetAppointmentReview(response?.data.appointment);
       } catch (error) {
         console.error("Error:", error.response.data);
         // console.error("Error Response:", error.response);
@@ -36,6 +36,14 @@ const AdminAppointmentReview = () => {
 
     fetchData();
   }, []);
+
+  const isoDate = getAppointmentReview?.lastVisitation;
+  const date = new Date(isoDate);
+  const options = { day: "2-digit", month: "2-digit", year: "numeric" };
+  const formattedDate = date.toLocaleDateString("en-GB", options);
+  const lastVisitation = formattedDate==="Invalid Date"? "none": formattedDate;
+
+  console.log(lastVisitation);
 
   return (
     <div className="AdminAppointmentReview-page">
@@ -48,27 +56,58 @@ const AdminAppointmentReview = () => {
           </div>
           <div className="admin-appointment-review-content">
             <div className="admin-appointment-review-main-content">
-                <p className="admin-appointment-review-patient-name-header" id="admin-appointment-review-patient-name-header">Patient name</p>
-                <p className="admin-appointment-review-patient-name">{getAppointmentReview?.fullName}</p>
+              <p
+                className="admin-appointment-review-patient-name-header"
+                id="admin-appointment-review-patient-name-header"
+              >
+                Patient name
+              </p>
+              <p className="admin-appointment-review-patient-name">
+                {getAppointmentReview?.fullName}
+              </p>
             </div>
             <div className="admin-appointment-review-main-content">
-                <p className="admin-appointment-review-patient-name-header" id="admin-appointment-review-patient-name-header">Last Visitation</p>
-                <p className="admin-appointment-review-patient-name">none</p>
+              <p
+                className="admin-appointment-review-patient-name-header"
+                id="admin-appointment-review-patient-name-header"
+              >
+                Last Visitation
+              </p>
+              <p className="admin-appointment-review-patient-name">
+                {lastVisitation? lastVisitation : "none"}
+              </p>
             </div>
             <div className="admin-appointment-review-main-content">
-                <p className="admin-appointment-review-patient-name-header" id="admin-appointment-review-patient-name-header">Last Diagnosis</p>
-                <p className="admin-appointment-review-patient-name">none</p>
+              <p
+                className="admin-appointment-review-patient-name-header"
+                id="admin-appointment-review-patient-name-header"
+              >
+                Last Diagnosis
+              </p>
+              <p className="admin-appointment-review-patient-name">
+                {getAppointmentReview?.lastDiagnosis}
+              </p>
             </div>
             <div className="admin-appointment-review-main-content">
-                <p className="admin-appointment-review-patient-name-header" id="admin-appointment-review-patient-name-header">Present Symtoms</p>
-                <p className="admin-appointment-review-patient-name">{getAppointmentReview?.presentSymptoms}</p>
+              <p
+                className="admin-appointment-review-patient-name-header"
+                id="admin-appointment-review-patient-name-header"
+              >
+                Present Symtoms
+              </p>
+              <p className="admin-appointment-review-patient-name">
+                {getAppointmentReview?.presentSymptoms}
+              </p>
             </div>
           </div>
         </div>
         <div className="admin-appointment-review-button-holder">
-            <div className="assign-a-doctor-btn" onClick={handleAdminAppointmentReview}>
-                Assign a doctor
-            </div>
+          <div
+            className="assign-a-doctor-btn"
+            onClick={handleAdminAppointmentReview}
+          >
+            Assign a doctor
+          </div>
         </div>
       </div>
     </div>

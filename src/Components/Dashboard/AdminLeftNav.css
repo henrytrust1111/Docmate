@@ -54,6 +54,10 @@
     font-family: Rubik;
 }
 
+.dashboard-text-container:nth-child(1){
+    color:#2c7da0;
+}
+
 #logout{
     display: flex;
     justify-self: flex-end;

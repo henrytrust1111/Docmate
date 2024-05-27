@@ -1,0 +1,606 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.RescheduleMaincon{
+    width: 100%;
+    height: 100vh;
+    /* background-color: blue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.RescheduleMainBody{
+    width: 70%;
+    height: 90%;
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Resleftside{
+    width: 40%;
+    height: 100%;
+    background-color: #2C7DA0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.ResleftsideUp{
+    width: 100%;
+    height: 30%;
+    /* background-color: blueviolet; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+
+
+}
+
+.ResleftsideUpIcon1{
+    width: 100%;
+    height: 50%;
+}
+
+.ResleftsideUpIcon{
+    width: 100%;
+    height: 50%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 75px;
+    color: white;
+}
+
+.ResleftsideDown{
+    width: 100%;
+    height: 70%;
+    /* background-color: brown; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ResleftsideDownwrapper{
+    width: 85%;
+    height: 90%;
+    /* background-color: green; */
+    /* display: flex; */
+
+}
+
+.ResleftsideDownh3{
+    width: 100%;
+    height: 18%;
+    /* background-color: blueviolet; */
+    display: flex;
+    align-self: center;
+    
+}
+
+.ResleftsideDownh3 h3{
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 25px;
+    color: white;
+    font-family: sans-serif;
+
+}
+
+.ResleftsideDownPtagbox{
+    width: 100%;
+    height: 82%;
+    /* background-color: gray; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ResleftsideDownPtagswrap{
+    width: 95%;
+    height: 100%;
+    /* background-color: blue; */
+}
+
+.ResleftPtagsbox{
+    width: 100%;
+    height: 20%;
+    /* background-color: brown; */
+    display: flex;
+    align-items: center;
+    
+}
+
+.ResleftPtagsboxLeft{
+    width: 8%;
+    height: 60%;
+    /* background-color: red; */
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    font-size: 10px;
+    color: white;
+}
+
+.ResleftPtagsboxRight{
+    width: 92%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    /* background-color: black; */
+}
+
+.ResleftPtagsboxRight p{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.Resrightside{
+    width: 60%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+
+}
+
+.ResrightsideCancle{
+    width: 99%;
+    height: 5%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: gray;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.RescheduleApt{
+    width: 100%;
+    height: 12%;
+    /* background-color: blue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.RescheduleApt h3{
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 40px;
+    font-family: sans-serif;
+
+}
+
+.RescheduleAptmnt{
+    width: 100%;
+    height: 83%;
+    /* background-color: green; */
+}
+
+.RescheduleAptmntUP{
+    width: 100%;
+    height: 30%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.RescheduleAptmntUPWrap{
+    width: 80%;
+    height: 100%;
+    /* background-color: aqua; */
+}
+
+.SelectAptmentUp{
+    width: 100%;
+    height: 45%;
+    /* background-color: gray; */
+  
+}
+
+.SelectNewDateApt{
+    width: 100%;
+    height: 20%;
+    /* background-color: aqua; */
+}
+
+.SelectNewDateApt p{
+    font-size: 17px;
+    line-height: 10px;
+    font-weight: 400;
+    font-family: sans-serif;
+}
+
+.SelectCalenderApt{
+    width: 100%;
+    height: 80%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.SelectNewCalenderApt{
+    width: 100%;
+    height: 80%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    /* box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px; */
+    /* justify-content: center; */
+}
+.SelectNewCalenderApt input{
+    width: 30%;
+    height: 100%;
+    font-weight: 300;
+    line-height: 30px;
+    font-family: sans-serif;
+    font-size: 17px;
+    border: none;
+}
+.SelectAptmentDown{
+    width: 100%;
+    height: 55%;
+    /* background-color: darkorchid; */
+}
+.SelectNewTimeApt{
+    width: 100%;
+    height: 18%;
+    /* background-color: aqua; */
+}
+
+.SelectNewTimeApt p{
+    font-size: 17px;
+    line-height: 10px;
+    font-weight: 400;
+    font-family: sans-serif;
+
+}
+
+.SelectNewTimeAptBox{
+    width: 100%;
+    height: 82%;
+    /* background-color: grey; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.SelectNewTimeAptBoxss{
+    width: 100%;
+    height: 95%;
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.SelectNewTimeBox1{
+    width: 48%;
+    height: 100%;
+    background-color: white;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+
+.SelectNewtimeHour{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.SelectNewtimeHour h3{
+    font-size: 16px;
+    font-family: sans-serif;
+    line-height: 30px;
+    font-weight: 700;
+    color: gray;
+}
+
+.SelectNewtimingHour{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.SelectNewtimingHour h3{
+    font-size: 17px;
+    font-family: sans-serif;
+    line-height: 30px;
+    font-weight: 700;
+    color: gray;
+
+}
+
+.Timedotss{
+    font-size: 28px;
+    color: lightgray;
+}
+.SelectNewTimeBox2{
+    width: 48%;
+    height: 100%;
+    background-color: white;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+
+.SelectNewminutes{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.SelectNewminutes h3{
+    font-size: 16px;
+    font-family: sans-serif;
+    line-height: 30px;
+    font-weight: 700;
+    color: gray;
+
+}
+
+.SelectNewminutesRead{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.SelectNewminutesRead h3{
+    font-size: 17px;
+    font-family: sans-serif;
+    line-height: 30px;
+    font-weight: 700;
+    color: gray;
+
+
+}
+
+.RescheduleAptmntDown{
+    width: 100%;
+    height: 70%;
+    /* background-color:blue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.RescheduleAptmntDownwrap{
+    width: 100%;
+    height: 100%;
+    /* background-color: blueviolet; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.RescheduleTimingNdSubmitup{
+    width: 100%;
+    height: 55%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.RescheduleTimingpwrap{
+    width: 80%;
+    height: 95%;
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.ResschTimingBox1{
+    width: 100%;
+    height: 23%;
+    /* background-color: gray; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.ResschTimeBox{
+    width: 24%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+
+.ResschTimeBox:hover{
+    background-color: #2C7DA0;
+}
+
+.ResschTimeBox h3{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 10px;
+    color: gray;
+    font-family: sans-serif;
+}
+.ResschTimingBox2{
+    width: 100%;
+    height: 23%;
+    /* background-color: gray; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.ResschTimeBox{
+    width: 24%;
+    height: 100%;
+    background-color: white;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+.ResschTimingBox3{
+    width: 100%;
+    height: 23%;
+    /* background-color: gray; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.ResschTimeBox{
+    width: 24%;
+    height: 100%;
+    background-color: white;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+.ResschTimingBox4{
+    width: 100%;
+    height: 23%;
+    /* background-color: gray; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.ResschTimeBox{
+    width: 24%;
+    height: 100%;
+    background-color: white;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+.RescheduleTimingNdSubmitdwn{
+    width: 100%;
+    height: 45%;
+    /* background-color: blue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+
+.RescheduleSubmitdwnwrapp{
+    width: 80%;
+    height: 100%;
+    /* background-color: red; */
+}
+
+.RescheduleCancelndSubmit{
+    width: 100%;
+    height: 65%;
+    /* background-color: black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ReschedulReasontextwrap{
+    width: 100%;
+    height: 80%;
+    /* background-color: aqua; */
+}
+
+.ReschedulReasontextwrap textarea{
+    width: 100%;
+    height: 100%;
+    border: none;
+    font-size: 17px;
+    font-family: sans-serif;
+    font-weight: 300;
+    line-height: 20px;
+}
+
+.RescheduleMainCancelndSubmit{
+    width: 100%;
+    height: 35%;
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.RRescheduleMainCancel{
+    width: 35%;
+    height: 100%;
+    /* background-color: blueviolet; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.RRescheduleMainCancel button{
+    width: 100%;
+    height: 80%;
+    border: none;
+    font-size: 16px;
+    font-weight: 550;
+    line-height: 20px;
+    font-family: sans-serif;
+    border-radius: 30px;
+    cursor: pointer;
+    color: gray;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+
+}
+
+.RRescheduleMainCancel button:hover{
+    background-color: #2C7DA0;
+}
+
+.RRescheduleMainSubmit{
+    width: 55%;
+    height: 100%;
+    /* background-color: blueviolet; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.RRescheduleMainSubmit button{
+    width: 100%;
+    height: 80%;
+    border: none;
+    font-size: 16px;
+    font-weight: 550;
+    line-height: 10px;
+    font-family: sans-serif;
+    border-radius: 30px;
+    cursor: pointer;
+    color: gray;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+
+.RRescheduleMainSubmit button:hover{
+    background-color: #2C7DA0;
+}

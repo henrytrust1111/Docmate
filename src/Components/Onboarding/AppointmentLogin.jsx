@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import "./PatientLogin.css";
 import image from "../../asset/icons/DocMate.png";
 import image2 from "../../asset/icons/signup.png";
@@ -15,6 +15,9 @@ const AppointmentLogin = () => {
   const [isLoading, setisLoading] = useState(false);
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
+  const params = useParams();
+  const appointmentId = params.appointmentId;
+  console.log(appointmentId);
 
   const nav = useNavigate();
   const HandleEmail = (e) => {
@@ -42,7 +45,7 @@ const AppointmentLogin = () => {
       localStorage.setItem("loggedInUser", JSON.stringify(loggedInUser));
       localStorage.setItem("loggedInUserToken",loggedInUserToken);
       console.log(response);
-      nav("/patient");
+      nav(`/patient/patientAppointmentReview/${appointmentId}`);
 
       Swal.fire({
         icon: 'success',

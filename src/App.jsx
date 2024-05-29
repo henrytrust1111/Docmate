@@ -96,7 +96,7 @@ const route = createHashRouter([
   },
 
   {
-    path: "/appointmentLogin",
+    path: "/appointmentLogin/:id",
     element: <AppointmentLogin />,
   },
   {

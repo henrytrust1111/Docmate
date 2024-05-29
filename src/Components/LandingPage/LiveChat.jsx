@@ -10,7 +10,7 @@ const LiveChat = () => {
     const userInfo = JSON.parse(localStorage.getItem("loggedInUser"));
     const userToken = localStorage.getItem("loggedInUserToken");
     if (userInfo && userToken) {
-      nav("/chat");
+      nav("/patient/chat");
     } else {
       Swal.fire({
         icon: "error",

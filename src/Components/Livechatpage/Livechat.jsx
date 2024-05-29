@@ -36,6 +36,7 @@ const Livechat = () => {
   };
 
   const handleSend = async (e) => {
+    scrollRef.current?.scrollIntoView({ behavior: "smooth" });
     e.preventDefault();
     if (!input) return;
 
@@ -64,7 +65,7 @@ const Livechat = () => {
 
   useEffect(() => {
     scrollRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [handleSend]);
+  }, []);
 
   return (
     <div className="livechat-container">

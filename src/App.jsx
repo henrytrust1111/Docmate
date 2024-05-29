@@ -64,6 +64,7 @@ const route = createHashRouter([
         path: "/patient",
         element: <PatientHospitalSelection />,
       },
+
       {
         path: "/patient/patientHospitalPage",
         element: <PatientHospitalPage />,
@@ -116,12 +117,12 @@ const route = createHashRouter([
     element: <Aboutus />,
   },
   {
-    path: "/chat",
+    path: "/patient/chat",
     element: <Livechat />,
   },
   {
     path: "/welcomepage",
-    element: <WelcomePage/>,
+    element: <WelcomePage />,
   },
   {
     path: "/faq",
@@ -217,4 +218,3 @@ function App() {
 }
 
 export default App;
-

@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./LiveChat.css";
 import Swal from "sweetalert2";
+import { IoIosChatboxes } from "react-icons/io";
 
 const LiveChat = () => {
   const nav = useNavigate();
@@ -20,12 +21,13 @@ const LiveChat = () => {
   };
   return (
     <div className="chat-icon">
-      <img
+      {/* <img
         src="/bubble-chat.png"
         alt=""
         style={{ width: "90%", height: "90%" }}
-        onClick={handleChat}
-      />
+        
+      /> */}
+      <IoIosChatboxes size={40} color="#007bff" onClick={handleChat} />
     </div>
   );
 };

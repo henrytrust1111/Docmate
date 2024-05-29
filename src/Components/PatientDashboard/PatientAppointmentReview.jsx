@@ -52,7 +52,7 @@ const PatientAppointmentReview = () => {
     setFirstName(userInfo?.data.firstName);
     setLastName(userInfo?.data.lastName);
     setEmail(userInfo?.data.email);
-    setPhoneNumber(userInfo?.data.phoneNumber || -1);
+    setPhoneNumber(userInfo?.data.phoneNumber || "none");
     const script = document.createElement("script");
     script.src =
       "https://korablobstorage.blob.core.windows.net/modal-bucket/korapay-collections.min.js";

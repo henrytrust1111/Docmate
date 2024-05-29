@@ -78,13 +78,13 @@ const AdminRightNav = () => {
     fetchData("https://doc-mate.onrender.com/all-appointments", (data) =>
       setAppointments((prev) => ({ ...prev, all: data }))
     );
-    fetchData("https://doc-mate.onrender.com/pendingappointment", (data) =>
+    fetchData("https://doc-mate.onrender.com/all-pending-reschedule", (data) =>
       setAppointments((prev) => ({ ...prev, reschedules: data }))
     );
     fetchData("https://doc-mate.onrender.com/get-all-confirmed", (data) =>
       setAppointments((prev) => ({ ...prev, confirmed: data }))
     );
-    fetchData("https://doc-mate.onrender.com/all-pending-reschedule", (data) =>
+    fetchData("https://doc-mate.onrender.com/pendingappointment", (data) =>
       setAppointments((prev) => ({ ...prev, pending: data }))
     );
   }, []);

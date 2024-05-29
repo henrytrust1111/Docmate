@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext, useLayoutEffect } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import { ThemeContext } from "../context/Theme";
 import ClipLoader from "react-spinners/ClipLoader";

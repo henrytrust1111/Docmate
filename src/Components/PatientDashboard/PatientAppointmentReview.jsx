@@ -30,6 +30,7 @@ const PatientAppointmentReview = () => {
   const params = useParams();
   const appointmentId = params.appointmentId;
   // const appointmentId = "66522fb112a7ea5bd6f102fa";
+  console.log(appDetails?.hospital[0]);
   console.log(appointmentId);
   const url = "https://doc-mate.onrender.com/confirm-payment";
   const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
@@ -120,7 +121,7 @@ const PatientAppointmentReview = () => {
           lastName,
           email,
           phoneNumber,
-          hospitalId: appDetails.hospital,
+          hospitalId: appDetails?.hospital[0],
           appointmentDate: formattedDate,
         };
         confirmPayment(paymentData);

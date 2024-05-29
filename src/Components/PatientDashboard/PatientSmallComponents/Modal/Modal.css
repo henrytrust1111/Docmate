@@ -32,6 +32,32 @@
   }
   
   .modal-footer {
-    margin-top: 20px;
+    margin-top: 40px;
   }
+  .modal-footer1 {
+    justify-content: center;
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+  }
+  .modal-footer1 button {
+    border: none;
+    width: 120px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-color: #2c7da0;
+    border-radius: 7px;
+    cursor: pointer;
+  }
+
+  .modal-footer1 button:hover{
+    color: #2c7da0;
+    border: 1px solid #2c7da0;
+    background-color: #fff;
+  }
+
+
   

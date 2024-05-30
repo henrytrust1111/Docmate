@@ -70,13 +70,12 @@ body {
 
 .message.user .message-text {
   background-color: #007bff;
-  color: #fff;
+  color: #ffffffeb;
   border-radius: 20px 20px 0 20px;
 }
 
 .message-text p {
   font-size: 14px;
-  color: #333;
   font-family: inter;
 }
 
@@ -88,6 +87,7 @@ body {
 .message.bot .message-text {
   background-color: #e0e0e0;
   border-radius: 20px 20px 20px 0;
+  color: #525151;
 }
 
 .profile-picture img {
@@ -97,9 +97,20 @@ body {
 }
 
 .message-text {
-  padding: 10px 20px;
-  word-wrap: break-word;
-}
+    position: relative;
+    padding: 10px 20px;
+    word-wrap: break-word;
+  }
+  
+  .timestamp {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 12px;
+    font-size: 11px;
+    padding-block-start: 10px;
+  }
+  
 
 .livechat-footer {
   padding: 10px;
@@ -176,6 +187,10 @@ body {
     font-size: 16px;
   }
 }
+
+
+
+
 
 /* * {
     box-sizing: border-box;

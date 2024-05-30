@@ -19,8 +19,6 @@ const Livechat = () => {
   const userToken = userInfo?.token;
   const headers = { Authorization: `Bearer ${userToken}` };
 
-  const data = { message: input };
-
   const handleGet = async () => {
     try {
       const response = await axios.get(url1, { headers });
@@ -38,6 +36,10 @@ const Livechat = () => {
   const handleSend = async (e) => {
     e.preventDefault();
     if (!input) return;
+
+    const timestamp = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+    const data = { message: input, timestamp };
 
     try {
       const response = await axios.post(url, data, { headers });
@@ -73,6 +75,8 @@ const Livechat = () => {
     }
   };
 
+  console.log(output);
+
   return (
     <div className="livechat-container">
       <div className="livechat-wrapper">
@@ -92,6 +96,7 @@ const Livechat = () => {
                 </div>
                 <div className="message-text">
                   <p>{e.message}</p>
+                  <div className="timestamp">{e.createdAt}</div>
                 </div>
               </div>
             ))}
@@ -116,6 +121,7 @@ const Livechat = () => {
 };
 
 export default Livechat;
+
 
 
 

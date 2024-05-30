@@ -64,7 +64,7 @@ const Livechat = () => {
 
   useEffect(() => {
     handleGet();
-  }, [output]);
+  }, []);
 
   useEffect(() => {
     scrollToBottom();

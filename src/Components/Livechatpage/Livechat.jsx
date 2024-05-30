@@ -1,14 +1,16 @@
 import "./Livechat.css";
 import Frame1 from "/docmate3.png";
 import Frame2 from "../../asset/Frame2.png";
-import Swal from "sweetalert2";
 import axios from "axios";
 import { useState, useEffect, useRef } from "react";
 import { io } from "socket.io-client";
+import "react-toastify/dist/ReactToastify.css";
+import toast from "react-hot-toast";
 
 const Livechat = () => {
   const [input, setInput] = useState("");
   const [output, setOutput] = useState([]);
+  const [loading, setLoading] = useState(false)
   const scrollRef = useRef(null);
   const messagesEndRef = useRef(null);
   const url = "https://doc-mate-rose.vercel.app/messages";
@@ -26,11 +28,12 @@ const Livechat = () => {
       setOutput(response.data.messages);
       scrollToBottom();
     } catch (error) {
-      Swal.fire({
-        icon: "error",
-        title: "Oops",
-        text: error.message || "An error occurred",
-      });
+      // Swal.fire({
+      //   icon: "error",
+      //   title: "Oops",
+      //   text: error.message || "An error occurred",
+      // });
+      toast.error(error.message || "An error occurred");
     }
   };
 
@@ -43,6 +46,7 @@ const Livechat = () => {
     const data = { message: input, createdAt: timestamp };
     setInput("");
     try {
+      setLoading(true)
       const response = await axios.post(url, data, { headers });
       setOutput((prev) => [...prev, data]);
       if (response) {
@@ -52,12 +56,10 @@ const Livechat = () => {
       }
       scrollToBottom();
     } catch (error) {
-      Swal.fire({
-        icon: "error",
-        title: "Oops",
-        text: error.message || "An error occurred",
-      });
+      toast.error(error.message || "An error occurred");
       console.log(error.message);
+    }finally {
+      setLoading(false);
     }
   };
 
@@ -138,7 +140,7 @@ const Livechat = () => {
               required
               // rows="1"
             ></textarea>
-            <button type="submit">Send</button>
+            <button type="submit"> {loading ? "Sending..." : "Send"}</button>
           </form>
         </footer>
       </div>

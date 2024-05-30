@@ -41,10 +41,9 @@ const Livechat = () => {
     const timestamp = new Date().toISOString();
 
     const data = { message: input, createdAt: timestamp };
-
+    setInput("");
     try {
       const response = await axios.post(url, data, { headers });
-      setInput("");
       setOutput((prev) => [...prev, data]);
       if (response) {
         socket.on("response", (datas) => {
@@ -64,11 +63,11 @@ const Livechat = () => {
 
   useEffect(() => {
     handleGet();
-  }, []);
+  }, [output]);
 
   useEffect(() => {
     scrollToBottom();
-  }, [output]);
+  }, [input]);
 
   const handleKeyDown = (e) => {
     if (e.key === "Enter" && e.shiftKey) {

@@ -21,8 +21,8 @@ const ServiceCard = () => {
           <div className="carddiv2Img">
             <img src={image2} alt="" />
           </div>
-          <h1>Wait Time</h1>
-          <p>We help you manage your time effectively to help manage health</p>
+          <h1>Artificial Intelligence</h1>
+          <p>Artificial Intelligence chat system,that can give tips and answer questions on health related issues</p>
         </div>
 
         <section className="carddiv2">

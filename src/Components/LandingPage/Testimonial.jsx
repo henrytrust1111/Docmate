@@ -3,8 +3,8 @@ import "./Testimonia.css";
 import image from "/images/fineBoy.jpg";
 import vivian from "/images/beautifulGirlSmile.jpg";
 import Godwin from "/images/beautifulGirlSmile2.png";
-import Henry from "/images/Henry.jpg";
-import Rose from "/images/Rose.jpg";
+import Henry from "/images/fineBoy1.jpg";
+import Rose from "/images/fineBoy2.jpg";
 import image11 from "/star.png";
 
 const Testimonial = () => {
@@ -86,7 +86,7 @@ const Testimonial = () => {
             <div className="leftborderdiv">
               <img src={Henry} alt="" />{" "}
             </div>
-            <h1>Trust Henry</h1>
+            <h1>David Adoyi</h1>
           </div>
 
           <div className="midcarrddiv">
@@ -109,7 +109,7 @@ const Testimonial = () => {
             <div className="leftborderdiv">
               <img src={Rose} alt="" />{" "}
             </div>
-            <h1>Rose Adoyi</h1>
+            <h1>Stanley Chis</h1>
           </div>
 
           <div className="midcarrddiv">

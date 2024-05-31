@@ -33,9 +33,7 @@ const Testimonial = () => {
           </div>
           <div className="docmatetextdiv">
             <p id="testimonialsP">
-              “ has made transitioning on my own very easy. I wouldn't be as
-              organized as I am without this software so I have nothing but good
-              things to say.”
+              “Using Docmate has been so seamless and easy to navigate, I don't even bother cracking my head on what to do next, Kudos Guys!!.”
             </p>
           </div>
         </div>
@@ -79,9 +77,7 @@ const Testimonial = () => {
 
           <div className="docmatetextdiv">
             <p>
-              “<span>DocMate</span> has made transitioning on my own very easy.
-              I wouldn't be as organized as I am without this software so I have
-              nothing but good things to say.”{" "}
+              “<span>DocMate</span> The Colors are so user friendly hence making it easy for me to navigate and also suiting my virtual impairment.”{" "}
             </p>
           </div>
         </div>

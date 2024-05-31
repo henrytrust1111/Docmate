@@ -24,7 +24,7 @@ const Footer = () => {
             <h2 className="branchOffice">Branch Office</h2>
             <div className="footercontact">
               <div className="footertextimg">
-              <MdLocationPin size={40} />
+              <MdLocationPin  />
                 {/* <img src={locationimg} alt="" /> */}
               </div>
               <div className="footerimagetext">
@@ -34,7 +34,7 @@ const Footer = () => {
 
             <div className="footercontact">
               <div className="footertextimg">
-              <IoCall size={40} />
+              <IoCall  />
                 {/* <img src={callimg} alt="" /> */}
               </div>
               <div className="footerimagetext">
@@ -43,7 +43,7 @@ const Footer = () => {
             </div>
             <div className="footercontact">
               <div className="footertextimg">
-              <FaMessage size={30} />
+              <FaMessage  />
                 {/* <img src={emailimg} alt="" /> */}
               </div>
               <div className="footerimagetext">

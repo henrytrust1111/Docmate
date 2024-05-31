@@ -41,13 +41,13 @@ const HomePageHeader = () => {
     setActiveHome(false);
     nav("/faq");
   };
-  const handlePharmacy = () => {
-    setActiveAboutUs(false);
-    setActiveContactUs(false);
-    setActiveFaq(true);
-    setActiveHome(false);
-    nav("/pharmacy");
-  };
+  // const handlePharmacy = () => {
+  //   setActiveAboutUs(false);
+  //   setActiveContactUs(false);
+  //   setActiveFaq(true);
+  //   setActiveHome(false);
+  //   nav("/pharmacy");
+  // };
   const handleContactUs = () => {
     setActiveAboutUs(false);
     setActiveContactUs(true);
@@ -105,12 +105,12 @@ const HomePageHeader = () => {
             >
               FAQ's
             </nav>
-            <nav
+            {/* <nav
               onClick={handlePharmacy}
               // style={activeFaq ? { color: "#2c7da0" } : null}
             >
               Pharmacy
-            </nav>
+            </nav> */}
             <nav
               onClick={handleContactUs}
               style={activeContactUs ? { color: "#2c7da0" } : null}

@@ -1,7 +1,7 @@
 import React from "react";
 import "./ServiceCard.css";
 import image from "/icons/calendar.svg";
-import image2 from "../../asset/icons/upload-icon.png";
+import image2 from "/artificial-intelligence.png";
 import image3 from "../../asset/icons/email.png";
 import image4 from "../../asset/icons/upload.png";
 

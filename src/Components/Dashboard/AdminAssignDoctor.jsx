@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./AdminAssignDoctor.css";
 import axios from "axios";
-import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
+import "react-toastify/dist/ReactToastify.css";
 import { toast } from "react-hot-toast";
 
 const AdminAssignDoctor = () => {

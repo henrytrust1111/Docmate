@@ -128,6 +128,14 @@ const AdminRightNav = () => {
     }
   };
 
+  const formatTimestamp = (timestamp) => {
+    const date = new Date(timestamp);
+    const day = date.getDate().toString().padStart(2, "0");
+    const month = (date.getMonth() + 1).toString().padStart(2, "0");
+    const year = date.getFullYear();
+    return `${day}/${month}/${year}`;
+  };
+
   if (loading) {
     return (
       <div className="admin-dashboard-right">
@@ -167,7 +175,7 @@ const AdminRightNav = () => {
         </div>
         <div className="attribute-fixed-width request-record">{e.status}</div>
         <div className="attribute-fixed-width date-record">
-          Today, 10 May 2023
+          {formatTimestamp(e.createdAt)}
         </div>
         <div className="delete-view-btn">
           <div

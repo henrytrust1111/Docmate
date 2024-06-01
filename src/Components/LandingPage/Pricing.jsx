@@ -16,7 +16,7 @@ const Pricing = () => {
         <section className="allcardsdiv">
           <div className="pricingcarddiv pricingcarddivFirst">
             <article className="moneydiv">
-              <h1>#1,000</h1>
+              <h1>₦3,000</h1>
               <p>Basic plan</p>
             </article>
             <section className="linedivv"></section>
@@ -65,7 +65,7 @@ const Pricing = () => {
           </div>
           <div className="pricingcarddiv pricingcarddivFirst2">
             <article className="moneydiv">
-              <h1>#3,000</h1>
+              <h1>₦6,000</h1>
               <p>Standard plan</p>
             </article>
             <section className="linedivv"></section>
@@ -114,7 +114,7 @@ const Pricing = () => {
           </div>
           <div className="pricingcarddiv">
             <article className="moneydiv">
-              <h1>#5,000</h1>
+              <h1>₦9,000</h1>
               <p>Premium plan</p>
             </article>
             <section className="linedivv"></section>

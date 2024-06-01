@@ -1,12 +1,16 @@
 import React from "react";
 import "./Footer.css";
 import footerlogo from "../../asset/icons/docmate1232.png";
-import locationimg from "../../asset/icons/Vector.png";
-import callimg from "../../asset/icons/call.png";
-import emailimg from "../../asset/icons/emailicon.png";
-import facebookimg1 from "../../asset/icons/facebook.png";
-import twitterimg from "../../asset/icons/twitter.png";
-import inimg from "../../asset/icons/in.png";
+// import locationimg from "../../asset/icons/Vector.png";
+// import callimg from "../../asset/icons/call.png";
+// import emailimg from "../../asset/icons/emailicon.png";
+// import facebookimg1 from "../../asset/icons/facebook.png";
+// import twitterimg from "../../asset/icons/twitter.png";
+// import inimg from "../../asset/icons/in.png";
+import { FaFacebookF, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import { MdLocationPin } from "react-icons/md";
+import { IoCall } from "react-icons/io5";
+import { FaMessage } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -20,7 +24,8 @@ const Footer = () => {
             <h2 className="branchOffice">Branch Office</h2>
             <div className="footercontact">
               <div className="footertextimg">
-                <img src={locationimg} alt="" />
+              <MdLocationPin  />
+                {/* <img src={locationimg} alt="" /> */}
               </div>
               <div className="footerimagetext">
                 <p>24 Road Carat24, Festac Town, Lagos</p>
@@ -29,15 +34,17 @@ const Footer = () => {
 
             <div className="footercontact">
               <div className="footertextimg">
-                <img src={callimg} alt="" />
+              <IoCall  />
+                {/* <img src={callimg} alt="" /> */}
               </div>
               <div className="footerimagetext">
-                <p>0000000000</p>
+                <p>08142789527</p>
               </div>
             </div>
             <div className="footercontact">
               <div className="footertextimg">
-                <img src={emailimg} alt="" />
+              <FaMessage  />
+                {/* <img src={emailimg} alt="" /> */}
               </div>
               <div className="footerimagetext">
                 <p>docmate24@gmail.com</p>
@@ -72,7 +79,8 @@ const Footer = () => {
           <div className="quicklinktext soso">
             <div className="socials">
               <div className="socialimg">
-                <img src={facebookimg1} alt="" />
+              <FaFacebookF />
+                {/* <img src={facebookimg1} alt="" /> */}
               </div>
               <div className="socialtxt">
                 <h1>Facebook</h1>
@@ -80,7 +88,8 @@ const Footer = () => {
             </div>
             <div className="socials">
               <div className="socialimg">
-                <img src={twitterimg} alt="" />
+              <FaTwitter />
+                {/* <img src={twitterimg} alt="" /> */}
               </div>
               <div className="socialtxt">
                 <h1>Twitter</h1>
@@ -88,10 +97,11 @@ const Footer = () => {
             </div>
             <div className="socials">
               <div className="socialimg">
-                <img src={inimg} alt="" />
+              <FaLinkedinIn />
+                {/* <img src={inimg} alt="" /> */}
               </div>
               <div className="socialtxt">
-                <h1>Facebook</h1>
+                <h1>LinkedIn</h1>
               </div>
             </div>
           </div>

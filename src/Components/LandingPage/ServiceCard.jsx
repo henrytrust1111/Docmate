@@ -1,7 +1,7 @@
 import React from "react";
 import "./ServiceCard.css";
 import image from "/icons/calendar.svg";
-import image2 from "../../asset/icons/upload-icon.png";
+import image2 from "/icons/artificial-intelligence.png";
 import image3 from "../../asset/icons/email.png";
 import image4 from "../../asset/icons/upload.png";
 
@@ -21,8 +21,8 @@ const ServiceCard = () => {
           <div className="carddiv2Img">
             <img src={image2} alt="" />
           </div>
-          <h1>Wait Time</h1>
-          <p>We help you manage your time effectively to help manage health</p>
+          <h1>Artificial Intelligence</h1>
+          <p>Artificial Intelligence chat system,that can give tips and answer questions on health related issues</p>
         </div>
 
         <section className="carddiv2">

@@ -27,7 +27,7 @@ const Body = () => {
   }, []);
   return (
     <div className="bodyHolder">
-      <LiveChat />
+      {/* <LiveChat /> */}
       <HomePageHeader />
       <Hero />
       <Services />

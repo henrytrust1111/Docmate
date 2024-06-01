@@ -63,6 +63,7 @@ const route = createHashRouter([
         path: "/patient",
         element: <PatientHospitalSelection />,
       },
+
       {
         path: "/patient/patientHospitalPage",
         element: <PatientHospitalPage />,
@@ -92,6 +93,13 @@ const route = createHashRouter([
   },
 
   {
+<<<<<<< HEAD
+=======
+    path: "/appointmentLogin/:appointmentId",
+    element: <AppointmentLogin />,
+  },
+  {
+>>>>>>> 0fdfb85f962b36fab30a69f9d93ffe48425fdefd
     path: "/contactUs",
     element: <Contactuspage />,
   },
@@ -108,12 +116,12 @@ const route = createHashRouter([
     element: <Aboutus />,
   },
   {
-    path: "/chat",
+    path: "/patient/chat",
     element: <Livechat />,
   },
   {
     path: "/welcomepage",
-    element: <WelcomePage/>,
+    element: <WelcomePage />,
   },
   {
     path: "/faq",
@@ -209,6 +217,7 @@ function App() {
 }
 
 export default App;
+<<<<<<< HEAD
 
 // function App() {
 //   return (
@@ -284,3 +293,5 @@ export default App;
 //       },
 //   ],
 // },
+=======
+>>>>>>> 0fdfb85f962b36fab30a69f9d93ffe48425fdefd

@@ -70,6 +70,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  margin-right: 10px;
 }
 
 .footertextimg > img {
@@ -246,6 +247,7 @@
     /* background: #dd1717; */
     min-width: 30px;
     height: 30px;
+    margin-left: 0px;
   }
 
   .footertextimg > img {
@@ -418,6 +420,7 @@
   .footertextimg{
     width: 20px;
     height: 20px;
+    margin-right: 0px;
   }
 
   .footerimagetext p{

@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext, useLayoutEffect } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import { ThemeContext } from "../context/Theme";
 import ClipLoader from "react-spinners/ClipLoader";
@@ -30,6 +30,7 @@ const PatientAppointmentReview = () => {
   const params = useParams();
   const appointmentId = params.appointmentId;
   // const appointmentId = "66522fb112a7ea5bd6f102fa";
+  console.log(appDetails?.hospital[0]);
   console.log(appointmentId);
   const url = "https://doc-mate.onrender.com/confirm-payment";
   const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
@@ -51,7 +52,7 @@ const PatientAppointmentReview = () => {
     setFirstName(userInfo?.data.firstName);
     setLastName(userInfo?.data.lastName);
     setEmail(userInfo?.data.email);
-    setPhoneNumber(userInfo?.data.phoneNumber || -1);
+    setPhoneNumber(userInfo?.data.phoneNumber || "none");
     const script = document.createElement("script");
     script.src =
       "https://korablobstorage.blob.core.windows.net/modal-bucket/korapay-collections.min.js";
@@ -120,7 +121,7 @@ const PatientAppointmentReview = () => {
           lastName,
           email,
           phoneNumber,
-          hospitalId: appDetails.hospital,
+          hospitalId: appDetails?.hospital[0],
           appointmentDate: formattedDate,
         };
         confirmPayment(paymentData);

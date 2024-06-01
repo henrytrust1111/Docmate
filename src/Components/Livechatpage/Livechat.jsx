@@ -1,280 +1,146 @@
 import "./Livechat.css";
-import Frame1 from "../../asset/Frame1.png";
+import Frame1 from "/docmate3.png";
 import Frame2 from "../../asset/Frame2.png";
-import Swal from "sweetalert2";
 import axios from "axios";
 import { useState, useEffect, useRef } from "react";
-import { io } from "socket.io-client"
-
+import { io } from "socket.io-client";
+import "react-toastify/dist/ReactToastify.css";
+import toast from "react-hot-toast";
 
 const Livechat = () => {
-  const [input, setInput] = useState();
+  const [input, setInput] = useState("");
   const [output, setOutput] = useState([]);
-  const scrollRef = useRef()
-  // console.log(input);
+  const [loading, setLoading] = useState(false)
+  const scrollRef = useRef(null);
+  const messagesEndRef = useRef(null);
   const url = "https://doc-mate-rose.vercel.app/messages";
-  // const url = "http://localhost:3000/api/messages";
   const url1 = "https://doc-mate-rose.vercel.app/get-messages";
-  // const url1 = "http://localhost:3000/api/get-messages";
-  // const socket = io("https://doc-mate.onrender.com");
-  // const socket = io("https://doc-mate-rose.vercel.app");
   const socket = io("http://localhost:3000");
-    
 
   const userInfo = JSON.parse(localStorage.getItem("loggedInUser"));
   const userToken = userInfo?.token;
-  const headers = {
-    Authorization: `Bearer ${userToken}`,
-  };
-
-  const data = { message: input };
-  // console.log(typeof data);
+  const headers = { Authorization: `Bearer ${userToken}` };
 
   const handleGet = async () => {
     try {
       const response = await axios.get(url1, { headers });
-      response.data.messages.reverse()
-      setOutput(response.data.messages); // Clear input after sending
+      response.data.messages.reverse();
+      setOutput(response.data.messages);
+      scrollToBottom();
     } catch (error) {
-      console.log("Message sent:", input);
-      console.log(error);
-      Swal.fire({
-        icon: "error",
-        title: "Oops",
-        text: error.message || "An error occurred",
-      });
+      toast.error(error.message || "An error occurred");
     }
   };
 
   const handleSend = async (e) => {
     e.preventDefault();
-    // console.log(input);
-    if (!input) {
-      console.log("the input is empty");
-    }
+    if (!input) return;
+
+    const timestamp = new Date().toISOString();
+
+    const data = { message: input, createdAt: timestamp };
+    setInput("");
     try {
+      setLoading(true)
       const response = await axios.post(url, data, { headers });
-      // handleGet();
-      // setInput(""); // Clear input after sending
-      setOutput((prev)=> ([...prev, data].reverse()))
-      if(response){
-        socket.on('response', (datas)=>{
-          console.log(datas);
-          setOutput((prev)=> ([...prev, datas].reverse()))
+      setOutput((prev) => [...prev, data]);
+      if (response) {
+        socket.on("response", (datas) => {
+          setOutput((prev) => [...prev, datas].reverse());
         });
       }
+      scrollToBottom();
     } catch (error) {
-      console.log("Message sent:", input);
-      console.log(error);
-      Swal.fire({
-        icon: "error",
-        title: "Oops",
-        text: error.message || "An error occurred",
-      });
+      toast.error(error.message || "An error occurred");
+      console.log(error.message);
+    }finally {
+      setLoading(false);
     }
   };
 
-  useEffect(()=>{
-    handleGet()
-  },[])
+  useEffect(() => {
+    handleGet();
+  }, [output]);
 
-  useEffect(()=>{
-    scrollRef.current?.scrollIntoView({behavior: "smooth"});
-  },[output])
+  useEffect(() => {
+    scrollToBottom();
+  }, [input]);
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter" && e.shiftKey) {
+      e.preventDefault();
+      handleSend(e);
+    }
+  };
+
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const formatTimestamp = (timestamp) => {
+    const date = new Date(timestamp);
+    const day = date.getDate().toString().padStart(2, "0");
+    const month = (date.getMonth() + 1).toString().padStart(2, "0");
+    const year = date.getFullYear();
+
+    let hours = date.getHours();
+    const minutes = date.getMinutes().toString().padStart(2, "0");
+    const ampm = hours >= 12 ? "pm" : "am";
+    hours = hours % 12;
+    hours = hours ? hours : 12;
+
+    return `${day}/${month}/${year} ${hours}:${minutes}${ampm}`;
+  };
 
   return (
-    <div className="LivechatContainer">
-      <div className="LivechatTop">
-        <div className="LivechatText">
+    <div className="livechat-container">
+      <div className="livechat-wrapper">
+        <header className="livechat-header">
           <h1>Live Chat</h1>
-        </div>
-      </div>
-      <div className="LivechatDown">
-        <div className="LiveChatdownBox">
-          <div className="LiveChatdownWrapper">
-            {/* <div className="LivechatHello"></div>
-            <div className="LivechatHi"></div> */}
-            {output?.reverse().map((e, i) =>
-            (
-                <div ref={scrollRef} className={e?.role === "user" ? "LivechatHello":"LivechatHello1"} key={i}>
-                  <div className="LivechatProfilecircle1">
-                    <div className="Leftlivechatprofile">
-                      <img src={e?.role === "user" ? Frame2: Frame1} alt="image" />
-                    </div>
-                    <div className="Rightlivechattext">
-                      <div className="Rightlivechattextwrap">
-                        <p>{e.message}</p>
-                      </div>
-                    </div>
+        </header>
+        <main className="livechat-main">
+          <div className="messages-container">
+            {output.map((e, i) => (
+              <div
+                className={`message ${e?.role === "user" ? "user" : "bot"}`}
+                key={i}
+                ref={scrollRef}
+              >
+                <div className="profile-picture">
+                  <img
+                    src={e?.role === "user" ? Frame2 : Frame1}
+                    alt="Profile"
+                  />
+                </div>
+                <div className="message-text">
+                  <p>{e.message}</p>
+                  <div
+                    className={e?.role === "user" ? "timestamp" : "timestamp1"}
+                  >
+                    {formatTimestamp(e.createdAt)}
                   </div>
                 </div>
-              )
-            )}
-          </div>
-        </div>
-        <div className="SendtextContainer">
-          <div className="Sendtextmainbody">
-            <div className="sendtextlivechatwrap">
-              <div className="Leftsendtectlivechat">
-                <input
-                  type="text"
-                  placeholder="Some text...."
-                  value={input}
-                  onChange={(e) => setInput(e.target.value)}
-                />
               </div>
-              <div className="Rightsendtectlivechat" onClick={handleSend}>
-                <button>Send</button>
-              </div>
-            </div>
+            ))}
+            <div ref={messagesEndRef} />
           </div>
-        </div>
+        </main>
+        <footer className="livechat-footer">
+          <form onSubmit={handleSend} className="send-message-form">
+            <textarea
+              placeholder="Type a message..."
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              onKeyDown={handleKeyDown}
+              required
+              // rows="1"
+            ></textarea>
+            <button type="submit"> {loading ? "Sending..." : "Send"}</button>
+          </form>
+        </footer>
       </div>
     </div>
   );
 };
 
 export default Livechat;
-
-// import "./Livechat.css";
-// import Frame1 from "../../asset/Frame1.png";
-// import Frame2 from "../../asset/Frame2.png";
-// import Swal from "sweetalert2";
-// import axios from "axios";
-// import { useEffect, useState } from "react";
-// import { io } from "socket.io-client";
-
-// const socket = io("https://doc-mate.onrender.com");
-// const Livechat = () => {
-//   const [input, setInput] = useState();
-//   const [output, setOutput] = useState();
-//   const url = "https://doc-mate.onrender.com/api/messages";
-//   const url1 = "https://doc-mate.onrender.com/api/get-messages";
-
-//   const userInfo = JSON.parse(localStorage.getItem("loggedInUser"));
-//   const userToken = userInfo?.token;
-//   const headers = {
-//     Authorization: `Bearer ${userToken}`,
-//   };
-
-//   const data = { message: input };
-//   console.log(typeof data);
-
-//   const handleSend = async (e) => {
-//     e.preventDefault();
-//     console.log(input);
-//     if (!input) {
-//       console.log("the input is empty");
-//     }
-//     try {
-//       socket.emit("message", input);
-//       const response = await axios.post(url, data, { headers });
-//       setOutput(response.data.messages);
-//       //   handleGet();
-//       setInput("");
-//     } catch (error) {
-//       console.log("Message sent:", input);
-//       console.log(error);
-//       Swal.fire({
-//         icon: "error",
-//         title: "Oops",
-//         text: error.message || "An error occurred",
-//       });
-//     }
-//   };
-
-//   useEffect(() => {
-//     const handleGet = async () => {
-//       try {
-//         const response = await axios.get(url1, { headers });
-//         console.log(response.data.messages);
-//         socket.on("response", (e) => {
-//           console.log(e);
-//         });
-
-//         // setOutput(response.data.messages)
-//         setInput("");
-//       } catch (error) {
-//         console.log("Message sent:", input);
-//         console.log(error);
-//         Swal.fire({
-//           icon: "error",
-//           title: "Oops",
-//           text: error.message || "An error occurred",
-//         });
-//       }
-//     };
-
-//     handleGet();
-//   }, [input]);
-
-// //   useEffect(() => {
-// //     // socket.on("response", (e)=>{console.log(e)})
-// //   }, [input]);
-
-//   return (
-//     <div className="LivechatContainer">
-//       <div className="LivechatTop">
-//         <div className="LivechatText">
-//           <h1>Live Chat</h1>
-//         </div>
-//       </div>
-//       <div className="LivechatDown">
-//         <div className="LiveChatdownBox">
-//           <div className="LiveChatdownWrapper">
-//             <div className="LivechatHello"></div>
-//             <div className="LivechatHi"></div>
-//             {output?.map((e) =>
-//               e?.role === "user" ? (
-//                 <div className="LivechatHello" key={e._id}>
-//                   <div className="LivechatProfilecircle1">
-//                     <div className="Leftlivechatprofile">
-//                       <img src={Frame2} alt="image" />
-//                     </div>
-//                     <div className="Rightlivechattext">
-//                       <div className="Rightlivechattextwrap">
-//                         <p>{e.message}</p>
-//                       </div>
-//                     </div>
-//                   </div>
-//                 </div>
-//               ) : e?.role === "Bot" ? (
-//                 <div className="LivechatHello1" key={e._id}>
-//                   <div className="LivechatProfilecircle">
-//                     <div className="Leftlivechatprofile">
-//                       <img src={Frame1} alt="image" />
-//                     </div>
-//                     <div className="Rightlivechattext">
-//                       <div className="Rightlivechattextwrap">
-//                         <p>{e.message}</p>
-//                       </div>
-//                     </div>
-//                   </div>
-//                 </div>
-//               ) : null
-//             )}
-//           </div>
-//         </div>
-//         <div className="SendtextContainer">
-//           <div className="Sendtextmainbody">
-//             <div className="sendtextlivechatwrap">
-//               <div className="Leftsendtectlivechat">
-//                 <input
-//                   type="text"
-//                   placeholder="Some text...."
-//                   value={input}
-//                   onChange={(e) => setInput(e.target.value)}
-//                 />
-//               </div>
-//               <div className="Rightsendtectlivechat" onClick={handleSend}>
-//                 <button>Send</button>
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Livechat;

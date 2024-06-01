@@ -1,17 +1,18 @@
-import React, { useEffect } from "react";
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./AdminPayment.css";
 import axios from "axios";
+import ClipLoader from "react-spinners/ClipLoader";
+import Modal from "react-modal";
+import { TiDelete } from "react-icons/ti";
 
 const AdminPayment = () => {
   const [payments, setPayments] = useState([]);
   const [error, setError] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedPaymentId, setSelectedPaymentId] = useState(null);
   const loggedInHospital = JSON.parse(localStorage.getItem("loggedInHospital"));
   const userToken = loggedInHospital?.token;
-  // console.log(userToken);
-  // const headers = {
-  //   Authorization: `Bearer ${userToken}`,
-  // };
 
   useEffect(() => {
     const fetchPayments = async () => {
@@ -31,11 +32,13 @@ const AdminPayment = () => {
         setError(
           err.response ? err.response.data.message : "An error occurred"
         );
+      } finally {
+        setIsLoading(false);
       }
     };
 
     fetchPayments();
-  }, [userToken]);
+  }, []);
 
   const formatDate = (isoDate) => {
     const date = new Date(isoDate);
@@ -43,6 +46,46 @@ const AdminPayment = () => {
     const formattedDate = date.toLocaleDateString("en-GB", options);
     return formattedDate === "Invalid Date" ? "none" : formattedDate;
   };
+
+  const openModal = (paymentId) => {
+    setSelectedPaymentId(paymentId);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setSelectedPaymentId(null);
+    setIsModalOpen(false);
+  };
+
+  const handleDelete = async () => {
+    const paymentId = selectedPaymentId;
+    try {
+      await axios.delete(
+        `https://doc-mate.onrender.com/delete-payment/${paymentId}`,
+        {
+          headers: {
+            Authorization: `Bearer ${userToken}`,
+          },
+        }
+      );
+      setPayments(payments.filter((payment) => payment._id !== paymentId));
+    } catch (err) {
+      console.error("Error deleting payment:", err);
+      setError(err.response ? err.response.data.message : "An error occurred");
+    } finally {
+      closeModal();
+    }
+  };
+
+  if (isLoading) {
+    return (
+      <div className="admin-dashboard-right">
+        <div className="spinner">
+          <ClipLoader size={50} color={"#123abc"} loading={isLoading} />
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="admin-dashboard-right">
@@ -72,36 +115,71 @@ const AdminPayment = () => {
                 </div>
               </div>
               <div className="dashboard-list-wrapper">
-                {payments?.map((e, i) => (
-                  <div className="list-container" key={i}>
-                    <div className="s-n">{i + 1}</div>
-                    <div className="attribute-fixed-width patient-profile-record">
-                      <div className="profile-img-view"></div>
-                      <div className="name-view-profile-container">
-                        <p>{`${e.firstName} ${e.lastName}`}</p>
-                        {/* <p className="colored-view-profile">View profile</p> */}
+                {error && (
+                  <p className="error-message">
+                    {`${error} please check your network, and refresh your page`}
+                  </p>
+                )}
+                {payments.length === 0 && !error ? (
+                  <h4>No Payments have been made</h4>
+                ) : (
+                  payments?.map((e, i) => (
+                    <div className="list-container" key={i}>
+                      <div className="s-n">{i + 1}</div>
+                      <div className="attribute-fixed-width patient-profile-record">
+                        <div className="profile-img-view"></div>
+                        <div className="name-view-profile-container">
+                          <p>{`${e.firstName} ${e.lastName}`}</p>
+                        </div>
+                      </div>
+                      <div className="attribute-fixed-width email-record">
+                        {e.email}
+                      </div>
+                      <div className="attribute-fixed-width request-record">
+                        {e.phoneNumber}
+                      </div>
+                      <div className="attribute-fixed-width date-record">
+                        {formatDate(e.paymentDate)}
+                      </div>
+                      <div className="delete-view-btn">
+                        <div
+                          className="delete-button"
+                          onClick={() => openModal(e._id)}
+                        >
+                          Delete
+                        </div>
                       </div>
                     </div>
-                    <div className="attribute-fixed-width email-record">
-                      {e.email}
-                    </div>
-                    <div className="attribute-fixed-width request-record">
-                      {e.phoneNumber}
-                    </div>
-                    <div className="attribute-fixed-width date-record">
-                      {formatDate(e.paymentDate)}
-                    </div>
-                    <div className="delete-view-btn">
-                      <div className="delete-button">Delete</div>
-                    </div>
-                  </div>
-                ))}
-   
+                  ))
+                )}
               </div>
             </div>
           </div>
         </div>
       </div>
+      <Modal
+        isOpen={isModalOpen}
+        onRequestClose={closeModal}
+        contentLabel="Confirm Delete"
+        className="modal"
+        overlayClassName="overlay"
+      >
+        <div className="modal-overlay">
+          <div className="modal-content">
+            <div className="modal-header">
+              <TiDelete size={40} color="red" />
+              <h4>Are you sure you want to delete this payment record?</h4>
+            </div>
+            <div className="modal-body">
+              <p> </p>
+            </div>
+            <div className="modal-footer1">
+              <button onClick={handleDelete}>Yes</button>
+              <button onClick={closeModal}>No</button>
+            </div>
+          </div>
+        </div>
+      </Modal>
     </div>
   );
 };

@@ -13,7 +13,8 @@
 }
 
 .AdminAssignDoctor-wrapper {
-  width: 50%;
+  width: max-content;
+  padding-inline: 10px;
   height: 90%;
   display: flex;
   align-items: center;
@@ -93,6 +94,12 @@
   background-color: #2c7da0;
   border-radius: 7px;
   cursor: pointer;
+}
+
+.proceed-btn:hover{
+  color: #2c7da0;
+  border: 1px solid #2c7da0;
+  background-color: #fff;
 }
 
 /* Mobile view iphone-13 */

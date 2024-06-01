@@ -1,8 +1,12 @@
+import { useNavigate } from "react-router-dom";
 import Footer from "../LandingPage/Footer";
 import HomePageHeader from "../LandingPage/HomePageHeader";
 import "./Faqpage.css";
 
 const Faqpage = () => {
+
+  const Nav = useNavigate();
+
   return (
     <>
       {/* <HomePageHeader /> */}
@@ -152,7 +156,7 @@ const Faqpage = () => {
           </div>
           <div className="Faqcontactus">
             <div className="FaqcontactusBox">
-              <button>Contact Us</button>
+              <button onClick={() => Nav('/contactUs')}>Contact Us</button>
             </div>
           </div>
         </div>

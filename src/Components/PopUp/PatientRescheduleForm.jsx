@@ -2,9 +2,36 @@ import "./PatientRescheduleForm.css";
 import { RiErrorWarningLine } from "react-icons/ri";
 import { GoDotFill } from "react-icons/go";
 import { MdOutlineCancel } from "react-icons/md";
+import { useState } from "react";
+import axios from "axios"
+import { useParams } from "react-router-dom";
 
 const PatientRescheduleForm = () => {
-      return (
+
+    const [date, SetDate] = useState()
+    const [time, SetTime] = useState()
+    const [reasonForReschedule, SetReasonForReschedule] = useState()
+
+    const params = useParams();
+    const appointmentId = params.appointmentId;
+
+    console.log(appointmentId)
+
+    const handleReschedule = async () => {
+        try {
+            const res = axios.put(
+                `https://doc-mate.onrender.com/reschedule-app/${appointmentId}`, {
+                date, time, reasonForReschedule
+            })
+            console.log(res)
+
+        } catch (error) {
+            console.log("error")
+
+        }
+    }
+
+    return (
         <>
             <div className='RescheduleMaincon'>
                 <div className='RescheduleMainBody'>
@@ -18,7 +45,7 @@ const PatientRescheduleForm = () => {
                         <div className='ResleftsideDown'>
                             <div className='ResleftsideDownwrapper'>
                                 <div className='ResleftsideDownh3'>
-                                    <h3>By rescheduling the appointment you agree to these points:</h3>
+                                    <h3>By rescheduling the appointment you must agree to these points:</h3>
                                 </div>
                                 <div className='ResleftsideDownPtagbox'>
                                     <div className='ResleftsideDownPtagswrap'>
@@ -59,7 +86,6 @@ const PatientRescheduleForm = () => {
                                             </div>
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
@@ -80,7 +106,10 @@ const PatientRescheduleForm = () => {
                                         </div>
                                         <div className='SelectCalenderApt'>
                                             <div className='SelectNewCalenderApt'>
-                                                <input type="Date" placeholder='Date' />
+                                                <input type="Date"
+                                                    value={date}
+                                                    onChange={(e) => SetDate(e.target.value)}
+                                                />
                                             </div>
                                         </div>
                                     </div>
@@ -89,108 +118,32 @@ const PatientRescheduleForm = () => {
                                             <p>Select new time of your appointment</p>
                                         </div>
                                         <div className='SelectNewTimeAptBox'>
-                                            <div className='SelectNewTimeAptBoxss'>
-                                                <div className='SelectNewTimeBox1'>
-                                                    <div className='SelectNewtimeHour'>
-                                                        <h3>HOUR</h3>
-                                                    </div>
-                                                    <div className='SelectNewtimingHour'>
-                                                        <h3>_ _</h3>
-                                                    </div>
-                                                </div>
-                                                <div className='Timedotss'>:</div>
-                                                <div className='SelectNewTimeBox2'>
-                                                    <div className='SelectNewminutes'>
-                                                        <h3>MINUTE</h3>
-                                                    </div>
-                                                    <div className='SelectNewminutesRead'>
-                                                        <h3>_ _</h3>
-                                                    </div>
-                                                </div>
+                                            <div className="SelectNewTimemainBox">
+                                                <input type="Time"
+                                                    value={time}
+                                                    onChange={(e) => SetTime(e.target.value)}
+                                                />
                                             </div>
-
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div className='RescheduleAptmntDown'>
                                 <div className='RescheduleAptmntDownwrap'>
-                                    <div className='RescheduleTimingNdSubmitup'>
-                                        <div className='RescheduleTimingpwrap'>
-                                            <div className='ResschTimingBox1'>
-                                                <div className='ResschTimeBox'>
-                                                    <h3>7 AM</h3>
-                                                </div>
-                                                <div className='ResschTimeBox'>
-                                                    <h3>8 AM</h3>
-                                                </div>
-                                                <div className='ResschTimeBox'>
-                                                    <h3>9 AM</h3>
-                                                </div>
-                                                <div className='ResschTimeBox'>
-                                                    <h3>9 AM</h3>
-                                                </div>
-                                            </div>
-                                            <div className='ResschTimingBox2'>
-                                                <div className='ResschTimeBox'>
-                                                    <h3>10 AM</h3>
-                                                </div>
-                                                <div className='ResschTimeBox'>
-                                                    <h3>11 AM</h3>
-                                                </div>
-                                                <div className='ResschTimeBox'>
-                                                    <h3>12 PM</h3>
-                                                </div>
-                                                <div className='ResschTimeBox'>
-                                                    <h3>1 PM</h3>
-                                                </div>
-                                            </div>
-                                            <div className='ResschTimingBox3'>
-                                                <div className='ResschTimeBox'>
-                                                    <h3>2 PM</h3>
-                                                </div>
-                                                <div className='ResschTimeBox'>
-                                                    <h3>3 PM</h3>
-                                                </div>
-                                                <div className='ResschTimeBox'>
-                                                    <h3>4 PM</h3>
-                                                </div>
-                                                <div className='ResschTimeBox'>
-                                                    <h3>5 PM</h3>
-                                                </div>
-                                            </div>
-                                            <div className='ResschTimingBox4'>
-                                                <div className='ResschTimeBox'>
-                                                    <h3>6 PM</h3>
-                                                </div>
-                                                <div className='ResschTimeBox'>
-                                                    <h3>7 PM</h3>
-                                                </div>
-                                                <div className='ResschTimeBox'>
-                                                    <h3>8 PM</h3>
-                                                </div>
-                                                <div className='ResschTimeBox'>
-                                                    <h3>9 PM</h3>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
                                     <div className='RescheduleTimingNdSubmitdwn'>
                                         <div className='RescheduleSubmitdwnwrapp'>
                                             <div className='RescheduleCancelndSubmit'>
                                                 <div className='ReschedulReasontextwrap'>
-                                                   <textarea name="" id=""  
-                                                   placeholder='Reason for your reschedule?'
-                                                   ></textarea>
+                                                    <textarea name="" id=""
+                                                        placeholder='Reason for your reschedule?'
+                                                        value={reasonForReschedule}
+                                                        onChange={(e) => SetReasonForReschedule(e.target.value)}
+                                                    ></textarea>
                                                 </div>
                                             </div>
-                                            <div className='RescheduleMainCancelndSubmit'>
-                                                <div className='RRescheduleMainCancel'>
-                                                    <button>CANCEL</button>
-                                                </div>
+                                            <div className='RescheduleMainCancelndSubmit'> 
                                                 <div className='RRescheduleMainSubmit'>
-                                                    <button>RESCHEDULE</button>
+                                                    <button onClick={()=>handleReschedule()}>RESCHEDULE</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -201,11 +154,7 @@ const PatientRescheduleForm = () => {
                     </div>
                 </div>
             </div>
-
-
         </>
-
     )
-
 }
 export default PatientRescheduleForm

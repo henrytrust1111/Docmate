@@ -6,6 +6,8 @@ import ClipLoader from "react-spinners/ClipLoader";
 import { FaCheckCircle, FaTimesCircle } from "react-icons/fa";
 import "./PatientAppointmentReview.css";
 import Modal from "./PatientSmallComponents/Modal/Modal";
+import PatientAppointmentForm from "./PatientAppointmentForm";
+import PatientRescheduleForm from "../PopUp/PatientRescheduleForm";
 
 const PatientAppointmentReview = () => {
   const { setShowSearch } = useContext(ThemeContext);
@@ -27,9 +29,10 @@ const PatientAppointmentReview = () => {
   const [modalIcon, setModalIcon] = useState(null);
 
   const userInfo = JSON.parse(localStorage.getItem("loggedInUser"));
+  const [reschedule,setReschedule] = useState(true)
   const params = useParams();
-  const appointmentId = params.appointmentId;
-  // const appointmentId = "66522fb112a7ea5bd6f102fa";
+  // const appointmentId = params.appointmentId;
+  const appointmentId = "66522fb112a7ea5bd6f102fa";
   console.log(appDetails?.hospital[0]);
   console.log(appointmentId);
   const url = "https://doc-mate.onrender.com/confirm-payment";
@@ -133,8 +136,7 @@ const PatientAppointmentReview = () => {
   };
 
   const handleReschedules=()=>{
-    localStorage.setItem("appointmentId",appointmentId)
-    nav('/patient/patientRescheduleForm')
+    setReschedule(true)
   }
 
   if (isLoading && !appDetails) {
@@ -148,7 +150,8 @@ const PatientAppointmentReview = () => {
   }
 
   return (
-    <div className="PatientAppointmentReview-container">
+    <>
+        <div className="PatientAppointmentReview-container">
       <div className="PatientAppointmentReview-wrapper">
         <div className="PatientAppointmentReview-container1">
           <h2>Appointment Review</h2>
@@ -187,7 +190,10 @@ const PatientAppointmentReview = () => {
         message={modalMessage}
         icon={modalIcon}
       />
+     {reschedule && <PatientRescheduleForm setReschedule={setReschedule} appID={appointmentId} /> }
+
     </div>
+    </>
   );
 };
 

@@ -73,10 +73,10 @@ const route = createHashRouter([
         path: "/patient/patientHospitalPage/patientAppointmentHistory",
         element: <PatientAppointmentHistory />,
       },
-      {
-        path: "/patient/patientHospitalPage/patientAppointmentForm",
-        element: <PatientAppointmentForm />,
-      },
+      // {
+      //   path: "/patient/patientHospitalPage/patientAppointmentForm",
+      //   element: <PatientAppointmentForm />,
+      // },
       {
         path: "/patient/patientProfilePage",
         element: <PatientProfilePage />,

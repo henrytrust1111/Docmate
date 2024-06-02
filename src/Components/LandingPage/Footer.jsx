@@ -1,12 +1,6 @@
 import React from "react";
 import "./Footer.css";
 import footerlogo from "../../asset/icons/docmate1232.png";
-// import locationimg from "../../asset/icons/Vector.png";
-// import callimg from "../../asset/icons/call.png";
-// import emailimg from "../../asset/icons/emailicon.png";
-// import facebookimg1 from "../../asset/icons/facebook.png";
-// import twitterimg from "../../asset/icons/twitter.png";
-// import inimg from "../../asset/icons/in.png";
 import { FaFacebookF, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import { MdLocationPin } from "react-icons/md";
 import { IoCall } from "react-icons/io5";
@@ -25,7 +19,6 @@ const Footer = () => {
             <div className="footercontact">
               <div className="footertextimg">
               <MdLocationPin  />
-                {/* <img src={locationimg} alt="" /> */}
               </div>
               <div className="footerimagetext">
                 <p>24 Road Carat24, Festac Town, Lagos</p>
@@ -35,7 +28,6 @@ const Footer = () => {
             <div className="footercontact">
               <div className="footertextimg">
               <IoCall  />
-                {/* <img src={callimg} alt="" /> */}
               </div>
               <div className="footerimagetext">
                 <p>08142789527</p>
@@ -44,7 +36,6 @@ const Footer = () => {
             <div className="footercontact">
               <div className="footertextimg">
               <FaMessage  />
-                {/* <img src={emailimg} alt="" /> */}
               </div>
               <div className="footerimagetext">
                 <p>docmate24@gmail.com</p>
@@ -80,7 +71,6 @@ const Footer = () => {
             <div className="socials">
               <div className="socialimg">
               <FaFacebookF />
-                {/* <img src={facebookimg1} alt="" /> */}
               </div>
               <div className="socialtxt">
                 <h1>Facebook</h1>
@@ -89,7 +79,6 @@ const Footer = () => {
             <div className="socials">
               <div className="socialimg">
               <FaTwitter />
-                {/* <img src={twitterimg} alt="" /> */}
               </div>
               <div className="socialtxt">
                 <h1>Twitter</h1>
@@ -98,7 +87,6 @@ const Footer = () => {
             <div className="socials">
               <div className="socialimg">
               <FaLinkedinIn />
-                {/* <img src={inimg} alt="" /> */}
               </div>
               <div className="socialtxt">
                 <h1>LinkedIn</h1>

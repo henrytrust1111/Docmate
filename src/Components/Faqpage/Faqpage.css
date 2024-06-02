@@ -141,11 +141,12 @@
     font-weight: 800;
     color: white;
     cursor: pointer;
+    outline: none;
     transition: background 0.3s ease;
   }
   
   .FaqcontactusBox button:hover {
-    background: #2c7da0;
+    background: #559fbe;
   }
   
   /* Responsive Design */

@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Doc
+DOCMATE_FRONTEND_AUDIT_AND_ROADMAP.md
+DOCMATE_PRODUCT_AUDIT.md

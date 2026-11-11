@@ -4,7 +4,7 @@ module.exports = {
   extends: ["eslint:recommended"],
   parserOptions: { ecmaVersion: "latest", sourceType: "module", ecmaFeatures: { jsx: true } },
   plugins: ["react", "react-hooks"],
-  ignorePatterns: ["dist", "src/Components", "src/asset"],
+  ignorePatterns: ["dist"],
   rules: {
     "no-unused-vars": ["error", { varsIgnorePattern: "^React$", argsIgnorePattern: "^_" }],
     "no-irregular-whitespace": "off",

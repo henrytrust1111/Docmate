@@ -1,0 +1,7 @@
+import { useState } from "react";
+import { Link, NavLink, Outlet } from "react-router-dom";
+import { Logo, Notice } from "../../shared/ui/common/AppComponents";
+export function PublicLayout() {
+  const [open, setOpen] = useState(false);
+  return <><header className="public-header"><div className="container header-inner"><Logo /><button className="menu" aria-label="Toggle menu" aria-expanded={open} onClick={() => setOpen(!open)}>☰</button><nav className={open ? "open" : ""} onClick={() => setOpen(false)}><NavLink to="/">Home</NavLink><NavLink to="/about">About</NavLink><NavLink to="/faq">FAQ</NavLink><NavLink to="/contact">Contact</NavLink></nav><div className="header-cta"><Link className="button ghost small" to="/auth/patient/sign-in">Sign in</Link><Link className="button small" to="/auth/patient/sign-up">Get started</Link></div></div></header><main><Outlet /></main><footer><div className="container footer-grid"><div><Logo /><p>Clear appointment coordination for patients and partner hospitals.</p></div><div><b>Explore</b><Link to="/about">About</Link><Link to="/faq">FAQs</Link><Link to="/contact">Support</Link></div><div><b>Hospitals</b><Link to="/auth/hospital/sign-up">Join DocMate</Link><Link to="/auth/hospital/sign-in">Sign in</Link></div><div><b>Legal & safety</b><Link to="/privacy">Privacy</Link><Link to="/terms">Terms</Link><Link to="/accessibility">Accessibility</Link></div></div><div className="container footer-bottom">© 2026 DocMate · Not for emergencies.</div></footer><Notice /></>;
+}

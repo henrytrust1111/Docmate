@@ -1,20 +1,16 @@
+﻿import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAppState } from "../../../app/providers/AppStateProvider";
-import { Field, Title } from "../../../shared/ui/common/AppComponents";
-import { hospitals } from "../../hospitals/data/mockHospitals";
-export function ProfilePage({
-  hospital = false,
-  edit = false
-}) {
-  const {
-    flash
-  } = useAppState();
-  const nav = useNavigate();
-  const h = hospitals[0];
-  if (edit) return <><Title over="Profile" title={`Edit ${hospital ? "facility" : "your"} details`} text="Keep public and contact information accurate." /><form className="panel form narrow" onSubmit={e => {
-      e.preventDefault();
-      flash("Profile saved");
-      nav(hospital ? "/hospital/profile" : "/patient/profile");
-    }}><Field label={hospital ? "Facility name" : "First name"} defaultValue={hospital ? h.name : "Ada"} /><Field label={hospital ? "About" : "Last name"} as={hospital ? "textarea" : "input"} defaultValue={hospital ? h.description : "Nwosu"} /><Field label="Email" type="email" defaultValue={hospital ? "team@lagoon.demo" : "ada@example.com"} /><Field label="Phone" defaultValue={hospital ? h.phone : "+234 801 234 5678"} /><div className="actions"><button className="button">Save changes</button></div></form></>;
-  return <><Title over="Account" title={hospital ? "Facility profile" : "Profile"} text="Manage the details used across DocMate." /><section className="profile panel"><i>{hospital ? "LC" : "AN"}</i><div><h2>{hospital ? h.name : "Ada Nwosu"}</h2><p>{hospital ? h.location : "ada@example.com · +234 801 234 5678"}</p><span className="verified">✓ Demo profile</span></div><Link className="button ghost" to="edit">Edit profile</Link></section><div className="cards"><article className="panel"><h2>{hospital ? "About" : "Personal details"}</h2><p>{hospital ? h.description : "Date of birth · 18 Apr 1994"}</p></article><article className="panel"><h2>{hospital ? "Profile readiness" : "Notifications"}</h2><p>{hospital ? "85% complete" : "✓ Email updates\n✓ SMS reminders"}</p></article></div></>;
+import { Field, Title, Empty } from "../../../shared/ui/common/AppComponents";
+import { hospitalService } from "../../hospitals/services/hospitalService";
+import { profileService } from "../../auth/services/profileService";
+export function ProfilePage({ hospital = false, edit = false }) {
+  const { flash, session } = useAppState(); const nav = useNavigate(); const [profile, setProfile] = useState(null); const [loading, setLoading] = useState(true); const [error, setError] = useState(""); const [busy, setBusy] = useState(false);
+  const load = async () => { setLoading(true); setError(""); try { setProfile(hospital ? await hospitalService.getMine() : await profileService.getPatient()); } catch (e) { setError(e.message); } finally { setLoading(false); } };
+  useEffect(() => { load(); }, [hospital]);
+  const submit = async (e) => { e.preventDefault(); const form = new FormData(e.currentTarget); const payload = hospital ? { name: form.get("name"), description: form.get("description"), email: form.get("email"), phone: form.get("phone"), address: form.get("address") } : { firstName: form.get("firstName"), lastName: form.get("lastName"), phone: form.get("phone") }; setBusy(true); setError(""); try { setProfile(hospital ? await hospitalService.updateMine(payload) : await profileService.updatePatient(payload)); flash("Profile saved"); nav(hospital ? "/hospital/profile" : "/patient/profile"); } catch (e) { setError(e.message); } finally { setBusy(false); } };
+  if (loading) return <p>Loading profile…</p>; if (error && !profile) return <Empty icon="!" title="Profile could not be loaded" text={error} action={<button className="button" onClick={load}>Try again</button>} />;
+  const name = hospital ? profile?.name : [profile?.firstName, profile?.lastName].filter(Boolean).join(" ");
+  if (edit) return <><Title over="Profile" title={`Edit ${hospital ? "facility" : "your"} details`} text="Keep public and contact information accurate." /><form className="panel form narrow" onSubmit={submit}>{hospital ? <><Field label="Facility name" name="name" defaultValue={profile?.name} required /><Field label="About" name="description" as="textarea" defaultValue={profile?.description} /><Field label="Email" name="email" type="email" defaultValue={profile?.email} /><Field label="Phone" name="phone" defaultValue={profile?.phone} /><Field label="Address" name="address" defaultValue={profile?.address} /></> : <><Field label="First name" name="firstName" defaultValue={profile?.firstName} required /><Field label="Last name" name="lastName" defaultValue={profile?.lastName} required /><Field label="Email" type="email" value={profile?.email || session?.user?.email || ""} readOnly hint="Email changes require account verification." /><Field label="Phone" name="phone" defaultValue={profile?.phone || ""} /></>}{error && <p className="error" role="alert">{error}</p>}<div className="actions"><button className="button" disabled={busy}>{busy ? "Saving…" : "Save changes"}</button></div></form></>;
+  return <><Title over="Account" title={hospital ? "Facility profile" : "Profile"} text="Manage the details used across DocMate." /><section className="profile panel"><i>{name?.split(/\s+/).slice(0, 2).map((x) => x[0]).join("") || "DM"}</i><div><h2>{name || "Profile"}</h2><p>{profile?.location || profile?.address || profile?.email}{profile?.phone ? ` · ${profile.phone}` : ""}</p>{hospital && profile?.verified && <span className="verified">✓ Verified</span>}</div><Link className="button ghost" to="edit">Edit profile</Link></section><div className="cards"><article className="panel"><h2>{hospital ? "About" : "Personal details"}</h2><p>{hospital ? profile?.description || "No description provided." : profile?.dateOfBirth ? `Date of birth · ${profile.dateOfBirth}` : "Date of birth not provided."}</p></article>{hospital && <article className="panel"><h2>Opening hours</h2>{(profile?.weeklyHours || []).map((x) => <p key={x.dayOfWeek}>{x.dayOfWeek}: {x.startTime}–{x.endTime}</p>)}</article>}</div></>;
 }
